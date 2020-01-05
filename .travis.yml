@@ -1,0 +1,11 @@
+# Minimal working yaml script for Travis CI
+language: cpp
+script:
+- cmake .
+- cmake --build .
+
+
+
+
+
+
