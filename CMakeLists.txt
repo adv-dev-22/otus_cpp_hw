@@ -29,10 +29,6 @@ set_target_properties(test_vers_boost PROPERTIES
     INCLUDE_DIRECTORIES  ${Boost_INCLUDE_DIR}
 )
 
-#set_target_properties(test_vers_gtest PROPERTIES
-#    INCLUDE_DIRECTORIES  ${GTEST_INCLUDE_DIRS}	
-#)
-
 target_include_directories(hw_version
     PRIVATE "${CMAKE_BINARY_DIR}"
 )
@@ -52,6 +48,33 @@ target_link_libraries(test_vers_gtest PRIVATE
     hw_version	
 )
 
+if (MSVC)
+    target_compile_options(helloworld_cli PRIVATE
+        /W4
+    )
+    target_compile_options(hw_version PRIVATE
+        /W4
+    )
+    target_compile_options(test_vers_boost PRIVATE
+        /W4
+    )
+    target_compile_options(test_vers_gtest PRIVATE
+        /W4
+    )
+else ()
+    target_compile_options(helloworld_cli PRIVATE
+        -Wall -Wextra -pedantic -Werror
+    )
+    target_compile_options(hw_version PRIVATE
+        -Wall -Wextra -pedantic -Werror
+    )
+    target_compile_options(test_vers_boost PRIVATE
+        -Wall -Wextra -pedantic -Werror
+    )
+    target_compile_options(test_vers_gtest PRIVATE
+        -Wall -Wextra -pedantic -Werror
+    )
+endif()
 
 install(TARGETS helloworld_cli RUNTIME DESTINATION bin)
 

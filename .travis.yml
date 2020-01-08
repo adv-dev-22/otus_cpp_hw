@@ -6,7 +6,7 @@ before_script:
 - sudo apt-get install libboost-test-dev -y
 - echo "deb http://archive.ubuntu.com/ubuntu xenial main universe" | sudo tee -a /etc/apt/sources.list
 - sudo apt-get update -qq
-  
+# Gtest framework installation  
 - sudo apt-get install libgtest-dev cmake -y 
 - cd /usr/src/gtest 
 - sudo cmake .
@@ -14,6 +14,7 @@ before_script:
 - sudo cp *.a /usr/lib/
 - cd "${TRAVIS_BUILD_DIR}"
 
+  ## Yet another way. 
   #- sudo apt-get install -y libgtest-dev cmake
   #- sudo wget https://github.com/google/googletest/archive/release-1.7.0.tar.gz
   #- sudo tar xf release-1.7.0.tar.gz
