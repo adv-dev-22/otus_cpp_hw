@@ -10,14 +10,16 @@ endif()
 project(helloworld VERSION 0.0.${COMMON_TBN})
 
 find_package(Boost COMPONENTS unit_test_framework REQUIRED)
+find_package(GTest REQUIRED)
 
 configure_file(version.h.in version.h)
 
 add_executable(helloworld_cli main.cpp)
 add_library(hw_version vers_lib.cpp)
 add_executable(test_vers_boost test_vers_boost.cpp)
+add_executable(test_vers_gtest test_vers_gtest.cpp)
 
-set_target_properties(helloworld_cli hw_version test_vers_boost PROPERTIES
+set_target_properties(helloworld_cli hw_version test_vers_boost test_vers_gtest  PROPERTIES
     CXX_STANDARD 14
     CXX_STANDARD_REQUIRED ON
 )
@@ -26,6 +28,10 @@ set_target_properties(test_vers_boost PROPERTIES
     COMPILE_DEFINITIONS  BOOST_TEST_DYN_LINK
     INCLUDE_DIRECTORIES  ${Boost_INCLUDE_DIR}
 )
+
+#set_target_properties(test_vers_gtest PROPERTIES
+#    INCLUDE_DIRECTORIES  ${GTEST_INCLUDE_DIRS}	
+#)
 
 target_include_directories(hw_version
     PRIVATE "${CMAKE_BINARY_DIR}"
@@ -38,6 +44,12 @@ target_link_libraries(helloworld_cli PRIVATE
 target_link_libraries(test_vers_boost PRIVATE
     ${Boost_LIBRARIES}
     hw_version
+)
+
+target_link_libraries(test_vers_gtest PRIVATE
+    GTest::GTest 
+    GTest::Main
+    hw_version	
 )
 
 
@@ -56,6 +68,7 @@ include(CPack)
 enable_testing()
 
 add_test(Versions::boost_test test_vers_boost)
+add_test(Versions::gtest_test test_vers_gtest)
 
 
 # End of the file
