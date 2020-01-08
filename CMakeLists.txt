@@ -9,14 +9,22 @@ endif()
 
 project(helloworld VERSION 0.0.${COMMON_TBN})
 
+find_package(Boost COMPONENTS unit_test_framework REQUIRED)
+
 configure_file(version.h.in version.h)
 
 add_executable(helloworld_cli main.cpp)
 add_library(hw_version vers_lib.cpp)
+add_executable(test_vers_boost test_vers_boost.cpp)
 
-set_target_properties(helloworld_cli hw_version PROPERTIES
+set_target_properties(helloworld_cli hw_version test_vers_boost PROPERTIES
     CXX_STANDARD 14
     CXX_STANDARD_REQUIRED ON
+)
+
+set_target_properties(test_vers_boost PROPERTIES 
+    COMPILE_DEFINITIONS  BOOST_TEST_DYN_LINK
+    INCLUDE_DIRECTORIES  ${Boost_INCLUDE_DIR}
 )
 
 target_include_directories(hw_version
@@ -27,6 +35,10 @@ target_link_libraries(helloworld_cli PRIVATE
     hw_version
 )
 
+target_link_libraries(test_vers_boost PRIVATE
+    ${Boost_LIBRARIES}
+    hw_version
+)
 
 
 install(TARGETS helloworld_cli RUNTIME DESTINATION bin)
@@ -41,7 +53,9 @@ set(CPACK_PACKAGE_CONTACT example@example.com)
 
 include(CPack)
 
+enable_testing()
+
+add_test(Versions::boost_test test_vers_boost)
+
 
 # End of the file
-
-
