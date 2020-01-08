@@ -12,10 +12,20 @@ project(helloworld VERSION 0.0.${COMMON_TBN})
 configure_file(version.h.in version.h)
 
 add_executable(helloworld_cli main.cpp)
+add_library(hw_version vers_lib.cpp)
 
+set_target_properties(helloworld_cli hw_version PROPERTIES
+    CXX_STANDARD 14
+    CXX_STANDARD_REQUIRED ON
+)
 
+target_include_directories(hw_version
+    PRIVATE "${CMAKE_BINARY_DIR}"
+)
 
-
+target_link_libraries(helloworld_cli PRIVATE
+    hw_version
+)
 
 
 
