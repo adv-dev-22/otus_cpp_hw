@@ -6,15 +6,15 @@ before_script:
 - sudo apt-get install libboost-test-dev -y
 - echo "deb http://archive.ubuntu.com/ubuntu xenial main universe" | sudo tee -a /etc/apt/sources.list
 - sudo apt-get update -qq
-# Gtest framework installation  
-##- sudo apt-get install libgtest-dev cmake -y 
-#- sudo apt-get install libgtest-dev -y 
-#- cmake --version
-#- cd /usr/src/gtest 
-#- sudo cmake .
-#- sudo make
-#- sudo cp *.a /usr/lib/
-#- cd "${TRAVIS_BUILD_DIR}"
+## Gtest framework installation  
+#- sudo apt-get install libgtest-dev cmake -y 
+- sudo apt-get install libgtest-dev -y 
+- sudo chmod 777 /usr/src/gtest
+- cd /usr/src/gtest 
+- cmake .
+- make
+- sudo cp *.a /usr/lib/
+- cd "${TRAVIS_BUILD_DIR}"
 
   ## Yet another way. 
   #- sudo apt-get install -y libgtest-dev cmake
@@ -28,11 +28,12 @@ before_script:
   #- cd "${TRAVIS_BUILD_DIR}"
 
 script:
-- whereis cmake
-- sudo /usr/local/cmake-3.12.4/bin/cmake .
-- sudo cmake --build .
-- sudo cmake --build . --target test
-- sudo cmake --build . --target package
+ #- whereis cmake
+ #- sudo /usr/local/cmake-3.12.4/bin/cmake .
+- cmake .
+- cmake --build .
+- cmake --build . --target test
+- cmake --build . --target package
 
 deploy:
   provider: script
