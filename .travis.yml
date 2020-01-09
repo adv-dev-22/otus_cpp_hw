@@ -28,6 +28,7 @@ before_script:
   #- cd "${TRAVIS_BUILD_DIR}"
 
 script:
+- whereis cmake
 - sudo cmake .
 - sudo cmake --build .
 - sudo cmake --build . --target test
