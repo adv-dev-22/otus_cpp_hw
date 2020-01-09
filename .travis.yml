@@ -29,7 +29,7 @@ before_script:
 
 script:
 - whereis cmake
-- sudo /usr/local/cmake .
+- sudo /usr/local/cmake-3.12.4/bin/cmake .
 - sudo cmake --build .
 - sudo cmake --build . --target test
 - sudo cmake --build . --target package
