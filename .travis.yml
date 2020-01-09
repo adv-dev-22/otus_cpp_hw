@@ -7,8 +7,8 @@ before_script:
 - echo "deb http://archive.ubuntu.com/ubuntu xenial main universe" | sudo tee -a /etc/apt/sources.list
 - sudo apt-get update -qq
 # Gtest framework installation  
-- sudo apt-get install libgtest-dev cmake -y 
-#- sudo apt-get install libgtest-dev -y 
+#- sudo apt-get install libgtest-dev cmake -y 
+- sudo apt-get install libgtest-dev -y 
 - cd /usr/src/gtest 
 - sudo cmake .
 - sudo make
