@@ -9,6 +9,7 @@ before_script:
 # Gtest framework installation  
 #- sudo apt-get install libgtest-dev cmake -y 
 - sudo apt-get install libgtest-dev -y 
+- cmake --version
 - cd /usr/src/gtest 
 - sudo cmake .
 - sudo make
@@ -27,10 +28,10 @@ before_script:
   #- cd "${TRAVIS_BUILD_DIR}"
 
 script:
-- sudo cmake .
-- sudo cmake --build .
-- sudo cmake --build . --target test
-- sudo cmake --build . --target package
+- cmake .
+- cmake --build .
+- cmake --build . --target test
+- cmake --build . --target package
 
 deploy:
   provider: script
