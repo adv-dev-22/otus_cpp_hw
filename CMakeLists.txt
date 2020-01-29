@@ -1,6 +1,15 @@
 
 cmake_minimum_required(VERSION 3.2)
-project(homeworks VERSION 0.0.1)
+
+if(DEFINED ENV{TRAVIS_BUILD_NUMBER})
+    set(COMMON_TBN $ENV{TRAVIS_BUILD_NUMBER})
+else()
+    set(COMMON_TBN 1)
+    message(WARNING "TRAVIS_BUILD_NUMBER env variable is undefined! It is set to 1.")
+endif()
+
+project(homeworks VERSION 0.0.${COMMON_TBN})
+#project(homeworks VERSION 0.0.1)
 
 enable_testing()
 
