@@ -30,16 +30,16 @@ before_script:
 script:
  #- whereis cmake
  #- sudo /usr/local/cmake-3.12.4/bin/cmake .
-- cmake .
+- cmake . -DHWALL=ON
 - cmake --build .
 - cmake --build . --target test
 - cmake --build . --target package
 
-deploy:
-  provider: script
-  skip_cleanup: true
-  script:
-  - curl -T helloworld-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb -uadv-dev-22:$BINTRAY_API_KEY "https://api.bintray.com/content/adv-dev-22/otus-cpp-hw-01/helloworld/$TRAVIS_BUILD_NUMBER/helloworld-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb;deb_distribution=trusty;deb_component=main;deb_architecture=amd64;publish=1"
+  #deploy:
+  # provider: script
+  #skip_cleanup: true
+  #script:
+  #- curl -T helloworld-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb -uadv-dev-22:$BINTRAY_API_KEY "https://api.bintray.com/content/adv-dev-22/otus-cpp-hw-01/helloworld/$TRAVIS_BUILD_NUMBER/helloworld-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb;deb_distribution=trusty;deb_component=main;deb_architecture=amd64;publish=1"
 
 
 
