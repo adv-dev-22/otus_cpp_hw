@@ -5,6 +5,7 @@ project(dz_02)
 
 add_executable(ip_processor 
 	ip_main.cpp 
+	ip_loader.cpp
 	ip_processor.cpp)
 
 set_target_properties(ip_processor PROPERTIES
