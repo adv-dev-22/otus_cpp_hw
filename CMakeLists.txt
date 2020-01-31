@@ -9,7 +9,6 @@ else()
 endif()
 
 project(homeworks VERSION 0.0.${COMMON_TBN})
-#project(homeworks VERSION 0.0.1)
 
 enable_testing()
 
