@@ -19,6 +19,7 @@ endif()
 
 if (HW02 OR HWALL)
     add_subdirectory(02)
+    add_subdirectory(02_tuple)
 endif()
 
 
