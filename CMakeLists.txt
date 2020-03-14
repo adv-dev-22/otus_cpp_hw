@@ -22,6 +22,12 @@ if (HW02 OR HWALL)
     add_subdirectory(02_tuple)
 endif()
 
+if (HW03 OR HWALL)
+    add_subdirectory(03_ranges)       	
+    add_subdirectory(03)
+endif()
+
+
 
 set(CPACK_GENERATOR DEB)
 
