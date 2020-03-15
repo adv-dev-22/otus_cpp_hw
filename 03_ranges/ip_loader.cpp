@@ -36,7 +36,7 @@ void IpDataLoader::read_from_stdin() {
     }
 }
 
-vector<vec_ui8> IpDataLoader::get_ip_pool() noexcept {
+vector<vec_ui8> IpDataLoader::take_ip_pool() noexcept {
     return std::move(vvs_ip_pool_);
 }
 

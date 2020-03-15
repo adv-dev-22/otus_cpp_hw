@@ -78,7 +78,7 @@ void IpProcessor::allocate_data_() {
 void IpProcessor::read_ippool_from_stdin_() {
 
     up_ip_loader_->read_from_stdin();
-    ip_pool_ = up_ip_loader_->get_ip_pool();
+    ip_pool_ = up_ip_loader_->take_ip_pool();
 }
 
 static bool ccomparator(const vec_ui8 & left_vs,

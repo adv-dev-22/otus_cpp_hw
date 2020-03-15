@@ -15,7 +15,7 @@ public:
     virtual ~IpDataLoader() = default;
 
     void  read_from_stdin();
-    vector<vec_ui8>  get_ip_pool() noexcept;
+    vector<vec_ui8>  take_ip_pool() noexcept;
 
 private:
     vector<vec_ui8>  vvs_ip_pool_;
