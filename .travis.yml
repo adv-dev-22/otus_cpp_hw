@@ -27,11 +27,14 @@ before_script:
   #- sudo cp -a libgtest_main.so libgtest.so /usr/lib/
   #- cd "${TRAVIS_BUILD_DIR}"
 
+# gcc-9
+sudo apt-get install libgcc-9-dev -y
+
  ## conan
 #- sudo apt-get install python3-pip -y
 - pip install --upgrade pip --user
 - sudo pip install conan
-- source ~/.profile
+#- source ~/.profile
 - conan
  
 
@@ -46,7 +49,7 @@ script:
 #- conan profile update settings.compiler.libcxx=libstdc++11 default
 #- less  /home/travis/.conan/profiles/default
 - conan install . -s compiler.libcxx=libstdc++11
-- env | grep PATH
+#- env | grep PATH
 - cmake . -DHWALL=ON
 - cmake --build .
 - cmake --build . --target test
