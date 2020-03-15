@@ -38,7 +38,7 @@ before_script:
 script:
  #- whereis cmake
  #- sudo /usr/local/cmake-3.12.4/bin/cmake .
-- conan install ..
+- conan install .
 - cmake . -DHWALL=ON
 - cmake --build .
 - cmake --build . --target test
