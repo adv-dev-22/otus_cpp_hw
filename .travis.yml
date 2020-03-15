@@ -38,6 +38,7 @@ before_script:
 script:
  #- whereis cmake
  #- sudo /usr/local/cmake-3.12.4/bin/cmake .
+- conan profile update settings.compiler.libcxx=libstdc++11 default
 - conan install .
 - cmake . -DHWALL=ON
 - cmake --build .
