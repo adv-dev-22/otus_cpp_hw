@@ -38,14 +38,14 @@ before_script:
 script:
  #- whereis cmake
  #- sudo /usr/local/cmake-3.12.4/bin/cmake .
-- ls /home/travis/.conan
-- mkdir /home/travis/.conan/profiles
-- touch /home/travis/.conan/profiles/default
-- chmod 777 /home/travis/.conan/profiles/default
-- less /home/travis/.conan/profiles/default
-- conan profile update settings.compiler.libcxx=libstdc++11 default
-- less  /home/travis/.conan/profiles/default
-- conan install .
+#- ls /home/travis/.conan
+#- mkdir /home/travis/.conan/profiles
+#- touch /home/travis/.conan/profiles/default
+#- chmod 777 /home/travis/.conan/profiles/default
+#- less /home/travis/.conan/profiles/default
+#- conan profile update settings.compiler.libcxx=libstdc++11 default
+#- less  /home/travis/.conan/profiles/default
+- conan install . -s compiler.libcxx=libstdc++11
 - cmake . -DHWALL=ON
 - cmake --build .
 - cmake --build . --target test
