@@ -46,6 +46,7 @@ script:
 #- conan profile update settings.compiler.libcxx=libstdc++11 default
 #- less  /home/travis/.conan/profiles/default
 - conan install . -s compiler.libcxx=libstdc++11
+- env | grep PATH
 - cmake . -DHWALL=ON
 - cmake --build .
 - cmake --build . --target test
