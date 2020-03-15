@@ -29,6 +29,7 @@ before_script:
 
  ## conan
 - sudo apt-get install python3-pip -y
+- pip install --upgrade pip
 - sudo pip3 install conan
 - source ~/.profile
 - conan
