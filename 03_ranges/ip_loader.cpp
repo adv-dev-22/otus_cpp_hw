@@ -41,26 +41,3 @@ vector<vec_ui8> IpDataLoader::get_ip_pool() noexcept {
 }
 
 // End of the file
-
-
-
-//            std::cout << vvs_ip_pool_.size() << std::endl;
-//            std::cout << (unsigned int) vvs_ip_pool_.back().at(0) << std::endl;
-
-
-////            std::cout << words.at(0) << "   ";
-//            auto str_digits = words.at(0) | ranges::views::split('.') | ranges::to<std::vector<string>>();
-////            for (auto itr = digits.begin(); itr != digits.end(); ++itr) {
-////                std::cout << *itr << std::endl;
-////            }
-
-//            auto ui8_digits = str_digits | ranges::views::transform([](const string s) {
-//                return static_cast<uint8_t>(std::stoi(s));});
-
-////            for (auto itr = ui8_digits.begin(); itr != ui8_digits.end(); ++itr) {
-////                std::cout << (unsigned int)*itr << " ";
-////            }
-////            std::cout << std::endl;
-
-//            //vvs_ip_pool_.push_back(uchar_digits);
-//        }

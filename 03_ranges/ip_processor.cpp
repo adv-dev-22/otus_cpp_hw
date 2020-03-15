@@ -3,6 +3,8 @@
 #include <algorithm>
 #include <iterator>
 #include <ostream>
+#include <range/v3/all.hpp>
+#include <range/v3/algorithm/sort.hpp>
 
 using  std::cout;
 using  std::endl;
@@ -15,21 +17,16 @@ namespace std {
 std::ostream & operator<< (std::ostream & os, const vec_ui8 & vs) {
 
     os << (unsigned int) vs.front();
-    std::for_each(vs.cbegin() + 1, vs.cend(), [& os](const uint8_t & s1) {
-                  os << "." << (unsigned int) s1;});
+    ranges::for_each(ranges::views::counted(ranges::begin(vs) + 1, 3),
+                     [& os](const uint8_t & s1) {os << "." << (unsigned int) s1;});
     os << endl;
 
     return os;
 }
 }
 
-template <typename Predicate>
-void print_any_condition(const vector<vec_ui8> & ippool, Predicate P1) {
-
-    std::copy_if(ippool.cbegin(),
-                 ippool.cend(),
-                 std::ostream_iterator<vec_ui8>(std::cout),
-                 P1);
+void print(const vector<vec_ui8> & ippool) {
+    std::copy(ippool.cbegin(), ippool.cend(), std::ostream_iterator<vec_ui8>(std::cout));
 }
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -45,37 +42,33 @@ void IpProcessor::run() {
     allocate_data_();
     read_ippool_from_stdin_();
 
-//    reverse_sort_();
-
-
-//    for (auto itr = ip_pool_.begin(); itr != ip_pool_.end(); ++itr) {
-//        std::cout << (unsigned int) (*itr).at(0) << std::endl;
-//    }
+    reverse_sort_();
 
     // *.*.*.*
-    print_any_condition(ip_pool_,
-                        [](const vec_ui8 & ){return true;});
-//    // 1.*.*.*
-//    print_any_condition(ip_pool_,
-//                        [](const vec_uchar & item) {
-//                            if (1 == item.at(0)) return true;
-//                            return false;
-//                        });
-//    // 46.70.*.*
-//    print_any_condition(ip_pool_,
-//                        [](const vec_uchar & item) {
-//                            if (46 == item.at(0) &&
-//                                70 == item.at(1)) return true;
-//                            return false;
-//                        });
+    print(ip_pool_);
 
-//    // 46 is at least at one of the (*) in ip *.*.*.*
-//    print_any_condition(ip_pool_,
-//                        [](const vec_uchar & item) {
-//                            return item.cend() != std::find(item.cbegin(),
-//                                                            item.cend(),
-//                                                            46);
-//                        });
+    // 1.*.*.*
+    auto filtered_1_x_x_x = ip_pool_ |
+                            ranges::views::filter([](const vec_ui8 & item) {
+                                if (1 == item.at(0)) return true;
+                                return false;}) |
+                            ranges::to<std::vector<vec_ui8>>();
+    print(filtered_1_x_x_x);
+
+    // 46.70.*.*
+    auto filtered_46_70_x_x = ip_pool_ |
+                              ranges::views::filter([](const vec_ui8 & item) {
+                                  if (46 == item.at(0) && 70 == item.at(1)) return true;
+                                  return false;}) |
+                              ranges::to<std::vector<vec_ui8>>();
+    print(filtered_46_70_x_x);
+
+    // 46 is at least at one of the (*) in ip *.*.*.*
+    auto filtered_any_46 = ip_pool_ |
+                           ranges::views::filter([](const vec_ui8 & item) {
+                               return item.cend() != std::find(item.cbegin(), item.cend(),46);}) |
+                           ranges::to<std::vector<vec_ui8>>();
+    print(filtered_any_46);
 }
 
 void IpProcessor::allocate_data_() {
@@ -88,35 +81,27 @@ void IpProcessor::read_ippool_from_stdin_() {
     ip_pool_ = up_ip_loader_->get_ip_pool();
 }
 
-//static bool ccomparator(const vec_uchar & left_vs,
-//                        const vec_uchar & right_vs,
-//                        std::size_t counter = 0) {
+static bool ccomparator(const vec_ui8 & left_vs,
+                        const vec_ui8 & right_vs,
+                        std::size_t counter = 0) {
 
-//    if (4 == counter) return false;
+    if (4 == counter) return false;
 
-//    const unsigned char left_byte_k  = left_vs.at(counter);
-//    const unsigned char right_byte_k = right_vs.at(counter);
+    const uint8_t left_byte_k  = left_vs.at(counter);
+    const uint8_t right_byte_k = right_vs.at(counter);
 
-//    if (left_byte_k > right_byte_k) {
-//        return true;
-//    }
+    if (left_byte_k > right_byte_k) return true;
 
-//    if (left_byte_k == right_byte_k) {
-//        return ccomparator(left_vs, right_vs, counter + 1);
-//    }
+    if (left_byte_k == right_byte_k) return ccomparator(left_vs, right_vs, counter + 1);
 
-//    return false;
-//}
+    return false;
+}
 
 void IpProcessor::reverse_sort_() {
 
-//    // Reverse lexicographically sort
-//    std::sort(ip_pool_.begin(),
-//              ip_pool_.end(),
-//              [](const vec_uchar & left_item, const vec_uchar & right_item) {
-//                  return ccomparator(left_item, right_item);
-//              });
+    // Reverse lexicographically sort
+    ranges::sort(ip_pool_, [](const vec_ui8 & left_item, const vec_ui8 & right_item) {
+                                return ccomparator(left_item, right_item);});
 }
 
 // End of the file
-
