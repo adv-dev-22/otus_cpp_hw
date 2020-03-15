@@ -27,6 +27,10 @@ before_script:
   #- sudo cp -a libgtest_main.so libgtest.so /usr/lib/
   #- cd "${TRAVIS_BUILD_DIR}"
 
+ ## conan
+- sudo pip install conan
+- conan
+
 script:
  #- whereis cmake
  #- sudo /usr/local/cmake-3.12.4/bin/cmake .
