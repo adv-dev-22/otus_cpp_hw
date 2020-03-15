@@ -28,6 +28,7 @@ before_script:
   #- cd "${TRAVIS_BUILD_DIR}"
 
  ## conan
+- sudo apt-get install python3-pip -y
 - sudo pip3 install conan
 - source ~/.profile
 - conan
