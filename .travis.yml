@@ -28,8 +28,9 @@ before_script:
   #- cd "${TRAVIS_BUILD_DIR}"
 
  ## conan
-- sudo apt-get install python3-pip -y
-- sudo pip3 install conan
+#- sudo apt-get install python3-pip -y
+- pip install --upgrade pip --user
+- sudo pip install conan
 - source ~/.profile
 - conan
  
@@ -37,6 +38,7 @@ before_script:
 script:
  #- whereis cmake
  #- sudo /usr/local/cmake-3.12.4/bin/cmake .
+- conan install ..
 - cmake . -DHWALL=ON
 - cmake --build .
 - cmake --build . --target test
