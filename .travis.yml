@@ -28,8 +28,10 @@ before_script:
   #- cd "${TRAVIS_BUILD_DIR}"
 
  ## conan
-- sudo pip install conan
+- sudo pip3 install conan
+- source ~/.profile
 - conan
+ 
 
 script:
  #- whereis cmake
