@@ -27,11 +27,10 @@ before_script:
   #- sudo cp -a libgtest_main.so libgtest.so /usr/lib/
   #- cd "${TRAVIS_BUILD_DIR}"
 
-# gcc-9
+## gcc-9
 sudo apt-get install libgcc-9-dev -y
 
- ## conan
-#- sudo apt-get install python3-pip -y
+## conan
 - pip install --upgrade pip --user
 - sudo pip install conan
 #- source ~/.profile
