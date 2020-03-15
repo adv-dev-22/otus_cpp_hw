@@ -38,6 +38,8 @@ before_script:
 script:
  #- whereis cmake
  #- sudo /usr/local/cmake-3.12.4/bin/cmake .
+- ls /home/travis/.conan
+- mkdir /home/travis/.conan/profiles
 - touch /home/travis/.conan/profiles/default
 - chmod 777 /home/travis/.conan/profiles/default
 - less /home/travis/.conan/profiles/default
