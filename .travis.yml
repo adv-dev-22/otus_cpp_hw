@@ -3,12 +3,13 @@
 language: cpp
 
 before_script:
+
 - sudo apt-get install libboost-test-dev -y
+- sudo apt-get install libgcc-7-dev -y
+
 - echo "deb http://archive.ubuntu.com/ubuntu xenial main universe" | sudo tee -a /etc/apt/sources.list
 - sudo apt-get update -qq
 
-## gcc-9
-- sudo apt-cache search libgcc-6
 
 
 
