@@ -16,7 +16,6 @@ before_script:
 - gcc --version
 - g++ --version
 
-
 ## Gtest framework installation  
 #- sudo apt-get install libgtest-dev cmake -y 
 - sudo apt-get install libgtest-dev -y 
@@ -43,15 +42,7 @@ before_script:
 - sudo pip install conan
 - conan
  
-
 script:
-#- ls /home/travis/.conan
-#- mkdir /home/travis/.conan/profiles
-#- touch /home/travis/.conan/profiles/default
-#- chmod 777 /home/travis/.conan/profiles/default
-#- less /home/travis/.conan/profiles/default
-#- conan profile update settings.compiler.libcxx=libstdc++11 default
-#- less  /home/travis/.conan/profiles/default
 - conan install . -s compiler.libcxx=libstdc++11
 - cmake . -DHWALL=ON
 - cmake --build .
