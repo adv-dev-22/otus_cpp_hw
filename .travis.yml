@@ -6,6 +6,12 @@ before_script:
 - sudo apt-get install libboost-test-dev -y
 - echo "deb http://archive.ubuntu.com/ubuntu xenial main universe" | sudo tee -a /etc/apt/sources.list
 - sudo apt-get update -qq
+
+## gcc-9
+- sudo apt-cache search libgcc-6
+
+
+
 ## Gtest framework installation  
 #- sudo apt-get install libgtest-dev cmake -y 
 - sudo apt-get install libgtest-dev -y 
@@ -26,10 +32,6 @@ before_script:
   #- sudo cp -a include/gtest /usr/include
   #- sudo cp -a libgtest_main.so libgtest.so /usr/lib/
   #- cd "${TRAVIS_BUILD_DIR}"
-
-
-## gcc-9
-- sudo apt-get install libgcc-9-dev -y
 
 ## conan
 - pip install --upgrade pip --user
