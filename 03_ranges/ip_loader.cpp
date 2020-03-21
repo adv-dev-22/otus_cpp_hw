@@ -14,10 +14,14 @@ IpDataLoader::IpDataLoader():
 vvs_ip_pool_(0) {
 }
 
-void IpDataLoader::read_from_stdin() {
+void IpDataLoader::read_from_stdin(std::istream& std_input) {
+
+    std::cout << "!!!!!!!!!!!!" << std::endl;
 
     try {
-        for (string line; std::getline(std::cin, line); ) {
+        for (string line; std::getline(std_input, line); ) {
+
+            std::cout << "--->> OOOOO " << std::endl;
 
             auto words = line | ranges::views::split('\t') | ranges::to<std::vector<std::string>>();
 

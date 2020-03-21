@@ -14,7 +14,7 @@ public:
     IpDataLoader();
     virtual ~IpDataLoader() = default;
 
-    void  read_from_stdin();
+    void  read_from_stdin(std::istream& std_input);
     vector<vec_ui8>  take_ip_pool() noexcept;
 
 private:

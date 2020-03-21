@@ -8,7 +8,7 @@ using  std::make_unique;
 int main(int argc, char * argv []) {
 
     auto up_ip_proc = make_unique<IpProcessor>();
-    up_ip_proc->run();
+    up_ip_proc->run(std::cin);
 
     return 0;
 }

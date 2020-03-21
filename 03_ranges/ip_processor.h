@@ -5,6 +5,7 @@
 #include <memory>
 #include <vector>
 #include <string>
+#include <iostream>
 
 using  std::unique_ptr;
 
@@ -14,14 +15,14 @@ public:
     IpProcessor();
     ~IpProcessor() = default;
 
-    void run();
+    void run(std::istream & input);
 
 private:
     unique_ptr<IpDataLoader> up_ip_loader_;
     vector<vec_ui8> ip_pool_;
 
     void allocate_data_();
-    void read_ippool_from_stdin_();
+    void read_ippool_from_stdin_(std::istream & input);
     void reverse_sort_();
 };
 

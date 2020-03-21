@@ -25,7 +25,11 @@ install(TARGETS ip_processor_rangesv3 RUNTIME DESTINATION bin)
 
 # Tests
 
-add_executable(test_out_01 test_out.cpp)
+add_executable(test_out_01 
+	test_out.cpp
+	ip_loader.cpp
+	ip_processor.cpp
+)
 
 set_target_properties(test_out_01 PROPERTIES
         CXX_STANDARD 17
@@ -37,7 +41,8 @@ target_link_libraries(test_out_01 PRIVATE
         GTest::Main
 )
 
-add_test(NAME IpConfig::ranges COMMAND test_out_01)
+set(TEST_03_RANGE_INP_FILE  ${CMAKE_SOURCE_DIR}/03_ranges/ip_filter-12995-758870.tsv)
+add_test(NAME IpConfig::ranges COMMAND test_out_01 ${TEST_03_RANGE_INP_FILE})
 
 # End of the file
 

@@ -37,10 +37,10 @@ ip_pool_(0) {
 
 }
 
-void IpProcessor::run() {
+void IpProcessor::run(std::istream& input) {
 
     allocate_data_();
-    read_ippool_from_stdin_();
+    read_ippool_from_stdin_(input);
 
     reverse_sort_();
 
@@ -75,9 +75,9 @@ void IpProcessor::allocate_data_() {
     up_ip_loader_ = make_unique<IpDataLoader>();
 }
 
-void IpProcessor::read_ippool_from_stdin_() {
+void IpProcessor::read_ippool_from_stdin_(std::istream & input) {
 
-    up_ip_loader_->read_from_stdin();
+    up_ip_loader_->read_from_stdin(input);
     ip_pool_ = up_ip_loader_->take_ip_pool();
 }
 
