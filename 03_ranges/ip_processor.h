@@ -15,7 +15,7 @@ public:
     IpProcessor();
     ~IpProcessor() = default;
 
-    void run(std::istream & input);
+    void run(std::istream & input, std::ostream & output);
 
 private:
     unique_ptr<IpDataLoader> up_ip_loader_;

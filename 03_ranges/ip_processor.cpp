@@ -25,8 +25,8 @@ std::ostream & operator<< (std::ostream & os, const vec_ui8 & vs) {
 }
 }
 
-void print(const vector<vec_ui8> & ippool) {
-    std::copy(ippool.cbegin(), ippool.cend(), std::ostream_iterator<vec_ui8>(std::cout));
+void print(const vector<vec_ui8> & ippool, std::ostream & output) {
+    std::copy(ippool.cbegin(), ippool.cend(), std::ostream_iterator<vec_ui8>(output));
 }
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -37,7 +37,7 @@ ip_pool_(0) {
 
 }
 
-void IpProcessor::run(std::istream& input) {
+void IpProcessor::run(std::istream& input, std::ostream & output) {
 
     allocate_data_();
     read_ippool_from_stdin_(input);
@@ -45,7 +45,7 @@ void IpProcessor::run(std::istream& input) {
     reverse_sort_();
 
     // *.*.*.*
-    print(ip_pool_);
+    print(ip_pool_, output);
 
     // 1.*.*.*
     auto filtered_1_x_x_x = ip_pool_ |
@@ -53,7 +53,7 @@ void IpProcessor::run(std::istream& input) {
                                 if (1 == item.at(0)) return true;
                                 return false;}) |
                             ranges::to<std::vector<vec_ui8>>();
-    print(filtered_1_x_x_x);
+    print(filtered_1_x_x_x, output);
 
     // 46.70.*.*
     auto filtered_46_70_x_x = ip_pool_ |
@@ -61,14 +61,14 @@ void IpProcessor::run(std::istream& input) {
                                   if (46 == item.at(0) && 70 == item.at(1)) return true;
                                   return false;}) |
                               ranges::to<std::vector<vec_ui8>>();
-    print(filtered_46_70_x_x);
+    print(filtered_46_70_x_x, output);
 
     // 46 is at least at one of the (*) in ip *.*.*.*
     auto filtered_any_46 = ip_pool_ |
                            ranges::views::filter([](const vec_ui8 & item) {
-                               return item.cend() != std::find(item.cbegin(), item.cend(),46);}) |
+                               return item.cend() != std::find(item.cbegin(), item.cend(), 46);}) |
                            ranges::to<std::vector<vec_ui8>>();
-    print(filtered_any_46);
+    print(filtered_any_46, output);
 }
 
 void IpProcessor::allocate_data_() {

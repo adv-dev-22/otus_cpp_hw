@@ -42,7 +42,7 @@ target_link_libraries(test_out_01 PRIVATE
 )
 
 set(TEST_03_RANGE_INP_FILE  ${CMAKE_SOURCE_DIR}/03_ranges/ip_filter-12995-758870.tsv)
-add_test(NAME IpConfig::ranges COMMAND test_out_01 ${TEST_03_RANGE_INP_FILE})
+add_test(NAME IpConfig::ranges COMMAND test_out_01 ${TEST_03_RANGE_INP_FILE} ip_out.txt)
 
 # End of the file
 
