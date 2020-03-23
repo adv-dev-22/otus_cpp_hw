@@ -39,23 +39,37 @@ index_(0) {
 
 }
 
-//template <typename T, size_t n>
-//T * custom_allocator<T, n>::allocate(const size_t m) {
+template <typename T, size_t n>
+T * reserve_allocator<T, n>::allocate(const size_t m) {
 
-//    auto ptr = std::malloc(n * sizeof(T));
-//    if (!ptr) throw std::bad_alloc();
+//    if (0 == m) {
+//        throw std::invalid_argument("Can not allocate 0 memory");
+//   }
 
-//    std::cout << "allocated at " << ptr << " " << n * sizeof(T) << " bytes" << std::endl;
+    if (index_ + m > memory_.size()) {
+        throw std::invalid_argument("Required memory exceeds reserved amount");
+    }
 
-//    return reinterpret_cast<T *>(ptr);
-//}
+    index_ += m;
 
-//template <typename T>
-//void custom_allocator<T>::deallocate(T * ptr, const size_t n) {
+    std::cout << "allocated at " << &memory_[0] << "  with shift ";
+    std::cout << index_ - m << " - " << index_ << std::endl;
 
-//    std::free(ptr);
-//    std::cout << "deallocated: " << ptr << std::endl;
-//}
+    return &memory_[index_ - m];
+}
+
+template <typename T, size_t n>
+void reserve_allocator<T, n>::deallocate(T * ptr, const size_t m) {
+
+    index_ -= m;
+
+    if (index_ < m ) {
+        throw std::invalid_argument("Can not free more memory then reserved amount");
+    }
+
+    std::cout << "deallocated at base " << &memory_[0] << "  in the range ";
+    std::cout << index_ << " - " << index_ + m << std::endl;
+}
 
 //template <typename T>
 //template <typename U, typename ... Args>
