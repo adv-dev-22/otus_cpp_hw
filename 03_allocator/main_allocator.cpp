@@ -1,10 +1,12 @@
-#include "reserve_allocator.hpp"
+#include "flexible_allocator.hpp"
+#include "fixed_sz_allocator.hpp"
 #include <iostream>
 #include <map>
 
 int main(int argc, char * argv []) {
 
-    // Preliminary demo API
+    // 0. Preliminary demo API
+    {
     elementwise_block_allocator<double> alloc;
 
     double * darr0 = alloc.allocate(2);
@@ -25,8 +27,10 @@ int main(int argc, char * argv []) {
     alloc.deallocate(darr2, 0);
     alloc.deallocate(darr1, 0);
     alloc.deallocate(darr0, 0);
+    }
 
     // 1. Create std::map
+    {
     std::map<int, int>  standard_map;
     const size_t n = 10;
     int value = 1;
@@ -36,18 +40,56 @@ int main(int argc, char * argv []) {
         value *= i;
         standard_map.emplace(i, value);
     }
-
     for (auto item : standard_map) {
         std::cout << item.first << " --> " << item.second << std::endl;
     }
+    }
+
+    // 2. Create std::map with custom (flexible) allocator
+    {
+    std::cout << std::endl << "start std::map with custom allocator" << std::endl;
+    std::map<int, int, std::less<int>,
+             elementwise_block_allocator<std::pair<const int, int>>> cstm_map;
+
+    const size_t n = 10;
+    int value = 1;
+    cstm_map.emplace(0, value);
+
+    for (int i = 1; i < n; ++i) {
+        value *= i;
+        cstm_map.emplace(i, value);
+    }
+    for (auto item : cstm_map) {
+        std::cout << item.first << " x-> " << item.second << std::endl;
+    }
+    }
+
+    // 3. Create std::map with custom (fixed size) allocator
+    {
+    //  ..
 
 
+    }
 
+    // 4. Create custom container with std::allocator
+    {
+    // ..
+
+    }
+
+    // 5. Create custom container with flexible allocator
+    {
+    // ..
+    }
+
+    // 6. Create custom container with (fixed size) allocator
+    {
+    //  ..
+
+    }
 
     return 0;
 }
-
-
 
 // End of the file
 

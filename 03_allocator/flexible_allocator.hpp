@@ -28,7 +28,7 @@ private:
 ///////////////////////////////////////////////////////////////////////////////
 
 template <typename T>
-class elementwise_block_allocator final {
+class elementwise_block_allocator {
 public:
     using value_type = T;
 
@@ -139,15 +139,3 @@ void elementwise_block_allocator<T>::destroy(U * ptr) {
 #endif   // _CUSTOM_ALLOCATOR_H_
 
 // End of the file
-
-
-
-//template <typename T>
-//class anysize_contigious_block {
-//public:
-//    virtual size_t size() const = 0;
-
-//    /*! Initial (base) address of contigious block */
-//    virtual T * base_address() = 0;
-//};
-
