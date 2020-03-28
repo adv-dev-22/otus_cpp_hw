@@ -3,45 +3,32 @@
 
 #include <cstddef>
 #include <iostream>
-#include <array>
+#include <vector>
 #include <memory>
 #include <list>
 
+///////////////////////////////////////////////////////////////////////////////
+
 template <typename T>
-class anysize_contigious_block {
+class contigious_block final {
 public:
-    virtual size_t size() const = 0;
+    contigious_block(const size_t);
+    contigious_block(contigious_block && );
 
-    /*! Initial (base) address of contigious block */
-    virtual T * base_address() = 0;
+    ~contigious_block();
 
-    /*! Index of first unoccupied cell. A
-     *  All cells with i <  index() are already in use.
-     *  All cells with i >= index() are free. */
-    virtual size_t index() const = 0;
-};
-
-
-template <typename T, size_t m>
-class fixedsize_contigious_block : public anysize_contigious_block<T> {
-public:
-    fixedsize_contigious_block();
-    ~fixedsize_contigious_block() = default;
-
-    virtual size_t size() const;
-
-    virtual T * base_address();
-
-    virtual size_t index() const;
+    const size_t size() const;
+    T * base_address();
+    const T * base_address() const;
 
 private:
-    std::array<T, m> mem_block_;
-    size_t index_;
+    std::vector<T> mem_block_;
 };
 
+///////////////////////////////////////////////////////////////////////////////
 
-template <typename T, size_t m>
-class reserve_allocator final {
+template <typename T>
+class elementwise_block_allocator final {
 public:
     using value_type = T;
 
@@ -51,107 +38,116 @@ public:
     using const_reference = const T & ;
     using size_type = std::size_t;
 
-    reserve_allocator();
-    ~reserve_allocator() = default;
+    elementwise_block_allocator();
+    ~elementwise_block_allocator() = default;
 
-//    T * allocate(const size_t n);
-//    void deallocate(T * ptr, const size_t n);
+    T * allocate(const size_t n);
+    void deallocate(T * ptr, const size_t n);
 
-    //size_t remaining_contigious_size() const;
+    template <typename U, typename ... Args>
+    void construct(U * ptr, Args && ... args);
 
-//    template <typename U, typename ... Args>
-//    void construct(U * ptr, Args && ... args);
-
-//    template <typename U>
-//    void destroy(U * ptr);
+    template <typename U>
+    void destroy(U * ptr);
 
 private:
-    std::list<anysize_contigious_block<T>> memory_blocks_;
+    std::list<contigious_block<T>> memory_blocks_;
 };
 
+///////////////////////////////////////////////////////////////////////////////
 
-//template <typename T, size_t m>
-//memory_contigious_block<T, m>::memory_contigious_block():
-//index(0) {
+template <typename T>
+contigious_block<T>::contigious_block(const size_t size):
+mem_block_(size, T()) {
 
-//}
+    std::cout << "contigious_block<T> created = " << std::endl;
+    std::cout << " address = " << mem_block_.data() << std::endl;
+}
 
-//template <typename T, size_t m>
-//reserve_allocator<T, m>::reserve_allocator():
-//memory_blocks_(0) {
+template <typename T>
+contigious_block<T>::contigious_block(contigious_block<T> && rhs):
+mem_block_(std::move(rhs.mem_block_)) {
+    std::cout << "move-constructor with block addr = " << mem_block_.data() << std::endl;
+}
 
-//}
+template <typename T>
+contigious_block<T>::~contigious_block() {
 
-//template <typename T, size_t m>
-//T * reserve_allocator<T, m>::allocate(const size_t n) {
+    std::cout << "contigious_block<T> deleted = " << std::endl;
+    std::cout << " address = " << mem_block_.data() << std::endl;
+}
 
-//    if (std::empty(memory_blocks_)) {
-//        memory_blocks_.push_back(std::make_shared<memory_contigious_block<T, m>>());
-//    }
+template <typename T>
+const size_t contigious_block<T>::size() const {
+    return mem_block_.size();
+}
 
-//    std::make_shared<memory_contigious_block<T, m>> last_block = memory_blocks_.back();
+template <typename T>
+T * contigious_block<T>::base_address() {
+    return mem_block_.data();
+}
 
-//    if (n <= m) {
+template <typename T>
+const T * contigious_block<T>::base_address() const {
+    return mem_block_.data();
+}
 
-//        //last_block->index;
+///////////////////////////////////////////////////////////////////////////////
 
-//    }
-//    else {
-//        last_block->index = m;
+template <typename T>
+elementwise_block_allocator<T>::elementwise_block_allocator():
+memory_blocks_() {
 
-//        memory_blocks_.push_back(std::make_shared<memory_contigious_block<T, m>>());
-//        allocate(n - m);
-//    }
+}
 
+template <typename T>
+T * elementwise_block_allocator<T>::allocate(const size_t n_ext) {
 
-//    //const size_t memory_blocks_.back().index;
+    contigious_block<T>  cblock(n_ext);
+    memory_blocks_.push_back(std::move(cblock));
 
-//    //if (index_ + m > memory_.size()) {
-//        //throw std::invalid_argument("Required memory exceeds reserved amount");
+    return memory_blocks_.back().base_address();
+}
 
-//    //}
+template <typename T>
+void elementwise_block_allocator<T>::deallocate(T * ptr, const size_t n) {
 
-//    //index_ += m;
+    auto is_block_with_base_address = [ptr](const contigious_block<T> & item) -> bool {
+        if (item.base_address() == ptr) return true;
+        return false;
+    };
 
-//    //std::cout << "allocated at " << &memory_[0] << "  with shift ";
-//    //std::cout << index_ - m << " - " << index_ << std::endl;
+    memory_blocks_.remove_if(is_block_with_base_address);
+}
 
-//    //return &memory_[index_ - m];
+template <typename T>
+template <typename U, typename ... Args>
+void elementwise_block_allocator<T>::construct(U * ptr, Args && ... args) {
 
-//    return nullptr;
-//}
+    std::cout << "construct at " << ptr << std::endl;
+    new ((void *) ptr) U(std::forward<Args>(args) ...);
+}
 
-//template <typename T, size_t m>
-//void reserve_allocator<T, m>::deallocate(T * ptr, const size_t n) {
+template <typename T>
+template <typename U>
+void elementwise_block_allocator<T>::destroy(U * ptr) {
 
-////    if (index_ < m ) {
-////        throw std::invalid_argument("Can not free more memory then reserved amount");
-////    }
-
-////    index_ -= m;
-
-////    std::cout << "deallocated at base " << &memory_[0] << "  in the range ";
-////    std::cout << index_ << " - " << index_ + m << std::endl;
-//}
-
-//template <typename T>
-//template <typename U, typename ... Args>
-//void custom_allocator<T>::construct(U * ptr, Args && ... args) {
-
-//    new ((void *) ptr) U(std::forward<Args>(args) ...);
-//}
-
-//template <typename T>
-//template <typename U>
-//void custom_allocator<T>::destroy(U * ptr) {
-
-//    std::cout << "destroy called for ptr = " << ptr <<std::endl;
-//    ptr->~U();
-//}
-
-
+    std::cout << "destroy called for ptr = " << ptr <<std::endl;
+    ptr->~U();
+}
 
 #endif   // _CUSTOM_ALLOCATOR_H_
 
 // End of the file
+
+
+
+//template <typename T>
+//class anysize_contigious_block {
+//public:
+//    virtual size_t size() const = 0;
+
+//    /*! Initial (base) address of contigious block */
+//    virtual T * base_address() = 0;
+//};
 

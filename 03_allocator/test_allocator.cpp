@@ -8,7 +8,7 @@ TEST(reverse_allocator, base_operations) {
     using T = double;
     constexpr size_t n = 15;
 
-    reserve_allocator<T, n> allc_n;
+   // reserve_allocator<T, n> allc_n;
 
 //    T * data_0 = allc_n.allocate(4);
 //    EXPECT_NE(data, nullptr);
