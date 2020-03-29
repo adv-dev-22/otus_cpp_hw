@@ -39,7 +39,7 @@ public:
     using size_type = std::size_t;
 
     elementwise_block_allocator();
-    ~elementwise_block_allocator() = default;
+    virtual ~elementwise_block_allocator() = default;
 
     T * allocate(const size_t n);
     void deallocate(T * ptr, const size_t n);

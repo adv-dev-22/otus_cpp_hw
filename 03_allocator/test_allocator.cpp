@@ -3,7 +3,7 @@
 #include <iostream>
 
 
-TEST(reverse_allocator, base_operations) {
+TEST(allocator, base_operations) {
 
     using T = double;
     constexpr size_t n = 15;

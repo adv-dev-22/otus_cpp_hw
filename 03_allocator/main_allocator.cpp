@@ -66,9 +66,21 @@ int main(int argc, char * argv []) {
 
     // 3. Create std::map with custom (fixed size) allocator
     {
-    //  ..
+    constexpr size_t n = 10;
+    std::cout << std::endl << "start std::map with reserving allocator" << std::endl;
+    std::map<int, int, std::less<int>,
+             reserve_allocator<std::pair<const int, int>, n> > rsrv_map;
 
+    int value = 1;
+    rsrv_map.emplace(0, value);
 
+    for (int i = 1; i < n; ++i) {
+        value *= i;
+        rsrv_map.emplace(i, value);
+    }
+    for (auto item : rsrv_map) {
+        std::cout << item.first << " -+> " << item.second << std::endl;
+    }
     }
 
     // 4. Create custom container with std::allocator
