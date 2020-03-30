@@ -15,13 +15,13 @@ int main(int argc, char * argv []) {
 
     alloc.construct(darr0,     2.0);
     alloc.construct(darr0 + 1, 3.0);
-    std::cout << darr0[0] << std::endl;
-    std::cout << darr0[1] << std::endl;
+    //std::cout << darr0[0] << std::endl;
+    //std::cout << darr0[1] << std::endl;
     alloc.destroy(darr0 + 1);
     alloc.destroy(darr0);
 
     alloc.construct(darr2 + 12, -42.);
-    std::cout << darr2[12] << std::endl;
+    //std::cout << darr2[12] << std::endl;
     alloc.destroy(darr2 + 12);
 
     alloc.deallocate(darr2, 0);
@@ -64,7 +64,7 @@ int main(int argc, char * argv []) {
     }
     }
 
-    // 3. Create std::map with custom (fixed size) allocator
+    // 3. Create std::map with custom (fixed size, fast) allocator
     {
     constexpr size_t n = 10;
     std::cout << std::endl << "start std::map with reserving allocator" << std::endl;

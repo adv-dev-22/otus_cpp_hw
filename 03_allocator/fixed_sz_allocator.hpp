@@ -4,6 +4,7 @@
 #include <array>
 #include <string>
 #include <exception>
+#include <iostream>
 
 ///////////////////////////////////////////////////////////////////////////////
 
@@ -36,16 +37,34 @@ public:
     void destroy(U * ptr);
 
 private:
+    /*! Raw memory to be used. */
     std::array<T, n> mem_block_;
-    size_t index_;
+
+    /*! Size of rest available cells in contigious block. */
+    size_t avail_size_;
+
+    /*! Indexes of available cells in contigious block. Can be shuffled. */
+    std::array<size_t, n> avail_index_;
 };
 
 ///////////////////////////////////////////////////////////////////////////////
 
 template <typename T, size_t n>
 reserve_allocator<T, n>::reserve_allocator():
-index_(0) {
+avail_size_(n) {
 
+    // At start all cells are unoccupied
+    for (size_t i = 0; i < n; ++i) {
+        avail_index_[i] = i;
+    }
+    avail_size_ = n;
+
+//    std::cout << "!!!!!!!!!  ";
+//    std::cout << &mem_block_[1] - &mem_block_[0] << std::endl;
+//    std::cout << &mem_block_[0] << std::endl;
+//    std::cout << &mem_block_[1] << std::endl;
+//    std::cout << "sizeof(T) = " << sizeof (T) << std::endl;
+//    std::cout << &mem_block_[0] + 1 << std::endl;
 }
 
 template <typename T, size_t n>
@@ -53,17 +72,32 @@ T * reserve_allocator<T, n>::allocate(const size_t m) {
 
     if (m > 1) throw std::out_of_range("Can allocate only 1 item at each request");
 
-    if (index_ + m > n)
-        throw std::out_of_range(std::string("Can not allocate block bigger then n ") + std::to_string(n));
+    if (0 == avail_size_)
+        throw std::out_of_range("Not enough memory: block is totally occupied.");
 
-    return mem_block_.data() + index_++;
+    //std::cout << "avail_size_ = " << avail_size_ << std::endl;
+
+    // First unoccupied address
+    T * address = mem_block_.data() + avail_index_[0];
+    //std::cout << "block_data: " << mem_block_.data();
+//    for (size_t i = 0; i < n; ++i) {
+//        std::cout << " " << avail_index_[i];
+//    }
+    //std::cout << std::endl;
+
+    //std::cout << "address =   " << address << std::endl;
+    //std::cout << "size_of(T) = " << sizeof (T) << std::endl;
+
+    std::swap(avail_index_[0], avail_index_[--avail_size_]);
+
+    return address;
 }
 
 template <typename T, size_t n>
-void reserve_allocator<T, n>::deallocate(T * /*unused*/, const size_t /*unused*/) {
-    // Keep holding (reserved) array.
-    if (index_ > 0) --index_;
-    else throw std::runtime_error("Everything is deallocated already!");
+void reserve_allocator<T, n>::deallocate(T * ptr, const size_t /*unused*/) {
+
+    size_t shift = ptr - mem_block_.data();
+    avail_index_[avail_size_++] = shift;
 }
 
 template <typename T, size_t n>

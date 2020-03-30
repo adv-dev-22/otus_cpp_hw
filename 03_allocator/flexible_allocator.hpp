@@ -60,21 +60,21 @@ template <typename T>
 contigious_block<T>::contigious_block(const size_t size):
 mem_block_(size, T()) {
 
-    std::cout << "contigious_block<T> created = " << std::endl;
-    std::cout << " address = " << mem_block_.data() << std::endl;
+//    std::cout << "contigious_block<T> created = " << std::endl;
+//    std::cout << " address = " << mem_block_.data() << std::endl;
 }
 
 template <typename T>
 contigious_block<T>::contigious_block(contigious_block<T> && rhs):
 mem_block_(std::move(rhs.mem_block_)) {
-    std::cout << "move-constructor with block addr = " << mem_block_.data() << std::endl;
+//    std::cout << "move-constructor with block addr = " << mem_block_.data() << std::endl;
 }
 
 template <typename T>
 contigious_block<T>::~contigious_block() {
 
-    std::cout << "contigious_block<T> deleted = " << std::endl;
-    std::cout << " address = " << mem_block_.data() << std::endl;
+//    std::cout << "contigious_block<T> deleted = " << std::endl;
+//    std::cout << " address = " << mem_block_.data() << std::endl;
 }
 
 template <typename T>
@@ -124,7 +124,7 @@ template <typename T>
 template <typename U, typename ... Args>
 void elementwise_block_allocator<T>::construct(U * ptr, Args && ... args) {
 
-    std::cout << "construct at " << ptr << std::endl;
+//    std::cout << "construct at " << ptr << std::endl;
     new ((void *) ptr) U(std::forward<Args>(args) ...);
 }
 
@@ -132,7 +132,7 @@ template <typename T>
 template <typename U>
 void elementwise_block_allocator<T>::destroy(U * ptr) {
 
-    std::cout << "destroy called for ptr = " << ptr <<std::endl;
+//    std::cout << "destroy called for ptr = " << ptr <<std::endl;
     ptr->~U();
 }
 
