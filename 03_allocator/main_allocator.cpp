@@ -1,5 +1,6 @@
 #include "flexible_allocator.hpp"
 #include "fixed_sz_allocator.hpp"
+#include "custom_container.hpp"
 #include <iostream>
 #include <map>
 
@@ -85,7 +86,19 @@ int main(int argc, char * argv []) {
 
     // 4. Create custom container with std::allocator
     {
-    // ..
+    const size_t n = 10;
+    CustomContainer<int> cont_std_alc;
+    for (size_t i = 0; i < n; ++i) {
+        cont_std_alc.push_back(i);
+    }
+
+    cont_std_alc.to_begin();
+    std::cout << cont_std_alc.current_item() << std::endl;
+    for ( ; cont_std_alc.next(); ) {
+        std::cout << cont_std_alc.current_item() << std::endl;
+    }
+    std::cout << "stopped" << std::endl;
+
 
     }
 

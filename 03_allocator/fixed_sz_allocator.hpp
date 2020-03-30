@@ -58,13 +58,6 @@ avail_size_(n) {
         avail_index_[i] = i;
     }
     avail_size_ = n;
-
-//    std::cout << "!!!!!!!!!  ";
-//    std::cout << &mem_block_[1] - &mem_block_[0] << std::endl;
-//    std::cout << &mem_block_[0] << std::endl;
-//    std::cout << &mem_block_[1] << std::endl;
-//    std::cout << "sizeof(T) = " << sizeof (T) << std::endl;
-//    std::cout << &mem_block_[0] + 1 << std::endl;
 }
 
 template <typename T, size_t n>
@@ -75,18 +68,8 @@ T * reserve_allocator<T, n>::allocate(const size_t m) {
     if (0 == avail_size_)
         throw std::out_of_range("Not enough memory: block is totally occupied.");
 
-    //std::cout << "avail_size_ = " << avail_size_ << std::endl;
-
     // First unoccupied address
     T * address = mem_block_.data() + avail_index_[0];
-    //std::cout << "block_data: " << mem_block_.data();
-//    for (size_t i = 0; i < n; ++i) {
-//        std::cout << " " << avail_index_[i];
-//    }
-    //std::cout << std::endl;
-
-    //std::cout << "address =   " << address << std::endl;
-    //std::cout << "size_of(T) = " << sizeof (T) << std::endl;
 
     std::swap(avail_index_[0], avail_index_[--avail_size_]);
 
@@ -114,45 +97,6 @@ void reserve_allocator<T, n>::destroy(U * ptr) {
 
 ///////////////////////////////////////////////////////////////////////////////
 
-
 #endif  // _FIXED_SIZE_ALLOCATOR_H_
 
 // End of the file
-
-
-//    const T * base_address() const;
-//    fixed_sz_block(fixed_sz_block && );
-//template <typename T, size_t n>
-//fixed_sz_block<T, n>::fixed_sz_block(fixed_sz_block && rhs) {
-
-//}
-
-
-//template <typename T, size_t n>
-//class fixed_sz_block final {
-//public:
-//    fixed_sz_block();
-//    ~fixed_sz_block() = default;
-
-//    T * base_address();
-//private:
-//    std::array<T, n> mem_block_;
-//};
-
-
-
-//template <typename T, size_t n>
-//fixed_sz_block<T, n>::fixed_sz_block():
-//index_(0) {
-
-//}
-
-//template <typename T, size_t n>
-//T * fixed_sz_block<T, n>::base_address() {
-//    return mem_block_.data();
-//}
-
-//template <typename T, size_t n>
-//const size_t fixed_sz_block<T, n>::index() const {
-//    return index_;
-//}

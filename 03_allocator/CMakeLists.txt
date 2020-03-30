@@ -8,6 +8,7 @@ add_executable(reserve_allocator
 	main_allocator.cpp  
 	flexible_allocator.hpp
 	fixed_sz_allocator.hpp
+        custom_container.hpp
 )
 
 set_target_properties(reserve_allocator PROPERTIES
