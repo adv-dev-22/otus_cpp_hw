@@ -28,9 +28,6 @@ private:
     size_t current_idx_;
 };
 
-// specialization
-// ..
-
 ///////////////////////////////////////////////////////////////////////////////
 
 template <typename T, typename allocator_type>
@@ -46,8 +43,10 @@ current_idx_(0) {
 template <typename T, typename allocator_type>
 CustomContainer<T, allocator_type>::~CustomContainer() {
 
-   // std::cout << "not ready yet " << __PRETTY_FUNCTION__ << std::endl;
-
+    for (size_t i = 0; i < avail_index_; ++i) {
+        alloc_.destroy(&memory_[i]);
+    }
+    avail_index_ = 0;
 }
 
 template <typename T, typename allocator_type>
@@ -92,7 +91,6 @@ template <typename T, typename allocator_type>
 T & CustomContainer<T, allocator_type>::current_item() {
     return memory_[current_idx_];
 }
-
 
 template <typename T, typename allocator_type>
 void CustomContainer<T, allocator_type>::to_begin() {

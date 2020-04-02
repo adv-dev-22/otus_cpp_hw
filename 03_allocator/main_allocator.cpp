@@ -1,6 +1,7 @@
 #include "flexible_allocator.hpp"
 #include "fixed_sz_allocator.hpp"
 #include "custom_container.hpp"
+#include "reserved_container.hpp"
 #include <iostream>
 #include <map>
 
@@ -97,20 +98,24 @@ int main(int argc, char * argv []) {
     for ( ; cont_std_alc.next(); ) {
         std::cout << cont_std_alc.current_item() << std::endl;
     }
-    std::cout << "stopped" << std::endl;
-
-
     }
 
-    // 5. Create custom container with flexible allocator
+    // 5. Create custom container with (fixed size) allocator
     {
-    // ..
+    std::cout << std::endl << "start custom container with reserving allocator" << std::endl;
+
+    constexpr size_t n = 10;
+    ReservedContainer<int, n> cont_reserved_alc;
+
+    for (size_t i = 0; i < n; ++i) {
+        cont_reserved_alc.push_back(i);
     }
 
-    // 6. Create custom container with (fixed size) allocator
-    {
-    //  ..
-
+    cont_reserved_alc.to_begin();
+    std::cout << cont_reserved_alc.current_item() << std::endl;
+    for ( ; cont_reserved_alc.next(); ) {
+        std::cout << cont_reserved_alc.current_item() << std::endl;
+    }
     }
 
     return 0;
