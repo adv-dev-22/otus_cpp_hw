@@ -3,6 +3,7 @@
 
 #include <memory>
 #include <cstddef>
+#include <iostream>
 
 ///////////////////////////////////////////////////////////////////////////////
 
@@ -45,7 +46,7 @@ current_idx_(0) {
 template <typename T, typename allocator_type>
 CustomContainer<T, allocator_type>::~CustomContainer() {
 
-    std::cout << "not ready yet " << __PRETTY_FUNCTION__ << std::endl;
+   // std::cout << "not ready yet " << __PRETTY_FUNCTION__ << std::endl;
 
 }
 
@@ -59,17 +60,32 @@ void CustomContainer<T, allocator_type>::push_back(T item) {
         avail_index_ = 0;
     }
 
-    if (avail_index_ < size_) {
-        alloc_.construct(&memory_[avail_index_++], item);
+    if (avail_index_ >= size_) {
+
+        T * buffer = alloc_.allocate(2 * size_);
+        size_t buffer_avail_index = 0;
+
+        for (size_t i = 0; i < avail_index_; ++i) {
+
+            alloc_.construct(&buffer[buffer_avail_index], memory_[buffer_avail_index]);
+            std::cout << " constructed (reallocated) item = " << buffer[buffer_avail_index] << std::endl;
+            std::cout << " destroyed item " << memory_[buffer_avail_index] << std::endl;
+            alloc_.destroy(&memory_[buffer_avail_index]);
+            ++buffer_avail_index;
+        }
+
+        alloc_.deallocate(memory_, size_);
+
+        memory_ = buffer;
+        buffer = nullptr;
+        size_ *= 2;
+        avail_index_ = buffer_avail_index;
+
+        std::cout << "memory reallocated.." << __PRETTY_FUNCTION__ << std::endl;
     }
-    else {
 
-        //T * buffer = alloc_.allocate(2 * size_);
-
-        //std::cout << "====" << memory_[2] << std::endl;
-
-        std::cout << "not implemented yet.." << __PRETTY_FUNCTION__ << std::endl;
-    }
+    alloc_.construct(&memory_[avail_index_++], item);
+    std::cout << "constructed for " << item << std::endl;
 }
 
 template <typename T, typename allocator_type>
