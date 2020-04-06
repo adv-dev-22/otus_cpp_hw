@@ -8,7 +8,7 @@ else()
     message(WARNING "TRAVIS_BUILD_NUMBER env variable is undefined! It is set to 1.")
 endif()
 
-project(homeworks VERSION 0.0.${COMMON_TBN})
+project(homeworks VERSION 4.1.${COMMON_TBN})
 
 enable_testing()
 
@@ -23,10 +23,13 @@ if (HW02 OR HWALL)
 endif()
 
 if (HW03 OR HWALL)
-    add_subdirectory(03_ranges)       	
+    add_subdirectory(03_ranges)
     add_subdirectory(03_allocator)
 endif()
 
+if (HW04 OR HWALL)
+    add_subdirectory(04_sfinae)
+endif()
 
 
 set(CPACK_GENERATOR DEB)

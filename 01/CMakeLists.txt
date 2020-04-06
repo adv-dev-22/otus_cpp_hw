@@ -13,10 +13,10 @@ add_executable(test_vers_boost test_vers_boost.cpp)
 add_executable(test_vers_gtest test_vers_gtest.cpp)
 
 set_target_properties(
-	helloworld_cli 
-	hw_version 
-	test_vers_boost 
-	test_vers_gtest  
+        helloworld_cli 
+        hw_version 
+        test_vers_boost 
+        test_vers_gtest  
     PROPERTIES
         CXX_STANDARD 14
         CXX_STANDARD_REQUIRED ON

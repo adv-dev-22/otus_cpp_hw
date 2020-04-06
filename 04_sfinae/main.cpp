@@ -1,11 +1,8 @@
-#include <QCoreApplication>
 #include <iostream>
 #include <string>
-#include "print_ip_04.h"
+#include "print_ip_04.hpp"
 
-int main(int argc, char *argv[])
-{
-    QCoreApplication a(argc, argv);
+int main(int argc, char *argv[]) {
 
     print_ip<int>(1234);
     print_ip<char>(-1);
@@ -17,5 +14,5 @@ int main(int argc, char *argv[])
     print_ip<std::list<uint8_t>>({9, 0, 80, 10});
     //print_ip<std::tuple<int, int, int, int>>(std::make_tuple(0,1,2,3));
 
-    return a.exec();
+    return 0;
 }
