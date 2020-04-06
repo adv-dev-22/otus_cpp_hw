@@ -39,14 +39,14 @@ struct is_std_container<std::list<T>> {
 
 ///////////////////////////////////////////////////////////////////////////////
 
-template <typename T>
-struct is_std_tuple {
-};
+//template <typename T>
+//struct is_std_tuple {
+//};
 
-template <typename T>
-struct is_std_tuple<std::tuple<T, T, T, T>> {
-    static constexpr bool value = true;
-};
+//template <typename T>
+//struct is_std_tuple<std::tuple<T, T, T, T>> {
+//    static constexpr bool value = true;
+//};
 
 ///////////////////////////////////////////////////////////////////////////////
 
@@ -57,7 +57,7 @@ void print_item(const std::string & msg, const T item) {
 };
 
 template <typename T>
-void print_ip(typename std::enable_if<std::is_integral<T>::value, T>::type value) {
+typename std::enable_if<std::is_integral<T>::value, T>::type print_ip(T value) {
 
     constexpr uint8_t byte_size = 8;
     constexpr uint8_t n = sizeof (T);
@@ -90,15 +90,18 @@ void print_ip(typename std::enable_if<std::is_integral<T>::value, T>::type value
         print_byte(".", n - k - 1);
 
     std::cout << std::endl;
+
+    return value;
 }
 
 template <typename T>
-void print_ip(typename std::enable_if<is_std_string<T>::value, T>::type value) {
+typename std::enable_if<is_std_string<T>::value, T>::type print_ip(T value) {
     std::cout << value << std::endl;
+    return value;
 }
 
 template <typename T>
-void print_ip(typename std::enable_if<is_std_container<T>::value, T>::type value) {
+typename std::enable_if<is_std_container<T>::value, T>::type print_ip(T value) {
 
     auto itr = value.begin();
     print_item("", *itr);
@@ -107,6 +110,7 @@ void print_ip(typename std::enable_if<is_std_container<T>::value, T>::type value
         print_item(".", *itr);
     }
     std::cout << std::endl;
+    return value;
 }
 
 //template <typename T>
