@@ -12,6 +12,7 @@
 
 ///////////////////////////////////////////////////////////////////////////////
 
+/*! String type deduction for SFINAE */
 template <typename T>
 struct is_std_string {
 };
@@ -23,6 +24,7 @@ struct is_std_string<std::string> {
 
 ///////////////////////////////////////////////////////////////////////////////
 
+/*! Container type deduction for SFINAE */
 template <typename T>
 struct is_std_container {
 };
@@ -39,14 +41,37 @@ struct is_std_container<std::list<T>> {
 
 ///////////////////////////////////////////////////////////////////////////////
 
-//template <typename T>
-//struct is_std_tuple {
-//};
+/*! Declaration of the same variadic types. */
+template <typename ... Args>
+struct are_types_same {
+    static constexpr bool value = false;
+};
 
-//template <typename T>
-//struct is_std_tuple<std::tuple<T, T, T, T>> {
-//    static constexpr bool value = true;
-//};
+/*! Specialization for empty parameter case. */
+template <>
+struct are_types_same<> {
+    static constexpr bool value = true;
+};
+
+template <typename T>
+struct are_types_same<T> {
+    static constexpr bool value = true;
+};
+
+template <typename T, typename U, typename ... Args>
+struct are_types_same<T, U, Args ...> {
+    static constexpr bool value = std::is_same<T, U>::value && are_types_same<Args ...>::value;
+};
+
+template <typename T>
+struct is_uniform_args_tuple {
+    static constexpr bool value = false;
+};
+
+template <typename... Args>
+struct is_uniform_args_tuple<std::tuple<Args...>> {
+    static constexpr bool value = are_types_same<Args ...>::value;
+};
 
 ///////////////////////////////////////////////////////////////////////////////
 
@@ -113,17 +138,30 @@ typename std::enable_if<is_std_container<T>::value, T>::type print_ip(T value) {
     return value;
 }
 
-//template <typename T>
-//void print_ip(typename std::enable_if<is_std_tuple<T>::value, T>::type value) {
+///////////////////////////////////////////////////////////////////////////////
 
-//    print_item("", std::get<0>(value));
-//    constexpr size_t t_size = std::tuple_size<T>::value;
+/*! Prints tuple of any size. */
+template <class Tuple, size_t n>
+struct tupple_printer {
+    static void print(const Tuple & t, const std::string & delimeter_str = ", ") {
+        tupple_printer<Tuple, n - 1>::print(t, delimeter_str);
+        std::cout << delimeter_str << std::get<n - 1>(t);
+    }
+};
 
-////    for (size_t i = 1; i <= t_size; ++i) {
-////        print_item(".", std::get<i>(value));
-////    }
-//    std::cout << std::endl;
-//}
+template <class Tuple>
+struct tupple_printer <Tuple, 1> {
+    static void print(const Tuple & t, const std::string & ) {
+        std::cout << std::get<0>(t);
+    }
+};
+
+template <typename T>
+typename std::enable_if<is_uniform_args_tuple<T>::value, T>::type print_ip(T value) {
+
+    tupple_printer<T, std::tuple_size<T>::value>::print(value, std::string("."));
+    std::cout << std::endl;
+}
 
 #endif // _PRINT_IP_04_H_
 
