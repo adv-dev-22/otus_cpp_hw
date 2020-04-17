@@ -1,0 +1,86 @@
+\hypertarget{classMultiThreadDataServer}{}\section{Multi\+Thread\+Data\+Server Class Reference}
+\label{classMultiThreadDataServer}\index{Multi\+Thread\+Data\+Server@{Multi\+Thread\+Data\+Server}}
+
+
+{\ttfamily \#include $<$mlt\+\_\+thr\+\_\+data\+\_\+server.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classMultiThreadDataServer_a614668c4111e4c4c65d86847d7ce448a}{Multi\+Thread\+Data\+Server} ()
+\item 
+virtual \hyperlink{classMultiThreadDataServer_a2f8821939b088372702fc5282d9c7d56}{$\sim$\+Multi\+Thread\+Data\+Server} ()
+\item 
+void \hyperlink{classMultiThreadDataServer_a6e347641cb63e8bce6d65d74c37849a7}{set\+\_\+buffer\+\_\+size} (const size\+\_\+t bsz)
+\item 
+void \hyperlink{classMultiThreadDataServer_a76eccc6978541af924a14f03d9d5b556}{set\+\_\+worker\+\_\+loop\+\_\+size} (const size\+\_\+t lsz)
+\item 
+size\+\_\+t \hyperlink{classMultiThreadDataServer_a86df4d28e4f35206b67a9c4e20b98649}{worker\+\_\+loop\+\_\+size} () const 
+\item 
+void \hyperlink{classMultiThreadDataServer_a46f7d9884de27f9a5427ea7a6b950c0a}{push} (const std\+::string msg, const size\+\_\+t ms)
+\item 
+void \hyperlink{classMultiThreadDataServer_a6b6020d24aec2aff2bbf8ed9420c0f91}{pop} (const std\+::string msg, const size\+\_\+t ms)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Multi\+Thread\+Data\+Server@{Multi\+Thread\+Data\+Server}!Multi\+Thread\+Data\+Server@{Multi\+Thread\+Data\+Server}}
+\index{Multi\+Thread\+Data\+Server@{Multi\+Thread\+Data\+Server}!Multi\+Thread\+Data\+Server@{Multi\+Thread\+Data\+Server}}
+\subsubsection[{\texorpdfstring{Multi\+Thread\+Data\+Server()}{MultiThreadDataServer()}}]{\setlength{\rightskip}{0pt plus 5cm}Multi\+Thread\+Data\+Server\+::\+Multi\+Thread\+Data\+Server (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classMultiThreadDataServer_a614668c4111e4c4c65d86847d7ce448a}{}\label{classMultiThreadDataServer_a614668c4111e4c4c65d86847d7ce448a}
+\index{Multi\+Thread\+Data\+Server@{Multi\+Thread\+Data\+Server}!````~Multi\+Thread\+Data\+Server@{$\sim$\+Multi\+Thread\+Data\+Server}}
+\index{````~Multi\+Thread\+Data\+Server@{$\sim$\+Multi\+Thread\+Data\+Server}!Multi\+Thread\+Data\+Server@{Multi\+Thread\+Data\+Server}}
+\subsubsection[{\texorpdfstring{$\sim$\+Multi\+Thread\+Data\+Server()}{~MultiThreadDataServer()}}]{\setlength{\rightskip}{0pt plus 5cm}Multi\+Thread\+Data\+Server\+::$\sim$\+Multi\+Thread\+Data\+Server (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classMultiThreadDataServer_a2f8821939b088372702fc5282d9c7d56}{}\label{classMultiThreadDataServer_a2f8821939b088372702fc5282d9c7d56}
+
+
+\subsection{Member Function Documentation}
+\index{Multi\+Thread\+Data\+Server@{Multi\+Thread\+Data\+Server}!pop@{pop}}
+\index{pop@{pop}!Multi\+Thread\+Data\+Server@{Multi\+Thread\+Data\+Server}}
+\subsubsection[{\texorpdfstring{pop(const std\+::string msg, const size\+\_\+t ms)}{pop(const std::string msg, const size_t ms)}}]{\setlength{\rightskip}{0pt plus 5cm}void Multi\+Thread\+Data\+Server\+::pop (
+\begin{DoxyParamCaption}
+\item[{const std\+::string}]{msg, }
+\item[{const size\+\_\+t}]{ms}
+\end{DoxyParamCaption}
+)}\hypertarget{classMultiThreadDataServer_a6b6020d24aec2aff2bbf8ed9420c0f91}{}\label{classMultiThreadDataServer_a6b6020d24aec2aff2bbf8ed9420c0f91}
+\index{Multi\+Thread\+Data\+Server@{Multi\+Thread\+Data\+Server}!push@{push}}
+\index{push@{push}!Multi\+Thread\+Data\+Server@{Multi\+Thread\+Data\+Server}}
+\subsubsection[{\texorpdfstring{push(const std\+::string msg, const size\+\_\+t ms)}{push(const std::string msg, const size_t ms)}}]{\setlength{\rightskip}{0pt plus 5cm}void Multi\+Thread\+Data\+Server\+::push (
+\begin{DoxyParamCaption}
+\item[{const std\+::string}]{msg, }
+\item[{const size\+\_\+t}]{ms}
+\end{DoxyParamCaption}
+)}\hypertarget{classMultiThreadDataServer_a46f7d9884de27f9a5427ea7a6b950c0a}{}\label{classMultiThreadDataServer_a46f7d9884de27f9a5427ea7a6b950c0a}
+\index{Multi\+Thread\+Data\+Server@{Multi\+Thread\+Data\+Server}!set\+\_\+buffer\+\_\+size@{set\+\_\+buffer\+\_\+size}}
+\index{set\+\_\+buffer\+\_\+size@{set\+\_\+buffer\+\_\+size}!Multi\+Thread\+Data\+Server@{Multi\+Thread\+Data\+Server}}
+\subsubsection[{\texorpdfstring{set\+\_\+buffer\+\_\+size(const size\+\_\+t bsz)}{set_buffer_size(const size_t bsz)}}]{\setlength{\rightskip}{0pt plus 5cm}void Multi\+Thread\+Data\+Server\+::set\+\_\+buffer\+\_\+size (
+\begin{DoxyParamCaption}
+\item[{const size\+\_\+t}]{bsz}
+\end{DoxyParamCaption}
+)}\hypertarget{classMultiThreadDataServer_a6e347641cb63e8bce6d65d74c37849a7}{}\label{classMultiThreadDataServer_a6e347641cb63e8bce6d65d74c37849a7}
+\index{Multi\+Thread\+Data\+Server@{Multi\+Thread\+Data\+Server}!set\+\_\+worker\+\_\+loop\+\_\+size@{set\+\_\+worker\+\_\+loop\+\_\+size}}
+\index{set\+\_\+worker\+\_\+loop\+\_\+size@{set\+\_\+worker\+\_\+loop\+\_\+size}!Multi\+Thread\+Data\+Server@{Multi\+Thread\+Data\+Server}}
+\subsubsection[{\texorpdfstring{set\+\_\+worker\+\_\+loop\+\_\+size(const size\+\_\+t lsz)}{set_worker_loop_size(const size_t lsz)}}]{\setlength{\rightskip}{0pt plus 5cm}void Multi\+Thread\+Data\+Server\+::set\+\_\+worker\+\_\+loop\+\_\+size (
+\begin{DoxyParamCaption}
+\item[{const size\+\_\+t}]{lsz}
+\end{DoxyParamCaption}
+)}\hypertarget{classMultiThreadDataServer_a76eccc6978541af924a14f03d9d5b556}{}\label{classMultiThreadDataServer_a76eccc6978541af924a14f03d9d5b556}
+\index{Multi\+Thread\+Data\+Server@{Multi\+Thread\+Data\+Server}!worker\+\_\+loop\+\_\+size@{worker\+\_\+loop\+\_\+size}}
+\index{worker\+\_\+loop\+\_\+size@{worker\+\_\+loop\+\_\+size}!Multi\+Thread\+Data\+Server@{Multi\+Thread\+Data\+Server}}
+\subsubsection[{\texorpdfstring{worker\+\_\+loop\+\_\+size() const }{worker_loop_size() const }}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t Multi\+Thread\+Data\+Server\+::worker\+\_\+loop\+\_\+size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classMultiThreadDataServer_a86df4d28e4f35206b67a9c4e20b98649}{}\label{classMultiThreadDataServer_a86df4d28e4f35206b67a9c4e20b98649}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+multithread\+\_\+pc/\hyperlink{mlt__thr__data__server_8h}{mlt\+\_\+thr\+\_\+data\+\_\+server.\+h}\item 
+multithread\+\_\+pc/\hyperlink{mlt__thr__data__server_8cpp}{mlt\+\_\+thr\+\_\+data\+\_\+server.\+cpp}\end{DoxyCompactItemize}

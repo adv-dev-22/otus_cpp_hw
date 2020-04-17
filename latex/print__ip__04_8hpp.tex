@@ -1,0 +1,107 @@
+\hypertarget{print__ip__04_8hpp}{}\section{04\+\_\+sfinae/print\+\_\+ip\+\_\+04.hpp File Reference}
+\label{print__ip__04_8hpp}\index{04\+\_\+sfinae/print\+\_\+ip\+\_\+04.\+hpp@{04\+\_\+sfinae/print\+\_\+ip\+\_\+04.\+hpp}}
+{\ttfamily \#include $<$type\+\_\+traits$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$list$>$}\\*
+{\ttfamily \#include $<$tuple$>$}\\*
+{\ttfamily \#include $<$bitset$>$}\\*
+{\ttfamily \#include $<$cstdint$>$}\\*
+Include dependency graph for print\+\_\+ip\+\_\+04.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{print__ip__04_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{print__ip__04_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structis__std__string}{is\+\_\+std\+\_\+string$<$ T $>$}
+\item 
+struct \hyperlink{structis__std__string_3_01std_1_1string_01_4}{is\+\_\+std\+\_\+string$<$ std\+::string $>$}
+\item 
+struct \hyperlink{structis__std__container}{is\+\_\+std\+\_\+container$<$ T $>$}
+\item 
+struct \hyperlink{structis__std__container_3_01std_1_1vector_3_01T_01_4_01_4}{is\+\_\+std\+\_\+container$<$ std\+::vector$<$ T $>$ $>$}
+\item 
+struct \hyperlink{structis__std__container_3_01std_1_1list_3_01T_01_4_01_4}{is\+\_\+std\+\_\+container$<$ std\+::list$<$ T $>$ $>$}
+\item 
+struct \hyperlink{structare__types__same}{are\+\_\+types\+\_\+same$<$ Args $>$}
+\item 
+struct \hyperlink{structare__types__same_3_4}{are\+\_\+types\+\_\+same$<$$>$}
+\item 
+struct \hyperlink{structare__types__same_3_01T_01_4}{are\+\_\+types\+\_\+same$<$ T $>$}
+\item 
+struct \hyperlink{structare__types__same_3_01T_00_01U_00_01Args_8_8_8_01_4}{are\+\_\+types\+\_\+same$<$ T, U, Args... $>$}
+\item 
+struct \hyperlink{structis__uniform__args__tuple}{is\+\_\+uniform\+\_\+args\+\_\+tuple$<$ T $>$}
+\item 
+struct \hyperlink{structis__uniform__args__tuple_3_01std_1_1tuple_3_01Args_8_8_8_01_4_01_4}{is\+\_\+uniform\+\_\+args\+\_\+tuple$<$ std\+::tuple$<$ Args... $>$ $>$}
+\item 
+struct \hyperlink{structtupple__printer}{tupple\+\_\+printer$<$ Tuple, n $>$}
+\item 
+struct \hyperlink{structtupple__printer_3_01Tuple_00_011_01_4}{tupple\+\_\+printer$<$ Tuple, 1 $>$}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \hyperlink{print__ip__04_8hpp_a47fd58ec6c1ddc652352838383b380ff}{print\+\_\+item} (const std\+::string \&msg, const T item)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::enable\+\_\+if$<$ std\+::is\+\_\+integral$<$ T $>$\+::value, T $>$\+::type \hyperlink{print__ip__04_8hpp_a45be38d8c2df09aa103b97e5925fc7b2}{print\+\_\+ip} (T value)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::enable\+\_\+if$<$ \hyperlink{structis__std__string}{is\+\_\+std\+\_\+string}$<$ T $>$\+::value, T $>$\+::type \hyperlink{print__ip__04_8hpp_aa8515b28dac29decc4cf49c1884d8736}{print\+\_\+ip} (T value)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::enable\+\_\+if$<$ \hyperlink{structis__std__container}{is\+\_\+std\+\_\+container}$<$ T $>$\+::value, T $>$\+::type \hyperlink{print__ip__04_8hpp_ace42651894778994f10c54654ffd327e}{print\+\_\+ip} (T value)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::enable\+\_\+if$<$ \hyperlink{structis__uniform__args__tuple}{is\+\_\+uniform\+\_\+args\+\_\+tuple}$<$ T $>$\+::value, T $>$\+::type \hyperlink{print__ip__04_8hpp_a7f8cd2f2b3eedebf8d78cdc41fbe8b61}{print\+\_\+ip} (T value)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{print\+\_\+ip\+\_\+04.\+hpp@{print\+\_\+ip\+\_\+04.\+hpp}!print\+\_\+ip@{print\+\_\+ip}}
+\index{print\+\_\+ip@{print\+\_\+ip}!print\+\_\+ip\+\_\+04.\+hpp@{print\+\_\+ip\+\_\+04.\+hpp}}
+\subsubsection[{\texorpdfstring{print\+\_\+ip(\+T value)}{print_ip(T value)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ std\+::enable\+\_\+if$<$std\+::is\+\_\+integral$<$T$>$\+::value, T$>$\+::type print\+\_\+ip (
+\begin{DoxyParamCaption}
+\item[{T}]{value}
+\end{DoxyParamCaption}
+)}\hypertarget{print__ip__04_8hpp_a45be38d8c2df09aa103b97e5925fc7b2}{}\label{print__ip__04_8hpp_a45be38d8c2df09aa103b97e5925fc7b2}
+\index{print\+\_\+ip\+\_\+04.\+hpp@{print\+\_\+ip\+\_\+04.\+hpp}!print\+\_\+ip@{print\+\_\+ip}}
+\index{print\+\_\+ip@{print\+\_\+ip}!print\+\_\+ip\+\_\+04.\+hpp@{print\+\_\+ip\+\_\+04.\+hpp}}
+\subsubsection[{\texorpdfstring{print\+\_\+ip(\+T value)}{print_ip(T value)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ std\+::enable\+\_\+if$<${\bf is\+\_\+std\+\_\+string}$<$T$>$\+::value, T$>$\+::type print\+\_\+ip (
+\begin{DoxyParamCaption}
+\item[{T}]{value}
+\end{DoxyParamCaption}
+)}\hypertarget{print__ip__04_8hpp_aa8515b28dac29decc4cf49c1884d8736}{}\label{print__ip__04_8hpp_aa8515b28dac29decc4cf49c1884d8736}
+\index{print\+\_\+ip\+\_\+04.\+hpp@{print\+\_\+ip\+\_\+04.\+hpp}!print\+\_\+ip@{print\+\_\+ip}}
+\index{print\+\_\+ip@{print\+\_\+ip}!print\+\_\+ip\+\_\+04.\+hpp@{print\+\_\+ip\+\_\+04.\+hpp}}
+\subsubsection[{\texorpdfstring{print\+\_\+ip(\+T value)}{print_ip(T value)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ std\+::enable\+\_\+if$<${\bf is\+\_\+std\+\_\+container}$<$T$>$\+::value, T$>$\+::type print\+\_\+ip (
+\begin{DoxyParamCaption}
+\item[{T}]{value}
+\end{DoxyParamCaption}
+)}\hypertarget{print__ip__04_8hpp_ace42651894778994f10c54654ffd327e}{}\label{print__ip__04_8hpp_ace42651894778994f10c54654ffd327e}
+\index{print\+\_\+ip\+\_\+04.\+hpp@{print\+\_\+ip\+\_\+04.\+hpp}!print\+\_\+ip@{print\+\_\+ip}}
+\index{print\+\_\+ip@{print\+\_\+ip}!print\+\_\+ip\+\_\+04.\+hpp@{print\+\_\+ip\+\_\+04.\+hpp}}
+\subsubsection[{\texorpdfstring{print\+\_\+ip(\+T value)}{print_ip(T value)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ std\+::enable\+\_\+if$<${\bf is\+\_\+uniform\+\_\+args\+\_\+tuple}$<$T$>$\+::value, T$>$\+::type print\+\_\+ip (
+\begin{DoxyParamCaption}
+\item[{T}]{value}
+\end{DoxyParamCaption}
+)}\hypertarget{print__ip__04_8hpp_a7f8cd2f2b3eedebf8d78cdc41fbe8b61}{}\label{print__ip__04_8hpp_a7f8cd2f2b3eedebf8d78cdc41fbe8b61}
+\index{print\+\_\+ip\+\_\+04.\+hpp@{print\+\_\+ip\+\_\+04.\+hpp}!print\+\_\+item@{print\+\_\+item}}
+\index{print\+\_\+item@{print\+\_\+item}!print\+\_\+ip\+\_\+04.\+hpp@{print\+\_\+ip\+\_\+04.\+hpp}}
+\subsubsection[{\texorpdfstring{print\+\_\+item(const std\+::string \&msg, const T item)}{print_item(const std::string &msg, const T item)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void print\+\_\+item (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{msg, }
+\item[{const T}]{item}
+\end{DoxyParamCaption}
+)}\hypertarget{print__ip__04_8hpp_a47fd58ec6c1ddc652352838383b380ff}{}\label{print__ip__04_8hpp_a47fd58ec6c1ddc652352838383b380ff}

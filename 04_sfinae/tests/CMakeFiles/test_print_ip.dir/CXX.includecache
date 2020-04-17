@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/travis/build/adv-dev-22/otus_cpp_hw/04_sfinae/print_ip_04.hpp
+type_traits
+-
+iostream
+-
+string
+-
+vector
+-
+list
+-
+tuple
+-
+bitset
+-
+cstdint
+-
+
+/home/travis/build/adv-dev-22/otus_cpp_hw/04_sfinae/tests/test_print_ip.cpp
+../print_ip_04.hpp
+/home/travis/build/adv-dev-22/otus_cpp_hw/04_sfinae/print_ip_04.hpp
+gtest/gtest.h
+-
+iostream
+-
+memory
+-
+

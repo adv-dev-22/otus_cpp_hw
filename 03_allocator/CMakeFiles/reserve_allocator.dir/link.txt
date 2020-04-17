@@ -1,0 +1,1 @@
+/usr/bin/g++     CMakeFiles/reserve_allocator.dir/main_allocator.cpp.o  -o reserve_allocator 

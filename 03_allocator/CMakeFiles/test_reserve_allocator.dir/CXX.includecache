@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/travis/build/adv-dev-22/otus_cpp_hw/03_allocator/fixed_sz_allocator.hpp
+array
+-
+string
+-
+exception
+-
+iostream
+-
+
+/home/travis/build/adv-dev-22/otus_cpp_hw/03_allocator/test_allocator.cpp
+fixed_sz_allocator.hpp
+/home/travis/build/adv-dev-22/otus_cpp_hw/03_allocator/fixed_sz_allocator.hpp
+gtest/gtest.h
+-
+iostream
+-
+

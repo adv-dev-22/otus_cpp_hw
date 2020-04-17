@@ -1,0 +1,117 @@
+\hypertarget{classreserve__allocator}{}\section{reserve\+\_\+allocator$<$ T, n $>$ Class Template Reference}
+\label{classreserve__allocator}\index{reserve\+\_\+allocator$<$ T, n $>$@{reserve\+\_\+allocator$<$ T, n $>$}}
+
+
+{\ttfamily \#include $<$fixed\+\_\+sz\+\_\+allocator.\+hpp$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structreserve__allocator_1_1rebind}{rebind}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \hyperlink{classreserve__allocator_a594a205f33e6b52110f5516b11d584f6}{value\+\_\+type} = T
+\item 
+using \hyperlink{classreserve__allocator_a5381e084c053670fcbcc13f1a8724a75}{pointer} = T $\ast$
+\item 
+using \hyperlink{classreserve__allocator_a258a73c5b6817b44358fab32cc8f37f4}{const\+\_\+pointer} = const T $\ast$
+\item 
+using \hyperlink{classreserve__allocator_a260b28f64b11d2c4af92d685343e074c}{reference} = T \&
+\item 
+using \hyperlink{classreserve__allocator_a6e81b567aee2879382a0baebba111c2a}{const\+\_\+reference} = const T \&
+\item 
+using \hyperlink{classreserve__allocator_acaf9251a99c55feadccf2bb894db4f4f}{size\+\_\+type} = std\+::size\+\_\+t
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classreserve__allocator_a6e20af249475b4b876cb50f6c180c4a9}{reserve\+\_\+allocator} ()
+\item 
+virtual \hyperlink{classreserve__allocator_aa2a6cb73017c9f2a24153c4c0fc3d7ea}{$\sim$reserve\+\_\+allocator} ()=default
+\item 
+T $\ast$ \hyperlink{classreserve__allocator_a499b48726cad65f443ed3bb7dd0268f2}{allocate} (const size\+\_\+t m)
+\item 
+void \hyperlink{classreserve__allocator_a9a3fc0c98cd6381e926a2a735c4cbb68}{deallocate} (T $\ast$ptr, const size\+\_\+t m)
+\item 
+{\footnotesize template$<$typename U , typename... Args$>$ }\\void \hyperlink{classreserve__allocator_a2d05e7ee613d9f22ace630d3a48a0930}{construct} (U $\ast$ptr, Args \&\&...args)
+\item 
+{\footnotesize template$<$typename U $>$ }\\void \hyperlink{classreserve__allocator_a0e036e2fe862aec6878d418cd3380c11}{destroy} (U $\ast$ptr)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Typedef Documentation}
+\index{reserve\+\_\+allocator@{reserve\+\_\+allocator}!const\+\_\+pointer@{const\+\_\+pointer}}
+\index{const\+\_\+pointer@{const\+\_\+pointer}!reserve\+\_\+allocator@{reserve\+\_\+allocator}}
+\subsubsection[{\texorpdfstring{const\+\_\+pointer}{const_pointer}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T, size\+\_\+t n$>$ using {\bf reserve\+\_\+allocator}$<$ T, n $>$\+::{\bf const\+\_\+pointer} =  const T $\ast$}\hypertarget{classreserve__allocator_a258a73c5b6817b44358fab32cc8f37f4}{}\label{classreserve__allocator_a258a73c5b6817b44358fab32cc8f37f4}
+\index{reserve\+\_\+allocator@{reserve\+\_\+allocator}!const\+\_\+reference@{const\+\_\+reference}}
+\index{const\+\_\+reference@{const\+\_\+reference}!reserve\+\_\+allocator@{reserve\+\_\+allocator}}
+\subsubsection[{\texorpdfstring{const\+\_\+reference}{const_reference}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T, size\+\_\+t n$>$ using {\bf reserve\+\_\+allocator}$<$ T, n $>$\+::{\bf const\+\_\+reference} =  const T \&}\hypertarget{classreserve__allocator_a6e81b567aee2879382a0baebba111c2a}{}\label{classreserve__allocator_a6e81b567aee2879382a0baebba111c2a}
+\index{reserve\+\_\+allocator@{reserve\+\_\+allocator}!pointer@{pointer}}
+\index{pointer@{pointer}!reserve\+\_\+allocator@{reserve\+\_\+allocator}}
+\subsubsection[{\texorpdfstring{pointer}{pointer}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T, size\+\_\+t n$>$ using {\bf reserve\+\_\+allocator}$<$ T, n $>$\+::{\bf pointer} =  T $\ast$}\hypertarget{classreserve__allocator_a5381e084c053670fcbcc13f1a8724a75}{}\label{classreserve__allocator_a5381e084c053670fcbcc13f1a8724a75}
+\index{reserve\+\_\+allocator@{reserve\+\_\+allocator}!reference@{reference}}
+\index{reference@{reference}!reserve\+\_\+allocator@{reserve\+\_\+allocator}}
+\subsubsection[{\texorpdfstring{reference}{reference}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T, size\+\_\+t n$>$ using {\bf reserve\+\_\+allocator}$<$ T, n $>$\+::{\bf reference} =  T \&}\hypertarget{classreserve__allocator_a260b28f64b11d2c4af92d685343e074c}{}\label{classreserve__allocator_a260b28f64b11d2c4af92d685343e074c}
+\index{reserve\+\_\+allocator@{reserve\+\_\+allocator}!size\+\_\+type@{size\+\_\+type}}
+\index{size\+\_\+type@{size\+\_\+type}!reserve\+\_\+allocator@{reserve\+\_\+allocator}}
+\subsubsection[{\texorpdfstring{size\+\_\+type}{size_type}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T, size\+\_\+t n$>$ using {\bf reserve\+\_\+allocator}$<$ T, n $>$\+::{\bf size\+\_\+type} =  std\+::size\+\_\+t}\hypertarget{classreserve__allocator_acaf9251a99c55feadccf2bb894db4f4f}{}\label{classreserve__allocator_acaf9251a99c55feadccf2bb894db4f4f}
+\index{reserve\+\_\+allocator@{reserve\+\_\+allocator}!value\+\_\+type@{value\+\_\+type}}
+\index{value\+\_\+type@{value\+\_\+type}!reserve\+\_\+allocator@{reserve\+\_\+allocator}}
+\subsubsection[{\texorpdfstring{value\+\_\+type}{value_type}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T, size\+\_\+t n$>$ using {\bf reserve\+\_\+allocator}$<$ T, n $>$\+::{\bf value\+\_\+type} =  T}\hypertarget{classreserve__allocator_a594a205f33e6b52110f5516b11d584f6}{}\label{classreserve__allocator_a594a205f33e6b52110f5516b11d584f6}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{reserve\+\_\+allocator@{reserve\+\_\+allocator}!reserve\+\_\+allocator@{reserve\+\_\+allocator}}
+\index{reserve\+\_\+allocator@{reserve\+\_\+allocator}!reserve\+\_\+allocator@{reserve\+\_\+allocator}}
+\subsubsection[{\texorpdfstring{reserve\+\_\+allocator()}{reserve_allocator()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T , size\+\_\+t n$>$ {\bf reserve\+\_\+allocator}$<$ T, n $>$\+::{\bf reserve\+\_\+allocator} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classreserve__allocator_a6e20af249475b4b876cb50f6c180c4a9}{}\label{classreserve__allocator_a6e20af249475b4b876cb50f6c180c4a9}
+\index{reserve\+\_\+allocator@{reserve\+\_\+allocator}!````~reserve\+\_\+allocator@{$\sim$reserve\+\_\+allocator}}
+\index{````~reserve\+\_\+allocator@{$\sim$reserve\+\_\+allocator}!reserve\+\_\+allocator@{reserve\+\_\+allocator}}
+\subsubsection[{\texorpdfstring{$\sim$reserve\+\_\+allocator()=default}{~reserve_allocator()=default}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T, size\+\_\+t n$>$ virtual {\bf reserve\+\_\+allocator}$<$ T, n $>$\+::$\sim${\bf reserve\+\_\+allocator} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}\hypertarget{classreserve__allocator_aa2a6cb73017c9f2a24153c4c0fc3d7ea}{}\label{classreserve__allocator_aa2a6cb73017c9f2a24153c4c0fc3d7ea}
+
+
+\subsection{Member Function Documentation}
+\index{reserve\+\_\+allocator@{reserve\+\_\+allocator}!allocate@{allocate}}
+\index{allocate@{allocate}!reserve\+\_\+allocator@{reserve\+\_\+allocator}}
+\subsubsection[{\texorpdfstring{allocate(const size\+\_\+t m)}{allocate(const size_t m)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T , size\+\_\+t n$>$ T $\ast$ {\bf reserve\+\_\+allocator}$<$ T, n $>$\+::allocate (
+\begin{DoxyParamCaption}
+\item[{const size\+\_\+t}]{m}
+\end{DoxyParamCaption}
+)}\hypertarget{classreserve__allocator_a499b48726cad65f443ed3bb7dd0268f2}{}\label{classreserve__allocator_a499b48726cad65f443ed3bb7dd0268f2}
+\index{reserve\+\_\+allocator@{reserve\+\_\+allocator}!construct@{construct}}
+\index{construct@{construct}!reserve\+\_\+allocator@{reserve\+\_\+allocator}}
+\subsubsection[{\texorpdfstring{construct(\+U $\ast$ptr, Args \&\&...\+args)}{construct(U *ptr, Args &&...args)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T , size\+\_\+t n$>$ template$<$typename U , typename... Args$>$ void {\bf reserve\+\_\+allocator}$<$ T, n $>$\+::construct (
+\begin{DoxyParamCaption}
+\item[{U $\ast$}]{ptr, }
+\item[{Args \&\&...}]{args}
+\end{DoxyParamCaption}
+)}\hypertarget{classreserve__allocator_a2d05e7ee613d9f22ace630d3a48a0930}{}\label{classreserve__allocator_a2d05e7ee613d9f22ace630d3a48a0930}
+\index{reserve\+\_\+allocator@{reserve\+\_\+allocator}!deallocate@{deallocate}}
+\index{deallocate@{deallocate}!reserve\+\_\+allocator@{reserve\+\_\+allocator}}
+\subsubsection[{\texorpdfstring{deallocate(\+T $\ast$ptr, const size\+\_\+t m)}{deallocate(T *ptr, const size_t m)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T , size\+\_\+t n$>$ void {\bf reserve\+\_\+allocator}$<$ T, n $>$\+::deallocate (
+\begin{DoxyParamCaption}
+\item[{T $\ast$}]{ptr, }
+\item[{const size\+\_\+t}]{m}
+\end{DoxyParamCaption}
+)}\hypertarget{classreserve__allocator_a9a3fc0c98cd6381e926a2a735c4cbb68}{}\label{classreserve__allocator_a9a3fc0c98cd6381e926a2a735c4cbb68}
+\index{reserve\+\_\+allocator@{reserve\+\_\+allocator}!destroy@{destroy}}
+\index{destroy@{destroy}!reserve\+\_\+allocator@{reserve\+\_\+allocator}}
+\subsubsection[{\texorpdfstring{destroy(\+U $\ast$ptr)}{destroy(U *ptr)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T , size\+\_\+t n$>$ template$<$typename U $>$ void {\bf reserve\+\_\+allocator}$<$ T, n $>$\+::destroy (
+\begin{DoxyParamCaption}
+\item[{U $\ast$}]{ptr}
+\end{DoxyParamCaption}
+)}\hypertarget{classreserve__allocator_a0e036e2fe862aec6878d418cd3380c11}{}\label{classreserve__allocator_a0e036e2fe862aec6878d418cd3380c11}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+03\+\_\+allocator/\hyperlink{fixed__sz__allocator_8hpp}{fixed\+\_\+sz\+\_\+allocator.\+hpp}\end{DoxyCompactItemize}

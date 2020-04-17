@@ -1,0 +1,92 @@
+\hypertarget{cstm__pair_8hpp}{}\section{02\+\_\+tuple/cstm\+\_\+pair.hpp File Reference}
+\label{cstm__pair_8hpp}\index{02\+\_\+tuple/cstm\+\_\+pair.\+hpp@{02\+\_\+tuple/cstm\+\_\+pair.\+hpp}}
+{\ttfamily \#include $<$algorithm$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$type\+\_\+traits$>$}\\*
+Include dependency graph for cstm\+\_\+pair.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{cstm__pair_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{cstm__pair_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classCustomPair}{Custom\+Pair$<$ T1, U2 $>$}
+\item 
+class \hyperlink{classCustomPair_3_01T1_01_6_00_01U2_01_6_01_4}{Custom\+Pair$<$ T1 \&, U2 \& $>$}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T1 , typename U2 $>$ }\\std\+::ostream \& \hyperlink{cstm__pair_8hpp_a9e995341e5de1cd5b91e01ca94b519c4}{operator$<$$<$} (std\+::ostream \&os, const \hyperlink{classCustomPair}{Custom\+Pair}$<$ T1, U2 $>$ \&rhs\+\_\+pr)
+\item 
+{\footnotesize template$<$std\+::size\+\_\+t n, typename T1 , typename U2 $>$ }\\std\+::enable\+\_\+if$<$ n==0, T1 $>$\+::type \& \hyperlink{cstm__pair_8hpp_aefe0ca04fd4eca3c7e2e7629d28786eb}{get} (\hyperlink{classCustomPair}{Custom\+Pair}$<$ T1, U2 $>$ \&cstm\+\_\+pair)
+\item 
+{\footnotesize template$<$std\+::size\+\_\+t n, typename T1 , typename U2 $>$ }\\std\+::enable\+\_\+if$<$ n==1, U2 $>$\+::type \& \hyperlink{cstm__pair_8hpp_a97080eade9568466123a90d375487f2f}{get} (\hyperlink{classCustomPair}{Custom\+Pair}$<$ T1, U2 $>$ \&cstm\+\_\+pair)
+\item 
+{\footnotesize template$<$typename T1 , typename U2 $>$ }\\std\+::ostream \& \hyperlink{cstm__pair_8hpp_aa7814abf8ff90cf37d6a8c538977263e}{operator$<$$<$} (std\+::ostream \&os, const \hyperlink{classCustomPair}{Custom\+Pair}$<$ T1 \&, U2 \& $>$ \&rhs\+\_\+pr)
+\item 
+{\footnotesize template$<$typename T1 , typename U2 $>$ }\\\hyperlink{classCustomPair}{Custom\+Pair}$<$ T1 \&, U2 \& $>$ \hyperlink{cstm__pair_8hpp_a77134479457c9e9914f95c32359b4ac0}{custom\+\_\+tie} (T1 \&f, U2 \&s)
+\item 
+{\footnotesize template$<$typename T1 , typename U2 $>$ }\\\hyperlink{classCustomPair}{Custom\+Pair}$<$ T1, U2 $>$ \hyperlink{cstm__pair_8hpp_ac248ca822921e4d7885334626cb7e463}{make\+\_\+custom\+\_\+pair} (T1 f, U2 s)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{cstm\+\_\+pair.\+hpp@{cstm\+\_\+pair.\+hpp}!custom\+\_\+tie@{custom\+\_\+tie}}
+\index{custom\+\_\+tie@{custom\+\_\+tie}!cstm\+\_\+pair.\+hpp@{cstm\+\_\+pair.\+hpp}}
+\subsubsection[{\texorpdfstring{custom\+\_\+tie(\+T1 \&f, U2 \&s)}{custom_tie(T1 &f, U2 &s)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T1 , typename U2 $>$ {\bf Custom\+Pair}$<$ T1 \&, U2 \& $>$ custom\+\_\+tie (
+\begin{DoxyParamCaption}
+\item[{T1 \&}]{f, }
+\item[{U2 \&}]{s}
+\end{DoxyParamCaption}
+)}\hypertarget{cstm__pair_8hpp_a77134479457c9e9914f95c32359b4ac0}{}\label{cstm__pair_8hpp_a77134479457c9e9914f95c32359b4ac0}
+\index{cstm\+\_\+pair.\+hpp@{cstm\+\_\+pair.\+hpp}!get@{get}}
+\index{get@{get}!cstm\+\_\+pair.\+hpp@{cstm\+\_\+pair.\+hpp}}
+\subsubsection[{\texorpdfstring{get(\+Custom\+Pair$<$ T1, U2 $>$ \&cstm\+\_\+pair)}{get(CustomPair< T1, U2 > &cstm_pair)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$std\+::size\+\_\+t n, typename T1 , typename U2 $>$ std\+::enable\+\_\+if$<$ n==0, T1 $>$\+::type \& get (
+\begin{DoxyParamCaption}
+\item[{{\bf Custom\+Pair}$<$ T1, U2 $>$ \&}]{cstm\+\_\+pair}
+\end{DoxyParamCaption}
+)}\hypertarget{cstm__pair_8hpp_aefe0ca04fd4eca3c7e2e7629d28786eb}{}\label{cstm__pair_8hpp_aefe0ca04fd4eca3c7e2e7629d28786eb}
+\index{cstm\+\_\+pair.\+hpp@{cstm\+\_\+pair.\+hpp}!get@{get}}
+\index{get@{get}!cstm\+\_\+pair.\+hpp@{cstm\+\_\+pair.\+hpp}}
+\subsubsection[{\texorpdfstring{get(\+Custom\+Pair$<$ T1, U2 $>$ \&cstm\+\_\+pair)}{get(CustomPair< T1, U2 > &cstm_pair)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$std\+::size\+\_\+t n, typename T1 , typename U2 $>$ std\+::enable\+\_\+if$<$ n==1, U2 $>$\+::type \& get (
+\begin{DoxyParamCaption}
+\item[{{\bf Custom\+Pair}$<$ T1, U2 $>$ \&}]{cstm\+\_\+pair}
+\end{DoxyParamCaption}
+)}\hypertarget{cstm__pair_8hpp_a97080eade9568466123a90d375487f2f}{}\label{cstm__pair_8hpp_a97080eade9568466123a90d375487f2f}
+\index{cstm\+\_\+pair.\+hpp@{cstm\+\_\+pair.\+hpp}!make\+\_\+custom\+\_\+pair@{make\+\_\+custom\+\_\+pair}}
+\index{make\+\_\+custom\+\_\+pair@{make\+\_\+custom\+\_\+pair}!cstm\+\_\+pair.\+hpp@{cstm\+\_\+pair.\+hpp}}
+\subsubsection[{\texorpdfstring{make\+\_\+custom\+\_\+pair(\+T1 f, U2 s)}{make_custom_pair(T1 f, U2 s)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T1 , typename U2 $>$ {\bf Custom\+Pair}$<$T1, U2$>$ make\+\_\+custom\+\_\+pair (
+\begin{DoxyParamCaption}
+\item[{T1}]{f, }
+\item[{U2}]{s}
+\end{DoxyParamCaption}
+)}\hypertarget{cstm__pair_8hpp_ac248ca822921e4d7885334626cb7e463}{}\label{cstm__pair_8hpp_ac248ca822921e4d7885334626cb7e463}
+\index{cstm\+\_\+pair.\+hpp@{cstm\+\_\+pair.\+hpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!cstm\+\_\+pair.\+hpp@{cstm\+\_\+pair.\+hpp}}
+\subsubsection[{\texorpdfstring{operator$<$$<$(std\+::ostream \&os, const Custom\+Pair$<$ T1, U2 $>$ \&rhs\+\_\+pr)}{operator<<(std::ostream &os, const CustomPair< T1, U2 > &rhs_pr)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T1 , typename U2 $>$ std\+::ostream \& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{os, }
+\item[{const {\bf Custom\+Pair}$<$ T1, U2 $>$ \&}]{rhs\+\_\+pr}
+\end{DoxyParamCaption}
+)}\hypertarget{cstm__pair_8hpp_a9e995341e5de1cd5b91e01ca94b519c4}{}\label{cstm__pair_8hpp_a9e995341e5de1cd5b91e01ca94b519c4}
+\index{cstm\+\_\+pair.\+hpp@{cstm\+\_\+pair.\+hpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!cstm\+\_\+pair.\+hpp@{cstm\+\_\+pair.\+hpp}}
+\subsubsection[{\texorpdfstring{operator$<$$<$(std\+::ostream \&os, const Custom\+Pair$<$ T1 \&, U2 \& $>$ \&rhs\+\_\+pr)}{operator<<(std::ostream &os, const CustomPair< T1 &, U2 & > &rhs_pr)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T1 , typename U2 $>$ std\+::ostream \& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{os, }
+\item[{const {\bf Custom\+Pair}$<$ T1 \&, U2 \& $>$ \&}]{rhs\+\_\+pr}
+\end{DoxyParamCaption}
+)}\hypertarget{cstm__pair_8hpp_aa7814abf8ff90cf37d6a8c538977263e}{}\label{cstm__pair_8hpp_aa7814abf8ff90cf37d6a8c538977263e}

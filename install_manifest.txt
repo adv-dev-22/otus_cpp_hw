@@ -1,0 +1,8 @@
+/usr/bin/helloworld_cli
+/usr/bin/ip_processor
+/usr/bin/custom_pair_exmpl
+/usr/bin/custom_pair_exmpl_2
+/usr/bin/cstm_tuple_exmpl
+/usr/bin/ip_processor_rangesv3
+/usr/bin/reserve_allocator
+/usr/bin/print_ip

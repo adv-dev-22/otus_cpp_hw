@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/travis/build/adv-dev-22/otus_cpp_hw/02_tuple/cstm_pair.hpp
+algorithm
+-
+iostream
+-
+type_traits
+-
+
+/home/travis/build/adv-dev-22/otus_cpp_hw/02_tuple/cstm_pair_exmpl.cpp
+cstm_pair.hpp
+/home/travis/build/adv-dev-22/otus_cpp_hw/02_tuple/cstm_pair.hpp
+iostream
+-
+string
+-
+

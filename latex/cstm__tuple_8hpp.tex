@@ -1,0 +1,79 @@
+\hypertarget{cstm__tuple_8hpp}{}\section{02\+\_\+tuple/cstm\+\_\+tuple.hpp File Reference}
+\label{cstm__tuple_8hpp}\index{02\+\_\+tuple/cstm\+\_\+tuple.\+hpp@{02\+\_\+tuple/cstm\+\_\+tuple.\+hpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$cassert$>$}\\*
+{\ttfamily \#include $<$cstdint$>$}\\*
+{\ttfamily \#include $<$typeinfo$>$}\\*
+{\ttfamily \#include $<$cstddef$>$}\\*
+Include dependency graph for cstm\+\_\+tuple.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{cstm__tuple_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=215pt]{cstm__tuple_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structcustom__tuple}{custom\+\_\+tuple$<$ Types $>$}
+\item 
+struct \hyperlink{structcustom__tuple_3_01T_00_01Types_8_8_8_01_4}{custom\+\_\+tuple$<$ T, Types... $>$}
+\item 
+struct \hyperlink{structelem__type__holder}{elem\+\_\+type\+\_\+holder$<$ size\+\_\+t, typename $>$}
+\item 
+struct \hyperlink{structelem__type__holder_3_010_00_01custom__tuple_3_01T_00_01Ts_8_8_8_01_4_01_4}{elem\+\_\+type\+\_\+holder$<$ 0, custom\+\_\+tuple$<$ T, Ts... $>$ $>$}
+\item 
+struct \hyperlink{structelem__type__holder_3_01k_00_01custom__tuple_3_01T_00_01Ts_8_8_8_01_4_01_4}{elem\+\_\+type\+\_\+holder$<$ k, custom\+\_\+tuple$<$ T, Ts... $>$ $>$}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$size\+\_\+t k, typename... Types$>$ }\\std\+::enable\+\_\+if\+\_\+t$<$ k==0, typename \hyperlink{structelem__type__holder}{elem\+\_\+type\+\_\+holder}$<$ 0, \hyperlink{structcustom__tuple}{custom\+\_\+tuple}$<$ Types... $>$ $>$\+::type \& $>$ \hyperlink{cstm__tuple_8hpp_ace875a167aa434ff372f40dd99ac0694}{get} (\hyperlink{structcustom__tuple}{custom\+\_\+tuple}$<$ Types... $>$ \&ct)
+\item 
+{\footnotesize template$<$size\+\_\+t k, typename T , typename... Types$>$ }\\std\+::enable\+\_\+if\+\_\+t$<$ k!=0, typename \hyperlink{structelem__type__holder}{elem\+\_\+type\+\_\+holder}$<$ k, \hyperlink{structcustom__tuple}{custom\+\_\+tuple}$<$ T, Types... $>$ $>$\+::type \& $>$ \hyperlink{cstm__tuple_8hpp_aba451cbb702ef2407f373818725abcad}{get} (\hyperlink{structcustom__tuple}{custom\+\_\+tuple}$<$ T, Types... $>$ \&ct)
+\item 
+{\footnotesize template$<$typename... Types$>$ }\\auto \hyperlink{cstm__tuple_8hpp_aed4eda5a742f86f514dac3e022f8429d}{make\+\_\+custom\+\_\+tuple} (Types...\+args)
+\item 
+{\footnotesize template$<$typename... Types$>$ }\\auto \hyperlink{cstm__tuple_8hpp_a2afbfdeedd1bf8afc04f7849f4648f6c}{custom\+\_\+tie} (Types \&...args) noexcept
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{cstm\+\_\+tuple.\+hpp@{cstm\+\_\+tuple.\+hpp}!custom\+\_\+tie@{custom\+\_\+tie}}
+\index{custom\+\_\+tie@{custom\+\_\+tie}!cstm\+\_\+tuple.\+hpp@{cstm\+\_\+tuple.\+hpp}}
+\subsubsection[{\texorpdfstring{custom\+\_\+tie(\+Types \&...\+args) noexcept}{custom_tie(Types &...args) noexcept}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename... Types$>$ auto custom\+\_\+tie (
+\begin{DoxyParamCaption}
+\item[{Types \&...}]{args}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [noexcept]}}\hypertarget{cstm__tuple_8hpp_a2afbfdeedd1bf8afc04f7849f4648f6c}{}\label{cstm__tuple_8hpp_a2afbfdeedd1bf8afc04f7849f4648f6c}
+\index{cstm\+\_\+tuple.\+hpp@{cstm\+\_\+tuple.\+hpp}!get@{get}}
+\index{get@{get}!cstm\+\_\+tuple.\+hpp@{cstm\+\_\+tuple.\+hpp}}
+\subsubsection[{\texorpdfstring{get(custom\+\_\+tuple$<$ Types... $>$ \&ct)}{get(custom_tuple< Types... > &ct)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$size\+\_\+t k, typename... Types$>$ std\+::enable\+\_\+if\+\_\+t$<$k == 0, typename {\bf elem\+\_\+type\+\_\+holder}$<$0, {\bf custom\+\_\+tuple}$<$Types ... $>$ $>$\+::type\& $>$ get (
+\begin{DoxyParamCaption}
+\item[{{\bf custom\+\_\+tuple}$<$ Types... $>$ \&}]{ct}
+\end{DoxyParamCaption}
+)}\hypertarget{cstm__tuple_8hpp_ace875a167aa434ff372f40dd99ac0694}{}\label{cstm__tuple_8hpp_ace875a167aa434ff372f40dd99ac0694}
+\index{cstm\+\_\+tuple.\+hpp@{cstm\+\_\+tuple.\+hpp}!get@{get}}
+\index{get@{get}!cstm\+\_\+tuple.\+hpp@{cstm\+\_\+tuple.\+hpp}}
+\subsubsection[{\texorpdfstring{get(custom\+\_\+tuple$<$ T, Types... $>$ \&ct)}{get(custom_tuple< T, Types... > &ct)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$size\+\_\+t k, typename T , typename... Types$>$ std\+::enable\+\_\+if\+\_\+t$<$k != 0, typename {\bf elem\+\_\+type\+\_\+holder}$<$k, {\bf custom\+\_\+tuple}$<$T, Types ... $>$ $>$\+::type \& $>$ get (
+\begin{DoxyParamCaption}
+\item[{{\bf custom\+\_\+tuple}$<$ T, Types... $>$ \&}]{ct}
+\end{DoxyParamCaption}
+)}\hypertarget{cstm__tuple_8hpp_aba451cbb702ef2407f373818725abcad}{}\label{cstm__tuple_8hpp_aba451cbb702ef2407f373818725abcad}
+\index{cstm\+\_\+tuple.\+hpp@{cstm\+\_\+tuple.\+hpp}!make\+\_\+custom\+\_\+tuple@{make\+\_\+custom\+\_\+tuple}}
+\index{make\+\_\+custom\+\_\+tuple@{make\+\_\+custom\+\_\+tuple}!cstm\+\_\+tuple.\+hpp@{cstm\+\_\+tuple.\+hpp}}
+\subsubsection[{\texorpdfstring{make\+\_\+custom\+\_\+tuple(\+Types...\+args)}{make_custom_tuple(Types...args)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename... Types$>$ auto make\+\_\+custom\+\_\+tuple (
+\begin{DoxyParamCaption}
+\item[{Types...}]{args}
+\end{DoxyParamCaption}
+)}\hypertarget{cstm__tuple_8hpp_aed4eda5a742f86f514dac3e022f8429d}{}\label{cstm__tuple_8hpp_aed4eda5a742f86f514dac3e022f8429d}

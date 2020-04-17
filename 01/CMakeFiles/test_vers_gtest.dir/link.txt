@@ -1,0 +1,1 @@
+/usr/bin/g++    -rdynamic CMakeFiles/test_vers_gtest.dir/test_vers_gtest.cpp.o  -o test_vers_gtest /usr/lib/libgtest.a /usr/lib/libgtest_main.a libhw_version.a /usr/lib/libgtest.a -lpthread 

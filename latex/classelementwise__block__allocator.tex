@@ -1,0 +1,112 @@
+\hypertarget{classelementwise__block__allocator}{}\section{elementwise\+\_\+block\+\_\+allocator$<$ T $>$ Class Template Reference}
+\label{classelementwise__block__allocator}\index{elementwise\+\_\+block\+\_\+allocator$<$ T $>$@{elementwise\+\_\+block\+\_\+allocator$<$ T $>$}}
+
+
+{\ttfamily \#include $<$flexible\+\_\+allocator.\+hpp$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \hyperlink{classelementwise__block__allocator_aa2cd647e579b49a8640c13ff73fef25b}{value\+\_\+type} = T
+\item 
+using \hyperlink{classelementwise__block__allocator_af41c83aed240eb55e53155abdd714ec6}{pointer} = T $\ast$
+\item 
+using \hyperlink{classelementwise__block__allocator_a9382f12bfa2ba50e989f2f84216f44f1}{const\+\_\+pointer} = const T $\ast$
+\item 
+using \hyperlink{classelementwise__block__allocator_a7bfdf1ff6d23bcd486ef3c6541f738f2}{reference} = T \&
+\item 
+using \hyperlink{classelementwise__block__allocator_af7d02fdeb779527f9cc8723f8cebc40b}{const\+\_\+reference} = const T \&
+\item 
+using \hyperlink{classelementwise__block__allocator_a5a93e8060385c80ebaa62ec6e1b0d37e}{size\+\_\+type} = std\+::size\+\_\+t
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classelementwise__block__allocator_a8175b2d3ec243bd30a24aab1da8d6433}{elementwise\+\_\+block\+\_\+allocator} ()
+\item 
+virtual \hyperlink{classelementwise__block__allocator_a00e784cf4d72a47d3afc7a61dc6db98e}{$\sim$elementwise\+\_\+block\+\_\+allocator} ()=default
+\item 
+T $\ast$ \hyperlink{classelementwise__block__allocator_a244160f3cdc30a5cbe992b001da86cae}{allocate} (const size\+\_\+t n)
+\item 
+void \hyperlink{classelementwise__block__allocator_add41be398fcb515fec16622ff41e5f0f}{deallocate} (T $\ast$ptr, const size\+\_\+t n)
+\item 
+{\footnotesize template$<$typename U , typename... Args$>$ }\\void \hyperlink{classelementwise__block__allocator_a4826c3a40b3d5d9be3ab42191817f216}{construct} (U $\ast$ptr, Args \&\&...args)
+\item 
+{\footnotesize template$<$typename U $>$ }\\void \hyperlink{classelementwise__block__allocator_ae4e94b11ffdc895aa80d9b5d9b7b0999}{destroy} (U $\ast$ptr)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Typedef Documentation}
+\index{elementwise\+\_\+block\+\_\+allocator@{elementwise\+\_\+block\+\_\+allocator}!const\+\_\+pointer@{const\+\_\+pointer}}
+\index{const\+\_\+pointer@{const\+\_\+pointer}!elementwise\+\_\+block\+\_\+allocator@{elementwise\+\_\+block\+\_\+allocator}}
+\subsubsection[{\texorpdfstring{const\+\_\+pointer}{const_pointer}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ using {\bf elementwise\+\_\+block\+\_\+allocator}$<$ T $>$\+::{\bf const\+\_\+pointer} =  const T $\ast$}\hypertarget{classelementwise__block__allocator_a9382f12bfa2ba50e989f2f84216f44f1}{}\label{classelementwise__block__allocator_a9382f12bfa2ba50e989f2f84216f44f1}
+\index{elementwise\+\_\+block\+\_\+allocator@{elementwise\+\_\+block\+\_\+allocator}!const\+\_\+reference@{const\+\_\+reference}}
+\index{const\+\_\+reference@{const\+\_\+reference}!elementwise\+\_\+block\+\_\+allocator@{elementwise\+\_\+block\+\_\+allocator}}
+\subsubsection[{\texorpdfstring{const\+\_\+reference}{const_reference}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ using {\bf elementwise\+\_\+block\+\_\+allocator}$<$ T $>$\+::{\bf const\+\_\+reference} =  const T \&}\hypertarget{classelementwise__block__allocator_af7d02fdeb779527f9cc8723f8cebc40b}{}\label{classelementwise__block__allocator_af7d02fdeb779527f9cc8723f8cebc40b}
+\index{elementwise\+\_\+block\+\_\+allocator@{elementwise\+\_\+block\+\_\+allocator}!pointer@{pointer}}
+\index{pointer@{pointer}!elementwise\+\_\+block\+\_\+allocator@{elementwise\+\_\+block\+\_\+allocator}}
+\subsubsection[{\texorpdfstring{pointer}{pointer}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ using {\bf elementwise\+\_\+block\+\_\+allocator}$<$ T $>$\+::{\bf pointer} =  T $\ast$}\hypertarget{classelementwise__block__allocator_af41c83aed240eb55e53155abdd714ec6}{}\label{classelementwise__block__allocator_af41c83aed240eb55e53155abdd714ec6}
+\index{elementwise\+\_\+block\+\_\+allocator@{elementwise\+\_\+block\+\_\+allocator}!reference@{reference}}
+\index{reference@{reference}!elementwise\+\_\+block\+\_\+allocator@{elementwise\+\_\+block\+\_\+allocator}}
+\subsubsection[{\texorpdfstring{reference}{reference}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ using {\bf elementwise\+\_\+block\+\_\+allocator}$<$ T $>$\+::{\bf reference} =  T \&}\hypertarget{classelementwise__block__allocator_a7bfdf1ff6d23bcd486ef3c6541f738f2}{}\label{classelementwise__block__allocator_a7bfdf1ff6d23bcd486ef3c6541f738f2}
+\index{elementwise\+\_\+block\+\_\+allocator@{elementwise\+\_\+block\+\_\+allocator}!size\+\_\+type@{size\+\_\+type}}
+\index{size\+\_\+type@{size\+\_\+type}!elementwise\+\_\+block\+\_\+allocator@{elementwise\+\_\+block\+\_\+allocator}}
+\subsubsection[{\texorpdfstring{size\+\_\+type}{size_type}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ using {\bf elementwise\+\_\+block\+\_\+allocator}$<$ T $>$\+::{\bf size\+\_\+type} =  std\+::size\+\_\+t}\hypertarget{classelementwise__block__allocator_a5a93e8060385c80ebaa62ec6e1b0d37e}{}\label{classelementwise__block__allocator_a5a93e8060385c80ebaa62ec6e1b0d37e}
+\index{elementwise\+\_\+block\+\_\+allocator@{elementwise\+\_\+block\+\_\+allocator}!value\+\_\+type@{value\+\_\+type}}
+\index{value\+\_\+type@{value\+\_\+type}!elementwise\+\_\+block\+\_\+allocator@{elementwise\+\_\+block\+\_\+allocator}}
+\subsubsection[{\texorpdfstring{value\+\_\+type}{value_type}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ using {\bf elementwise\+\_\+block\+\_\+allocator}$<$ T $>$\+::{\bf value\+\_\+type} =  T}\hypertarget{classelementwise__block__allocator_aa2cd647e579b49a8640c13ff73fef25b}{}\label{classelementwise__block__allocator_aa2cd647e579b49a8640c13ff73fef25b}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{elementwise\+\_\+block\+\_\+allocator@{elementwise\+\_\+block\+\_\+allocator}!elementwise\+\_\+block\+\_\+allocator@{elementwise\+\_\+block\+\_\+allocator}}
+\index{elementwise\+\_\+block\+\_\+allocator@{elementwise\+\_\+block\+\_\+allocator}!elementwise\+\_\+block\+\_\+allocator@{elementwise\+\_\+block\+\_\+allocator}}
+\subsubsection[{\texorpdfstring{elementwise\+\_\+block\+\_\+allocator()}{elementwise_block_allocator()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf elementwise\+\_\+block\+\_\+allocator}$<$ T $>$\+::{\bf elementwise\+\_\+block\+\_\+allocator} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classelementwise__block__allocator_a8175b2d3ec243bd30a24aab1da8d6433}{}\label{classelementwise__block__allocator_a8175b2d3ec243bd30a24aab1da8d6433}
+\index{elementwise\+\_\+block\+\_\+allocator@{elementwise\+\_\+block\+\_\+allocator}!````~elementwise\+\_\+block\+\_\+allocator@{$\sim$elementwise\+\_\+block\+\_\+allocator}}
+\index{````~elementwise\+\_\+block\+\_\+allocator@{$\sim$elementwise\+\_\+block\+\_\+allocator}!elementwise\+\_\+block\+\_\+allocator@{elementwise\+\_\+block\+\_\+allocator}}
+\subsubsection[{\texorpdfstring{$\sim$elementwise\+\_\+block\+\_\+allocator()=default}{~elementwise_block_allocator()=default}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ virtual {\bf elementwise\+\_\+block\+\_\+allocator}$<$ T $>$\+::$\sim${\bf elementwise\+\_\+block\+\_\+allocator} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}\hypertarget{classelementwise__block__allocator_a00e784cf4d72a47d3afc7a61dc6db98e}{}\label{classelementwise__block__allocator_a00e784cf4d72a47d3afc7a61dc6db98e}
+
+
+\subsection{Member Function Documentation}
+\index{elementwise\+\_\+block\+\_\+allocator@{elementwise\+\_\+block\+\_\+allocator}!allocate@{allocate}}
+\index{allocate@{allocate}!elementwise\+\_\+block\+\_\+allocator@{elementwise\+\_\+block\+\_\+allocator}}
+\subsubsection[{\texorpdfstring{allocate(const size\+\_\+t n)}{allocate(const size_t n)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ T $\ast$ {\bf elementwise\+\_\+block\+\_\+allocator}$<$ T $>$\+::allocate (
+\begin{DoxyParamCaption}
+\item[{const size\+\_\+t}]{n}
+\end{DoxyParamCaption}
+)}\hypertarget{classelementwise__block__allocator_a244160f3cdc30a5cbe992b001da86cae}{}\label{classelementwise__block__allocator_a244160f3cdc30a5cbe992b001da86cae}
+\index{elementwise\+\_\+block\+\_\+allocator@{elementwise\+\_\+block\+\_\+allocator}!construct@{construct}}
+\index{construct@{construct}!elementwise\+\_\+block\+\_\+allocator@{elementwise\+\_\+block\+\_\+allocator}}
+\subsubsection[{\texorpdfstring{construct(\+U $\ast$ptr, Args \&\&...\+args)}{construct(U *ptr, Args &&...args)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ template$<$typename U , typename... Args$>$ void {\bf elementwise\+\_\+block\+\_\+allocator}$<$ T $>$\+::construct (
+\begin{DoxyParamCaption}
+\item[{U $\ast$}]{ptr, }
+\item[{Args \&\&...}]{args}
+\end{DoxyParamCaption}
+)}\hypertarget{classelementwise__block__allocator_a4826c3a40b3d5d9be3ab42191817f216}{}\label{classelementwise__block__allocator_a4826c3a40b3d5d9be3ab42191817f216}
+\index{elementwise\+\_\+block\+\_\+allocator@{elementwise\+\_\+block\+\_\+allocator}!deallocate@{deallocate}}
+\index{deallocate@{deallocate}!elementwise\+\_\+block\+\_\+allocator@{elementwise\+\_\+block\+\_\+allocator}}
+\subsubsection[{\texorpdfstring{deallocate(\+T $\ast$ptr, const size\+\_\+t n)}{deallocate(T *ptr, const size_t n)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf elementwise\+\_\+block\+\_\+allocator}$<$ T $>$\+::deallocate (
+\begin{DoxyParamCaption}
+\item[{T $\ast$}]{ptr, }
+\item[{const size\+\_\+t}]{n}
+\end{DoxyParamCaption}
+)}\hypertarget{classelementwise__block__allocator_add41be398fcb515fec16622ff41e5f0f}{}\label{classelementwise__block__allocator_add41be398fcb515fec16622ff41e5f0f}
+\index{elementwise\+\_\+block\+\_\+allocator@{elementwise\+\_\+block\+\_\+allocator}!destroy@{destroy}}
+\index{destroy@{destroy}!elementwise\+\_\+block\+\_\+allocator@{elementwise\+\_\+block\+\_\+allocator}}
+\subsubsection[{\texorpdfstring{destroy(\+U $\ast$ptr)}{destroy(U *ptr)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ template$<$typename U $>$ void {\bf elementwise\+\_\+block\+\_\+allocator}$<$ T $>$\+::destroy (
+\begin{DoxyParamCaption}
+\item[{U $\ast$}]{ptr}
+\end{DoxyParamCaption}
+)}\hypertarget{classelementwise__block__allocator_ae4e94b11ffdc895aa80d9b5d9b7b0999}{}\label{classelementwise__block__allocator_ae4e94b11ffdc895aa80d9b5d9b7b0999}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+03\+\_\+allocator/\hyperlink{flexible__allocator_8hpp}{flexible\+\_\+allocator.\+hpp}\end{DoxyCompactItemize}

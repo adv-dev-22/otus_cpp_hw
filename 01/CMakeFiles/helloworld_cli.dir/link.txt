@@ -1,0 +1,1 @@
+/usr/bin/g++    -rdynamic CMakeFiles/helloworld_cli.dir/main.cpp.o  -o helloworld_cli libhw_version.a 

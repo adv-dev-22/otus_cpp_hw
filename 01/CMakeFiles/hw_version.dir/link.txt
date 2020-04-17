@@ -1,0 +1,2 @@
+/usr/bin/ar qc libhw_version.a  CMakeFiles/hw_version.dir/vers_lib.cpp.o
+/usr/bin/ranlib libhw_version.a
