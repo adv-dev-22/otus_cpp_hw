@@ -42,6 +42,10 @@ before_script:
 - sudo pip install conan
 - conan
  
+# doxygen
+- sudo apt-get install doxygen -y
+- sudo apt-get install graphviz -y
+
 script:
 - conan install . -s compiler.libcxx=libstdc++11
 - cmake . -DHWALL=ON
