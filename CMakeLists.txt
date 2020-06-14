@@ -31,6 +31,13 @@ if (HW04 OR HWALL)
     add_subdirectory(04_sfinae)
 endif()
 
+#hw 05
+
+if (HW06 OR HWALL)
+    add_subdirectory(06_matrix)
+endif()
+
+
 
 set(CPACK_GENERATOR DEB)
 
