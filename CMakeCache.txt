@@ -154,7 +154,7 @@ CMAKE_OBJDUMP:FILEPATH=/usr/bin/objdump
 CMAKE_PROJECT_NAME:STATIC=homeworks
 
 //Value Computed by CMake
-CMAKE_PROJECT_VERSION:STATIC=4.1.96
+CMAKE_PROJECT_VERSION:STATIC=4.1.99
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION_MAJOR:STATIC=4
@@ -163,7 +163,7 @@ CMAKE_PROJECT_VERSION_MAJOR:STATIC=4
 CMAKE_PROJECT_VERSION_MINOR:STATIC=1
 
 //Value Computed by CMake
-CMAKE_PROJECT_VERSION_PATCH:STATIC=96
+CMAKE_PROJECT_VERSION_PATCH:STATIC=99
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION_TWEAK:STATIC=
@@ -306,6 +306,12 @@ dz_04_sfinae_tests_BINARY_DIR:STATIC=/home/travis/build/adv-dev-22/otus_cpp_hw/0
 dz_04_sfinae_tests_SOURCE_DIR:STATIC=/home/travis/build/adv-dev-22/otus_cpp_hw/04_sfinae/tests
 
 //Value Computed by CMake
+dz_06_matrix_BINARY_DIR:STATIC=/home/travis/build/adv-dev-22/otus_cpp_hw/06_matrix
+
+//Value Computed by CMake
+dz_06_matrix_SOURCE_DIR:STATIC=/home/travis/build/adv-dev-22/otus_cpp_hw/06_matrix
+
+//Value Computed by CMake
 homeworks_BINARY_DIR:STATIC=/home/travis/build/adv-dev-22/otus_cpp_hw
 
 //Value Computed by CMake
@@ -434,7 +440,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=8
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=9
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

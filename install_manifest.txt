@@ -6,3 +6,4 @@
 /usr/bin/ip_processor_rangesv3
 /usr/bin/reserve_allocator
 /usr/bin/print_ip
+/usr/bin/run_matrix

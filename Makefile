@@ -371,6 +371,19 @@ test_print_ip/fast:
 	$(MAKE) -f 04_sfinae/tests/CMakeFiles/test_print_ip.dir/build.make 04_sfinae/tests/CMakeFiles/test_print_ip.dir/build
 .PHONY : test_print_ip/fast
 
+#=============================================================================
+# Target rules for targets named run_matrix
+
+# Build rule for target.
+run_matrix: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 run_matrix
+.PHONY : run_matrix
+
+# fast build rule for target.
+run_matrix/fast:
+	$(MAKE) -f 06_matrix/CMakeFiles/run_matrix.dir/build.make 06_matrix/CMakeFiles/run_matrix.dir/build
+.PHONY : run_matrix/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -400,6 +413,7 @@ help:
 	@echo "... reserve_allocator"
 	@echo "... print_ip"
 	@echo "... test_print_ip"
+	@echo "... run_matrix"
 .PHONY : help
 
 

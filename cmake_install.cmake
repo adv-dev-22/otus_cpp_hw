@@ -45,6 +45,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/travis/build/adv-dev-22/otus_cpp_hw/03_ranges/cmake_install.cmake")
   include("/home/travis/build/adv-dev-22/otus_cpp_hw/03_allocator/cmake_install.cmake")
   include("/home/travis/build/adv-dev-22/otus_cpp_hw/04_sfinae/cmake_install.cmake")
+  include("/home/travis/build/adv-dev-22/otus_cpp_hw/06_matrix/cmake_install.cmake")
 
 endif()
 
