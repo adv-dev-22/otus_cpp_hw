@@ -6,5 +6,23 @@
 
 #IncludeRegexTransform: 
 
+/home/travis/build/adv-dev-22/otus_cpp_hw/06_matrix/infinite_row.cpp
+
+/home/travis/build/adv-dev-22/otus_cpp_hw/06_matrix/infinite_row.h
+map
+-
+iostream
+-
+infinite_row.cpp
+/home/travis/build/adv-dev-22/otus_cpp_hw/06_matrix/infinite_row.cpp
+
 /home/travis/build/adv-dev-22/otus_cpp_hw/06_matrix/tests/test_inf_matrix.cpp
+../infinite_row.h
+/home/travis/build/adv-dev-22/otus_cpp_hw/06_matrix/infinite_row.h
+gtest/gtest.h
+-
+iostream
+-
+memory
+-
 

@@ -1,8 +1,10 @@
 #ifndef _INIFINITE_ROW_H_
 #define _INIFINITE_ROW_H_
 
-#include <vector>
+#include <map>
 
+/*! Indexing starts from 0 and ends at infinity.
+ */
 template <typename T, T DefaultValue>
 class InfiniteRow final {
 public:
@@ -15,27 +17,24 @@ public:
 
     ~InfiniteRow();
 
-    const T & operator[] (const size_t index) const;
-    T & operator[] (const size_t index);
-
-    /*! \return position in row.
-     *  For row {..., zero_position, x, 1, 2, x, 3, x, 4, x, x, 5, ...}
-     *  position(0) == 2,
-     *  position(1) == 3,
-     *  position(2) == 5,
-     *  position(3) == 7,
-     *  position(4) == 10
-     */
-    size_t position(const size_t index) const;
+    const T  operator[] (const size_t index) const;
+    T& operator[] (const size_t index);
 
     size_t size() const;
 
+    //friend bool operator == (const InfiniteRow & inf_row_1, const InfiniteRow & inf_row_2);
+
 private:
-    std::vector<size_t> positions_;
-    std::vector<T> values_;
+    /*! According to problem statement, we do not implement internal
+     *  data structures to achive fastest performance.
+     *  We do not assume the matrix (and row) class will be used in
+     *  fastest computations. Otherwise more tricky data structures are required.
+     *  (with O(1) access).
+     */
+    std::map<size_t, T> values_;
 };
 
-
+#include <iostream>
 /*! InfiniteRow depends on numerical type (second parameter).
  *  That is why we can not use explicit instantiation
  *  like "template class InfiniteRow<double, -100.0>"
