@@ -53,3 +53,9 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   endif()
 endif()
 
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for each subdirectory.
+  include("/home/travis/build/adv-dev-22/otus_cpp_hw/06_matrix/tests/cmake_install.cmake")
+
+endif()
+

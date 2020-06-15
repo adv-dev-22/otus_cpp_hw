@@ -384,6 +384,19 @@ run_matrix/fast:
 	$(MAKE) -f 06_matrix/CMakeFiles/run_matrix.dir/build.make 06_matrix/CMakeFiles/run_matrix.dir/build
 .PHONY : run_matrix/fast
 
+#=============================================================================
+# Target rules for targets named test_inf_matrix
+
+# Build rule for target.
+test_inf_matrix: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_inf_matrix
+.PHONY : test_inf_matrix
+
+# fast build rule for target.
+test_inf_matrix/fast:
+	$(MAKE) -f 06_matrix/tests/CMakeFiles/test_inf_matrix.dir/build.make 06_matrix/tests/CMakeFiles/test_inf_matrix.dir/build
+.PHONY : test_inf_matrix/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -414,6 +427,7 @@ help:
 	@echo "... print_ip"
 	@echo "... test_print_ip"
 	@echo "... run_matrix"
+	@echo "... test_inf_matrix"
 .PHONY : help
 
 

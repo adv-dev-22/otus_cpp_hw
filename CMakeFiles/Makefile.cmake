@@ -16,6 +16,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "04_sfinae/CMakeLists.txt"
   "04_sfinae/tests/CMakeLists.txt"
   "06_matrix/CMakeLists.txt"
+  "06_matrix/tests/CMakeLists.txt"
   "CMakeFiles/3.12.4/CMakeCCompiler.cmake"
   "CMakeFiles/3.12.4/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.12.4/CMakeSystem.cmake"
@@ -147,6 +148,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "04_sfinae/CMakeFiles/CMakeDirectoryInformation.cmake"
   "04_sfinae/tests/CMakeFiles/CMakeDirectoryInformation.cmake"
   "06_matrix/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "06_matrix/tests/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -166,4 +168,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "04_sfinae/CMakeFiles/print_ip.dir/DependInfo.cmake"
   "04_sfinae/tests/CMakeFiles/test_print_ip.dir/DependInfo.cmake"
   "06_matrix/CMakeFiles/run_matrix.dir/DependInfo.cmake"
+  "06_matrix/tests/CMakeFiles/test_inf_matrix.dir/DependInfo.cmake"
   )
