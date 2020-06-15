@@ -1,12 +1,9 @@
 #ifndef _INIFINITE_MATRIX_H_
 #define _INIFINITE_MATRIX_H_
 
-#include <vector>
+#include <map>
 
-
-
-
-template <typename T, T value>
+template <typename T, T DefaultValue>
 class InfiniteMatrix {
 public:
 
@@ -14,11 +11,9 @@ public:
 
 private:
 
-    std::vector<T> values_;
-    std::vector<T> rows_;
-    std::vector<T> cols_;
+//    std::map<size_t, >   rows_;
 
-    // cols_;
+    //rows also will be observers when whole the row is zero.
 
 };
 

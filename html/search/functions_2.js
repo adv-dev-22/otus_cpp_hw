@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['cellobserver',['CellObserver',['../classCellObserver.html#a04a245848c8cd86cfc471b0f278dc546',1,'CellObserver']]],
   ['construct',['construct',['../classreserve__allocator.html#a2d05e7ee613d9f22ace630d3a48a0930',1,'reserve_allocator::construct()'],['../classelementwise__block__allocator.html#a4826c3a40b3d5d9be3ab42191817f216',1,'elementwise_block_allocator::construct()']]],
   ['consumer_5fthread',['consumer_thread',['../prod__cons__simulator_8cpp.html#a0d99d3bcb8787180b4227572fcf9240f',1,'prod_cons_simulator.cpp']]],
   ['contigious_5fblock',['contigious_block',['../classcontigious__block.html#a6357ef263d76c0fcbec77c152365bf59',1,'contigious_block::contigious_block(const size_t)'],['../classcontigious__block.html#abf42cd806e0612249e48f27bedbb3414',1,'contigious_block::contigious_block(contigious_block &amp;&amp;)']]],

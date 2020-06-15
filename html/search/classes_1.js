@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['cellobserver',['CellObserver',['../classCellObserver.html',1,'']]],
   ['contigious_5fblock',['contigious_block',['../classcontigious__block.html',1,'']]],
   ['custom_5ftuple',['custom_tuple',['../structcustom__tuple.html',1,'']]],
   ['custom_5ftuple_3c_20t_2c_20types_2e_2e_2e_20_3e',['custom_tuple&lt; T, Types... &gt;',['../structcustom__tuple_3_01T_00_01Types_8_8_8_01_4.html',1,'']]],

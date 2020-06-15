@@ -6,6 +6,12 @@
 
 #IncludeRegexTransform: 
 
+/home/travis/build/adv-dev-22/otus_cpp_hw/06_matrix/cell_observer.cpp
+
+/home/travis/build/adv-dev-22/otus_cpp_hw/06_matrix/cell_observer.h
+cell_observer.cpp
+/home/travis/build/adv-dev-22/otus_cpp_hw/06_matrix/cell_observer.cpp
+
 /home/travis/build/adv-dev-22/otus_cpp_hw/06_matrix/infinite_row.cpp
 
 /home/travis/build/adv-dev-22/otus_cpp_hw/06_matrix/infinite_row.h
@@ -19,6 +25,8 @@ infinite_row.cpp
 /home/travis/build/adv-dev-22/otus_cpp_hw/06_matrix/tests/test_inf_matrix.cpp
 ../infinite_row.h
 /home/travis/build/adv-dev-22/otus_cpp_hw/06_matrix/infinite_row.h
+../cell_observer.h
+/home/travis/build/adv-dev-22/otus_cpp_hw/06_matrix/cell_observer.h
 gtest/gtest.h
 -
 iostream

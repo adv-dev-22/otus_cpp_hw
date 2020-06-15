@@ -1,6 +1,9 @@
 var searchData=
 [
   ['c_5fdialect',['C_DIALECT',['../CMakeCCompilerId_8c.html#a07f8e5783674099cd7f5110e22a78cdb',1,'CMakeCCompilerId.c']]],
+  ['cell_5fobserver_2ecpp',['cell_observer.cpp',['../cell__observer_8cpp.html',1,'']]],
+  ['cell_5fobserver_2eh',['cell_observer.h',['../cell__observer_8h.html',1,'']]],
+  ['cellobserver',['CellObserver',['../classCellObserver.html',1,'CellObserver&lt; T, DefaultValue &gt;'],['../classCellObserver.html#a04a245848c8cd86cfc471b0f278dc546',1,'CellObserver::CellObserver()']]],
   ['cmakeccompilerid_2ec',['CMakeCCompilerId.c',['../CMakeCCompilerId_8c.html',1,'']]],
   ['cmakecxxcompilerid_2ecpp',['CMakeCXXCompilerId.cpp',['../CMakeCXXCompilerId_8cpp.html',1,'']]],
   ['compiler_5fid',['COMPILER_ID',['../CMakeCCompilerId_8c.html#a81dee0709ded976b2e0319239f72d174',1,'COMPILER_ID():&#160;CMakeCCompilerId.c'],['../CMakeCXXCompilerId_8cpp.html#a81dee0709ded976b2e0319239f72d174',1,'COMPILER_ID():&#160;CMakeCXXCompilerId.cpp']]],

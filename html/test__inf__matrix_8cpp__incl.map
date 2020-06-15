@@ -1,4 +1,6 @@
 <map id="06_matrix/tests/test_inf_matrix.cpp" name="06_matrix/tests/test_inf_matrix.cpp">
-<area shape="rect" id="node2" href="$infinite__row_8h.html" title="../infinite_row.h" alt="" coords="89,95,205,121"/>
+<area shape="rect" id="node2" href="$infinite__row_8h.html" title="../infinite_row.h" alt="" coords="95,95,211,121"/>
+<area shape="rect" id="node6" href="$cell__observer_8h.html" title="../cell_observer.h" alt="" coords="301,95,430,121"/>
 <area shape="rect" id="node5" href="$infinite__row_8cpp.html" title="infinite_row.cpp" alt="" coords="81,169,199,196"/>
+<area shape="rect" id="node7" href="$cell__observer_8cpp.html" title="cell_observer.cpp" alt="" coords="326,169,458,196"/>
 </map>
