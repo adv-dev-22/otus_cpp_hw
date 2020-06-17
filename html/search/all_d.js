@@ -7,5 +7,8 @@ var searchData=
   ['reserve_5fallocator',['reserve_allocator',['../classreserve__allocator.html',1,'reserve_allocator&lt; T, n &gt;'],['../classreserve__allocator.html#a6e20af249475b4b876cb50f6c180c4a9',1,'reserve_allocator::reserve_allocator()']]],
   ['reserved_5fcontainer_2ehpp',['reserved_container.hpp',['../reserved__container_8hpp.html',1,'']]],
   ['reservedcontainer',['ReservedContainer',['../reserved__container_8hpp.html#a645c90241dfa63f57e4e174b957f076a',1,'reserved_container.hpp']]],
+  ['row_5fobserver_2ecpp',['row_observer.cpp',['../row__observer_8cpp.html',1,'']]],
+  ['row_5fobserver_2eh',['row_observer.h',['../row__observer_8h.html',1,'']]],
+  ['rowobserver',['RowObserver',['../classRowObserver.html',1,'RowObserver&lt; T, DefaultValue &gt;'],['../classRowObserver.html#ac2afaf71609842039b959f937f1d3379',1,'RowObserver::RowObserver()']]],
   ['run',['run',['../classIpProcessor.html#ad11eb7c6f178650f24633fd2588ee2b2',1,'IpProcessor::run()'],['../classIpProcessor.html#a255b8e80e59d4c3e305187c8e9b2a3cd',1,'IpProcessor::run(std::istream &amp;input, std::ostream &amp;output)'],['../classProdConsSimulator.html#af458b2a52f333169b84c144636587fab',1,'ProdConsSimulator::run()']]]
 ];

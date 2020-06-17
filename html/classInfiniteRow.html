@@ -93,14 +93,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="cell__observer_8h_source.html">cell_observer.h</a>&gt;</code></p>
-<div class="dynheader">
-Inheritance diagram for InfiniteRow&lt; T, DefaultValue &gt;:</div>
-<div class="dyncontent">
-<div class="center"><img src="classInfiniteRow__inherit__graph.png" border="0" usemap="#InfiniteRow_3_01T_00_01DefaultValue_01_4_inherit__map" alt="Inheritance graph"/></div>
-<map name="InfiniteRow_3_01T_00_01DefaultValue_01_4_inherit__map" id="InfiniteRow_3_01T_00_01DefaultValue_01_4_inherit__map">
-<area shape="rect" id="node2" href="classInfiniteRow__Debug.html" title="InfiniteRow_Debug\&lt;\l T, DefaultValue \&gt;" alt="" coords="39,80,187,121"/>
-</map>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -108,12 +100,16 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ab5d574f96b18c889ce001aa54c7fc56f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a35b43c388e4f3e980fbf823fbca37b36"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInfiniteRow.html#a35b43c388e4f3e980fbf823fbca37b36">~InfiniteRow</a> ()</td></tr>
 <tr class="separator:a35b43c388e4f3e980fbf823fbca37b36"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5fd02e2dcf8710d54377ca29539f4c23"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInfiniteRow.html#a5fd02e2dcf8710d54377ca29539f4c23">set_cell_observer</a> (<a class="el" href="classCellObserver.html">CellObserver</a>&lt; T, DefaultValue &gt; *const cell_observer)</td></tr>
-<tr class="separator:a5fd02e2dcf8710d54377ca29539f4c23"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa24edf2e7e8ea7c481fc32724cf24b6f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classCellObserver.html">CellObserver</a>&lt; T, DefaultValue &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInfiniteRow.html#aa24edf2e7e8ea7c481fc32724cf24b6f">operator[]</a> (const size_t index)</td></tr>
 <tr class="separator:aa24edf2e7e8ea7c481fc32724cf24b6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a76e52c26ba4b10c0ff7852e6c449a51b"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInfiniteRow.html#a76e52c26ba4b10c0ff7852e6c449a51b">size</a> () const </td></tr>
 <tr class="separator:a76e52c26ba4b10c0ff7852e6c449a51b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7029e8e6f260ef680a5bcf41ec7095b8"><td class="memItemLeft" align="right" valign="top">std::map&lt; size_t, T &gt;::iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInfiniteRow.html#a7029e8e6f260ef680a5bcf41ec7095b8">find</a> (const size_t index)</td></tr>
+<tr class="separator:a7029e8e6f260ef680a5bcf41ec7095b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab680d59ac893f2878b92299b1f5d933"><td class="memItemLeft" align="right" valign="top">std::map&lt; size_t, T &gt;::iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInfiniteRow.html#aab680d59ac893f2878b92299b1f5d933">end</a> ()</td></tr>
+<tr class="separator:aab680d59ac893f2878b92299b1f5d933"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15186dbba011c751c84b4d32d2a9e999"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInfiniteRow.html#a15186dbba011c751c84b4d32d2a9e999">insert</a> (const size_t index, const T &amp;value)</td></tr>
+<tr class="separator:a15186dbba011c751c84b4d32d2a9e999"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename T, T DefaultValue&gt;<br />
@@ -164,6 +160,69 @@ template&lt;typename T , T DefaultValue&gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="aab680d59ac893f2878b92299b1f5d933"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , T DefaultValue&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt; size_t, T &gt;::iterator <a class="el" href="classInfiniteRow.html">InfiniteRow</a>&lt; T, DefaultValue &gt;::end </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7029e8e6f260ef680a5bcf41ec7095b8"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , T DefaultValue&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt; size_t, T &gt;::iterator <a class="el" href="classInfiniteRow.html">InfiniteRow</a>&lt; T, DefaultValue &gt;::find </td>
+          <td>(</td>
+          <td class="paramtype">const size_t&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a15186dbba011c751c84b4d32d2a9e999"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , T DefaultValue&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classInfiniteRow.html">InfiniteRow</a>&lt; T, DefaultValue &gt;::insert </td>
+          <td>(</td>
+          <td class="paramtype">const size_t&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="aa24edf2e7e8ea7c481fc32724cf24b6f"></a>
 <div class="memitem">
 <div class="memproto">
@@ -175,24 +234,6 @@ template&lt;typename T , T DefaultValue&gt; </div>
           <td>(</td>
           <td class="paramtype">const size_t&#160;</td>
           <td class="paramname"><em>index</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a5fd02e2dcf8710d54377ca29539f4c23"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T, T DefaultValue&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classInfiniteRow.html">InfiniteRow</a>&lt; T, DefaultValue &gt;::set_cell_observer </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classCellObserver.html">CellObserver</a>&lt; T, DefaultValue &gt; *const&#160;</td>
-          <td class="paramname"><em>cell_observer</em></td><td>)</td>
           <td></td>
         </tr>
       </table>

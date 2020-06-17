@@ -3,6 +3,8 @@
 
 06_matrix/tests/CMakeFiles/test_inf_matrix.dir/test_inf_matrix.cpp.o: 06_matrix/cell_observer.cpp
 06_matrix/tests/CMakeFiles/test_inf_matrix.dir/test_inf_matrix.cpp.o: 06_matrix/cell_observer.h
+06_matrix/tests/CMakeFiles/test_inf_matrix.dir/test_inf_matrix.cpp.o: 06_matrix/infinite_matrix.cpp
+06_matrix/tests/CMakeFiles/test_inf_matrix.dir/test_inf_matrix.cpp.o: 06_matrix/infinite_matrix.h
 06_matrix/tests/CMakeFiles/test_inf_matrix.dir/test_inf_matrix.cpp.o: 06_matrix/infinite_row.cpp
 06_matrix/tests/CMakeFiles/test_inf_matrix.dir/test_inf_matrix.cpp.o: 06_matrix/infinite_row.h
 06_matrix/tests/CMakeFiles/test_inf_matrix.dir/test_inf_matrix.cpp.o: 06_matrix/tests/test_inf_matrix.cpp

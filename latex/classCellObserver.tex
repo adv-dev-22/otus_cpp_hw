@@ -15,6 +15,8 @@ void \hyperlink{classCellObserver_a5838eda25127346a5a296c38a651f764}{set\+\_\+in
 \item 
 void \hyperlink{classCellObserver_aa94b7933d2e0a3e576f6ab35c061bcfa}{bind} (\hyperlink{classInfiniteRow}{Infinite\+Row}$<$ T, Default\+Value $>$ $\ast$const host\+\_\+row)
 \item 
+\hyperlink{classCellObserver_a5789d1039a4d96afacae64a9a1cb90a5}{operator T} () const 
+\item 
 \hyperlink{classCellObserver}{Cell\+Observer} \& \hyperlink{classCellObserver_a51d022b73fee930b38516437f8bd0b49}{operator=} (const T \&rhs\+\_\+value)
 \end{DoxyCompactItemize}
 
@@ -44,7 +46,14 @@ void \hyperlink{classCellObserver_aa94b7933d2e0a3e576f6ab35c061bcfa}{bind} (\hyp
 \item[{{\bf Infinite\+Row}$<$ T, Default\+Value $>$ $\ast$const}]{host\+\_\+row}
 \end{DoxyParamCaption}
 )}\hypertarget{classCellObserver_aa94b7933d2e0a3e576f6ab35c061bcfa}{}\label{classCellObserver_aa94b7933d2e0a3e576f6ab35c061bcfa}
-\index{Cell\+Observer@{Cell\+Observer}!operator=@{operator=}}
+\index{Cell\+Observer@{Cell\+Observer}!operator T@{operator T}}
+\index{operator T@{operator T}!Cell\+Observer@{Cell\+Observer}}
+\subsubsection[{\texorpdfstring{operator T() const }{operator T() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T , T Default\+Value$>$ {\bf Cell\+Observer}$<$ T, Default\+Value $>$\+::operator T (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classCellObserver_a5789d1039a4d96afacae64a9a1cb90a5}{}\label{classCellObserver_a5789d1039a4d96afacae64a9a1cb90a5}
+Return T value when it is in the right hand side position. \index{Cell\+Observer@{Cell\+Observer}!operator=@{operator=}}
 \index{operator=@{operator=}!Cell\+Observer@{Cell\+Observer}}
 \subsubsection[{\texorpdfstring{operator=(const T \&rhs\+\_\+value)}{operator=(const T &rhs_value)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T , T Default\+Value$>$ {\bf Cell\+Observer}$<$ T, Default\+Value $>$ \& {\bf Cell\+Observer}$<$ T, Default\+Value $>$\+::operator= (
 \begin{DoxyParamCaption}
@@ -58,7 +67,7 @@ Operator is used for cells assignment\+: it calls update value of row if and onl
 \item[{const size\+\_\+t}]{index}
 \end{DoxyParamCaption}
 )}\hypertarget{classCellObserver_a5838eda25127346a5a296c38a651f764}{}\label{classCellObserver_a5838eda25127346a5a296c38a651f764}
-
+Saves index of cell for a corresponding row. 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

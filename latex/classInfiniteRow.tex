@@ -4,16 +4,6 @@
 
 {\ttfamily \#include $<$cell\+\_\+observer.\+h$>$}
 
-
-
-Inheritance diagram for Infinite\+Row$<$ T, Default\+Value $>$\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=241pt]{classInfiniteRow__inherit__graph}
-\end{center}
-\end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -21,11 +11,15 @@ Inheritance diagram for Infinite\+Row$<$ T, Default\+Value $>$\+:
 \item 
 virtual \hyperlink{classInfiniteRow_a35b43c388e4f3e980fbf823fbca37b36}{$\sim$\+Infinite\+Row} ()
 \item 
-void \hyperlink{classInfiniteRow_a5fd02e2dcf8710d54377ca29539f4c23}{set\+\_\+cell\+\_\+observer} (\hyperlink{classCellObserver}{Cell\+Observer}$<$ T, Default\+Value $>$ $\ast$const cell\+\_\+observer)
-\item 
 \hyperlink{classCellObserver}{Cell\+Observer}$<$ T, Default\+Value $>$ \& \hyperlink{classInfiniteRow_aa24edf2e7e8ea7c481fc32724cf24b6f}{operator\mbox{[}$\,$\mbox{]}} (const size\+\_\+t index)
 \item 
 size\+\_\+t \hyperlink{classInfiniteRow_a76e52c26ba4b10c0ff7852e6c449a51b}{size} () const 
+\item 
+std\+::map$<$ size\+\_\+t, T $>$\+::iterator \hyperlink{classInfiniteRow_a7029e8e6f260ef680a5bcf41ec7095b8}{find} (const size\+\_\+t index)
+\item 
+std\+::map$<$ size\+\_\+t, T $>$\+::iterator \hyperlink{classInfiniteRow_aab680d59ac893f2878b92299b1f5d933}{end} ()
+\item 
+void \hyperlink{classInfiniteRow_a15186dbba011c751c84b4d32d2a9e999}{insert} (const size\+\_\+t index, const T \&value)
 \end{DoxyCompactItemize}
 
 
@@ -53,6 +47,28 @@ Indexing starts from 0 and ends at infinity.
 
 
 \subsection{Member Function Documentation}
+\index{Infinite\+Row@{Infinite\+Row}!end@{end}}
+\index{end@{end}!Infinite\+Row@{Infinite\+Row}}
+\subsubsection[{\texorpdfstring{end()}{end()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T , T Default\+Value$>$ std\+::map$<$ size\+\_\+t, T $>$\+::iterator {\bf Infinite\+Row}$<$ T, Default\+Value $>$\+::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classInfiniteRow_aab680d59ac893f2878b92299b1f5d933}{}\label{classInfiniteRow_aab680d59ac893f2878b92299b1f5d933}
+\index{Infinite\+Row@{Infinite\+Row}!find@{find}}
+\index{find@{find}!Infinite\+Row@{Infinite\+Row}}
+\subsubsection[{\texorpdfstring{find(const size\+\_\+t index)}{find(const size_t index)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T , T Default\+Value$>$ std\+::map$<$ size\+\_\+t, T $>$\+::iterator {\bf Infinite\+Row}$<$ T, Default\+Value $>$\+::find (
+\begin{DoxyParamCaption}
+\item[{const size\+\_\+t}]{index}
+\end{DoxyParamCaption}
+)}\hypertarget{classInfiniteRow_a7029e8e6f260ef680a5bcf41ec7095b8}{}\label{classInfiniteRow_a7029e8e6f260ef680a5bcf41ec7095b8}
+\index{Infinite\+Row@{Infinite\+Row}!insert@{insert}}
+\index{insert@{insert}!Infinite\+Row@{Infinite\+Row}}
+\subsubsection[{\texorpdfstring{insert(const size\+\_\+t index, const T \&value)}{insert(const size_t index, const T &value)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T , T Default\+Value$>$ void {\bf Infinite\+Row}$<$ T, Default\+Value $>$\+::insert (
+\begin{DoxyParamCaption}
+\item[{const size\+\_\+t}]{index, }
+\item[{const T \&}]{value}
+\end{DoxyParamCaption}
+)}\hypertarget{classInfiniteRow_a15186dbba011c751c84b4d32d2a9e999}{}\label{classInfiniteRow_a15186dbba011c751c84b4d32d2a9e999}
 \index{Infinite\+Row@{Infinite\+Row}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
 \index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!Infinite\+Row@{Infinite\+Row}}
 \subsubsection[{\texorpdfstring{operator[](const size\+\_\+t index)}{operator[](const size_t index)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T , T Default\+Value$>$ {\bf Cell\+Observer}$<$ T, Default\+Value $>$ \& {\bf Infinite\+Row}$<$ T, Default\+Value $>$\+::operator\mbox{[}$\,$\mbox{]} (
@@ -60,13 +76,6 @@ Indexing starts from 0 and ends at infinity.
 \item[{const size\+\_\+t}]{index}
 \end{DoxyParamCaption}
 )}\hypertarget{classInfiniteRow_aa24edf2e7e8ea7c481fc32724cf24b6f}{}\label{classInfiniteRow_aa24edf2e7e8ea7c481fc32724cf24b6f}
-\index{Infinite\+Row@{Infinite\+Row}!set\+\_\+cell\+\_\+observer@{set\+\_\+cell\+\_\+observer}}
-\index{set\+\_\+cell\+\_\+observer@{set\+\_\+cell\+\_\+observer}!Infinite\+Row@{Infinite\+Row}}
-\subsubsection[{\texorpdfstring{set\+\_\+cell\+\_\+observer(\+Cell\+Observer$<$ T, Default\+Value $>$ $\ast$const cell\+\_\+observer)}{set_cell_observer(CellObserver< T, DefaultValue > *const cell_observer)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T, T Default\+Value$>$ void {\bf Infinite\+Row}$<$ T, Default\+Value $>$\+::set\+\_\+cell\+\_\+observer (
-\begin{DoxyParamCaption}
-\item[{{\bf Cell\+Observer}$<$ T, Default\+Value $>$ $\ast$const}]{cell\+\_\+observer}
-\end{DoxyParamCaption}
-)}\hypertarget{classInfiniteRow_a5fd02e2dcf8710d54377ca29539f4c23}{}\label{classInfiniteRow_a5fd02e2dcf8710d54377ca29539f4c23}
 \index{Infinite\+Row@{Infinite\+Row}!size@{size}}
 \index{size@{size}!Infinite\+Row@{Infinite\+Row}}
 \subsubsection[{\texorpdfstring{size() const }{size() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T , T Default\+Value$>$ size\+\_\+t {\bf Infinite\+Row}$<$ T, Default\+Value $>$\+::size (

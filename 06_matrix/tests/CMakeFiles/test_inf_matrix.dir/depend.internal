@@ -4,6 +4,8 @@
 06_matrix/tests/CMakeFiles/test_inf_matrix.dir/test_inf_matrix.cpp.o
  /home/travis/build/adv-dev-22/otus_cpp_hw/06_matrix/cell_observer.cpp
  /home/travis/build/adv-dev-22/otus_cpp_hw/06_matrix/cell_observer.h
+ /home/travis/build/adv-dev-22/otus_cpp_hw/06_matrix/infinite_matrix.cpp
+ /home/travis/build/adv-dev-22/otus_cpp_hw/06_matrix/infinite_matrix.h
  /home/travis/build/adv-dev-22/otus_cpp_hw/06_matrix/infinite_row.cpp
  /home/travis/build/adv-dev-22/otus_cpp_hw/06_matrix/infinite_row.h
  /home/travis/build/adv-dev-22/otus_cpp_hw/06_matrix/tests/test_inf_matrix.cpp

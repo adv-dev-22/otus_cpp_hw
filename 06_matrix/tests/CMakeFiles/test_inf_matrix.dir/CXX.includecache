@@ -7,26 +7,44 @@
 #IncludeRegexTransform: 
 
 /home/travis/build/adv-dev-22/otus_cpp_hw/06_matrix/cell_observer.cpp
+map
+-
 
 /home/travis/build/adv-dev-22/otus_cpp_hw/06_matrix/cell_observer.h
+cstddef
+-
 cell_observer.cpp
 /home/travis/build/adv-dev-22/otus_cpp_hw/06_matrix/cell_observer.cpp
 
+/home/travis/build/adv-dev-22/otus_cpp_hw/06_matrix/infinite_matrix.cpp
+
+/home/travis/build/adv-dev-22/otus_cpp_hw/06_matrix/infinite_matrix.h
+map
+-
+infinite_matrix.cpp
+/home/travis/build/adv-dev-22/otus_cpp_hw/06_matrix/infinite_matrix.cpp
+
 /home/travis/build/adv-dev-22/otus_cpp_hw/06_matrix/infinite_row.cpp
+iostream
+-
+map
+-
 
 /home/travis/build/adv-dev-22/otus_cpp_hw/06_matrix/infinite_row.h
 map
 -
-iostream
+memory
 -
 infinite_row.cpp
 /home/travis/build/adv-dev-22/otus_cpp_hw/06_matrix/infinite_row.cpp
 
 /home/travis/build/adv-dev-22/otus_cpp_hw/06_matrix/tests/test_inf_matrix.cpp
-../infinite_row.h
-/home/travis/build/adv-dev-22/otus_cpp_hw/06_matrix/infinite_row.h
 ../cell_observer.h
 /home/travis/build/adv-dev-22/otus_cpp_hw/06_matrix/cell_observer.h
+../infinite_row.h
+/home/travis/build/adv-dev-22/otus_cpp_hw/06_matrix/infinite_row.h
+../infinite_matrix.h
+/home/travis/build/adv-dev-22/otus_cpp_hw/06_matrix/infinite_matrix.h
 gtest/gtest.h
 -
 iostream
