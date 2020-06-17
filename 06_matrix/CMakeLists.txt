@@ -10,6 +10,7 @@ add_executable(run_matrix
         main.cpp
         cell_observer.h
 	infinite_row.h
+	infinite_matrix.h
 )
 
 set_target_properties(run_matrix PROPERTIES
