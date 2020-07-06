@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['tupple_5fprinter',['tupple_printer',['../structtupple__printer.html',1,'']]],
-  ['tupple_5fprinter_3c_20tuple_2c_201_20_3e',['tupple_printer&lt; Tuple, 1 &gt;',['../structtupple__printer_3_01Tuple_00_011_01_4.html',1,'']]]
+  ['rebind',['rebind',['../structreserve__allocator_1_1rebind.html',1,'reserve_allocator']]],
+  ['reserve_5fallocator',['reserve_allocator',['../classreserve__allocator.html',1,'']]],
+  ['rowobserver',['RowObserver',['../classRowObserver.html',1,'']]]
 ];

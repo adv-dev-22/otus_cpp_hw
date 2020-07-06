@@ -1,1 +1,1 @@
-/usr/bin/g++     CMakeFiles/run_editor.dir/main.cpp.o  -o run_editor 
+/usr/bin/g++     CMakeFiles/run_editor.dir/main.cpp.o CMakeFiles/run_editor.dir/default.cpp.o CMakeFiles/run_editor.dir/document.cpp.o CMakeFiles/run_editor.dir/document_parameters.cpp.o CMakeFiles/run_editor.dir/editor_core.cpp.o  -o run_editor 

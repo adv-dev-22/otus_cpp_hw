@@ -6,5 +6,43 @@
 
 #IncludeRegexTransform: 
 
+/home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/default.cpp
+default.h
+/home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/default.h
+
+/home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/default.h
+cstddef
+-
+
+/home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/document.cpp
+document.h
+/home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/document.h
+iostream
+-
+
+/home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/document.h
+
+/home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/document_parameters.cpp
+document_parameters.h
+/home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/document_parameters.h
+iostream
+-
+
+/home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/document_parameters.h
+cstddef
+-
+
+/home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/editor_core.cpp
+editor_core.h
+/home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/editor_core.h
+iostream
+-
+
+/home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/editor_core.h
+
 /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/main.cpp
+editor_core.h
+/home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/editor_core.h
+memory
+-
 

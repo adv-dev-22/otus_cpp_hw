@@ -1,8 +1,4 @@
 var searchData=
 [
-  ['infinitematrix',['InfiniteMatrix',['../classInfiniteMatrix.html#aaae25173c8e6ce9ffc548fe1a63d6ed4',1,'InfiniteMatrix']]],
-  ['infiniterow',['InfiniteRow',['../classInfiniteRow.html#ab5d574f96b18c889ce001aa54c7fc56f',1,'InfiniteRow']]],
-  ['insert',['insert',['../classInfiniteRow.html#a15186dbba011c751c84b4d32d2a9e999',1,'InfiniteRow']]],
-  ['ipdataloader',['IpDataLoader',['../classIpDataLoader.html#a23d801469ebb7c1493ac006600186408',1,'IpDataLoader::IpDataLoader()'],['../classIpDataLoader.html#a23d801469ebb7c1493ac006600186408',1,'IpDataLoader::IpDataLoader()']]],
-  ['ipprocessor',['IpProcessor',['../classIpProcessor.html#a383c3aceb6a6a6605b41ce4ac77debde',1,'IpProcessor::IpProcessor()'],['../classIpProcessor.html#a383c3aceb6a6a6605b41ce4ac77debde',1,'IpProcessor::IpProcessor()']]]
+  ['height',['height',['../classGraphicalEditorCore_1_1DocumentParametersInterface.html#a1a3f45e27f2c9b11d04b2fe562323bb2',1,'GraphicalEditorCore::DocumentParametersInterface::height()'],['../classGraphicalEditorCore_1_1DocumentParameters.html#ab28b51581bade5d1b1a4122b347995da',1,'GraphicalEditorCore::DocumentParameters::height()']]]
 ];

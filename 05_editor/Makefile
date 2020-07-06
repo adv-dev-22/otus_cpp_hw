@@ -204,6 +204,114 @@ run_editor/fast:
 	cd /home/travis/build/adv-dev-22/otus_cpp_hw && $(MAKE) -f 05_editor/CMakeFiles/run_editor.dir/build.make 05_editor/CMakeFiles/run_editor.dir/build
 .PHONY : run_editor/fast
 
+default.o: default.cpp.o
+
+.PHONY : default.o
+
+# target to build an object file
+default.cpp.o:
+	cd /home/travis/build/adv-dev-22/otus_cpp_hw && $(MAKE) -f 05_editor/CMakeFiles/run_editor.dir/build.make 05_editor/CMakeFiles/run_editor.dir/default.cpp.o
+.PHONY : default.cpp.o
+
+default.i: default.cpp.i
+
+.PHONY : default.i
+
+# target to preprocess a source file
+default.cpp.i:
+	cd /home/travis/build/adv-dev-22/otus_cpp_hw && $(MAKE) -f 05_editor/CMakeFiles/run_editor.dir/build.make 05_editor/CMakeFiles/run_editor.dir/default.cpp.i
+.PHONY : default.cpp.i
+
+default.s: default.cpp.s
+
+.PHONY : default.s
+
+# target to generate assembly for a file
+default.cpp.s:
+	cd /home/travis/build/adv-dev-22/otus_cpp_hw && $(MAKE) -f 05_editor/CMakeFiles/run_editor.dir/build.make 05_editor/CMakeFiles/run_editor.dir/default.cpp.s
+.PHONY : default.cpp.s
+
+document.o: document.cpp.o
+
+.PHONY : document.o
+
+# target to build an object file
+document.cpp.o:
+	cd /home/travis/build/adv-dev-22/otus_cpp_hw && $(MAKE) -f 05_editor/CMakeFiles/run_editor.dir/build.make 05_editor/CMakeFiles/run_editor.dir/document.cpp.o
+.PHONY : document.cpp.o
+
+document.i: document.cpp.i
+
+.PHONY : document.i
+
+# target to preprocess a source file
+document.cpp.i:
+	cd /home/travis/build/adv-dev-22/otus_cpp_hw && $(MAKE) -f 05_editor/CMakeFiles/run_editor.dir/build.make 05_editor/CMakeFiles/run_editor.dir/document.cpp.i
+.PHONY : document.cpp.i
+
+document.s: document.cpp.s
+
+.PHONY : document.s
+
+# target to generate assembly for a file
+document.cpp.s:
+	cd /home/travis/build/adv-dev-22/otus_cpp_hw && $(MAKE) -f 05_editor/CMakeFiles/run_editor.dir/build.make 05_editor/CMakeFiles/run_editor.dir/document.cpp.s
+.PHONY : document.cpp.s
+
+document_parameters.o: document_parameters.cpp.o
+
+.PHONY : document_parameters.o
+
+# target to build an object file
+document_parameters.cpp.o:
+	cd /home/travis/build/adv-dev-22/otus_cpp_hw && $(MAKE) -f 05_editor/CMakeFiles/run_editor.dir/build.make 05_editor/CMakeFiles/run_editor.dir/document_parameters.cpp.o
+.PHONY : document_parameters.cpp.o
+
+document_parameters.i: document_parameters.cpp.i
+
+.PHONY : document_parameters.i
+
+# target to preprocess a source file
+document_parameters.cpp.i:
+	cd /home/travis/build/adv-dev-22/otus_cpp_hw && $(MAKE) -f 05_editor/CMakeFiles/run_editor.dir/build.make 05_editor/CMakeFiles/run_editor.dir/document_parameters.cpp.i
+.PHONY : document_parameters.cpp.i
+
+document_parameters.s: document_parameters.cpp.s
+
+.PHONY : document_parameters.s
+
+# target to generate assembly for a file
+document_parameters.cpp.s:
+	cd /home/travis/build/adv-dev-22/otus_cpp_hw && $(MAKE) -f 05_editor/CMakeFiles/run_editor.dir/build.make 05_editor/CMakeFiles/run_editor.dir/document_parameters.cpp.s
+.PHONY : document_parameters.cpp.s
+
+editor_core.o: editor_core.cpp.o
+
+.PHONY : editor_core.o
+
+# target to build an object file
+editor_core.cpp.o:
+	cd /home/travis/build/adv-dev-22/otus_cpp_hw && $(MAKE) -f 05_editor/CMakeFiles/run_editor.dir/build.make 05_editor/CMakeFiles/run_editor.dir/editor_core.cpp.o
+.PHONY : editor_core.cpp.o
+
+editor_core.i: editor_core.cpp.i
+
+.PHONY : editor_core.i
+
+# target to preprocess a source file
+editor_core.cpp.i:
+	cd /home/travis/build/adv-dev-22/otus_cpp_hw && $(MAKE) -f 05_editor/CMakeFiles/run_editor.dir/build.make 05_editor/CMakeFiles/run_editor.dir/editor_core.cpp.i
+.PHONY : editor_core.cpp.i
+
+editor_core.s: editor_core.cpp.s
+
+.PHONY : editor_core.s
+
+# target to generate assembly for a file
+editor_core.cpp.s:
+	cd /home/travis/build/adv-dev-22/otus_cpp_hw && $(MAKE) -f 05_editor/CMakeFiles/run_editor.dir/build.make 05_editor/CMakeFiles/run_editor.dir/editor_core.cpp.s
+.PHONY : editor_core.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -247,6 +355,18 @@ help:
 	@echo "... package_source"
 	@echo "... package"
 	@echo "... test"
+	@echo "... default.o"
+	@echo "... default.i"
+	@echo "... default.s"
+	@echo "... document.o"
+	@echo "... document.i"
+	@echo "... document.s"
+	@echo "... document_parameters.o"
+	@echo "... document_parameters.i"
+	@echo "... document_parameters.s"
+	@echo "... editor_core.o"
+	@echo "... editor_core.i"
+	@echo "... editor_core.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

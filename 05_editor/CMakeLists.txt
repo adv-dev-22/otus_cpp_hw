@@ -8,7 +8,10 @@ enable_testing()
 
 add_executable(run_editor 
         main.cpp
-        
+        default.cpp	
+        document.cpp
+        document_parameters.cpp	
+        editor_core.cpp
 )
 
 set_target_properties(run_editor PROPERTIES
