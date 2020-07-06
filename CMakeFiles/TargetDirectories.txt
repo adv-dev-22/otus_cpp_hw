@@ -84,6 +84,16 @@
 /home/travis/build/adv-dev-22/otus_cpp_hw/04_sfinae/tests/CMakeFiles/test_print_ip.dir
 /home/travis/build/adv-dev-22/otus_cpp_hw/04_sfinae/tests/CMakeFiles/package.dir
 /home/travis/build/adv-dev-22/otus_cpp_hw/04_sfinae/tests/CMakeFiles/test.dir
+/home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/CMakeFiles/install/strip.dir
+/home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/CMakeFiles/install/local.dir
+/home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/CMakeFiles/install.dir
+/home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/CMakeFiles/list_install_components.dir
+/home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/CMakeFiles/rebuild_cache.dir
+/home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/CMakeFiles/edit_cache.dir
+/home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/CMakeFiles/run_editor.dir
+/home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/CMakeFiles/package_source.dir
+/home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/CMakeFiles/package.dir
+/home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/CMakeFiles/test.dir
 /home/travis/build/adv-dev-22/otus_cpp_hw/06_matrix/CMakeFiles/install/strip.dir
 /home/travis/build/adv-dev-22/otus_cpp_hw/06_matrix/CMakeFiles/install/local.dir
 /home/travis/build/adv-dev-22/otus_cpp_hw/06_matrix/CMakeFiles/install.dir

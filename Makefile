@@ -372,6 +372,19 @@ test_print_ip/fast:
 .PHONY : test_print_ip/fast
 
 #=============================================================================
+# Target rules for targets named run_editor
+
+# Build rule for target.
+run_editor: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 run_editor
+.PHONY : run_editor
+
+# fast build rule for target.
+run_editor/fast:
+	$(MAKE) -f 05_editor/CMakeFiles/run_editor.dir/build.make 05_editor/CMakeFiles/run_editor.dir/build
+.PHONY : run_editor/fast
+
+#=============================================================================
 # Target rules for targets named run_matrix
 
 # Build rule for target.
@@ -426,6 +439,7 @@ help:
 	@echo "... reserve_allocator"
 	@echo "... print_ip"
 	@echo "... test_print_ip"
+	@echo "... run_editor"
 	@echo "... run_matrix"
 	@echo "... test_inf_matrix"
 .PHONY : help

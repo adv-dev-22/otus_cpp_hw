@@ -31,7 +31,9 @@ if (HW04 OR HWALL)
     add_subdirectory(04_sfinae)
 endif()
 
-#hw 05
+if (HW05 OR HWALL)
+    add_subdirectory(05_editor)
+endif()
 
 if (HW06 OR HWALL)
     add_subdirectory(06_matrix)
