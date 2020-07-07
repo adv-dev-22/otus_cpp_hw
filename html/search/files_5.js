@@ -1,13 +1,17 @@
 var searchData=
 [
-  ['main_2ecpp',['main.cpp',['../01_2main_8cpp.html',1,'']]],
-  ['main_2ecpp',['main.cpp',['../04__sfinae_2main_8cpp.html',1,'']]],
-  ['main_2ecpp',['main.cpp',['../06__matrix_2main_8cpp.html',1,'']]],
-  ['main_2ecpp',['main.cpp',['../multithread__pc_2main_8cpp.html',1,'']]],
-  ['main_2ecpp',['main.cpp',['../05__editor_2main_8cpp.html',1,'']]],
-  ['main_5fallocator_2ecpp',['main_allocator.cpp',['../main__allocator_8cpp.html',1,'']]],
-  ['matrix_5fobserver_2ecpp',['matrix_observer.cpp',['../matrix__observer_8cpp.html',1,'']]],
-  ['matrix_5fobserver_2eh',['matrix_observer.h',['../matrix__observer_8h.html',1,'']]],
-  ['mlt_5fthr_5fdata_5fserver_2ecpp',['mlt_thr_data_server.cpp',['../mlt__thr__data__server_8cpp.html',1,'']]],
-  ['mlt_5fthr_5fdata_5fserver_2eh',['mlt_thr_data_server.h',['../mlt__thr__data__server_8h.html',1,'']]]
+  ['infinite_5fmatrix_2ecpp',['infinite_matrix.cpp',['../infinite__matrix_8cpp.html',1,'']]],
+  ['infinite_5fmatrix_2eh',['infinite_matrix.h',['../infinite__matrix_8h.html',1,'']]],
+  ['infinite_5frow_2ecpp',['infinite_row.cpp',['../infinite__row_8cpp.html',1,'']]],
+  ['infinite_5frow_2eh',['infinite_row.h',['../infinite__row_8h.html',1,'']]],
+  ['ip_5floader_2ecpp',['ip_loader.cpp',['../02_2ip__loader_8cpp.html',1,'']]],
+  ['ip_5floader_2ecpp',['ip_loader.cpp',['../03__ranges_2ip__loader_8cpp.html',1,'']]],
+  ['ip_5floader_2eh',['ip_loader.h',['../03__ranges_2ip__loader_8h.html',1,'']]],
+  ['ip_5floader_2eh',['ip_loader.h',['../02_2ip__loader_8h.html',1,'']]],
+  ['ip_5fmain_2ecpp',['ip_main.cpp',['../02_2ip__main_8cpp.html',1,'']]],
+  ['ip_5fmain_2ecpp',['ip_main.cpp',['../03__ranges_2ip__main_8cpp.html',1,'']]],
+  ['ip_5fprocessor_2ecpp',['ip_processor.cpp',['../02_2ip__processor_8cpp.html',1,'']]],
+  ['ip_5fprocessor_2ecpp',['ip_processor.cpp',['../03__ranges_2ip__processor_8cpp.html',1,'']]],
+  ['ip_5fprocessor_2eh',['ip_processor.h',['../03__ranges_2ip__processor_8h.html',1,'']]],
+  ['ip_5fprocessor_2eh',['ip_processor.h',['../02_2ip__processor_8h.html',1,'']]]
 ];

@@ -204,6 +204,33 @@ run_editor/fast:
 	cd /home/travis/build/adv-dev-22/otus_cpp_hw && $(MAKE) -f 05_editor/CMakeFiles/run_editor.dir/build.make 05_editor/CMakeFiles/run_editor.dir/build
 .PHONY : run_editor/fast
 
+base_shape_2d.o: base_shape_2d.cpp.o
+
+.PHONY : base_shape_2d.o
+
+# target to build an object file
+base_shape_2d.cpp.o:
+	cd /home/travis/build/adv-dev-22/otus_cpp_hw && $(MAKE) -f 05_editor/CMakeFiles/run_editor.dir/build.make 05_editor/CMakeFiles/run_editor.dir/base_shape_2d.cpp.o
+.PHONY : base_shape_2d.cpp.o
+
+base_shape_2d.i: base_shape_2d.cpp.i
+
+.PHONY : base_shape_2d.i
+
+# target to preprocess a source file
+base_shape_2d.cpp.i:
+	cd /home/travis/build/adv-dev-22/otus_cpp_hw && $(MAKE) -f 05_editor/CMakeFiles/run_editor.dir/build.make 05_editor/CMakeFiles/run_editor.dir/base_shape_2d.cpp.i
+.PHONY : base_shape_2d.cpp.i
+
+base_shape_2d.s: base_shape_2d.cpp.s
+
+.PHONY : base_shape_2d.s
+
+# target to generate assembly for a file
+base_shape_2d.cpp.s:
+	cd /home/travis/build/adv-dev-22/otus_cpp_hw && $(MAKE) -f 05_editor/CMakeFiles/run_editor.dir/build.make 05_editor/CMakeFiles/run_editor.dir/base_shape_2d.cpp.s
+.PHONY : base_shape_2d.cpp.s
+
 default.o: default.cpp.o
 
 .PHONY : default.o
@@ -382,6 +409,9 @@ help:
 	@echo "... package_source"
 	@echo "... package"
 	@echo "... test"
+	@echo "... base_shape_2d.o"
+	@echo "... base_shape_2d.i"
+	@echo "... base_shape_2d.s"
 	@echo "... default.o"
 	@echo "... default.i"
 	@echo "... default.s"

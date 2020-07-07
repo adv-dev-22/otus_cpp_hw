@@ -1,17 +1,7 @@
 var searchData=
 [
-  ['infinite_5fmatrix_2ecpp',['infinite_matrix.cpp',['../infinite__matrix_8cpp.html',1,'']]],
-  ['infinite_5fmatrix_2eh',['infinite_matrix.h',['../infinite__matrix_8h.html',1,'']]],
-  ['infinite_5frow_2ecpp',['infinite_row.cpp',['../infinite__row_8cpp.html',1,'']]],
-  ['infinite_5frow_2eh',['infinite_row.h',['../infinite__row_8h.html',1,'']]],
-  ['ip_5floader_2ecpp',['ip_loader.cpp',['../02_2ip__loader_8cpp.html',1,'']]],
-  ['ip_5floader_2ecpp',['ip_loader.cpp',['../03__ranges_2ip__loader_8cpp.html',1,'']]],
-  ['ip_5floader_2eh',['ip_loader.h',['../03__ranges_2ip__loader_8h.html',1,'']]],
-  ['ip_5floader_2eh',['ip_loader.h',['../02_2ip__loader_8h.html',1,'']]],
-  ['ip_5fmain_2ecpp',['ip_main.cpp',['../02_2ip__main_8cpp.html',1,'']]],
-  ['ip_5fmain_2ecpp',['ip_main.cpp',['../03__ranges_2ip__main_8cpp.html',1,'']]],
-  ['ip_5fprocessor_2ecpp',['ip_processor.cpp',['../02_2ip__processor_8cpp.html',1,'']]],
-  ['ip_5fprocessor_2ecpp',['ip_processor.cpp',['../03__ranges_2ip__processor_8cpp.html',1,'']]],
-  ['ip_5fprocessor_2eh',['ip_processor.h',['../03__ranges_2ip__processor_8h.html',1,'']]],
-  ['ip_5fprocessor_2eh',['ip_processor.h',['../02_2ip__processor_8h.html',1,'']]]
+  ['feature_5ftests_2ec',['feature_tests.c',['../feature__tests_8c.html',1,'']]],
+  ['feature_5ftests_2ecxx',['feature_tests.cxx',['../feature__tests_8cxx.html',1,'']]],
+  ['fixed_5fsz_5fallocator_2ehpp',['fixed_sz_allocator.hpp',['../fixed__sz__allocator_8hpp.html',1,'']]],
+  ['flexible_5fallocator_2ehpp',['flexible_allocator.hpp',['../flexible__allocator_8hpp.html',1,'']]]
 ];

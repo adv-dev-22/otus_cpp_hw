@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['_7ebaseshape2d',['~BaseShape2D',['../classGraphicalEditorCore_1_1BaseShape2D.html#a512cef9650dce3a909957ae0459c5132',1,'GraphicalEditorCore::BaseShape2D']]],
   ['_7ecellobserver',['~CellObserver',['../classCellObserver.html#a4a930e2b7ac95c7c11f34cee6f868bc1',1,'CellObserver']]],
   ['_7econtigious_5fblock',['~contigious_block',['../classcontigious__block.html#a5fe8250399873d760c8bbf0b08e51189',1,'contigious_block']]],
   ['_7ecustomcontainer',['~CustomContainer',['../classCustomContainer.html#a7de15b5199e301225c6bc469aef4ef77',1,'CustomContainer::~CustomContainer()'],['../classCustomContainer_3_01T_00_01reserve__allocator_3_01T_00_01n_01_4_01_4.html#a11dae533731736ae4c2309550b793a11',1,'CustomContainer&lt; T, reserve_allocator&lt; T, n &gt; &gt;::~CustomContainer()']]],

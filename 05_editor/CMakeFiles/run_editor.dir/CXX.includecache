@@ -6,6 +6,8 @@
 
 #IncludeRegexTransform: 
 
+/home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/base_shape_2d.cpp
+
 /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/default.cpp
 default.h
 /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/default.h
