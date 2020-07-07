@@ -9,6 +9,8 @@ public:
     virtual ~BaseShape2D();
 
     // void rotate();
+    // void move();
+    // void scale();
 
 private:
 
