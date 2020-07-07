@@ -339,6 +339,33 @@ main.cpp.s:
 	cd /home/travis/build/adv-dev-22/otus_cpp_hw && $(MAKE) -f 05_editor/CMakeFiles/run_editor.dir/build.make 05_editor/CMakeFiles/run_editor.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+point_2d.o: point_2d.cpp.o
+
+.PHONY : point_2d.o
+
+# target to build an object file
+point_2d.cpp.o:
+	cd /home/travis/build/adv-dev-22/otus_cpp_hw && $(MAKE) -f 05_editor/CMakeFiles/run_editor.dir/build.make 05_editor/CMakeFiles/run_editor.dir/point_2d.cpp.o
+.PHONY : point_2d.cpp.o
+
+point_2d.i: point_2d.cpp.i
+
+.PHONY : point_2d.i
+
+# target to preprocess a source file
+point_2d.cpp.i:
+	cd /home/travis/build/adv-dev-22/otus_cpp_hw && $(MAKE) -f 05_editor/CMakeFiles/run_editor.dir/build.make 05_editor/CMakeFiles/run_editor.dir/point_2d.cpp.i
+.PHONY : point_2d.cpp.i
+
+point_2d.s: point_2d.cpp.s
+
+.PHONY : point_2d.s
+
+# target to generate assembly for a file
+point_2d.cpp.s:
+	cd /home/travis/build/adv-dev-22/otus_cpp_hw && $(MAKE) -f 05_editor/CMakeFiles/run_editor.dir/build.make 05_editor/CMakeFiles/run_editor.dir/point_2d.cpp.s
+.PHONY : point_2d.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -370,6 +397,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... point_2d.o"
+	@echo "... point_2d.i"
+	@echo "... point_2d.s"
 .PHONY : help
 
 

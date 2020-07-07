@@ -16,3 +16,6 @@
 05_editor/CMakeFiles/run_editor.dir/main.cpp.o
  /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/editor_core.h
  /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/main.cpp
+05_editor/CMakeFiles/run_editor.dir/point_2d.cpp.o
+ /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/point_2d.cpp
+ /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/point_2d.h

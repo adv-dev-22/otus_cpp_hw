@@ -12,6 +12,7 @@ add_executable(run_editor
         document.cpp
         document_parameters.cpp	
         editor_core.cpp
+	point_2d.cpp
 )
 
 set_target_properties(run_editor PROPERTIES

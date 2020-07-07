@@ -1,9 +1,9 @@
 Package: homeworks
-Version: 4.1.105
+Version: 4.1.106
 Section: devel
 Priority: optional
 Architecture: amd64
-Installed-Size: 1348
+Installed-Size: 1350
 Maintainer: example@example.com
 Description: homeworks built using CMake
 

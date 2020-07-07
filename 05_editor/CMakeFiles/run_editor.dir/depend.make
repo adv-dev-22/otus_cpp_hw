@@ -16,3 +16,6 @@
 05_editor/CMakeFiles/run_editor.dir/main.cpp.o: 05_editor/editor_core.h
 05_editor/CMakeFiles/run_editor.dir/main.cpp.o: 05_editor/main.cpp
 
+05_editor/CMakeFiles/run_editor.dir/point_2d.cpp.o: 05_editor/point_2d.cpp
+05_editor/CMakeFiles/run_editor.dir/point_2d.cpp.o: 05_editor/point_2d.h
+
