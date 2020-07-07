@@ -8,6 +8,7 @@ enable_testing()
 
 add_executable(run_editor 
         main.cpp
+	base_shape_2d.cpp
         default.cpp	
         document.cpp
         document_parameters.cpp	
