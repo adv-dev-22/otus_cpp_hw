@@ -19,7 +19,7 @@ public:
 
     virtual size_t width()  const = 0;
     virtual size_t height() const = 0;
-    virtual size_t colorDepth() const = 0;
+   //virtual size_t colorDepth() const = 0;
 
     // ..
 
@@ -39,14 +39,14 @@ public:
 
     virtual size_t width()  const;
     virtual size_t height() const;
-    virtual size_t colorDepth() const;
+   // virtual size_t colorDepth() const;
 
     // ..
 
 private:
     size_t width_;
     size_t height_;
-    size_t color_depth_;
+  //  size_t color_depth_;
 
     // ..
 };

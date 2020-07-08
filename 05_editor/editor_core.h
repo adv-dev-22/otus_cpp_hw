@@ -8,10 +8,13 @@ public:
     EditorCore();
     virtual ~EditorCore();
 
-    void create_document(/*Parameters .. */);
+    void create_document(const DocumentParametersInterface & );
+
+    // iterators
+    //void next_document();
 
 private:
-    // map of already created documents
+    // container (map) of already created documents
     // ..
 
 
