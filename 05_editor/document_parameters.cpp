@@ -36,9 +36,9 @@ size_t DocumentParameters::height() const {
     return height_;
 }
 
-size_t DocumentParameters::colorDepth() const {
-    return color_depth_;
-}
+//size_t DocumentParameters::colorDepth() const {
+//    return color_depth_;
+//}
 
 } // End of namespace GraphicalEditorCore.
 

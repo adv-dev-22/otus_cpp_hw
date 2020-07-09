@@ -8,7 +8,7 @@ public:
     EditorCore();
     virtual ~EditorCore();
 
-    void create_document(const DocumentParametersInterface & );
+    void create_document(/*const DocumentParametersInterface & */);
 
     // iterators
     //void next_document();

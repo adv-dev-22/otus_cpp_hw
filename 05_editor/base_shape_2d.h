@@ -1,6 +1,7 @@
 #ifndef _BASE_SHAPE_2D_H_
 #define _BASE_SHAPE_2D_H_
 
+#include "color_engine.h"
 #include <memory>
 
 namespace GraphicalEditorCore {
