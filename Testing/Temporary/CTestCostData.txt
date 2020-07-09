@@ -1,7 +1,7 @@
-Versions::boost_test 1 0.00296304
-Versions::gtest_test 1 0.00273364
-IpConfig::ranges 1 0.0387378
-HomeWork03::allocator 1 0.00315698
-HomeWork04::print_ip 1 0.00318869
-HomeWork06::infinite_matrix 1 0.00251603
+Versions::boost_test 1 0.0048168
+Versions::gtest_test 1 0.00596545
+IpConfig::ranges 1 0.0399219
+HomeWork03::allocator 1 0.00306225
+HomeWork04::print_ip 1 0.00480169
+HomeWork06::infinite_matrix 1 0.00312654
 ---

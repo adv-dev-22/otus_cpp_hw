@@ -1,5 +1,5 @@
-\hypertarget{classGraphicalEditorCore_1_1BaseShape2D}{}\section{Graphical\+Editor\+Core\+:\+:Base\+Shape2D Class Reference}
-\label{classGraphicalEditorCore_1_1BaseShape2D}\index{Graphical\+Editor\+Core\+::\+Base\+Shape2D@{Graphical\+Editor\+Core\+::\+Base\+Shape2D}}
+\hypertarget{classGraphicalEditorCore_1_1BaseShape2D}{}\section{Graphical\+Editor\+Core\+:\+:Base\+Shape2D$<$ T $>$ Class Template Reference}
+\label{classGraphicalEditorCore_1_1BaseShape2D}\index{Graphical\+Editor\+Core\+::\+Base\+Shape2\+D$<$ T $>$@{Graphical\+Editor\+Core\+::\+Base\+Shape2\+D$<$ T $>$}}
 
 
 {\ttfamily \#include $<$base\+\_\+shape\+\_\+2d.\+h$>$}
@@ -7,27 +7,78 @@
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classGraphicalEditorCore_1_1BaseShape2D_af2358f7fd2482e86a07f4fb9330fa142}{Base\+Shape2D} ()
+\hyperlink{classGraphicalEditorCore_1_1BaseShape2D_aa561989871a4590bad5377fa62f13443}{Base\+Shape2D} ()
 \item 
-virtual \hyperlink{classGraphicalEditorCore_1_1BaseShape2D_a512cef9650dce3a909957ae0459c5132}{$\sim$\+Base\+Shape2D} ()
+virtual \hyperlink{classGraphicalEditorCore_1_1BaseShape2D_ada8fbba63ef307fe04688007aeec4f87}{$\sim$\+Base\+Shape2D} ()
+\item 
+virtual void \hyperlink{classGraphicalEditorCore_1_1BaseShape2D_a94a87b2fd8485cfb7d4ca97050d1bdde}{rotate} (const T clockwise\+\_\+angle)=0
+\item 
+virtual void \hyperlink{classGraphicalEditorCore_1_1BaseShape2D_aab368c5a675aff41dacb23bf4cce1acb}{move\+\_\+center} (const T dx, const T dy)=0
+\item 
+virtual void \hyperlink{classGraphicalEditorCore_1_1BaseShape2D_a22408ae787f6e0b5444c89399173af62}{move\+\_\+vertex} (const T dx, const T dy, const size\+\_\+t index)=0
+\item 
+virtual void \hyperlink{classGraphicalEditorCore_1_1BaseShape2D_a2ff960ec57b180222a084642fa7dc780}{scale} (const T factor)=0
+\item 
+void \hyperlink{classGraphicalEditorCore_1_1BaseShape2D_a8de5ea1a542510e0800a5e4293878e0b}{reset\+\_\+color\+\_\+engine} (\hyperlink{classGraphicalEditorCore_1_1ColorEngineBase}{Color\+Engine\+Base} $\ast$)
 \end{DoxyCompactItemize}
 
 
 \subsection{Constructor \& Destructor Documentation}
 \index{Graphical\+Editor\+Core\+::\+Base\+Shape2D@{Graphical\+Editor\+Core\+::\+Base\+Shape2D}!Base\+Shape2D@{Base\+Shape2D}}
 \index{Base\+Shape2D@{Base\+Shape2D}!Graphical\+Editor\+Core\+::\+Base\+Shape2D@{Graphical\+Editor\+Core\+::\+Base\+Shape2D}}
-\subsubsection[{\texorpdfstring{Base\+Shape2\+D()}{BaseShape2D()}}]{\setlength{\rightskip}{0pt plus 5cm}Graphical\+Editor\+Core\+::\+Base\+Shape2\+D\+::\+Base\+Shape2D (
+\subsubsection[{\texorpdfstring{Base\+Shape2\+D()}{BaseShape2D()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T  = double$>$ {\bf Graphical\+Editor\+Core\+::\+Base\+Shape2D}$<$ T $>$\+::{\bf Base\+Shape2D} (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}\hypertarget{classGraphicalEditorCore_1_1BaseShape2D_af2358f7fd2482e86a07f4fb9330fa142}{}\label{classGraphicalEditorCore_1_1BaseShape2D_af2358f7fd2482e86a07f4fb9330fa142}
+)}\hypertarget{classGraphicalEditorCore_1_1BaseShape2D_aa561989871a4590bad5377fa62f13443}{}\label{classGraphicalEditorCore_1_1BaseShape2D_aa561989871a4590bad5377fa62f13443}
 \index{Graphical\+Editor\+Core\+::\+Base\+Shape2D@{Graphical\+Editor\+Core\+::\+Base\+Shape2D}!````~Base\+Shape2D@{$\sim$\+Base\+Shape2D}}
 \index{````~Base\+Shape2D@{$\sim$\+Base\+Shape2D}!Graphical\+Editor\+Core\+::\+Base\+Shape2D@{Graphical\+Editor\+Core\+::\+Base\+Shape2D}}
-\subsubsection[{\texorpdfstring{$\sim$\+Base\+Shape2\+D()}{~BaseShape2D()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual Graphical\+Editor\+Core\+::\+Base\+Shape2\+D\+::$\sim$\+Base\+Shape2D (
+\subsubsection[{\texorpdfstring{$\sim$\+Base\+Shape2\+D()}{~BaseShape2D()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T  = double$>$ virtual {\bf Graphical\+Editor\+Core\+::\+Base\+Shape2D}$<$ T $>$\+::$\sim${\bf Base\+Shape2D} (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGraphicalEditorCore_1_1BaseShape2D_a512cef9650dce3a909957ae0459c5132}{}\label{classGraphicalEditorCore_1_1BaseShape2D_a512cef9650dce3a909957ae0459c5132}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGraphicalEditorCore_1_1BaseShape2D_ada8fbba63ef307fe04688007aeec4f87}{}\label{classGraphicalEditorCore_1_1BaseShape2D_ada8fbba63ef307fe04688007aeec4f87}
+
+
+\subsection{Member Function Documentation}
+\index{Graphical\+Editor\+Core\+::\+Base\+Shape2D@{Graphical\+Editor\+Core\+::\+Base\+Shape2D}!move\+\_\+center@{move\+\_\+center}}
+\index{move\+\_\+center@{move\+\_\+center}!Graphical\+Editor\+Core\+::\+Base\+Shape2D@{Graphical\+Editor\+Core\+::\+Base\+Shape2D}}
+\subsubsection[{\texorpdfstring{move\+\_\+center(const T dx, const T dy)=0}{move_center(const T dx, const T dy)=0}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T  = double$>$ virtual void {\bf Graphical\+Editor\+Core\+::\+Base\+Shape2D}$<$ T $>$\+::move\+\_\+center (
+\begin{DoxyParamCaption}
+\item[{const T}]{dx, }
+\item[{const T}]{dy}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classGraphicalEditorCore_1_1BaseShape2D_aab368c5a675aff41dacb23bf4cce1acb}{}\label{classGraphicalEditorCore_1_1BaseShape2D_aab368c5a675aff41dacb23bf4cce1acb}
+\index{Graphical\+Editor\+Core\+::\+Base\+Shape2D@{Graphical\+Editor\+Core\+::\+Base\+Shape2D}!move\+\_\+vertex@{move\+\_\+vertex}}
+\index{move\+\_\+vertex@{move\+\_\+vertex}!Graphical\+Editor\+Core\+::\+Base\+Shape2D@{Graphical\+Editor\+Core\+::\+Base\+Shape2D}}
+\subsubsection[{\texorpdfstring{move\+\_\+vertex(const T dx, const T dy, const size\+\_\+t index)=0}{move_vertex(const T dx, const T dy, const size_t index)=0}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T  = double$>$ virtual void {\bf Graphical\+Editor\+Core\+::\+Base\+Shape2D}$<$ T $>$\+::move\+\_\+vertex (
+\begin{DoxyParamCaption}
+\item[{const T}]{dx, }
+\item[{const T}]{dy, }
+\item[{const size\+\_\+t}]{index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classGraphicalEditorCore_1_1BaseShape2D_a22408ae787f6e0b5444c89399173af62}{}\label{classGraphicalEditorCore_1_1BaseShape2D_a22408ae787f6e0b5444c89399173af62}
+\index{Graphical\+Editor\+Core\+::\+Base\+Shape2D@{Graphical\+Editor\+Core\+::\+Base\+Shape2D}!reset\+\_\+color\+\_\+engine@{reset\+\_\+color\+\_\+engine}}
+\index{reset\+\_\+color\+\_\+engine@{reset\+\_\+color\+\_\+engine}!Graphical\+Editor\+Core\+::\+Base\+Shape2D@{Graphical\+Editor\+Core\+::\+Base\+Shape2D}}
+\subsubsection[{\texorpdfstring{reset\+\_\+color\+\_\+engine(\+Color\+Engine\+Base $\ast$)}{reset_color_engine(ColorEngineBase *)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T  = double$>$ void {\bf Graphical\+Editor\+Core\+::\+Base\+Shape2D}$<$ T $>$\+::reset\+\_\+color\+\_\+engine (
+\begin{DoxyParamCaption}
+\item[{{\bf Color\+Engine\+Base} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classGraphicalEditorCore_1_1BaseShape2D_a8de5ea1a542510e0800a5e4293878e0b}{}\label{classGraphicalEditorCore_1_1BaseShape2D_a8de5ea1a542510e0800a5e4293878e0b}
+\index{Graphical\+Editor\+Core\+::\+Base\+Shape2D@{Graphical\+Editor\+Core\+::\+Base\+Shape2D}!rotate@{rotate}}
+\index{rotate@{rotate}!Graphical\+Editor\+Core\+::\+Base\+Shape2D@{Graphical\+Editor\+Core\+::\+Base\+Shape2D}}
+\subsubsection[{\texorpdfstring{rotate(const T clockwise\+\_\+angle)=0}{rotate(const T clockwise_angle)=0}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T  = double$>$ virtual void {\bf Graphical\+Editor\+Core\+::\+Base\+Shape2D}$<$ T $>$\+::rotate (
+\begin{DoxyParamCaption}
+\item[{const T}]{clockwise\+\_\+angle}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classGraphicalEditorCore_1_1BaseShape2D_a94a87b2fd8485cfb7d4ca97050d1bdde}{}\label{classGraphicalEditorCore_1_1BaseShape2D_a94a87b2fd8485cfb7d4ca97050d1bdde}
+\index{Graphical\+Editor\+Core\+::\+Base\+Shape2D@{Graphical\+Editor\+Core\+::\+Base\+Shape2D}!scale@{scale}}
+\index{scale@{scale}!Graphical\+Editor\+Core\+::\+Base\+Shape2D@{Graphical\+Editor\+Core\+::\+Base\+Shape2D}}
+\subsubsection[{\texorpdfstring{scale(const T factor)=0}{scale(const T factor)=0}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T  = double$>$ virtual void {\bf Graphical\+Editor\+Core\+::\+Base\+Shape2D}$<$ T $>$\+::scale (
+\begin{DoxyParamCaption}
+\item[{const T}]{factor}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classGraphicalEditorCore_1_1BaseShape2D_a2ff960ec57b180222a084642fa7dc780}{}\label{classGraphicalEditorCore_1_1BaseShape2D_a2ff960ec57b180222a084642fa7dc780}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

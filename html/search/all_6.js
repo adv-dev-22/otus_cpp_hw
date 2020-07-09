@@ -4,5 +4,6 @@ var searchData=
   ['get_5fip_5fpool',['get_ip_pool',['../classIpDataLoader.html#a3db77224a43c4a347cd24e4219acc1fb',1,'IpDataLoader']]],
   ['getperson',['getPerson',['../cstm__pair__exmpl_8cpp.html#ae67256938aa05b1d4bb49651db1d7acd',1,'getPerson():&#160;cstm_pair_exmpl.cpp'],['../cstm__pair__exmpl__2_8cpp.html#ae67256938aa05b1d4bb49651db1d7acd',1,'getPerson():&#160;cstm_pair_exmpl_2.cpp'],['../cstm__tuple__exmpl_8cpp.html#ae67256938aa05b1d4bb49651db1d7acd',1,'getPerson():&#160;cstm_tuple_exmpl.cpp']]],
   ['getperson1',['getPerson1',['../cstm__tuple__exmpl_8cpp.html#a290da9ec9671d3f6d8be6f84c862678e',1,'cstm_tuple_exmpl.cpp']]],
-  ['graphicaleditorcore',['GraphicalEditorCore',['../namespaceGraphicalEditorCore.html',1,'']]]
+  ['graphicaleditorcore',['GraphicalEditorCore',['../namespaceGraphicalEditorCore.html',1,'']]],
+  ['green',['green',['../classGraphicalEditorCore_1_1ColorEngineBase.html#a748837e34f2bf4409ae36a5d9ea02e27',1,'GraphicalEditorCore::ColorEngineBase::green()'],['../classGraphicalEditorCore_1_1ColorEngineUniform.html#a219f34e3e5dabdf260e7c1adaa8bc2ee',1,'GraphicalEditorCore::ColorEngineUniform::green()'],['../classGraphicalEditorCore_1_1ColorEngineLinearGradient.html#a961e4df71e25e227418a7bcb13c7379b',1,'GraphicalEditorCore::ColorEngineLinearGradient::green()'],['../namespaceGraphicalEditorCore.html#ada0d86f7dc1329a6731f908a95f68a38ad382816a3cbeed082c9e216e7392eed1',1,'GraphicalEditorCore::Green()']]]
 ];

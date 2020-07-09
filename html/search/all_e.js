@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['scale',['scale',['../classGraphicalEditorCore_1_1BaseShape2D.html#a2ff960ec57b180222a084642fa7dc780',1,'GraphicalEditorCore::BaseShape2D']]],
   ['set_5fbuffer_5fsize',['set_buffer_size',['../classMultiThreadDataServer.html#a6e347641cb63e8bce6d65d74c37849a7',1,'MultiThreadDataServer::set_buffer_size()'],['../classProdConsSimulator.html#a470ba42fc7a78806034056405e4ce1f1',1,'ProdConsSimulator::set_buffer_size()']]],
   ['set_5fconsumer_5fnumber',['set_consumer_number',['../classProdConsSimulator.html#a405ddd1c46a8b1c6acaddd2743c98e9a',1,'ProdConsSimulator']]],
   ['set_5findex',['set_index',['../classCellObserver.html#a5838eda25127346a5a296c38a651f764',1,'CellObserver']]],

@@ -231,6 +231,33 @@ base_shape_2d.cpp.s:
 	cd /home/travis/build/adv-dev-22/otus_cpp_hw && $(MAKE) -f 05_editor/CMakeFiles/run_editor.dir/build.make 05_editor/CMakeFiles/run_editor.dir/base_shape_2d.cpp.s
 .PHONY : base_shape_2d.cpp.s
 
+color_engine.o: color_engine.cpp.o
+
+.PHONY : color_engine.o
+
+# target to build an object file
+color_engine.cpp.o:
+	cd /home/travis/build/adv-dev-22/otus_cpp_hw && $(MAKE) -f 05_editor/CMakeFiles/run_editor.dir/build.make 05_editor/CMakeFiles/run_editor.dir/color_engine.cpp.o
+.PHONY : color_engine.cpp.o
+
+color_engine.i: color_engine.cpp.i
+
+.PHONY : color_engine.i
+
+# target to preprocess a source file
+color_engine.cpp.i:
+	cd /home/travis/build/adv-dev-22/otus_cpp_hw && $(MAKE) -f 05_editor/CMakeFiles/run_editor.dir/build.make 05_editor/CMakeFiles/run_editor.dir/color_engine.cpp.i
+.PHONY : color_engine.cpp.i
+
+color_engine.s: color_engine.cpp.s
+
+.PHONY : color_engine.s
+
+# target to generate assembly for a file
+color_engine.cpp.s:
+	cd /home/travis/build/adv-dev-22/otus_cpp_hw && $(MAKE) -f 05_editor/CMakeFiles/run_editor.dir/build.make 05_editor/CMakeFiles/run_editor.dir/color_engine.cpp.s
+.PHONY : color_engine.cpp.s
+
 default.o: default.cpp.o
 
 .PHONY : default.o
@@ -412,6 +439,9 @@ help:
 	@echo "... base_shape_2d.o"
 	@echo "... base_shape_2d.i"
 	@echo "... base_shape_2d.s"
+	@echo "... color_engine.o"
+	@echo "... color_engine.i"
+	@echo "... color_engine.s"
 	@echo "... default.o"
 	@echo "... default.i"
 	@echo "... default.s"

@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/run_editor.dir/main.cpp.o"
   "CMakeFiles/run_editor.dir/base_shape_2d.cpp.o"
+  "CMakeFiles/run_editor.dir/color_engine.cpp.o"
   "CMakeFiles/run_editor.dir/default.cpp.o"
   "CMakeFiles/run_editor.dir/document.cpp.o"
   "CMakeFiles/run_editor.dir/document_parameters.cpp.o"

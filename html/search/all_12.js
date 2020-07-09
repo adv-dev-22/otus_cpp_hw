@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['x',['x',['../classGraphicalEditorCore_1_1Point2D.html#a3535507204fc7a8f6470942de5a7643d',1,'GraphicalEditorCore::Point2D::x() const noexcept'],['../classGraphicalEditorCore_1_1Point2D.html#a0768ab4b5b5bd50bd65b7e1b3138c91a',1,'GraphicalEditorCore::Point2D::x() noexcept']]]
+  ['width',['width',['../classGraphicalEditorCore_1_1DocumentParametersInterface.html#a8e96d1aa50d0b2bd3ef21fafaeaa4261',1,'GraphicalEditorCore::DocumentParametersInterface::width()'],['../classGraphicalEditorCore_1_1DocumentParameters.html#af84100459d1e49474e57e5b7b16f1750',1,'GraphicalEditorCore::DocumentParameters::width()']]],
+  ['worker_5floop_5fsize',['worker_loop_size',['../classMultiThreadDataServer.html#a86df4d28e4f35206b67a9c4e20b98649',1,'MultiThreadDataServer']]]
 ];
