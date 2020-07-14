@@ -6,12 +6,15 @@
 05_editor/CMakeFiles/run_editor.dir/color_engine.cpp.o: 05_editor/color_engine.cpp
 05_editor/CMakeFiles/run_editor.dir/color_engine.cpp.o: 05_editor/color_engine.h
 
+05_editor/CMakeFiles/run_editor.dir/default.cpp.o: 05_editor/color_engine.h
 05_editor/CMakeFiles/run_editor.dir/default.cpp.o: 05_editor/default.cpp
 05_editor/CMakeFiles/run_editor.dir/default.cpp.o: 05_editor/default.h
 
 05_editor/CMakeFiles/run_editor.dir/document.cpp.o: 05_editor/document.cpp
 05_editor/CMakeFiles/run_editor.dir/document.cpp.o: 05_editor/document.h
 
+05_editor/CMakeFiles/run_editor.dir/document_parameters.cpp.o: 05_editor/color_engine.h
+05_editor/CMakeFiles/run_editor.dir/document_parameters.cpp.o: 05_editor/default.h
 05_editor/CMakeFiles/run_editor.dir/document_parameters.cpp.o: 05_editor/document_parameters.cpp
 05_editor/CMakeFiles/run_editor.dir/document_parameters.cpp.o: 05_editor/document_parameters.h
 

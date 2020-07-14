@@ -32,6 +32,10 @@ virtual \hyperlink{classGraphicalEditorCore_1_1DocumentParametersInterface_a17f3
 virtual size\+\_\+t \hyperlink{classGraphicalEditorCore_1_1DocumentParametersInterface_a8e96d1aa50d0b2bd3ef21fafaeaa4261}{width} () const =0
 \item 
 virtual size\+\_\+t \hyperlink{classGraphicalEditorCore_1_1DocumentParametersInterface_a1a3f45e27f2c9b11d04b2fe562323bb2}{height} () const =0
+\item 
+virtual \hyperlink{classGraphicalEditorCore_1_1ColorEngineBase}{Color\+Engine\+Base} \& \hyperlink{classGraphicalEditorCore_1_1DocumentParametersInterface_aa686512ed2fc7bc504c1ee97ac8e4ad6}{color\+Engine} () const =0
+\item 
+virtual void \hyperlink{classGraphicalEditorCore_1_1DocumentParametersInterface_aeba626dbd31400b97a067bef47acc29d}{set\+Color\+Engine} (\hyperlink{classGraphicalEditorCore_1_1ColorEngineBase}{Color\+Engine\+Base} $\ast$const ceb\+\_\+ptr)=0
 \end{DoxyCompactItemize}
 
 
@@ -67,6 +71,17 @@ virtual size\+\_\+t \hyperlink{classGraphicalEditorCore_1_1DocumentParametersInt
 
 
 \subsection{Member Function Documentation}
+\index{Graphical\+Editor\+Core\+::\+Document\+Parameters\+Interface@{Graphical\+Editor\+Core\+::\+Document\+Parameters\+Interface}!color\+Engine@{color\+Engine}}
+\index{color\+Engine@{color\+Engine}!Graphical\+Editor\+Core\+::\+Document\+Parameters\+Interface@{Graphical\+Editor\+Core\+::\+Document\+Parameters\+Interface}}
+\subsubsection[{\texorpdfstring{color\+Engine() const =0}{colorEngine() const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Color\+Engine\+Base}\& Graphical\+Editor\+Core\+::\+Document\+Parameters\+Interface\+::color\+Engine (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classGraphicalEditorCore_1_1DocumentParametersInterface_aa686512ed2fc7bc504c1ee97ac8e4ad6}{}\label{classGraphicalEditorCore_1_1DocumentParametersInterface_aa686512ed2fc7bc504c1ee97ac8e4ad6}
+
+
+Implemented in \hyperlink{classGraphicalEditorCore_1_1DocumentParameters_a7be5fa9d87e97bbc523f976d4acdd657}{Graphical\+Editor\+Core\+::\+Document\+Parameters}.
+
 \index{Graphical\+Editor\+Core\+::\+Document\+Parameters\+Interface@{Graphical\+Editor\+Core\+::\+Document\+Parameters\+Interface}!height@{height}}
 \index{height@{height}!Graphical\+Editor\+Core\+::\+Document\+Parameters\+Interface@{Graphical\+Editor\+Core\+::\+Document\+Parameters\+Interface}}
 \subsubsection[{\texorpdfstring{height() const =0}{height() const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual size\+\_\+t Graphical\+Editor\+Core\+::\+Document\+Parameters\+Interface\+::height (
@@ -92,6 +107,17 @@ Implemented in \hyperlink{classGraphicalEditorCore_1_1DocumentParameters_ab28b51
 \item[{{\bf Document\+Parameters\+Interface} \&\&}]{}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [default]}}\hypertarget{classGraphicalEditorCore_1_1DocumentParametersInterface_a43e956fc79f52aff91ea8e2d0b952e5c}{}\label{classGraphicalEditorCore_1_1DocumentParametersInterface_a43e956fc79f52aff91ea8e2d0b952e5c}
+\index{Graphical\+Editor\+Core\+::\+Document\+Parameters\+Interface@{Graphical\+Editor\+Core\+::\+Document\+Parameters\+Interface}!set\+Color\+Engine@{set\+Color\+Engine}}
+\index{set\+Color\+Engine@{set\+Color\+Engine}!Graphical\+Editor\+Core\+::\+Document\+Parameters\+Interface@{Graphical\+Editor\+Core\+::\+Document\+Parameters\+Interface}}
+\subsubsection[{\texorpdfstring{set\+Color\+Engine(\+Color\+Engine\+Base $\ast$const ceb\+\_\+ptr)=0}{setColorEngine(ColorEngineBase *const ceb_ptr)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Graphical\+Editor\+Core\+::\+Document\+Parameters\+Interface\+::set\+Color\+Engine (
+\begin{DoxyParamCaption}
+\item[{{\bf Color\+Engine\+Base} $\ast$const}]{ceb\+\_\+ptr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classGraphicalEditorCore_1_1DocumentParametersInterface_aeba626dbd31400b97a067bef47acc29d}{}\label{classGraphicalEditorCore_1_1DocumentParametersInterface_aeba626dbd31400b97a067bef47acc29d}
+
+
+Implemented in \hyperlink{classGraphicalEditorCore_1_1DocumentParameters_a57c2ba4a8cfc9c4a058f109a1c32f4aa}{Graphical\+Editor\+Core\+::\+Document\+Parameters}.
+
 \index{Graphical\+Editor\+Core\+::\+Document\+Parameters\+Interface@{Graphical\+Editor\+Core\+::\+Document\+Parameters\+Interface}!width@{width}}
 \index{width@{width}!Graphical\+Editor\+Core\+::\+Document\+Parameters\+Interface@{Graphical\+Editor\+Core\+::\+Document\+Parameters\+Interface}}
 \subsubsection[{\texorpdfstring{width() const =0}{width() const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual size\+\_\+t Graphical\+Editor\+Core\+::\+Document\+Parameters\+Interface\+::width (

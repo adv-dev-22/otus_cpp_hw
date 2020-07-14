@@ -7,12 +7,15 @@
  /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/color_engine.cpp
  /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/color_engine.h
 05_editor/CMakeFiles/run_editor.dir/default.cpp.o
+ /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/color_engine.h
  /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/default.cpp
  /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/default.h
 05_editor/CMakeFiles/run_editor.dir/document.cpp.o
  /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/document.cpp
  /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/document.h
 05_editor/CMakeFiles/run_editor.dir/document_parameters.cpp.o
+ /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/color_engine.h
+ /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/default.h
  /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/document_parameters.cpp
  /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/document_parameters.h
 05_editor/CMakeFiles/run_editor.dir/editor_core.cpp.o

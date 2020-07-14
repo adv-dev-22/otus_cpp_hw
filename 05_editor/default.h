@@ -6,12 +6,18 @@
 namespace GraphicalEditorCore {
 
 class Default {
+public:
 
     class Document {
     public:
         static size_t width() noexcept;
         static size_t height() noexcept;
-        static size_t colorDepth() noexcept;
+    };
+
+    template <typename T>
+    class ColorEngine_t {
+    public:
+        using Type = T;
     };
 
     // ..  ..

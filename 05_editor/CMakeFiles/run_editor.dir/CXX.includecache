@@ -21,6 +21,8 @@ array
 /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/default.cpp
 default.h
 /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/default.h
+color_engine.h
+/home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/color_engine.h
 
 /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/default.h
 cstddef
@@ -37,11 +39,17 @@ iostream
 /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/document_parameters.cpp
 document_parameters.h
 /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/document_parameters.h
+default.h
+/home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/default.h
 iostream
 -
 
 /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/document_parameters.h
+color_engine.h
+/home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/color_engine.h
 cstddef
+-
+memory
 -
 
 /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/editor_core.cpp

@@ -1,7 +1,9 @@
 #ifndef _DOCUMENT_PARAMETERS_H_
 #define _DOCUMENT_PARAMETERS_H_
 
+#include "color_engine.h"
 #include <cstddef>
+#include <memory>
 
 namespace GraphicalEditorCore {
 
@@ -19,7 +21,9 @@ public:
 
     virtual size_t width()  const = 0;
     virtual size_t height() const = 0;
-   //virtual size_t colorDepth() const = 0;
+    virtual ColorEngineBase & colorEngine() const = 0;
+
+    virtual void  setColorEngine(ColorEngineBase * const ceb_ptr) = 0;
 
     // ..
 
@@ -39,14 +43,16 @@ public:
 
     virtual size_t width()  const;
     virtual size_t height() const;
-   // virtual size_t colorDepth() const;
+    virtual ColorEngineBase & colorEngine() const;
+
+    virtual void setColorEngine(ColorEngineBase * const ceb_ptr);
 
     // ..
 
 private:
     size_t width_;
     size_t height_;
-  //  size_t color_depth_;
+    std::unique_ptr<ColorEngineBase> uptr_color_engine_;
 
     // ..
 };
