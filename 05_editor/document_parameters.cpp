@@ -1,10 +1,14 @@
 #include "document_parameters.h"
+#include "default.h"
 #include <iostream>
 
 namespace GraphicalEditorCore {
 
 DocumentParameters::DocumentParameters():
-DocumentParametersInterface() {
+DocumentParametersInterface(),
+width_(Default::Document::width()),
+height_(Default::Document::height()),
+uptr_color_engine_(std::make_unique<Default::ColorEngine_t<ColorEngineUniform>::Type>()) {
     std::cout << "DocumentParameters ctor" << std::endl;
 }
 
@@ -36,9 +40,13 @@ size_t DocumentParameters::height() const {
     return height_;
 }
 
-//size_t DocumentParameters::colorDepth() const {
-//    return color_depth_;
-//}
+ColorEngineBase & DocumentParameters::colorEngine() const {
+    return *(uptr_color_engine_.get());
+}
+
+void DocumentParameters::setColorEngine(ColorEngineBase * const ceb_ptr) {
+
+}
 
 } // End of namespace GraphicalEditorCore.
 
