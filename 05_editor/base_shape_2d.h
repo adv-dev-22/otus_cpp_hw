@@ -23,6 +23,21 @@ private:
     std::unique_ptr<ColorEngineBase> uptr_color_engine_;
 };
 
+// Triangle
+template <typename T = double>
+class TriangleShape2D : public BaseShape2D<T> {
+public:
+
+
+private:
+
+};
+
+// Circle
+
+
+
+
 } // End of namespace GraphicalEditorCore.
 
 #endif  // _BASE_SHAPE_2D_H_

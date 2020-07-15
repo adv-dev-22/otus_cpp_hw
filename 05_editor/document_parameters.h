@@ -10,26 +10,20 @@ namespace GraphicalEditorCore {
 class DocumentParametersInterface {
 public:
     DocumentParametersInterface() = default;
-
-    DocumentParametersInterface(const DocumentParametersInterface & ) = default;
-    DocumentParametersInterface(DocumentParametersInterface && ) = default;
-
-    DocumentParametersInterface & operator = (const DocumentParametersInterface & ) = default;
-    DocumentParametersInterface & operator = (DocumentParametersInterface && ) = default;
-
     virtual ~DocumentParametersInterface() = default;
 
     virtual size_t width()  const = 0;
     virtual size_t height() const = 0;
     virtual ColorEngineBase & colorEngine() const = 0;
 
-    virtual void  setColorEngine(ColorEngineBase * const ceb_ptr) = 0;
-
-    // ..
-
 private:
+    DocumentParametersInterface(const DocumentParametersInterface & ) = delete;
+    DocumentParametersInterface(DocumentParametersInterface && ) = delete;
+    DocumentParametersInterface & operator = (const DocumentParametersInterface & ) = delete;
+    DocumentParametersInterface & operator = (DocumentParametersInterface && ) = delete;
 };
 
+template <typename T = ColorEngineUniform>
 class DocumentParameters : public DocumentParametersInterface {
 public:
     DocumentParameters();
@@ -41,18 +35,18 @@ public:
 
     virtual ~DocumentParameters();
 
-    virtual size_t width()  const;
-    virtual size_t height() const;
-    virtual ColorEngineBase & colorEngine() const;
+    virtual size_t width()    const override;
+    virtual size_t height()   const override;
+    virtual T & colorEngine() const override;
 
-    virtual void setColorEngine(ColorEngineBase * const ceb_ptr);
-
-    // ..
+    void setWidth(const size_t w);
+    void setHeight(const size_t h);
+    void resetColorEngine(T * const ptr_clr_eng);
 
 private:
     size_t width_;
     size_t height_;
-    std::unique_ptr<ColorEngineBase> uptr_color_engine_;
+    std::unique_ptr<T> uptr_color_engine_;
 
     // ..
 };
@@ -62,3 +56,6 @@ private:
 #endif  // _DOCUMENT_PARAMETERS_H_
 
 // End of the file
+
+
+

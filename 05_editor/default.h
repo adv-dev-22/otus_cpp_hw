@@ -1,6 +1,7 @@
 #ifndef _DEFAULT_CONSTANTS_H_
 #define _DEFAULT_CONSTANTS_H_
 
+#include "color_engine.h"
 #include <cstddef>
 
 namespace GraphicalEditorCore {
@@ -12,12 +13,7 @@ public:
     public:
         static size_t width() noexcept;
         static size_t height() noexcept;
-    };
-
-    template <typename T>
-    class ColorEngine_t {
-    public:
-        using Type = T;
+        using color_engine_type = ColorEngineUniform;
     };
 
     // ..  ..
