@@ -1,3 +1,8 @@
 <map id="05_editor/document_parameters.h" name="05_editor/document_parameters.h">
-<area shape="rect" id="node2" href="$document__parameters_8cpp.html" title="05_editor/document\l_parameters.cpp" alt="" coords="5,95,156,136"/>
+<area shape="rect" id="node2" href="$document_8h.html" title="05_editor/document.h" alt="" coords="229,102,392,129"/>
+<area shape="rect" id="node5" href="$editor__core_8cpp.html" title="05_editor/editor_core.cpp" alt="" coords="22,259,207,285"/>
+<area shape="rect" id="node6" href="$05__editor_2main_8cpp.html" title="05_editor/main.cpp" alt="" coords="299,259,445,285"/>
+<area shape="rect" id="node7" href="$document__parameters_8cpp.html" title="05_editor/document\l_parameters.cpp" alt="" coords="471,95,622,136"/>
+<area shape="rect" id="node3" href="$document_8cpp.html" title="05_editor/document.cpp" alt="" coords="23,184,201,211"/>
+<area shape="rect" id="node4" href="$editor__core_8h.html" title="05_editor/editor_core.h" alt="" coords="225,184,396,211"/>
 </map>

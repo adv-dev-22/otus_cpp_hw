@@ -1,12 +1,12 @@
-\hypertarget{classGraphicalEditorCore_1_1DocumentParameters}{}\section{Graphical\+Editor\+Core\+:\+:Document\+Parameters Class Reference}
-\label{classGraphicalEditorCore_1_1DocumentParameters}\index{Graphical\+Editor\+Core\+::\+Document\+Parameters@{Graphical\+Editor\+Core\+::\+Document\+Parameters}}
+\hypertarget{classGraphicalEditorCore_1_1DocumentParameters}{}\section{Graphical\+Editor\+Core\+:\+:Document\+Parameters$<$ T $>$ Class Template Reference}
+\label{classGraphicalEditorCore_1_1DocumentParameters}\index{Graphical\+Editor\+Core\+::\+Document\+Parameters$<$ T $>$@{Graphical\+Editor\+Core\+::\+Document\+Parameters$<$ T $>$}}
 
 
 {\ttfamily \#include $<$document\+\_\+parameters.\+h$>$}
 
 
 
-Inheritance diagram for Graphical\+Editor\+Core\+:\+:Document\+Parameters\+:
+Inheritance diagram for Graphical\+Editor\+Core\+:\+:Document\+Parameters$<$ T $>$\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -16,7 +16,7 @@ Inheritance diagram for Graphical\+Editor\+Core\+:\+:Document\+Parameters\+:
 \end{figure}
 
 
-Collaboration diagram for Graphical\+Editor\+Core\+:\+:Document\+Parameters\+:
+Collaboration diagram for Graphical\+Editor\+Core\+:\+:Document\+Parameters$<$ T $>$\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -27,114 +27,128 @@ Collaboration diagram for Graphical\+Editor\+Core\+:\+:Document\+Parameters\+:
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classGraphicalEditorCore_1_1DocumentParameters_a89df3a7acba401ec3c636d599d40341f}{Document\+Parameters} ()
+\hyperlink{classGraphicalEditorCore_1_1DocumentParameters_a2f886f265cbb7c548763142c05daa7f9}{Document\+Parameters} ()
 \item 
-\hyperlink{classGraphicalEditorCore_1_1DocumentParameters_ad34fb74cda0ad52bc38678875ce32c91}{Document\+Parameters} (const \hyperlink{classGraphicalEditorCore_1_1DocumentParameters}{Document\+Parameters} \&)
+\hyperlink{classGraphicalEditorCore_1_1DocumentParameters_af51920612aedf38f46b341b675f6f271}{Document\+Parameters} (const \hyperlink{classGraphicalEditorCore_1_1DocumentParameters}{Document\+Parameters} \&)
 \item 
-\hyperlink{classGraphicalEditorCore_1_1DocumentParameters_af797b5c95963fdafdd2253bb4d152c21}{Document\+Parameters} (\hyperlink{classGraphicalEditorCore_1_1DocumentParameters}{Document\+Parameters} \&\&)
+\hyperlink{classGraphicalEditorCore_1_1DocumentParameters_a3fc1cb785673903106dce2a4c6d47875}{Document\+Parameters} (\hyperlink{classGraphicalEditorCore_1_1DocumentParameters}{Document\+Parameters} \&\&)
 \item 
-\hyperlink{classGraphicalEditorCore_1_1DocumentParameters}{Document\+Parameters} \& \hyperlink{classGraphicalEditorCore_1_1DocumentParameters_a084ca6d2aafc7e65b401b2e62b0a16e4}{operator=} (const \hyperlink{classGraphicalEditorCore_1_1DocumentParameters}{Document\+Parameters} \&)
+\hyperlink{classGraphicalEditorCore_1_1DocumentParameters}{Document\+Parameters} \& \hyperlink{classGraphicalEditorCore_1_1DocumentParameters_ab4603c9baf2d76b9405fd099572546f4}{operator=} (const \hyperlink{classGraphicalEditorCore_1_1DocumentParameters}{Document\+Parameters} \&)
 \item 
-\hyperlink{classGraphicalEditorCore_1_1DocumentParameters}{Document\+Parameters} \& \hyperlink{classGraphicalEditorCore_1_1DocumentParameters_a947b1cc43448286d07300fd7b9eeb722}{operator=} (\hyperlink{classGraphicalEditorCore_1_1DocumentParameters}{Document\+Parameters} \&\&)
+\hyperlink{classGraphicalEditorCore_1_1DocumentParameters}{Document\+Parameters} \& \hyperlink{classGraphicalEditorCore_1_1DocumentParameters_a635d305147d085a54281dd135601afa9}{operator=} (\hyperlink{classGraphicalEditorCore_1_1DocumentParameters}{Document\+Parameters} \&\&)
 \item 
-virtual \hyperlink{classGraphicalEditorCore_1_1DocumentParameters_a4ea3a0d935da5c124d9989fd686d6d70}{$\sim$\+Document\+Parameters} ()
+virtual \hyperlink{classGraphicalEditorCore_1_1DocumentParameters_a390ce6cb3be137d584bb7c74965325b7}{$\sim$\+Document\+Parameters} ()
 \item 
-virtual size\+\_\+t \hyperlink{classGraphicalEditorCore_1_1DocumentParameters_af84100459d1e49474e57e5b7b16f1750}{width} () const 
+virtual size\+\_\+t \hyperlink{classGraphicalEditorCore_1_1DocumentParameters_a96834b7081ba4001cf0c8a38532f3a48}{width} () const override
 \item 
-virtual size\+\_\+t \hyperlink{classGraphicalEditorCore_1_1DocumentParameters_ab28b51581bade5d1b1a4122b347995da}{height} () const 
+virtual size\+\_\+t \hyperlink{classGraphicalEditorCore_1_1DocumentParameters_ab1a929a3638767bbb361e9a7c69e9374}{height} () const override
 \item 
-virtual \hyperlink{classGraphicalEditorCore_1_1ColorEngineBase}{Color\+Engine\+Base} \& \hyperlink{classGraphicalEditorCore_1_1DocumentParameters_a7be5fa9d87e97bbc523f976d4acdd657}{color\+Engine} () const 
+virtual T \& \hyperlink{classGraphicalEditorCore_1_1DocumentParameters_a49010b1753c4a62a46bf01da20f17e61}{color\+Engine} () const override
 \item 
-virtual void \hyperlink{classGraphicalEditorCore_1_1DocumentParameters_a57c2ba4a8cfc9c4a058f109a1c32f4aa}{set\+Color\+Engine} (\hyperlink{classGraphicalEditorCore_1_1ColorEngineBase}{Color\+Engine\+Base} $\ast$const ceb\+\_\+ptr)
+void \hyperlink{classGraphicalEditorCore_1_1DocumentParameters_a1b982f66a9fd844c3ecbba465bf85ad1}{set\+Width} (const size\+\_\+t w)
+\item 
+void \hyperlink{classGraphicalEditorCore_1_1DocumentParameters_a399ffb889b05829955ed0ab4020408ef}{set\+Height} (const size\+\_\+t h)
+\item 
+void \hyperlink{classGraphicalEditorCore_1_1DocumentParameters_afdd4ea9fd33458fdfdb125b286a75344}{reset\+Color\+Engine} (T $\ast$const ptr\+\_\+clr\+\_\+eng)
 \end{DoxyCompactItemize}
 
 
 \subsection{Constructor \& Destructor Documentation}
 \index{Graphical\+Editor\+Core\+::\+Document\+Parameters@{Graphical\+Editor\+Core\+::\+Document\+Parameters}!Document\+Parameters@{Document\+Parameters}}
 \index{Document\+Parameters@{Document\+Parameters}!Graphical\+Editor\+Core\+::\+Document\+Parameters@{Graphical\+Editor\+Core\+::\+Document\+Parameters}}
-\subsubsection[{\texorpdfstring{Document\+Parameters()}{DocumentParameters()}}]{\setlength{\rightskip}{0pt plus 5cm}Graphical\+Editor\+Core\+::\+Document\+Parameters\+::\+Document\+Parameters (
+\subsubsection[{\texorpdfstring{Document\+Parameters()}{DocumentParameters()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Graphical\+Editor\+Core\+::\+Document\+Parameters}$<$ T $>$\+::{\bf Document\+Parameters} (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}\hypertarget{classGraphicalEditorCore_1_1DocumentParameters_a89df3a7acba401ec3c636d599d40341f}{}\label{classGraphicalEditorCore_1_1DocumentParameters_a89df3a7acba401ec3c636d599d40341f}
+)}\hypertarget{classGraphicalEditorCore_1_1DocumentParameters_a2f886f265cbb7c548763142c05daa7f9}{}\label{classGraphicalEditorCore_1_1DocumentParameters_a2f886f265cbb7c548763142c05daa7f9}
 \index{Graphical\+Editor\+Core\+::\+Document\+Parameters@{Graphical\+Editor\+Core\+::\+Document\+Parameters}!Document\+Parameters@{Document\+Parameters}}
 \index{Document\+Parameters@{Document\+Parameters}!Graphical\+Editor\+Core\+::\+Document\+Parameters@{Graphical\+Editor\+Core\+::\+Document\+Parameters}}
-\subsubsection[{\texorpdfstring{Document\+Parameters(const Document\+Parameters \&)}{DocumentParameters(const DocumentParameters &)}}]{\setlength{\rightskip}{0pt plus 5cm}Graphical\+Editor\+Core\+::\+Document\+Parameters\+::\+Document\+Parameters (
+\subsubsection[{\texorpdfstring{Document\+Parameters(const Document\+Parameters \&)}{DocumentParameters(const DocumentParameters &)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Graphical\+Editor\+Core\+::\+Document\+Parameters}$<$ T $>$\+::{\bf Document\+Parameters} (
 \begin{DoxyParamCaption}
-\item[{const {\bf Document\+Parameters} \&}]{}
+\item[{const {\bf Document\+Parameters}$<$ T $>$ \&}]{rhs}
 \end{DoxyParamCaption}
-)}\hypertarget{classGraphicalEditorCore_1_1DocumentParameters_ad34fb74cda0ad52bc38678875ce32c91}{}\label{classGraphicalEditorCore_1_1DocumentParameters_ad34fb74cda0ad52bc38678875ce32c91}
+)}\hypertarget{classGraphicalEditorCore_1_1DocumentParameters_af51920612aedf38f46b341b675f6f271}{}\label{classGraphicalEditorCore_1_1DocumentParameters_af51920612aedf38f46b341b675f6f271}
 \index{Graphical\+Editor\+Core\+::\+Document\+Parameters@{Graphical\+Editor\+Core\+::\+Document\+Parameters}!Document\+Parameters@{Document\+Parameters}}
 \index{Document\+Parameters@{Document\+Parameters}!Graphical\+Editor\+Core\+::\+Document\+Parameters@{Graphical\+Editor\+Core\+::\+Document\+Parameters}}
-\subsubsection[{\texorpdfstring{Document\+Parameters(\+Document\+Parameters \&\&)}{DocumentParameters(DocumentParameters &&)}}]{\setlength{\rightskip}{0pt plus 5cm}Graphical\+Editor\+Core\+::\+Document\+Parameters\+::\+Document\+Parameters (
+\subsubsection[{\texorpdfstring{Document\+Parameters(\+Document\+Parameters \&\&)}{DocumentParameters(DocumentParameters &&)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Graphical\+Editor\+Core\+::\+Document\+Parameters}$<$ T $>$\+::{\bf Document\+Parameters} (
 \begin{DoxyParamCaption}
-\item[{{\bf Document\+Parameters} \&\&}]{}
+\item[{{\bf Document\+Parameters}$<$ T $>$ \&\&}]{rhs}
 \end{DoxyParamCaption}
-)}\hypertarget{classGraphicalEditorCore_1_1DocumentParameters_af797b5c95963fdafdd2253bb4d152c21}{}\label{classGraphicalEditorCore_1_1DocumentParameters_af797b5c95963fdafdd2253bb4d152c21}
+)}\hypertarget{classGraphicalEditorCore_1_1DocumentParameters_a3fc1cb785673903106dce2a4c6d47875}{}\label{classGraphicalEditorCore_1_1DocumentParameters_a3fc1cb785673903106dce2a4c6d47875}
 \index{Graphical\+Editor\+Core\+::\+Document\+Parameters@{Graphical\+Editor\+Core\+::\+Document\+Parameters}!````~Document\+Parameters@{$\sim$\+Document\+Parameters}}
 \index{````~Document\+Parameters@{$\sim$\+Document\+Parameters}!Graphical\+Editor\+Core\+::\+Document\+Parameters@{Graphical\+Editor\+Core\+::\+Document\+Parameters}}
-\subsubsection[{\texorpdfstring{$\sim$\+Document\+Parameters()}{~DocumentParameters()}}]{\setlength{\rightskip}{0pt plus 5cm}Graphical\+Editor\+Core\+::\+Document\+Parameters\+::$\sim$\+Document\+Parameters (
+\subsubsection[{\texorpdfstring{$\sim$\+Document\+Parameters()}{~DocumentParameters()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Graphical\+Editor\+Core\+::\+Document\+Parameters}$<$ T $>$\+::$\sim${\bf Document\+Parameters} (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGraphicalEditorCore_1_1DocumentParameters_a4ea3a0d935da5c124d9989fd686d6d70}{}\label{classGraphicalEditorCore_1_1DocumentParameters_a4ea3a0d935da5c124d9989fd686d6d70}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGraphicalEditorCore_1_1DocumentParameters_a390ce6cb3be137d584bb7c74965325b7}{}\label{classGraphicalEditorCore_1_1DocumentParameters_a390ce6cb3be137d584bb7c74965325b7}
 
 
 \subsection{Member Function Documentation}
 \index{Graphical\+Editor\+Core\+::\+Document\+Parameters@{Graphical\+Editor\+Core\+::\+Document\+Parameters}!color\+Engine@{color\+Engine}}
 \index{color\+Engine@{color\+Engine}!Graphical\+Editor\+Core\+::\+Document\+Parameters@{Graphical\+Editor\+Core\+::\+Document\+Parameters}}
-\subsubsection[{\texorpdfstring{color\+Engine() const }{colorEngine() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Color\+Engine\+Base} \& Graphical\+Editor\+Core\+::\+Document\+Parameters\+::color\+Engine (
+\subsubsection[{\texorpdfstring{color\+Engine() const override}{colorEngine() const override}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ T \& {\bf Graphical\+Editor\+Core\+::\+Document\+Parameters}$<$ T $>$\+::color\+Engine (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGraphicalEditorCore_1_1DocumentParameters_a7be5fa9d87e97bbc523f976d4acdd657}{}\label{classGraphicalEditorCore_1_1DocumentParameters_a7be5fa9d87e97bbc523f976d4acdd657}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classGraphicalEditorCore_1_1DocumentParameters_a49010b1753c4a62a46bf01da20f17e61}{}\label{classGraphicalEditorCore_1_1DocumentParameters_a49010b1753c4a62a46bf01da20f17e61}
 
 
 Implements \hyperlink{classGraphicalEditorCore_1_1DocumentParametersInterface_aa686512ed2fc7bc504c1ee97ac8e4ad6}{Graphical\+Editor\+Core\+::\+Document\+Parameters\+Interface}.
 
 \index{Graphical\+Editor\+Core\+::\+Document\+Parameters@{Graphical\+Editor\+Core\+::\+Document\+Parameters}!height@{height}}
 \index{height@{height}!Graphical\+Editor\+Core\+::\+Document\+Parameters@{Graphical\+Editor\+Core\+::\+Document\+Parameters}}
-\subsubsection[{\texorpdfstring{height() const }{height() const }}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t Graphical\+Editor\+Core\+::\+Document\+Parameters\+::height (
+\subsubsection[{\texorpdfstring{height() const override}{height() const override}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ size\+\_\+t {\bf Graphical\+Editor\+Core\+::\+Document\+Parameters}$<$ T $>$\+::height (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGraphicalEditorCore_1_1DocumentParameters_ab28b51581bade5d1b1a4122b347995da}{}\label{classGraphicalEditorCore_1_1DocumentParameters_ab28b51581bade5d1b1a4122b347995da}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classGraphicalEditorCore_1_1DocumentParameters_ab1a929a3638767bbb361e9a7c69e9374}{}\label{classGraphicalEditorCore_1_1DocumentParameters_ab1a929a3638767bbb361e9a7c69e9374}
 
 
 Implements \hyperlink{classGraphicalEditorCore_1_1DocumentParametersInterface_a1a3f45e27f2c9b11d04b2fe562323bb2}{Graphical\+Editor\+Core\+::\+Document\+Parameters\+Interface}.
 
 \index{Graphical\+Editor\+Core\+::\+Document\+Parameters@{Graphical\+Editor\+Core\+::\+Document\+Parameters}!operator=@{operator=}}
 \index{operator=@{operator=}!Graphical\+Editor\+Core\+::\+Document\+Parameters@{Graphical\+Editor\+Core\+::\+Document\+Parameters}}
-\subsubsection[{\texorpdfstring{operator=(const Document\+Parameters \&)}{operator=(const DocumentParameters &)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Document\+Parameters} \& Graphical\+Editor\+Core\+::\+Document\+Parameters\+::operator= (
+\subsubsection[{\texorpdfstring{operator=(const Document\+Parameters \&)}{operator=(const DocumentParameters &)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Document\+Parameters}$<$ T $>$ \& {\bf Graphical\+Editor\+Core\+::\+Document\+Parameters}$<$ T $>$\+::operator= (
 \begin{DoxyParamCaption}
-\item[{const {\bf Document\+Parameters} \&}]{}
+\item[{const {\bf Document\+Parameters}$<$ T $>$ \&}]{rhs}
 \end{DoxyParamCaption}
-)}\hypertarget{classGraphicalEditorCore_1_1DocumentParameters_a084ca6d2aafc7e65b401b2e62b0a16e4}{}\label{classGraphicalEditorCore_1_1DocumentParameters_a084ca6d2aafc7e65b401b2e62b0a16e4}
+)}\hypertarget{classGraphicalEditorCore_1_1DocumentParameters_ab4603c9baf2d76b9405fd099572546f4}{}\label{classGraphicalEditorCore_1_1DocumentParameters_ab4603c9baf2d76b9405fd099572546f4}
 \index{Graphical\+Editor\+Core\+::\+Document\+Parameters@{Graphical\+Editor\+Core\+::\+Document\+Parameters}!operator=@{operator=}}
 \index{operator=@{operator=}!Graphical\+Editor\+Core\+::\+Document\+Parameters@{Graphical\+Editor\+Core\+::\+Document\+Parameters}}
-\subsubsection[{\texorpdfstring{operator=(\+Document\+Parameters \&\&)}{operator=(DocumentParameters &&)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Document\+Parameters} \& Graphical\+Editor\+Core\+::\+Document\+Parameters\+::operator= (
+\subsubsection[{\texorpdfstring{operator=(\+Document\+Parameters \&\&)}{operator=(DocumentParameters &&)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Document\+Parameters}$<$ T $>$ \& {\bf Graphical\+Editor\+Core\+::\+Document\+Parameters}$<$ T $>$\+::operator= (
 \begin{DoxyParamCaption}
-\item[{{\bf Document\+Parameters} \&\&}]{}
+\item[{{\bf Document\+Parameters}$<$ T $>$ \&\&}]{rhs}
 \end{DoxyParamCaption}
-)}\hypertarget{classGraphicalEditorCore_1_1DocumentParameters_a947b1cc43448286d07300fd7b9eeb722}{}\label{classGraphicalEditorCore_1_1DocumentParameters_a947b1cc43448286d07300fd7b9eeb722}
-\index{Graphical\+Editor\+Core\+::\+Document\+Parameters@{Graphical\+Editor\+Core\+::\+Document\+Parameters}!set\+Color\+Engine@{set\+Color\+Engine}}
-\index{set\+Color\+Engine@{set\+Color\+Engine}!Graphical\+Editor\+Core\+::\+Document\+Parameters@{Graphical\+Editor\+Core\+::\+Document\+Parameters}}
-\subsubsection[{\texorpdfstring{set\+Color\+Engine(\+Color\+Engine\+Base $\ast$const ceb\+\_\+ptr)}{setColorEngine(ColorEngineBase *const ceb_ptr)}}]{\setlength{\rightskip}{0pt plus 5cm}void Graphical\+Editor\+Core\+::\+Document\+Parameters\+::set\+Color\+Engine (
+)}\hypertarget{classGraphicalEditorCore_1_1DocumentParameters_a635d305147d085a54281dd135601afa9}{}\label{classGraphicalEditorCore_1_1DocumentParameters_a635d305147d085a54281dd135601afa9}
+\index{Graphical\+Editor\+Core\+::\+Document\+Parameters@{Graphical\+Editor\+Core\+::\+Document\+Parameters}!reset\+Color\+Engine@{reset\+Color\+Engine}}
+\index{reset\+Color\+Engine@{reset\+Color\+Engine}!Graphical\+Editor\+Core\+::\+Document\+Parameters@{Graphical\+Editor\+Core\+::\+Document\+Parameters}}
+\subsubsection[{\texorpdfstring{reset\+Color\+Engine(\+T $\ast$const ptr\+\_\+clr\+\_\+eng)}{resetColorEngine(T *const ptr_clr_eng)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf Graphical\+Editor\+Core\+::\+Document\+Parameters}$<$ T $>$\+::reset\+Color\+Engine (
 \begin{DoxyParamCaption}
-\item[{{\bf Color\+Engine\+Base} $\ast$const}]{ceb\+\_\+ptr}
+\item[{T $\ast$const}]{ptr\+\_\+clr\+\_\+eng}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGraphicalEditorCore_1_1DocumentParameters_a57c2ba4a8cfc9c4a058f109a1c32f4aa}{}\label{classGraphicalEditorCore_1_1DocumentParameters_a57c2ba4a8cfc9c4a058f109a1c32f4aa}
-
-
-Implements \hyperlink{classGraphicalEditorCore_1_1DocumentParametersInterface_aeba626dbd31400b97a067bef47acc29d}{Graphical\+Editor\+Core\+::\+Document\+Parameters\+Interface}.
-
+)}\hypertarget{classGraphicalEditorCore_1_1DocumentParameters_afdd4ea9fd33458fdfdb125b286a75344}{}\label{classGraphicalEditorCore_1_1DocumentParameters_afdd4ea9fd33458fdfdb125b286a75344}
+\index{Graphical\+Editor\+Core\+::\+Document\+Parameters@{Graphical\+Editor\+Core\+::\+Document\+Parameters}!set\+Height@{set\+Height}}
+\index{set\+Height@{set\+Height}!Graphical\+Editor\+Core\+::\+Document\+Parameters@{Graphical\+Editor\+Core\+::\+Document\+Parameters}}
+\subsubsection[{\texorpdfstring{set\+Height(const size\+\_\+t h)}{setHeight(const size_t h)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf Graphical\+Editor\+Core\+::\+Document\+Parameters}$<$ T $>$\+::set\+Height (
+\begin{DoxyParamCaption}
+\item[{const size\+\_\+t}]{h}
+\end{DoxyParamCaption}
+)}\hypertarget{classGraphicalEditorCore_1_1DocumentParameters_a399ffb889b05829955ed0ab4020408ef}{}\label{classGraphicalEditorCore_1_1DocumentParameters_a399ffb889b05829955ed0ab4020408ef}
+\index{Graphical\+Editor\+Core\+::\+Document\+Parameters@{Graphical\+Editor\+Core\+::\+Document\+Parameters}!set\+Width@{set\+Width}}
+\index{set\+Width@{set\+Width}!Graphical\+Editor\+Core\+::\+Document\+Parameters@{Graphical\+Editor\+Core\+::\+Document\+Parameters}}
+\subsubsection[{\texorpdfstring{set\+Width(const size\+\_\+t w)}{setWidth(const size_t w)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf Graphical\+Editor\+Core\+::\+Document\+Parameters}$<$ T $>$\+::set\+Width (
+\begin{DoxyParamCaption}
+\item[{const size\+\_\+t}]{w}
+\end{DoxyParamCaption}
+)}\hypertarget{classGraphicalEditorCore_1_1DocumentParameters_a1b982f66a9fd844c3ecbba465bf85ad1}{}\label{classGraphicalEditorCore_1_1DocumentParameters_a1b982f66a9fd844c3ecbba465bf85ad1}
 \index{Graphical\+Editor\+Core\+::\+Document\+Parameters@{Graphical\+Editor\+Core\+::\+Document\+Parameters}!width@{width}}
 \index{width@{width}!Graphical\+Editor\+Core\+::\+Document\+Parameters@{Graphical\+Editor\+Core\+::\+Document\+Parameters}}
-\subsubsection[{\texorpdfstring{width() const }{width() const }}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t Graphical\+Editor\+Core\+::\+Document\+Parameters\+::width (
+\subsubsection[{\texorpdfstring{width() const override}{width() const override}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ size\+\_\+t {\bf Graphical\+Editor\+Core\+::\+Document\+Parameters}$<$ T $>$\+::width (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGraphicalEditorCore_1_1DocumentParameters_af84100459d1e49474e57e5b7b16f1750}{}\label{classGraphicalEditorCore_1_1DocumentParameters_af84100459d1e49474e57e5b7b16f1750}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classGraphicalEditorCore_1_1DocumentParameters_a96834b7081ba4001cf0c8a38532f3a48}{}\label{classGraphicalEditorCore_1_1DocumentParameters_a96834b7081ba4001cf0c8a38532f3a48}
 
 
 Implements \hyperlink{classGraphicalEditorCore_1_1DocumentParametersInterface_a8e96d1aa50d0b2bd3ef21fafaeaa4261}{Graphical\+Editor\+Core\+::\+Document\+Parameters\+Interface}.

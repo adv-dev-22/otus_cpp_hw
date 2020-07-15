@@ -14,7 +14,8 @@ var searchData=
   ['test_5fvers_5fboost_2ecpp',['test_vers_boost.cpp',['../test__vers__boost_8cpp.html',1,'']]],
   ['test_5fvers_5fgtest_2ecpp',['test_vers_gtest.cpp',['../test__vers__gtest_8cpp.html',1,'']]],
   ['to_5fbegin',['to_begin',['../classCustomContainer.html#a6cd396f303782097efc8eff705a720b8',1,'CustomContainer::to_begin()'],['../classCustomContainer_3_01T_00_01reserve__allocator_3_01T_00_01n_01_4_01_4.html#aa43a96f008af53f254a014629f0627b7',1,'CustomContainer&lt; T, reserve_allocator&lt; T, n &gt; &gt;::to_begin()']]],
+  ['triangleshape2d',['TriangleShape2D',['../classGraphicalEditorCore_1_1TriangleShape2D.html',1,'GraphicalEditorCore']]],
   ['tupple_5fprinter',['tupple_printer',['../structtupple__printer.html',1,'']]],
   ['tupple_5fprinter_3c_20tuple_2c_201_20_3e',['tupple_printer&lt; Tuple, 1 &gt;',['../structtupple__printer_3_01Tuple_00_011_01_4.html',1,'']]],
-  ['type',['type',['../structelem__type__holder_3_010_00_01custom__tuple_3_01T_00_01Ts_8_8_8_01_4_01_4.html#af978e6f8de071074a4c26f7450fa2636',1,'elem_type_holder&lt; 0, custom_tuple&lt; T, Ts... &gt; &gt;::type()'],['../structelem__type__holder_3_01k_00_01custom__tuple_3_01T_00_01Ts_8_8_8_01_4_01_4.html#ab3b1bf71db4e249545297ee87ba43659',1,'elem_type_holder&lt; k, custom_tuple&lt; T, Ts... &gt; &gt;::type()'],['../classGraphicalEditorCore_1_1Default_1_1ColorEngine__t.html#aefae5eac83e1674f3d2d263e11739e5d',1,'GraphicalEditorCore::Default::ColorEngine_t::Type()']]]
+  ['type',['type',['../structelem__type__holder_3_010_00_01custom__tuple_3_01T_00_01Ts_8_8_8_01_4_01_4.html#af978e6f8de071074a4c26f7450fa2636',1,'elem_type_holder&lt; 0, custom_tuple&lt; T, Ts... &gt; &gt;::type()'],['../structelem__type__holder_3_01k_00_01custom__tuple_3_01T_00_01Ts_8_8_8_01_4_01_4.html#ab3b1bf71db4e249545297ee87ba43659',1,'elem_type_holder&lt; k, custom_tuple&lt; T, Ts... &gt; &gt;::type()']]]
 ];

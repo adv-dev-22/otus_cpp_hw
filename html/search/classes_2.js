@@ -5,7 +5,6 @@ var searchData=
   ['color_5findex_3c_20rgbcolor_3a_3ablue_20_3e',['color_index&lt; RgbColor::Blue &gt;',['../structGraphicalEditorCore_1_1color__index_3_01RgbColor_1_1Blue_01_4.html',1,'GraphicalEditorCore']]],
   ['color_5findex_3c_20rgbcolor_3a_3agreen_20_3e',['color_index&lt; RgbColor::Green &gt;',['../structGraphicalEditorCore_1_1color__index_3_01RgbColor_1_1Green_01_4.html',1,'GraphicalEditorCore']]],
   ['color_5findex_3c_20rgbcolor_3a_3ared_20_3e',['color_index&lt; RgbColor::Red &gt;',['../structGraphicalEditorCore_1_1color__index_3_01RgbColor_1_1Red_01_4.html',1,'GraphicalEditorCore']]],
-  ['colorengine_5ft',['ColorEngine_t',['../classGraphicalEditorCore_1_1Default_1_1ColorEngine__t.html',1,'GraphicalEditorCore::Default']]],
   ['colorenginebase',['ColorEngineBase',['../classGraphicalEditorCore_1_1ColorEngineBase.html',1,'GraphicalEditorCore']]],
   ['colorenginelineargradient',['ColorEngineLinearGradient',['../classGraphicalEditorCore_1_1ColorEngineLinearGradient.html',1,'GraphicalEditorCore']]],
   ['colorengineuniform',['ColorEngineUniform',['../classGraphicalEditorCore_1_1ColorEngineUniform.html',1,'GraphicalEditorCore']]],

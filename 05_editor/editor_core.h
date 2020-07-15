@@ -1,22 +1,30 @@
 #ifndef _EDITOR_CORE_H_
 #define _EDITOR_CORE_H_
 
+#include "document.h"
+#include <memory>
+
 namespace GraphicalEditorCore {
+
+class DocumentParametersInterface;
 
 class EditorCore {
 public:
     EditorCore();
     virtual ~EditorCore();
 
-    void create_document(/*const DocumentParametersInterface & */);
+    Document & create_document(std::shared_ptr<DocumentParametersInterface> shp_dpi);
 
-    // iterators
-    //void next_document();
+    void save(const std::string & file);
+
+//    void load(const std::string & file);
+
+    // May be added in future versions:  iterators
+    // TODO: next_document();
 
 private:
-    // container (map) of already created documents
-    // ..
-
+    std::unique_ptr<Document> up_document_;
+    // TODO: May be changed to container (map) of already created documents
 
 private:
     EditorCore(const EditorCore & ) = delete;

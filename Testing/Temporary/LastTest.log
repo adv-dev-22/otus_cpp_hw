@@ -1,10 +1,10 @@
-Start testing: Jul 14 20:38 UTC
+Start testing: Jul 15 13:08 UTC
 ----------------------------------------------------------
 1/6 Testing: Versions::boost_test
 1/6 Test: Versions::boost_test
 Command: "/home/travis/build/adv-dev-22/otus_cpp_hw/01/test_vers_boost"
 Directory: /home/travis/build/adv-dev-22/otus_cpp_hw/01
-"Versions::boost_test" start time: Jul 14 20:38 UTC
+"Versions::boost_test" start time: Jul 15 13:08 UTC
 Output:
 ----------------------------------------------------------
 Running 1 test case...
@@ -14,7 +14,7 @@ Running 1 test case...
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"Versions::boost_test" end time: Jul 14 20:38 UTC
+"Versions::boost_test" end time: Jul 15 13:08 UTC
 "Versions::boost_test" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -22,7 +22,7 @@ Test Passed.
 2/6 Test: Versions::gtest_test
 Command: "/home/travis/build/adv-dev-22/otus_cpp_hw/01/test_vers_gtest"
 Directory: /home/travis/build/adv-dev-22/otus_cpp_hw/01
-"Versions::gtest_test" start time: Jul 14 20:38 UTC
+"Versions::gtest_test" start time: Jul 15 13:08 UTC
 Output:
 ----------------------------------------------------------
 [==========] Running 1 test from 1 test case.
@@ -36,10 +36,10 @@ Output:
 [==========] 1 test from 1 test case ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"Versions::gtest_test" end time: Jul 14 20:38 UTC
+"Versions::gtest_test" end time: Jul 15 13:08 UTC
 "Versions::gtest_test" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -47,7 +47,7 @@ Test Passed.
 3/6 Test: IpConfig::ranges
 Command: "/home/travis/build/adv-dev-22/otus_cpp_hw/03_ranges/bin/test_out_01" "/home/travis/build/adv-dev-22/otus_cpp_hw/03_ranges/ip_filter-12995-758870.tsv" "ip_out.txt"
 Directory: /home/travis/build/adv-dev-22/otus_cpp_hw/03_ranges
-"IpConfig::ranges" start time: Jul 14 20:38 UTC
+"IpConfig::ranges" start time: Jul 15 13:08 UTC
 Output:
 ----------------------------------------------------------
 [==========] Running 1 test from 1 test case.
@@ -64,7 +64,7 @@ Output:
 Test time =   0.04 sec
 ----------------------------------------------------------
 Test Passed.
-"IpConfig::ranges" end time: Jul 14 20:38 UTC
+"IpConfig::ranges" end time: Jul 15 13:08 UTC
 "IpConfig::ranges" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -72,28 +72,28 @@ Test Passed.
 4/6 Test: HomeWork03::allocator
 Command: "/home/travis/build/adv-dev-22/otus_cpp_hw/03_allocator/test_reserve_allocator"
 Directory: /home/travis/build/adv-dev-22/otus_cpp_hw/03_allocator
-"HomeWork03::allocator" start time: Jul 14 20:38 UTC
+"HomeWork03::allocator" start time: Jul 15 13:08 UTC
 Output:
 ----------------------------------------------------------
 [==========] Running 3 tests from 1 test case.
 [----------] Global test environment set-up.
 [----------] 3 tests from allocator
 [ RUN      ] allocator.base_operations
-[       OK ] allocator.base_operations (1 ms)
+[       OK ] allocator.base_operations (0 ms)
 [ RUN      ] allocator.insert_operations
 [       OK ] allocator.insert_operations (0 ms)
 [ RUN      ] allocator.remove_operations
 [       OK ] allocator.remove_operations (0 ms)
-[----------] 3 tests from allocator (1 ms total)
+[----------] 3 tests from allocator (0 ms total)
 
 [----------] Global test environment tear-down
-[==========] 3 tests from 1 test case ran. (1 ms total)
+[==========] 3 tests from 1 test case ran. (0 ms total)
 [  PASSED  ] 3 tests.
 <end of output>
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"HomeWork03::allocator" end time: Jul 14 20:38 UTC
+"HomeWork03::allocator" end time: Jul 15 13:08 UTC
 "HomeWork03::allocator" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -101,7 +101,7 @@ Test Passed.
 5/6 Test: HomeWork04::print_ip
 Command: "/home/travis/build/adv-dev-22/otus_cpp_hw/04_sfinae/tests/test_print_ip"
 Directory: /home/travis/build/adv-dev-22/otus_cpp_hw/04_sfinae/tests
-"HomeWork04::print_ip" start time: Jul 14 20:38 UTC
+"HomeWork04::print_ip" start time: Jul 15 13:08 UTC
 Output:
 ----------------------------------------------------------
 [==========] Running 1 test from 1 test case.
@@ -118,7 +118,7 @@ Output:
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"HomeWork04::print_ip" end time: Jul 14 20:38 UTC
+"HomeWork04::print_ip" end time: Jul 15 13:08 UTC
 "HomeWork04::print_ip" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -126,7 +126,7 @@ Test Passed.
 6/6 Test: HomeWork06::infinite_matrix
 Command: "/home/travis/build/adv-dev-22/otus_cpp_hw/06_matrix/tests/test_inf_matrix"
 Directory: /home/travis/build/adv-dev-22/otus_cpp_hw/06_matrix/tests
-"HomeWork06::infinite_matrix" start time: Jul 14 20:38 UTC
+"HomeWork06::infinite_matrix" start time: Jul 15 13:08 UTC
 Output:
 ----------------------------------------------------------
 [==========] Running 2 tests from 2 test cases.
@@ -148,8 +148,8 @@ Output:
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"HomeWork06::infinite_matrix" end time: Jul 14 20:38 UTC
+"HomeWork06::infinite_matrix" end time: Jul 15 13:08 UTC
 "HomeWork06::infinite_matrix" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Jul 14 20:38 UTC
+End testing: Jul 15 13:08 UTC

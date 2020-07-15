@@ -35,17 +35,15 @@ public:
     ColorEngineBase() = default;
     virtual ~ColorEngineBase() = default;
 
-    ColorEngineBase(const ColorEngineBase & ) = default;
-    ColorEngineBase(ColorEngineBase && ) = default;
-
-    ColorEngineBase & operator = (const ColorEngineBase & ) = default;
-    ColorEngineBase & operator = (ColorEngineBase && ) = default;
-
     virtual uint8_t red  (const size_t i_x, const size_t j_y) const = 0;
     virtual uint8_t green(const size_t i_x, const size_t j_y) const = 0;
     virtual uint8_t blue (const size_t i_x, const size_t j_y) const = 0;
 
-    // ..
+private:
+    ColorEngineBase(const ColorEngineBase & ) = delete;
+    ColorEngineBase(ColorEngineBase && ) = delete;
+    ColorEngineBase & operator = (const ColorEngineBase & ) = delete;
+    ColorEngineBase & operator = (ColorEngineBase && ) = delete;
 };
 
 
@@ -56,12 +54,19 @@ public:
 
     virtual ~ColorEngineUniform() = default;
 
+    ColorEngineUniform(const ColorEngineUniform & rhs);
+    ColorEngineUniform & operator = (const ColorEngineUniform & );
+
     virtual uint8_t red  (const size_t i_x, const size_t j_y) const override;
     virtual uint8_t green(const size_t i_x, const size_t j_y) const override;
     virtual uint8_t blue (const size_t i_x, const size_t j_y) const override;
 
 private:
     std::array<uint8_t, 3> rgb_color_;
+
+private:
+    ColorEngineUniform(ColorEngineUniform && rhs) = delete;
+    ColorEngineUniform & operator = (ColorEngineUniform && ) = delete;
 };
 
 

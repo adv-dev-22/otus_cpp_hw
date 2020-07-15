@@ -1,4 +1,5 @@
 #include "color_engine.h"
+#include <iostream>
 
 namespace GraphicalEditorCore {
 
@@ -17,13 +18,41 @@ constexpr uint8_t color_index<RgbColor::Blue>::value() {
 ColorEngineUniform::ColorEngineUniform():
 ColorEngineBase(),
 rgb_color_{0, 0, 0} {
-
+    std::cout << "ColorEngineUniform default ctor" << std::endl;
 }
 
 ColorEngineUniform::ColorEngineUniform(const uint8_t r, const uint8_t g, const uint8_t b):
 ColorEngineBase(),
 rgb_color_{r, g, b} {
+    std::cout << "ColorEngineUniform {r,g,b} ctor" << std::endl;
+}
 
+ColorEngineUniform::ColorEngineUniform(const ColorEngineUniform & rhs):
+ColorEngineBase(),
+rgb_color_{
+    rhs.rgb_color_[color_index<RgbColor::Red>::value()],
+    rhs.rgb_color_[color_index<RgbColor::Green>::value()],
+    rhs.rgb_color_[color_index<RgbColor::Blue>::value()]} {
+
+    std::cout << "ColorEngineUniform copy ctor" << std::endl;
+}
+
+ColorEngineUniform & ColorEngineUniform::operator = (const ColorEngineUniform & rhs) {
+
+    std::cout << "ColorEngineUniform assignment operator" << std::endl;
+
+    if (&rhs != this) {
+
+        const auto ir = color_index<RgbColor::Red>::value();
+        const auto ig = color_index<RgbColor::Green>::value();
+        const auto ib = color_index<RgbColor::Blue>::value();
+
+        rgb_color_[ib] = rhs.rgb_color_[ib];
+        rgb_color_[ir] = rhs.rgb_color_[ir];
+        rgb_color_[ig] = rhs.rgb_color_[ig];
+    }
+
+    return *this;
 }
 
 // virtual

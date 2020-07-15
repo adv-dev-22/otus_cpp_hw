@@ -9,6 +9,7 @@ var searchData=
   ['reserved_5fcontainer_2ehpp',['reserved_container.hpp',['../reserved__container_8hpp.html',1,'']]],
   ['reservedcontainer',['ReservedContainer',['../reserved__container_8hpp.html#a645c90241dfa63f57e4e174b957f076a',1,'reserved_container.hpp']]],
   ['reset_5fcolor_5fengine',['reset_color_engine',['../classGraphicalEditorCore_1_1BaseShape2D.html#a8de5ea1a542510e0800a5e4293878e0b',1,'GraphicalEditorCore::BaseShape2D']]],
+  ['resetcolorengine',['resetColorEngine',['../classGraphicalEditorCore_1_1DocumentParameters.html#afdd4ea9fd33458fdfdb125b286a75344',1,'GraphicalEditorCore::DocumentParameters']]],
   ['rgbcolor',['RgbColor',['../namespaceGraphicalEditorCore.html#ada0d86f7dc1329a6731f908a95f68a38',1,'GraphicalEditorCore']]],
   ['rotate',['rotate',['../classGraphicalEditorCore_1_1BaseShape2D.html#a94a87b2fd8485cfb7d4ca97050d1bdde',1,'GraphicalEditorCore::BaseShape2D']]],
   ['row_5fobserver_2ecpp',['row_observer.cpp',['../row__observer_8cpp.html',1,'']]],
