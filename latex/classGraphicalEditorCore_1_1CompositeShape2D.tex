@@ -31,9 +31,9 @@ Collaboration diagram for Graphical\+Editor\+Core\+:\+:Composite\+Shape2D$<$ T $
 \item 
 virtual \hyperlink{classGraphicalEditorCore_1_1CompositeShape2D_a0a5658b8caf83f1578ed32b762e5db2c}{$\sim$\+Composite\+Shape2D} ()
 \item 
-void \hyperlink{classGraphicalEditorCore_1_1CompositeShape2D_a7ef78e00f1b0a673c2a3900a8bb5eca4}{add} (std\+::unique\+\_\+ptr$<$ \hyperlink{classGraphicalEditorCore_1_1CompositeShape2D}{Composite\+Shape2D}$<$ T $>$$>$ \&\&shape\+\_\+composite\+\_\+2d)
+void \hyperlink{classGraphicalEditorCore_1_1CompositeShape2D_afa65e170aed5aa31d67b1f541c24f656}{add} (std\+::unique\+\_\+ptr$<$ \hyperlink{classGraphicalEditorCore_1_1BaseShape2D}{Base\+Shape2D}$<$ T $>$$>$ \&\&shape\+\_\+composite\+\_\+2d)
 \item 
-\hyperlink{classGraphicalEditorCore_1_1BaseShape2D}{Base\+Shape2D}$<$ T $>$ \& \hyperlink{classGraphicalEditorCore_1_1CompositeShape2D_a21d5c8c7348a3df1fdbd71e7605e991c}{shape2d} (const size\+\_\+t \hyperlink{classGraphicalEditorCore_1_1BaseShape2D_ac66cfa23289ae36d70ff6b7c41dd791f}{id})
+\hyperlink{classGraphicalEditorCore_1_1BaseShape2D}{Base\+Shape2D}$<$ T $>$ \& \hyperlink{classGraphicalEditorCore_1_1CompositeShape2D_a4cfefba661a2a6652ec2554e77ecba71}{shape2d} (const size\+\_\+t \hyperlink{classGraphicalEditorCore_1_1BaseShape2D_ac66cfa23289ae36d70ff6b7c41dd791f}{id})
 \item 
 virtual void \hyperlink{classGraphicalEditorCore_1_1CompositeShape2D_a1ad124ab5448a4276d06742318744473}{rotate} (const T clockwise\+\_\+angle) override
 \item 
@@ -65,11 +65,11 @@ virtual void \hyperlink{classGraphicalEditorCore_1_1CompositeShape2D_ae1d0a3270a
 \subsection{Member Function Documentation}
 \index{Graphical\+Editor\+Core\+::\+Composite\+Shape2D@{Graphical\+Editor\+Core\+::\+Composite\+Shape2D}!add@{add}}
 \index{add@{add}!Graphical\+Editor\+Core\+::\+Composite\+Shape2D@{Graphical\+Editor\+Core\+::\+Composite\+Shape2D}}
-\subsubsection[{\texorpdfstring{add(std\+::unique\+\_\+ptr$<$ Composite\+Shape2\+D$<$ T $>$$>$ \&\&shape\+\_\+composite\+\_\+2d)}{add(std::unique_ptr< CompositeShape2D< T >> &&shape_composite_2d)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf Graphical\+Editor\+Core\+::\+Composite\+Shape2D}$<$ T $>$\+::add (
+\subsubsection[{\texorpdfstring{add(std\+::unique\+\_\+ptr$<$ Base\+Shape2\+D$<$ T $>$$>$ \&\&shape\+\_\+composite\+\_\+2d)}{add(std::unique_ptr< BaseShape2D< T >> &&shape_composite_2d)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf Graphical\+Editor\+Core\+::\+Composite\+Shape2D}$<$ T $>$\+::add (
 \begin{DoxyParamCaption}
-\item[{std\+::unique\+\_\+ptr$<$ {\bf Composite\+Shape2D}$<$ T $>$$>$ \&\&}]{shape\+\_\+composite\+\_\+2d}
+\item[{std\+::unique\+\_\+ptr$<$ {\bf Base\+Shape2D}$<$ T $>$$>$ \&\&}]{shape\+\_\+composite\+\_\+2d}
 \end{DoxyParamCaption}
-)}\hypertarget{classGraphicalEditorCore_1_1CompositeShape2D_a7ef78e00f1b0a673c2a3900a8bb5eca4}{}\label{classGraphicalEditorCore_1_1CompositeShape2D_a7ef78e00f1b0a673c2a3900a8bb5eca4}
+)}\hypertarget{classGraphicalEditorCore_1_1CompositeShape2D_afa65e170aed5aa31d67b1f541c24f656}{}\label{classGraphicalEditorCore_1_1CompositeShape2D_afa65e170aed5aa31d67b1f541c24f656}
 \index{Graphical\+Editor\+Core\+::\+Composite\+Shape2D@{Graphical\+Editor\+Core\+::\+Composite\+Shape2D}!move\+Center@{move\+Center}}
 \index{move\+Center@{move\+Center}!Graphical\+Editor\+Core\+::\+Composite\+Shape2D@{Graphical\+Editor\+Core\+::\+Composite\+Shape2D}}
 \subsubsection[{\texorpdfstring{move\+Center(const T dx, const T dy) override}{moveCenter(const T dx, const T dy) override}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf Graphical\+Editor\+Core\+::\+Composite\+Shape2D}$<$ T $>$\+::move\+Center (
@@ -119,11 +119,11 @@ Implements \hyperlink{classGraphicalEditorCore_1_1BaseShape2D_a2ff960ec57b180222
 
 \index{Graphical\+Editor\+Core\+::\+Composite\+Shape2D@{Graphical\+Editor\+Core\+::\+Composite\+Shape2D}!shape2d@{shape2d}}
 \index{shape2d@{shape2d}!Graphical\+Editor\+Core\+::\+Composite\+Shape2D@{Graphical\+Editor\+Core\+::\+Composite\+Shape2D}}
-\subsubsection[{\texorpdfstring{shape2d(const size\+\_\+t id)}{shape2d(const size_t id)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Base\+Shape2D}$<$T$>$\& {\bf Graphical\+Editor\+Core\+::\+Composite\+Shape2D}$<$ T $>$\+::shape2d (
+\subsubsection[{\texorpdfstring{shape2d(const size\+\_\+t id)}{shape2d(const size_t id)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Base\+Shape2D}$<$ T $>$ \& {\bf Graphical\+Editor\+Core\+::\+Composite\+Shape2D}$<$ T $>$\+::shape2d (
 \begin{DoxyParamCaption}
 \item[{const size\+\_\+t}]{id}
 \end{DoxyParamCaption}
-)}\hypertarget{classGraphicalEditorCore_1_1CompositeShape2D_a21d5c8c7348a3df1fdbd71e7605e991c}{}\label{classGraphicalEditorCore_1_1CompositeShape2D_a21d5c8c7348a3df1fdbd71e7605e991c}
+)}\hypertarget{classGraphicalEditorCore_1_1CompositeShape2D_a4cfefba661a2a6652ec2554e77ecba71}{}\label{classGraphicalEditorCore_1_1CompositeShape2D_a4cfefba661a2a6652ec2554e77ecba71}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

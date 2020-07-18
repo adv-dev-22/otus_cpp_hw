@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>My Project: GraphicalEditorCore::Document Class Reference</title>
+<title>My Project: GraphicalEditorCore::Document&lt; T &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,7 +92,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classGraphicalEditorCore_1_1Document-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">GraphicalEditorCore::Document Class Reference</div>  </div>
+<div class="title">GraphicalEditorCore::Document&lt; T &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -100,18 +100,24 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa45eb4c4edc68538d9441b90fd462868"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraphicalEditorCore_1_1Document.html#aa45eb4c4edc68538d9441b90fd462868">Document</a> (std::shared_ptr&lt; <a class="el" href="classGraphicalEditorCore_1_1DocumentParametersInterface.html">DocumentParametersInterface</a> &gt; shp_dpi)</td></tr>
-<tr class="separator:aa45eb4c4edc68538d9441b90fd462868"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaed7e606c3badeee559e144a783765ae"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraphicalEditorCore_1_1Document.html#aaed7e606c3badeee559e144a783765ae">~Document</a> ()</td></tr>
-<tr class="separator:aaed7e606c3badeee559e144a783765ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60780d888bf00a262dc1df546b3660ea"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraphicalEditorCore_1_1Document.html#a60780d888bf00a262dc1df546b3660ea">Document</a> (std::shared_ptr&lt; <a class="el" href="classGraphicalEditorCore_1_1DocumentParametersInterface.html">DocumentParametersInterface</a> &gt; shp_dpi)</td></tr>
+<tr class="separator:a60780d888bf00a262dc1df546b3660ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cadcf8e4a1e1873b372db9740db06f0"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraphicalEditorCore_1_1Document.html#a4cadcf8e4a1e1873b372db9740db06f0">~Document</a> ()</td></tr>
+<tr class="separator:a4cadcf8e4a1e1873b372db9740db06f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe527194c1568fd30d2aaaa3892d024a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraphicalEditorCore_1_1Document.html#abe527194c1568fd30d2aaaa3892d024a">add_shape</a> (std::unique_ptr&lt; <a class="el" href="classGraphicalEditorCore_1_1BaseShape2D.html">BaseShape2D</a>&lt; T &gt;&gt; &amp;&amp;shape_2d)</td></tr>
+<tr class="separator:abe527194c1568fd30d2aaaa3892d024a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac9bdac723068023fa0f46f021114566"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraphicalEditorCore_1_1Document.html#aac9bdac723068023fa0f46f021114566">remove_shape</a> (const size_t id)</td></tr>
+<tr class="separator:aac9bdac723068023fa0f46f021114566"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="aa45eb4c4edc68538d9441b90fd462868"></a>
+<a class="anchor" id="a60780d888bf00a262dc1df546b3660ea"></a>
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">GraphicalEditorCore::Document::Document </td>
+          <td class="memname"><a class="el" href="classGraphicalEditorCore_1_1Document.html">GraphicalEditorCore::Document</a>&lt; T &gt;::<a class="el" href="classGraphicalEditorCore_1_1Document.html">Document</a> </td>
           <td>(</td>
           <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classGraphicalEditorCore_1_1DocumentParametersInterface.html">DocumentParametersInterface</a> &gt;&#160;</td>
           <td class="paramname"><em>shp_dpi</em></td><td>)</td>
@@ -122,15 +128,17 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aaed7e606c3badeee559e144a783765ae"></a>
+<a class="anchor" id="a4cadcf8e4a1e1873b372db9740db06f0"></a>
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">GraphicalEditorCore::Document::~Document </td>
+          <td class="memname"><a class="el" href="classGraphicalEditorCore_1_1Document.html">GraphicalEditorCore::Document</a>&lt; T &gt;::~<a class="el" href="classGraphicalEditorCore_1_1Document.html">Document</a> </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -141,6 +149,43 @@ Public Member Functions</h2></td></tr>
 <span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="abe527194c1568fd30d2aaaa3892d024a"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classGraphicalEditorCore_1_1Document.html">GraphicalEditorCore::Document</a>&lt; T &gt;::add_shape </td>
+          <td>(</td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="classGraphicalEditorCore_1_1BaseShape2D.html">BaseShape2D</a>&lt; T &gt;&gt; &amp;&amp;&#160;</td>
+          <td class="paramname"><em>shape_2d</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aac9bdac723068023fa0f46f021114566"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classGraphicalEditorCore_1_1Document.html">GraphicalEditorCore::Document</a>&lt; T &gt;::remove_shape </td>
+          <td>(</td>
+          <td class="paramtype">const size_t&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
 </div><div class="memdoc">
 
 </div>

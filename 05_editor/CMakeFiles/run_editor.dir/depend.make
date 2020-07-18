@@ -19,6 +19,11 @@
 05_editor/CMakeFiles/run_editor.dir/composite_shape_2d.cpp.o: 05_editor/point_2d.h
 05_editor/CMakeFiles/run_editor.dir/composite_shape_2d.cpp.o: 05_editor/shapes_2d.h
 
+05_editor/CMakeFiles/run_editor.dir/container_shape_2d.cpp.o: 05_editor/color_engine.h
+05_editor/CMakeFiles/run_editor.dir/container_shape_2d.cpp.o: 05_editor/container_shape_2d.cpp
+05_editor/CMakeFiles/run_editor.dir/container_shape_2d.cpp.o: 05_editor/point_2d.h
+05_editor/CMakeFiles/run_editor.dir/container_shape_2d.cpp.o: 05_editor/shapes_2d.h
+
 05_editor/CMakeFiles/run_editor.dir/default.cpp.o: 05_editor/color_engine.h
 05_editor/CMakeFiles/run_editor.dir/default.cpp.o: 05_editor/default.cpp
 05_editor/CMakeFiles/run_editor.dir/default.cpp.o: 05_editor/default.h
@@ -27,6 +32,8 @@
 05_editor/CMakeFiles/run_editor.dir/document.cpp.o: 05_editor/document.cpp
 05_editor/CMakeFiles/run_editor.dir/document.cpp.o: 05_editor/document.h
 05_editor/CMakeFiles/run_editor.dir/document.cpp.o: 05_editor/document_parameters.h
+05_editor/CMakeFiles/run_editor.dir/document.cpp.o: 05_editor/point_2d.h
+05_editor/CMakeFiles/run_editor.dir/document.cpp.o: 05_editor/shapes_2d.h
 
 05_editor/CMakeFiles/run_editor.dir/document_parameters.cpp.o: 05_editor/color_engine.h
 05_editor/CMakeFiles/run_editor.dir/document_parameters.cpp.o: 05_editor/default.h
@@ -38,12 +45,16 @@
 05_editor/CMakeFiles/run_editor.dir/editor_core.cpp.o: 05_editor/document_parameters.h
 05_editor/CMakeFiles/run_editor.dir/editor_core.cpp.o: 05_editor/editor_core.cpp
 05_editor/CMakeFiles/run_editor.dir/editor_core.cpp.o: 05_editor/editor_core.h
+05_editor/CMakeFiles/run_editor.dir/editor_core.cpp.o: 05_editor/point_2d.h
+05_editor/CMakeFiles/run_editor.dir/editor_core.cpp.o: 05_editor/shapes_2d.h
 
 05_editor/CMakeFiles/run_editor.dir/main.cpp.o: 05_editor/color_engine.h
 05_editor/CMakeFiles/run_editor.dir/main.cpp.o: 05_editor/document.h
 05_editor/CMakeFiles/run_editor.dir/main.cpp.o: 05_editor/document_parameters.h
 05_editor/CMakeFiles/run_editor.dir/main.cpp.o: 05_editor/editor_core.h
 05_editor/CMakeFiles/run_editor.dir/main.cpp.o: 05_editor/main.cpp
+05_editor/CMakeFiles/run_editor.dir/main.cpp.o: 05_editor/point_2d.h
+05_editor/CMakeFiles/run_editor.dir/main.cpp.o: 05_editor/shapes_2d.h
 
 05_editor/CMakeFiles/run_editor.dir/point_2d.cpp.o: 05_editor/point_2d.cpp
 05_editor/CMakeFiles/run_editor.dir/point_2d.cpp.o: 05_editor/point_2d.h

@@ -1,4 +1,5 @@
 #include "shapes_2d.h"
+#include <iostream>
 
 namespace GraphicalEditorCore {
 
@@ -7,11 +8,24 @@ TriangleShape2D<T>::TriangleShape2D(const size_t id):
 BaseShape2D<T>(id),
 points_2d_() {
     points_2d_.fill(Point2D(T(0),T(0)));
+    std::cout << " Empty triangle ctor" << std::endl;
+}
+
+template <typename T>
+TriangleShape2D<T>::TriangleShape2D(const size_t id,
+                                    const Point2D<T> & p1,
+                                    const Point2D<T> & p2,
+                                    const Point2D<T> & p3):
+BaseShape2D<T>(id),
+points_2d_() {
+    points_2d_[0] = p1;
+    points_2d_[1] = p2;
+    points_2d_[2] = p3;
 }
 
 template <typename T>
 TriangleShape2D<T>::~TriangleShape2D() {
-
+    std::cout << " Triangle dtor" << std::endl;
 }
 
 template <typename T>

@@ -120,10 +120,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:af8dcc9f1047e1594cfbe61b62dd6a0ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0a5658b8caf83f1578ed32b762e5db2c"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraphicalEditorCore_1_1CompositeShape2D.html#a0a5658b8caf83f1578ed32b762e5db2c">~CompositeShape2D</a> ()</td></tr>
 <tr class="separator:a0a5658b8caf83f1578ed32b762e5db2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7ef78e00f1b0a673c2a3900a8bb5eca4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraphicalEditorCore_1_1CompositeShape2D.html#a7ef78e00f1b0a673c2a3900a8bb5eca4">add</a> (std::unique_ptr&lt; <a class="el" href="classGraphicalEditorCore_1_1CompositeShape2D.html">CompositeShape2D</a>&lt; T &gt;&gt; &amp;&amp;shape_composite_2d)</td></tr>
-<tr class="separator:a7ef78e00f1b0a673c2a3900a8bb5eca4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a21d5c8c7348a3df1fdbd71e7605e991c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classGraphicalEditorCore_1_1BaseShape2D.html">BaseShape2D</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraphicalEditorCore_1_1CompositeShape2D.html#a21d5c8c7348a3df1fdbd71e7605e991c">shape2d</a> (const size_t <a class="el" href="classGraphicalEditorCore_1_1BaseShape2D.html#ac66cfa23289ae36d70ff6b7c41dd791f">id</a>)</td></tr>
-<tr class="separator:a21d5c8c7348a3df1fdbd71e7605e991c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa65e170aed5aa31d67b1f541c24f656"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraphicalEditorCore_1_1CompositeShape2D.html#afa65e170aed5aa31d67b1f541c24f656">add</a> (std::unique_ptr&lt; <a class="el" href="classGraphicalEditorCore_1_1BaseShape2D.html">BaseShape2D</a>&lt; T &gt;&gt; &amp;&amp;shape_composite_2d)</td></tr>
+<tr class="separator:afa65e170aed5aa31d67b1f541c24f656"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cfefba661a2a6652ec2554e77ecba71"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classGraphicalEditorCore_1_1BaseShape2D.html">BaseShape2D</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraphicalEditorCore_1_1CompositeShape2D.html#a4cfefba661a2a6652ec2554e77ecba71">shape2d</a> (const size_t <a class="el" href="classGraphicalEditorCore_1_1BaseShape2D.html#ac66cfa23289ae36d70ff6b7c41dd791f">id</a>)</td></tr>
+<tr class="separator:a4cfefba661a2a6652ec2554e77ecba71"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ad124ab5448a4276d06742318744473"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraphicalEditorCore_1_1CompositeShape2D.html#a1ad124ab5448a4276d06742318744473">rotate</a> (const T clockwise_angle) override</td></tr>
 <tr class="separator:a1ad124ab5448a4276d06742318744473"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16cb9751cbd8f587f7f68ce831314e14"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraphicalEditorCore_1_1CompositeShape2D.html#a16cb9751cbd8f587f7f68ce831314e14">moveCenter</a> (const T dx, const T dy) override</td></tr>
@@ -189,7 +189,7 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a7ef78e00f1b0a673c2a3900a8bb5eca4"></a>
+<a class="anchor" id="afa65e170aed5aa31d67b1f541c24f656"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -198,7 +198,7 @@ template&lt;typename T &gt; </div>
         <tr>
           <td class="memname">void <a class="el" href="classGraphicalEditorCore_1_1CompositeShape2D.html">GraphicalEditorCore::CompositeShape2D</a>&lt; T &gt;::add </td>
           <td>(</td>
-          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="classGraphicalEditorCore_1_1CompositeShape2D.html">CompositeShape2D</a>&lt; T &gt;&gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="classGraphicalEditorCore_1_1BaseShape2D.html">BaseShape2D</a>&lt; T &gt;&gt; &amp;&amp;&#160;</td>
           <td class="paramname"><em>shape_composite_2d</em></td><td>)</td>
           <td></td>
         </tr>
@@ -345,14 +345,14 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a21d5c8c7348a3df1fdbd71e7605e991c"></a>
+<a class="anchor" id="a4cfefba661a2a6652ec2554e77ecba71"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classGraphicalEditorCore_1_1BaseShape2D.html">BaseShape2D</a>&lt;T&gt;&amp; <a class="el" href="classGraphicalEditorCore_1_1CompositeShape2D.html">GraphicalEditorCore::CompositeShape2D</a>&lt; T &gt;::shape2d </td>
+          <td class="memname"><a class="el" href="classGraphicalEditorCore_1_1BaseShape2D.html">BaseShape2D</a>&lt; T &gt; &amp; <a class="el" href="classGraphicalEditorCore_1_1CompositeShape2D.html">GraphicalEditorCore::CompositeShape2D</a>&lt; T &gt;::shape2d </td>
           <td>(</td>
           <td class="paramtype">const size_t&#160;</td>
           <td class="paramname"><em>id</em></td><td>)</td>

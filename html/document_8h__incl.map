@@ -1,4 +1,6 @@
 <map id="05_editor/document.h" name="05_editor/document.h">
-<area shape="rect" id="node2" href="$document__parameters_8h.html" title="document_parameters.h" alt="" coords="97,80,278,107"/>
-<area shape="rect" id="node3" href="$color__engine_8h.html" title="color_engine.h" alt="" coords="22,155,137,181"/>
+<area shape="rect" id="node2" href="$document__parameters_8h.html" title="document_parameters.h" alt="" coords="127,80,308,107"/>
+<area shape="rect" id="node8" href="$shapes__2d_8h.html" title="shapes_2d.h" alt="" coords="333,80,435,107"/>
+<area shape="rect" id="node3" href="$color__engine_8h.html" title="color_engine.h" alt="" coords="200,155,315,181"/>
+<area shape="rect" id="node9" href="$point__2d_8h.html" title="point_2d.h" alt="" coords="339,155,429,181"/>
 </map>

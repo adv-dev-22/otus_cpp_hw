@@ -109,9 +109,22 @@ include 05_editor/CMakeFiles/run_editor.dir/flags.make
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/run_editor.dir/composite_shape_2d.cpp.s"
 	cd /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/composite_shape_2d.cpp -o CMakeFiles/run_editor.dir/composite_shape_2d.cpp.s
 
+05_editor/CMakeFiles/run_editor.dir/container_shape_2d.cpp.o: 05_editor/CMakeFiles/run_editor.dir/flags.make
+05_editor/CMakeFiles/run_editor.dir/container_shape_2d.cpp.o: 05_editor/container_shape_2d.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/travis/build/adv-dev-22/otus_cpp_hw/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object 05_editor/CMakeFiles/run_editor.dir/container_shape_2d.cpp.o"
+	cd /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/run_editor.dir/container_shape_2d.cpp.o -c /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/container_shape_2d.cpp
+
+05_editor/CMakeFiles/run_editor.dir/container_shape_2d.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/run_editor.dir/container_shape_2d.cpp.i"
+	cd /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/container_shape_2d.cpp > CMakeFiles/run_editor.dir/container_shape_2d.cpp.i
+
+05_editor/CMakeFiles/run_editor.dir/container_shape_2d.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/run_editor.dir/container_shape_2d.cpp.s"
+	cd /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/container_shape_2d.cpp -o CMakeFiles/run_editor.dir/container_shape_2d.cpp.s
+
 05_editor/CMakeFiles/run_editor.dir/default.cpp.o: 05_editor/CMakeFiles/run_editor.dir/flags.make
 05_editor/CMakeFiles/run_editor.dir/default.cpp.o: 05_editor/default.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/travis/build/adv-dev-22/otus_cpp_hw/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object 05_editor/CMakeFiles/run_editor.dir/default.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/travis/build/adv-dev-22/otus_cpp_hw/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object 05_editor/CMakeFiles/run_editor.dir/default.cpp.o"
 	cd /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/run_editor.dir/default.cpp.o -c /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/default.cpp
 
 05_editor/CMakeFiles/run_editor.dir/default.cpp.i: cmake_force
@@ -124,7 +137,7 @@ include 05_editor/CMakeFiles/run_editor.dir/flags.make
 
 05_editor/CMakeFiles/run_editor.dir/document.cpp.o: 05_editor/CMakeFiles/run_editor.dir/flags.make
 05_editor/CMakeFiles/run_editor.dir/document.cpp.o: 05_editor/document.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/travis/build/adv-dev-22/otus_cpp_hw/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object 05_editor/CMakeFiles/run_editor.dir/document.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/travis/build/adv-dev-22/otus_cpp_hw/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object 05_editor/CMakeFiles/run_editor.dir/document.cpp.o"
 	cd /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/run_editor.dir/document.cpp.o -c /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/document.cpp
 
 05_editor/CMakeFiles/run_editor.dir/document.cpp.i: cmake_force
@@ -137,7 +150,7 @@ include 05_editor/CMakeFiles/run_editor.dir/flags.make
 
 05_editor/CMakeFiles/run_editor.dir/document_parameters.cpp.o: 05_editor/CMakeFiles/run_editor.dir/flags.make
 05_editor/CMakeFiles/run_editor.dir/document_parameters.cpp.o: 05_editor/document_parameters.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/travis/build/adv-dev-22/otus_cpp_hw/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object 05_editor/CMakeFiles/run_editor.dir/document_parameters.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/travis/build/adv-dev-22/otus_cpp_hw/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object 05_editor/CMakeFiles/run_editor.dir/document_parameters.cpp.o"
 	cd /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/run_editor.dir/document_parameters.cpp.o -c /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/document_parameters.cpp
 
 05_editor/CMakeFiles/run_editor.dir/document_parameters.cpp.i: cmake_force
@@ -150,7 +163,7 @@ include 05_editor/CMakeFiles/run_editor.dir/flags.make
 
 05_editor/CMakeFiles/run_editor.dir/editor_core.cpp.o: 05_editor/CMakeFiles/run_editor.dir/flags.make
 05_editor/CMakeFiles/run_editor.dir/editor_core.cpp.o: 05_editor/editor_core.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/travis/build/adv-dev-22/otus_cpp_hw/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object 05_editor/CMakeFiles/run_editor.dir/editor_core.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/travis/build/adv-dev-22/otus_cpp_hw/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object 05_editor/CMakeFiles/run_editor.dir/editor_core.cpp.o"
 	cd /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/run_editor.dir/editor_core.cpp.o -c /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/editor_core.cpp
 
 05_editor/CMakeFiles/run_editor.dir/editor_core.cpp.i: cmake_force
@@ -163,7 +176,7 @@ include 05_editor/CMakeFiles/run_editor.dir/flags.make
 
 05_editor/CMakeFiles/run_editor.dir/main.cpp.o: 05_editor/CMakeFiles/run_editor.dir/flags.make
 05_editor/CMakeFiles/run_editor.dir/main.cpp.o: 05_editor/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/travis/build/adv-dev-22/otus_cpp_hw/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object 05_editor/CMakeFiles/run_editor.dir/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/travis/build/adv-dev-22/otus_cpp_hw/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object 05_editor/CMakeFiles/run_editor.dir/main.cpp.o"
 	cd /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/run_editor.dir/main.cpp.o -c /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/main.cpp
 
 05_editor/CMakeFiles/run_editor.dir/main.cpp.i: cmake_force
@@ -176,7 +189,7 @@ include 05_editor/CMakeFiles/run_editor.dir/flags.make
 
 05_editor/CMakeFiles/run_editor.dir/point_2d.cpp.o: 05_editor/CMakeFiles/run_editor.dir/flags.make
 05_editor/CMakeFiles/run_editor.dir/point_2d.cpp.o: 05_editor/point_2d.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/travis/build/adv-dev-22/otus_cpp_hw/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object 05_editor/CMakeFiles/run_editor.dir/point_2d.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/travis/build/adv-dev-22/otus_cpp_hw/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object 05_editor/CMakeFiles/run_editor.dir/point_2d.cpp.o"
 	cd /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/run_editor.dir/point_2d.cpp.o -c /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/point_2d.cpp
 
 05_editor/CMakeFiles/run_editor.dir/point_2d.cpp.i: cmake_force
@@ -189,7 +202,7 @@ include 05_editor/CMakeFiles/run_editor.dir/flags.make
 
 05_editor/CMakeFiles/run_editor.dir/triangle_shape_2d.cpp.o: 05_editor/CMakeFiles/run_editor.dir/flags.make
 05_editor/CMakeFiles/run_editor.dir/triangle_shape_2d.cpp.o: 05_editor/triangle_shape_2d.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/travis/build/adv-dev-22/otus_cpp_hw/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object 05_editor/CMakeFiles/run_editor.dir/triangle_shape_2d.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/travis/build/adv-dev-22/otus_cpp_hw/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object 05_editor/CMakeFiles/run_editor.dir/triangle_shape_2d.cpp.o"
 	cd /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/run_editor.dir/triangle_shape_2d.cpp.o -c /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/triangle_shape_2d.cpp
 
 05_editor/CMakeFiles/run_editor.dir/triangle_shape_2d.cpp.i: cmake_force
@@ -206,6 +219,7 @@ run_editor_OBJECTS = \
 "CMakeFiles/run_editor.dir/circle_shape_2d.cpp.o" \
 "CMakeFiles/run_editor.dir/color_engine.cpp.o" \
 "CMakeFiles/run_editor.dir/composite_shape_2d.cpp.o" \
+"CMakeFiles/run_editor.dir/container_shape_2d.cpp.o" \
 "CMakeFiles/run_editor.dir/default.cpp.o" \
 "CMakeFiles/run_editor.dir/document.cpp.o" \
 "CMakeFiles/run_editor.dir/document_parameters.cpp.o" \
@@ -221,6 +235,7 @@ run_editor_EXTERNAL_OBJECTS =
 05_editor/run_editor: 05_editor/CMakeFiles/run_editor.dir/circle_shape_2d.cpp.o
 05_editor/run_editor: 05_editor/CMakeFiles/run_editor.dir/color_engine.cpp.o
 05_editor/run_editor: 05_editor/CMakeFiles/run_editor.dir/composite_shape_2d.cpp.o
+05_editor/run_editor: 05_editor/CMakeFiles/run_editor.dir/container_shape_2d.cpp.o
 05_editor/run_editor: 05_editor/CMakeFiles/run_editor.dir/default.cpp.o
 05_editor/run_editor: 05_editor/CMakeFiles/run_editor.dir/document.cpp.o
 05_editor/run_editor: 05_editor/CMakeFiles/run_editor.dir/document_parameters.cpp.o
@@ -230,7 +245,7 @@ run_editor_EXTERNAL_OBJECTS =
 05_editor/run_editor: 05_editor/CMakeFiles/run_editor.dir/triangle_shape_2d.cpp.o
 05_editor/run_editor: 05_editor/CMakeFiles/run_editor.dir/build.make
 05_editor/run_editor: 05_editor/CMakeFiles/run_editor.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/travis/build/adv-dev-22/otus_cpp_hw/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable run_editor"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/travis/build/adv-dev-22/otus_cpp_hw/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable run_editor"
 	cd /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/run_editor.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

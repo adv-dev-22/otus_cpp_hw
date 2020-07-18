@@ -41,6 +41,11 @@ template <typename T = double>
 class TriangleShape2D : public BaseShape2D<T> {
 public:
     TriangleShape2D(const size_t id);
+    TriangleShape2D(const size_t id,
+                    const Point2D<T> & p1,
+                    const Point2D<T> & p2,
+                    const Point2D<T> & p3);
+
     virtual ~TriangleShape2D();
 
     virtual void rotate(const T clockwise_angle) override;
@@ -82,12 +87,39 @@ private:
 };
 
 template <typename T>
+class CompositeShape2D;
+
+template <typename T>
+class Shape2DContainer final {
+
+    friend class CompositeShape2D<T>;
+
+public:
+    Shape2DContainer();
+    ~Shape2DContainer();
+
+    void add(std::unique_ptr<BaseShape2D<T>> && shape_composite_2d);
+    void remove(const size_t id);
+
+    BaseShape2D<T> & find(const size_t id);
+
+private:
+    std::map<size_t, std::unique_ptr<BaseShape2D<T>>> shapes_2d_;
+
+private:
+    Shape2DContainer(const Shape2DContainer & );
+    Shape2DContainer(Shape2DContainer && );
+    Shape2DContainer & operator= (const Shape2DContainer & );
+    Shape2DContainer & operator= (Shape2DContainer && );
+};
+
+template <typename T>
 class CompositeShape2D : public BaseShape2D<T> {
 public:
     CompositeShape2D(const size_t id);
     virtual ~CompositeShape2D();
 
-    void add(std::unique_ptr<CompositeShape2D<T>> && shape_composite_2d);
+    void add(std::unique_ptr<BaseShape2D<T>> && shape_composite_2d);
     BaseShape2D<T> & shape2d(const size_t id);
 
     virtual void rotate(const T clockwise_angle) override;
@@ -96,7 +128,8 @@ public:
     virtual void scale(const T factor) override;
 
 private:
-    std::map<size_t, std::unique_ptr<BaseShape2D<T>>> shapes_2d_;
+    //std::map<size_t, std::unique_ptr<BaseShape2D<T>>> shapes_2d_;
+    Shape2DContainer<T> shapes_2d_;
 
 private:
     CompositeShape2D(const CompositeShape2D & );

@@ -5,6 +5,8 @@ var searchData=
   ['rebind',['rebind',['../structreserve__allocator_1_1rebind.html',1,'reserve_allocator']]],
   ['red',['red',['../classGraphicalEditorCore_1_1ColorEngineBase.html#a9d0b1a48ea117d8f47c43b9c63982dc5',1,'GraphicalEditorCore::ColorEngineBase::red()'],['../classGraphicalEditorCore_1_1ColorEngineUniform.html#a91461ce9955811e4e5e2f74cd2e9ec94',1,'GraphicalEditorCore::ColorEngineUniform::red()'],['../classGraphicalEditorCore_1_1ColorEngineLinearGradient.html#acecdc769c65b3ede786edd1a6abe72b5',1,'GraphicalEditorCore::ColorEngineLinearGradient::red()'],['../namespaceGraphicalEditorCore.html#ada0d86f7dc1329a6731f908a95f68a38aee38e4d5dd68c4e440825018d549cb47',1,'GraphicalEditorCore::Red()']]],
   ['reference',['reference',['../classreserve__allocator.html#a260b28f64b11d2c4af92d685343e074c',1,'reserve_allocator::reference()'],['../classelementwise__block__allocator.html#a7bfdf1ff6d23bcd486ef3c6541f738f2',1,'elementwise_block_allocator::reference()']]],
+  ['remove',['remove',['../classGraphicalEditorCore_1_1Shape2DContainer.html#aaba57542cb133dfbe71c4e0857cccbc2',1,'GraphicalEditorCore::Shape2DContainer']]],
+  ['remove_5fshape',['remove_shape',['../classGraphicalEditorCore_1_1Document.html#aac9bdac723068023fa0f46f021114566',1,'GraphicalEditorCore::Document']]],
   ['reserve_5fallocator',['reserve_allocator',['../classreserve__allocator.html',1,'reserve_allocator&lt; T, n &gt;'],['../classreserve__allocator.html#a6e20af249475b4b876cb50f6c180c4a9',1,'reserve_allocator::reserve_allocator()']]],
   ['reserved_5fcontainer_2ehpp',['reserved_container.hpp',['../reserved__container_8hpp.html',1,'']]],
   ['reservedcontainer',['ReservedContainer',['../reserved__container_8hpp.html#a645c90241dfa63f57e4e174b957f076a',1,'reserved_container.hpp']]],

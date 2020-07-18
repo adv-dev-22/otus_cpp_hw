@@ -1,5 +1,5 @@
-\hypertarget{classGraphicalEditorCore_1_1Document}{}\section{Graphical\+Editor\+Core\+:\+:Document Class Reference}
-\label{classGraphicalEditorCore_1_1Document}\index{Graphical\+Editor\+Core\+::\+Document@{Graphical\+Editor\+Core\+::\+Document}}
+\hypertarget{classGraphicalEditorCore_1_1Document}{}\section{Graphical\+Editor\+Core\+:\+:Document$<$ T $>$ Class Template Reference}
+\label{classGraphicalEditorCore_1_1Document}\index{Graphical\+Editor\+Core\+::\+Document$<$ T $>$@{Graphical\+Editor\+Core\+::\+Document$<$ T $>$}}
 
 
 {\ttfamily \#include $<$document.\+h$>$}
@@ -7,27 +7,48 @@
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classGraphicalEditorCore_1_1Document_aa45eb4c4edc68538d9441b90fd462868}{Document} (std\+::shared\+\_\+ptr$<$ \hyperlink{classGraphicalEditorCore_1_1DocumentParametersInterface}{Document\+Parameters\+Interface} $>$ shp\+\_\+dpi)
+\hyperlink{classGraphicalEditorCore_1_1Document_a60780d888bf00a262dc1df546b3660ea}{Document} (std\+::shared\+\_\+ptr$<$ \hyperlink{classGraphicalEditorCore_1_1DocumentParametersInterface}{Document\+Parameters\+Interface} $>$ shp\+\_\+dpi)
 \item 
-virtual \hyperlink{classGraphicalEditorCore_1_1Document_aaed7e606c3badeee559e144a783765ae}{$\sim$\+Document} ()
+virtual \hyperlink{classGraphicalEditorCore_1_1Document_a4cadcf8e4a1e1873b372db9740db06f0}{$\sim$\+Document} ()
+\item 
+void \hyperlink{classGraphicalEditorCore_1_1Document_abe527194c1568fd30d2aaaa3892d024a}{add\+\_\+shape} (std\+::unique\+\_\+ptr$<$ \hyperlink{classGraphicalEditorCore_1_1BaseShape2D}{Base\+Shape2D}$<$ T $>$$>$ \&\&shape\+\_\+2d)
+\item 
+void \hyperlink{classGraphicalEditorCore_1_1Document_aac9bdac723068023fa0f46f021114566}{remove\+\_\+shape} (const size\+\_\+t id)
 \end{DoxyCompactItemize}
 
 
 \subsection{Constructor \& Destructor Documentation}
 \index{Graphical\+Editor\+Core\+::\+Document@{Graphical\+Editor\+Core\+::\+Document}!Document@{Document}}
 \index{Document@{Document}!Graphical\+Editor\+Core\+::\+Document@{Graphical\+Editor\+Core\+::\+Document}}
-\subsubsection[{\texorpdfstring{Document(std\+::shared\+\_\+ptr$<$ Document\+Parameters\+Interface $>$ shp\+\_\+dpi)}{Document(std::shared_ptr< DocumentParametersInterface > shp_dpi)}}]{\setlength{\rightskip}{0pt plus 5cm}Graphical\+Editor\+Core\+::\+Document\+::\+Document (
+\subsubsection[{\texorpdfstring{Document(std\+::shared\+\_\+ptr$<$ Document\+Parameters\+Interface $>$ shp\+\_\+dpi)}{Document(std::shared_ptr< DocumentParametersInterface > shp_dpi)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Graphical\+Editor\+Core\+::\+Document}$<$ T $>$\+::{\bf Document} (
 \begin{DoxyParamCaption}
 \item[{std\+::shared\+\_\+ptr$<$ {\bf Document\+Parameters\+Interface} $>$}]{shp\+\_\+dpi}
 \end{DoxyParamCaption}
-)}\hypertarget{classGraphicalEditorCore_1_1Document_aa45eb4c4edc68538d9441b90fd462868}{}\label{classGraphicalEditorCore_1_1Document_aa45eb4c4edc68538d9441b90fd462868}
+)}\hypertarget{classGraphicalEditorCore_1_1Document_a60780d888bf00a262dc1df546b3660ea}{}\label{classGraphicalEditorCore_1_1Document_a60780d888bf00a262dc1df546b3660ea}
 \index{Graphical\+Editor\+Core\+::\+Document@{Graphical\+Editor\+Core\+::\+Document}!````~Document@{$\sim$\+Document}}
 \index{````~Document@{$\sim$\+Document}!Graphical\+Editor\+Core\+::\+Document@{Graphical\+Editor\+Core\+::\+Document}}
-\subsubsection[{\texorpdfstring{$\sim$\+Document()}{~Document()}}]{\setlength{\rightskip}{0pt plus 5cm}Graphical\+Editor\+Core\+::\+Document\+::$\sim$\+Document (
+\subsubsection[{\texorpdfstring{$\sim$\+Document()}{~Document()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Graphical\+Editor\+Core\+::\+Document}$<$ T $>$\+::$\sim${\bf Document} (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGraphicalEditorCore_1_1Document_aaed7e606c3badeee559e144a783765ae}{}\label{classGraphicalEditorCore_1_1Document_aaed7e606c3badeee559e144a783765ae}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGraphicalEditorCore_1_1Document_a4cadcf8e4a1e1873b372db9740db06f0}{}\label{classGraphicalEditorCore_1_1Document_a4cadcf8e4a1e1873b372db9740db06f0}
+
+
+\subsection{Member Function Documentation}
+\index{Graphical\+Editor\+Core\+::\+Document@{Graphical\+Editor\+Core\+::\+Document}!add\+\_\+shape@{add\+\_\+shape}}
+\index{add\+\_\+shape@{add\+\_\+shape}!Graphical\+Editor\+Core\+::\+Document@{Graphical\+Editor\+Core\+::\+Document}}
+\subsubsection[{\texorpdfstring{add\+\_\+shape(std\+::unique\+\_\+ptr$<$ Base\+Shape2\+D$<$ T $>$$>$ \&\&shape\+\_\+2d)}{add_shape(std::unique_ptr< BaseShape2D< T >> &&shape_2d)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf Graphical\+Editor\+Core\+::\+Document}$<$ T $>$\+::add\+\_\+shape (
+\begin{DoxyParamCaption}
+\item[{std\+::unique\+\_\+ptr$<$ {\bf Base\+Shape2D}$<$ T $>$$>$ \&\&}]{shape\+\_\+2d}
+\end{DoxyParamCaption}
+)}\hypertarget{classGraphicalEditorCore_1_1Document_abe527194c1568fd30d2aaaa3892d024a}{}\label{classGraphicalEditorCore_1_1Document_abe527194c1568fd30d2aaaa3892d024a}
+\index{Graphical\+Editor\+Core\+::\+Document@{Graphical\+Editor\+Core\+::\+Document}!remove\+\_\+shape@{remove\+\_\+shape}}
+\index{remove\+\_\+shape@{remove\+\_\+shape}!Graphical\+Editor\+Core\+::\+Document@{Graphical\+Editor\+Core\+::\+Document}}
+\subsubsection[{\texorpdfstring{remove\+\_\+shape(const size\+\_\+t id)}{remove_shape(const size_t id)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf Graphical\+Editor\+Core\+::\+Document}$<$ T $>$\+::remove\+\_\+shape (
+\begin{DoxyParamCaption}
+\item[{const size\+\_\+t}]{id}
+\end{DoxyParamCaption}
+)}\hypertarget{classGraphicalEditorCore_1_1Document_aac9bdac723068023fa0f46f021114566}{}\label{classGraphicalEditorCore_1_1Document_aac9bdac723068023fa0f46f021114566}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

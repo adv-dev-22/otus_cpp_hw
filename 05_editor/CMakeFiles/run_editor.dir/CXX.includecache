@@ -13,6 +13,10 @@ shapes_2d.h
 /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/circle_shape_2d.cpp
 shapes_2d.h
 /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/shapes_2d.h
+cmath
+-
+iostream
+-
 
 /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/color_engine.cpp
 color_engine.h
@@ -27,6 +31,10 @@ array
 -
 
 /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/composite_shape_2d.cpp
+shapes_2d.h
+/home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/shapes_2d.h
+
+/home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/container_shape_2d.cpp
 shapes_2d.h
 /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/shapes_2d.h
 
@@ -47,11 +55,17 @@ document.h
 /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/document.h
 iostream
 -
+memory
+-
 
 /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/document.h
 document_parameters.h
 /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/document_parameters.h
+shapes_2d.h
+/home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/shapes_2d.h
 memory
+-
+map
 -
 
 /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/document_parameters.cpp
@@ -89,6 +103,8 @@ editor_core.h
 /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/editor_core.h
 document_parameters.h
 /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/document_parameters.h
+shapes_2d.h
+/home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/shapes_2d.h
 memory
 -
 string
@@ -113,4 +129,6 @@ map
 /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/triangle_shape_2d.cpp
 shapes_2d.h
 /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/shapes_2d.h
+iostream
+-
 

@@ -312,6 +312,33 @@ composite_shape_2d.cpp.s:
 	cd /home/travis/build/adv-dev-22/otus_cpp_hw && $(MAKE) -f 05_editor/CMakeFiles/run_editor.dir/build.make 05_editor/CMakeFiles/run_editor.dir/composite_shape_2d.cpp.s
 .PHONY : composite_shape_2d.cpp.s
 
+container_shape_2d.o: container_shape_2d.cpp.o
+
+.PHONY : container_shape_2d.o
+
+# target to build an object file
+container_shape_2d.cpp.o:
+	cd /home/travis/build/adv-dev-22/otus_cpp_hw && $(MAKE) -f 05_editor/CMakeFiles/run_editor.dir/build.make 05_editor/CMakeFiles/run_editor.dir/container_shape_2d.cpp.o
+.PHONY : container_shape_2d.cpp.o
+
+container_shape_2d.i: container_shape_2d.cpp.i
+
+.PHONY : container_shape_2d.i
+
+# target to preprocess a source file
+container_shape_2d.cpp.i:
+	cd /home/travis/build/adv-dev-22/otus_cpp_hw && $(MAKE) -f 05_editor/CMakeFiles/run_editor.dir/build.make 05_editor/CMakeFiles/run_editor.dir/container_shape_2d.cpp.i
+.PHONY : container_shape_2d.cpp.i
+
+container_shape_2d.s: container_shape_2d.cpp.s
+
+.PHONY : container_shape_2d.s
+
+# target to generate assembly for a file
+container_shape_2d.cpp.s:
+	cd /home/travis/build/adv-dev-22/otus_cpp_hw && $(MAKE) -f 05_editor/CMakeFiles/run_editor.dir/build.make 05_editor/CMakeFiles/run_editor.dir/container_shape_2d.cpp.s
+.PHONY : container_shape_2d.cpp.s
+
 default.o: default.cpp.o
 
 .PHONY : default.o
@@ -529,6 +556,9 @@ help:
 	@echo "... composite_shape_2d.o"
 	@echo "... composite_shape_2d.i"
 	@echo "... composite_shape_2d.s"
+	@echo "... container_shape_2d.o"
+	@echo "... container_shape_2d.i"
+	@echo "... container_shape_2d.s"
 	@echo "... default.o"
 	@echo "... default.i"
 	@echo "... default.s"
