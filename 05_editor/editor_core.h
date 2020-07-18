@@ -8,12 +8,13 @@ namespace GraphicalEditorCore {
 
 class DocumentParametersInterface;
 
+template <typename T = double>
 class EditorCore {
 public:
     EditorCore();
     virtual ~EditorCore();
 
-    Document & create_document(std::shared_ptr<DocumentParametersInterface> shp_dpi);
+    Document<T> & create_document(std::shared_ptr<DocumentParametersInterface> shp_dpi);
 
     void save(const std::string & file);
 
@@ -23,7 +24,7 @@ public:
     // TODO: next_document();
 
 private:
-    std::unique_ptr<Document> up_document_;
+    std::unique_ptr<Document<T>> up_document_;
     // TODO: May be changed to container (map) of documents have been already created
 
 private:

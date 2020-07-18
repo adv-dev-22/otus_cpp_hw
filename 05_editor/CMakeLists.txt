@@ -11,6 +11,7 @@ add_executable(run_editor
 	circle_shape_2d.cpp
 	color_engine.cpp
 	composite_shape_2d.cpp
+	container_shape_2d.cpp
         default.cpp	
         document.cpp
         document_parameters.cpp	

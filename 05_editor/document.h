@@ -2,22 +2,24 @@
 #define _DOCUMENT_H_
 
 #include "document_parameters.h"
+#include "shapes_2d.h"
 #include <memory>
+#include <map>
 
 namespace GraphicalEditorCore {
 
+template <typename T = double>
 class Document {
 public:
     Document(std::shared_ptr<DocumentParametersInterface> shp_dpi);
     virtual ~Document();
 
-    //void add_shape(BaseShape2D * const );
-    //void remove_shape(const BaseShape2D * const );
+    void add_shape(std::unique_ptr<BaseShape2D<T>> && shape_2d);
+    void remove_shape(const size_t id);
 
 private:
     std::weak_ptr<DocumentParametersInterface> wp_doc_params_;
-
-    // TODO: std::map<BaseShape2D>
+    Shape2DContainer<T> shapes_2d_;
 
 private:
     Document(const Document & ) = delete;
