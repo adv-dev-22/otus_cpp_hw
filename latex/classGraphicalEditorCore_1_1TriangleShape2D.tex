@@ -2,7 +2,7 @@
 \label{classGraphicalEditorCore_1_1TriangleShape2D}\index{Graphical\+Editor\+Core\+::\+Triangle\+Shape2\+D$<$ T $>$@{Graphical\+Editor\+Core\+::\+Triangle\+Shape2\+D$<$ T $>$}}
 
 
-{\ttfamily \#include $<$base\+\_\+shape\+\_\+2d.\+h$>$}
+{\ttfamily \#include $<$shapes\+\_\+2d.\+h$>$}
 
 
 
@@ -24,9 +24,91 @@ Collaboration diagram for Graphical\+Editor\+Core\+:\+:Triangle\+Shape2D$<$ T $>
 \includegraphics[width=211pt]{classGraphicalEditorCore_1_1TriangleShape2D__coll__graph}
 \end{center}
 \end{figure}
-\subsection*{Additional Inherited Members}
-
-
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
 \item 
-05\+\_\+editor/\hyperlink{base__shape__2d_8h}{base\+\_\+shape\+\_\+2d.\+h}\end{DoxyCompactItemize}
+\hyperlink{classGraphicalEditorCore_1_1TriangleShape2D_af0339a667c63abd464603bf68e8d4770}{Triangle\+Shape2D} (const size\+\_\+t \hyperlink{classGraphicalEditorCore_1_1BaseShape2D_ac66cfa23289ae36d70ff6b7c41dd791f}{id})
+\item 
+virtual \hyperlink{classGraphicalEditorCore_1_1TriangleShape2D_a561fbaff5077e2d945eb8a9a95c48617}{$\sim$\+Triangle\+Shape2D} ()
+\item 
+virtual void \hyperlink{classGraphicalEditorCore_1_1TriangleShape2D_a70baf8d77cdaa6107cac5ba2c8f9bc5b}{rotate} (const T clockwise\+\_\+angle) override
+\item 
+virtual void \hyperlink{classGraphicalEditorCore_1_1TriangleShape2D_a2b84784e80b932ef32641e7ac7d41bee}{move\+Center} (const T dx, const T dy) override
+\item 
+virtual void \hyperlink{classGraphicalEditorCore_1_1TriangleShape2D_a904d1d62d033013b636062c38df68d29}{move\+Vertex} (const T dx, const T dy, const size\+\_\+t index) override
+\item 
+virtual void \hyperlink{classGraphicalEditorCore_1_1TriangleShape2D_a769d7053c7410e288abeaa8e6122ee26}{scale} (const T factor) override
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Graphical\+Editor\+Core\+::\+Triangle\+Shape2D@{Graphical\+Editor\+Core\+::\+Triangle\+Shape2D}!Triangle\+Shape2D@{Triangle\+Shape2D}}
+\index{Triangle\+Shape2D@{Triangle\+Shape2D}!Graphical\+Editor\+Core\+::\+Triangle\+Shape2D@{Graphical\+Editor\+Core\+::\+Triangle\+Shape2D}}
+\subsubsection[{\texorpdfstring{Triangle\+Shape2\+D(const size\+\_\+t id)}{TriangleShape2D(const size_t id)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Graphical\+Editor\+Core\+::\+Triangle\+Shape2D}$<$ T $>$\+::{\bf Triangle\+Shape2D} (
+\begin{DoxyParamCaption}
+\item[{const size\+\_\+t}]{id}
+\end{DoxyParamCaption}
+)}\hypertarget{classGraphicalEditorCore_1_1TriangleShape2D_af0339a667c63abd464603bf68e8d4770}{}\label{classGraphicalEditorCore_1_1TriangleShape2D_af0339a667c63abd464603bf68e8d4770}
+\index{Graphical\+Editor\+Core\+::\+Triangle\+Shape2D@{Graphical\+Editor\+Core\+::\+Triangle\+Shape2D}!````~Triangle\+Shape2D@{$\sim$\+Triangle\+Shape2D}}
+\index{````~Triangle\+Shape2D@{$\sim$\+Triangle\+Shape2D}!Graphical\+Editor\+Core\+::\+Triangle\+Shape2D@{Graphical\+Editor\+Core\+::\+Triangle\+Shape2D}}
+\subsubsection[{\texorpdfstring{$\sim$\+Triangle\+Shape2\+D()}{~TriangleShape2D()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Graphical\+Editor\+Core\+::\+Triangle\+Shape2D}$<$ T $>$\+::$\sim${\bf Triangle\+Shape2D} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGraphicalEditorCore_1_1TriangleShape2D_a561fbaff5077e2d945eb8a9a95c48617}{}\label{classGraphicalEditorCore_1_1TriangleShape2D_a561fbaff5077e2d945eb8a9a95c48617}
+
+
+\subsection{Member Function Documentation}
+\index{Graphical\+Editor\+Core\+::\+Triangle\+Shape2D@{Graphical\+Editor\+Core\+::\+Triangle\+Shape2D}!move\+Center@{move\+Center}}
+\index{move\+Center@{move\+Center}!Graphical\+Editor\+Core\+::\+Triangle\+Shape2D@{Graphical\+Editor\+Core\+::\+Triangle\+Shape2D}}
+\subsubsection[{\texorpdfstring{move\+Center(const T dx, const T dy) override}{moveCenter(const T dx, const T dy) override}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf Graphical\+Editor\+Core\+::\+Triangle\+Shape2D}$<$ T $>$\+::move\+Center (
+\begin{DoxyParamCaption}
+\item[{const T}]{dx, }
+\item[{const T}]{dy}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classGraphicalEditorCore_1_1TriangleShape2D_a2b84784e80b932ef32641e7ac7d41bee}{}\label{classGraphicalEditorCore_1_1TriangleShape2D_a2b84784e80b932ef32641e7ac7d41bee}
+
+
+Implements \hyperlink{classGraphicalEditorCore_1_1BaseShape2D_adebef5c637da2c34a2fe728022740f94}{Graphical\+Editor\+Core\+::\+Base\+Shape2\+D$<$ T $>$}.
+
+\index{Graphical\+Editor\+Core\+::\+Triangle\+Shape2D@{Graphical\+Editor\+Core\+::\+Triangle\+Shape2D}!move\+Vertex@{move\+Vertex}}
+\index{move\+Vertex@{move\+Vertex}!Graphical\+Editor\+Core\+::\+Triangle\+Shape2D@{Graphical\+Editor\+Core\+::\+Triangle\+Shape2D}}
+\subsubsection[{\texorpdfstring{move\+Vertex(const T dx, const T dy, const size\+\_\+t index) override}{moveVertex(const T dx, const T dy, const size_t index) override}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf Graphical\+Editor\+Core\+::\+Triangle\+Shape2D}$<$ T $>$\+::move\+Vertex (
+\begin{DoxyParamCaption}
+\item[{const T}]{dx, }
+\item[{const T}]{dy, }
+\item[{const size\+\_\+t}]{index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classGraphicalEditorCore_1_1TriangleShape2D_a904d1d62d033013b636062c38df68d29}{}\label{classGraphicalEditorCore_1_1TriangleShape2D_a904d1d62d033013b636062c38df68d29}
+
+
+Implements \hyperlink{classGraphicalEditorCore_1_1BaseShape2D_a9e6394ecf62e475a1d087e89258d4131}{Graphical\+Editor\+Core\+::\+Base\+Shape2\+D$<$ T $>$}.
+
+\index{Graphical\+Editor\+Core\+::\+Triangle\+Shape2D@{Graphical\+Editor\+Core\+::\+Triangle\+Shape2D}!rotate@{rotate}}
+\index{rotate@{rotate}!Graphical\+Editor\+Core\+::\+Triangle\+Shape2D@{Graphical\+Editor\+Core\+::\+Triangle\+Shape2D}}
+\subsubsection[{\texorpdfstring{rotate(const T clockwise\+\_\+angle) override}{rotate(const T clockwise_angle) override}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf Graphical\+Editor\+Core\+::\+Triangle\+Shape2D}$<$ T $>$\+::rotate (
+\begin{DoxyParamCaption}
+\item[{const T}]{clockwise\+\_\+angle}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classGraphicalEditorCore_1_1TriangleShape2D_a70baf8d77cdaa6107cac5ba2c8f9bc5b}{}\label{classGraphicalEditorCore_1_1TriangleShape2D_a70baf8d77cdaa6107cac5ba2c8f9bc5b}
+
+
+Implements \hyperlink{classGraphicalEditorCore_1_1BaseShape2D_a94a87b2fd8485cfb7d4ca97050d1bdde}{Graphical\+Editor\+Core\+::\+Base\+Shape2\+D$<$ T $>$}.
+
+\index{Graphical\+Editor\+Core\+::\+Triangle\+Shape2D@{Graphical\+Editor\+Core\+::\+Triangle\+Shape2D}!scale@{scale}}
+\index{scale@{scale}!Graphical\+Editor\+Core\+::\+Triangle\+Shape2D@{Graphical\+Editor\+Core\+::\+Triangle\+Shape2D}}
+\subsubsection[{\texorpdfstring{scale(const T factor) override}{scale(const T factor) override}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf Graphical\+Editor\+Core\+::\+Triangle\+Shape2D}$<$ T $>$\+::scale (
+\begin{DoxyParamCaption}
+\item[{const T}]{factor}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classGraphicalEditorCore_1_1TriangleShape2D_a769d7053c7410e288abeaa8e6122ee26}{}\label{classGraphicalEditorCore_1_1TriangleShape2D_a769d7053c7410e288abeaa8e6122ee26}
+
+
+Implements \hyperlink{classGraphicalEditorCore_1_1BaseShape2D_a2ff960ec57b180222a084642fa7dc780}{Graphical\+Editor\+Core\+::\+Base\+Shape2\+D$<$ T $>$}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+05\+\_\+editor/\hyperlink{shapes__2d_8h}{shapes\+\_\+2d.\+h}\item 
+05\+\_\+editor/\hyperlink{triangle__shape__2d_8cpp}{triangle\+\_\+shape\+\_\+2d.\+cpp}\end{DoxyCompactItemize}

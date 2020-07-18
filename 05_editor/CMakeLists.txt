@@ -7,14 +7,17 @@ find_package(GTest REQUIRED)
 enable_testing()
 
 add_executable(run_editor 
-        main.cpp
 	base_shape_2d.cpp
+	circle_shape_2d.cpp
 	color_engine.cpp
+	composite_shape_2d.cpp
         default.cpp	
         document.cpp
         document_parameters.cpp	
         editor_core.cpp
+        main.cpp
 	point_2d.cpp
+	triangle_shape_2d.cpp
 )
 
 set_target_properties(run_editor PROPERTIES

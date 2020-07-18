@@ -1,3 +1,5 @@
 <map id="GraphicalEditorCore::BaseShape2D&lt; T &gt;" name="GraphicalEditorCore::BaseShape2D&lt; T &gt;">
-<area shape="rect" id="node2" href="$classGraphicalEditorCore_1_1TriangleShape2D.html" title="GraphicalEditorCore\l::TriangleShape2D\&lt; T \&gt;" alt="" coords="5,95,180,136"/>
+<area shape="rect" id="node2" href="$classGraphicalEditorCore_1_1CircleShape2D.html" title="GraphicalEditorCore\l::CircleShape2D\&lt; T \&gt;" alt="" coords="229,5,390,47"/>
+<area shape="rect" id="node3" href="$classGraphicalEditorCore_1_1CompositeShape2D.html" title="GraphicalEditorCore\l::CompositeShape2D\&lt; T \&gt;" alt="" coords="212,71,407,112"/>
+<area shape="rect" id="node4" href="$classGraphicalEditorCore_1_1TriangleShape2D.html" title="GraphicalEditorCore\l::TriangleShape2D\&lt; T \&gt;" alt="" coords="222,136,397,177"/>
 </map>

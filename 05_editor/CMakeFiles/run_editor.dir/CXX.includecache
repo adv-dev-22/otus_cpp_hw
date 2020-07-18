@@ -7,6 +7,12 @@
 #IncludeRegexTransform: 
 
 /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/base_shape_2d.cpp
+shapes_2d.h
+/home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/shapes_2d.h
+
+/home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/circle_shape_2d.cpp
+shapes_2d.h
+/home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/shapes_2d.h
 
 /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/color_engine.cpp
 color_engine.h
@@ -19,6 +25,10 @@ cstdint
 -
 array
 -
+
+/home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/composite_shape_2d.cpp
+shapes_2d.h
+/home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/shapes_2d.h
 
 /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/default.cpp
 default.h
@@ -89,4 +99,18 @@ point_2d.h
 /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/point_2d.h
 
 /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/point_2d.h
+
+/home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/shapes_2d.h
+color_engine.h
+/home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/color_engine.h
+point_2d.h
+/home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/point_2d.h
+memory
+-
+map
+-
+
+/home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/triangle_shape_2d.cpp
+shapes_2d.h
+/home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/shapes_2d.h
 

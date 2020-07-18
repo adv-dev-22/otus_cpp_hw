@@ -231,6 +231,33 @@ base_shape_2d.cpp.s:
 	cd /home/travis/build/adv-dev-22/otus_cpp_hw && $(MAKE) -f 05_editor/CMakeFiles/run_editor.dir/build.make 05_editor/CMakeFiles/run_editor.dir/base_shape_2d.cpp.s
 .PHONY : base_shape_2d.cpp.s
 
+circle_shape_2d.o: circle_shape_2d.cpp.o
+
+.PHONY : circle_shape_2d.o
+
+# target to build an object file
+circle_shape_2d.cpp.o:
+	cd /home/travis/build/adv-dev-22/otus_cpp_hw && $(MAKE) -f 05_editor/CMakeFiles/run_editor.dir/build.make 05_editor/CMakeFiles/run_editor.dir/circle_shape_2d.cpp.o
+.PHONY : circle_shape_2d.cpp.o
+
+circle_shape_2d.i: circle_shape_2d.cpp.i
+
+.PHONY : circle_shape_2d.i
+
+# target to preprocess a source file
+circle_shape_2d.cpp.i:
+	cd /home/travis/build/adv-dev-22/otus_cpp_hw && $(MAKE) -f 05_editor/CMakeFiles/run_editor.dir/build.make 05_editor/CMakeFiles/run_editor.dir/circle_shape_2d.cpp.i
+.PHONY : circle_shape_2d.cpp.i
+
+circle_shape_2d.s: circle_shape_2d.cpp.s
+
+.PHONY : circle_shape_2d.s
+
+# target to generate assembly for a file
+circle_shape_2d.cpp.s:
+	cd /home/travis/build/adv-dev-22/otus_cpp_hw && $(MAKE) -f 05_editor/CMakeFiles/run_editor.dir/build.make 05_editor/CMakeFiles/run_editor.dir/circle_shape_2d.cpp.s
+.PHONY : circle_shape_2d.cpp.s
+
 color_engine.o: color_engine.cpp.o
 
 .PHONY : color_engine.o
@@ -257,6 +284,33 @@ color_engine.s: color_engine.cpp.s
 color_engine.cpp.s:
 	cd /home/travis/build/adv-dev-22/otus_cpp_hw && $(MAKE) -f 05_editor/CMakeFiles/run_editor.dir/build.make 05_editor/CMakeFiles/run_editor.dir/color_engine.cpp.s
 .PHONY : color_engine.cpp.s
+
+composite_shape_2d.o: composite_shape_2d.cpp.o
+
+.PHONY : composite_shape_2d.o
+
+# target to build an object file
+composite_shape_2d.cpp.o:
+	cd /home/travis/build/adv-dev-22/otus_cpp_hw && $(MAKE) -f 05_editor/CMakeFiles/run_editor.dir/build.make 05_editor/CMakeFiles/run_editor.dir/composite_shape_2d.cpp.o
+.PHONY : composite_shape_2d.cpp.o
+
+composite_shape_2d.i: composite_shape_2d.cpp.i
+
+.PHONY : composite_shape_2d.i
+
+# target to preprocess a source file
+composite_shape_2d.cpp.i:
+	cd /home/travis/build/adv-dev-22/otus_cpp_hw && $(MAKE) -f 05_editor/CMakeFiles/run_editor.dir/build.make 05_editor/CMakeFiles/run_editor.dir/composite_shape_2d.cpp.i
+.PHONY : composite_shape_2d.cpp.i
+
+composite_shape_2d.s: composite_shape_2d.cpp.s
+
+.PHONY : composite_shape_2d.s
+
+# target to generate assembly for a file
+composite_shape_2d.cpp.s:
+	cd /home/travis/build/adv-dev-22/otus_cpp_hw && $(MAKE) -f 05_editor/CMakeFiles/run_editor.dir/build.make 05_editor/CMakeFiles/run_editor.dir/composite_shape_2d.cpp.s
+.PHONY : composite_shape_2d.cpp.s
 
 default.o: default.cpp.o
 
@@ -420,6 +474,33 @@ point_2d.cpp.s:
 	cd /home/travis/build/adv-dev-22/otus_cpp_hw && $(MAKE) -f 05_editor/CMakeFiles/run_editor.dir/build.make 05_editor/CMakeFiles/run_editor.dir/point_2d.cpp.s
 .PHONY : point_2d.cpp.s
 
+triangle_shape_2d.o: triangle_shape_2d.cpp.o
+
+.PHONY : triangle_shape_2d.o
+
+# target to build an object file
+triangle_shape_2d.cpp.o:
+	cd /home/travis/build/adv-dev-22/otus_cpp_hw && $(MAKE) -f 05_editor/CMakeFiles/run_editor.dir/build.make 05_editor/CMakeFiles/run_editor.dir/triangle_shape_2d.cpp.o
+.PHONY : triangle_shape_2d.cpp.o
+
+triangle_shape_2d.i: triangle_shape_2d.cpp.i
+
+.PHONY : triangle_shape_2d.i
+
+# target to preprocess a source file
+triangle_shape_2d.cpp.i:
+	cd /home/travis/build/adv-dev-22/otus_cpp_hw && $(MAKE) -f 05_editor/CMakeFiles/run_editor.dir/build.make 05_editor/CMakeFiles/run_editor.dir/triangle_shape_2d.cpp.i
+.PHONY : triangle_shape_2d.cpp.i
+
+triangle_shape_2d.s: triangle_shape_2d.cpp.s
+
+.PHONY : triangle_shape_2d.s
+
+# target to generate assembly for a file
+triangle_shape_2d.cpp.s:
+	cd /home/travis/build/adv-dev-22/otus_cpp_hw && $(MAKE) -f 05_editor/CMakeFiles/run_editor.dir/build.make 05_editor/CMakeFiles/run_editor.dir/triangle_shape_2d.cpp.s
+.PHONY : triangle_shape_2d.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -439,9 +520,15 @@ help:
 	@echo "... base_shape_2d.o"
 	@echo "... base_shape_2d.i"
 	@echo "... base_shape_2d.s"
+	@echo "... circle_shape_2d.o"
+	@echo "... circle_shape_2d.i"
+	@echo "... circle_shape_2d.s"
 	@echo "... color_engine.o"
 	@echo "... color_engine.i"
 	@echo "... color_engine.s"
+	@echo "... composite_shape_2d.o"
+	@echo "... composite_shape_2d.i"
+	@echo "... composite_shape_2d.s"
 	@echo "... default.o"
 	@echo "... default.i"
 	@echo "... default.s"
@@ -460,6 +547,9 @@ help:
 	@echo "... point_2d.o"
 	@echo "... point_2d.i"
 	@echo "... point_2d.s"
+	@echo "... triangle_shape_2d.o"
+	@echo "... triangle_shape_2d.i"
+	@echo "... triangle_shape_2d.s"
 .PHONY : help
 
 

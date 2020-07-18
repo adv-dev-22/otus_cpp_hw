@@ -1,10 +1,12 @@
 var searchData=
 [
-  ['_7ebaseshape2d',['~BaseShape2D',['../classGraphicalEditorCore_1_1BaseShape2D.html#ada8fbba63ef307fe04688007aeec4f87',1,'GraphicalEditorCore::BaseShape2D']]],
+  ['_7ebaseshape2d',['~BaseShape2D',['../classGraphicalEditorCore_1_1BaseShape2D.html#ac3cf9262d27b9b1b84afc8ddb729f743',1,'GraphicalEditorCore::BaseShape2D']]],
   ['_7ecellobserver',['~CellObserver',['../classCellObserver.html#a4a930e2b7ac95c7c11f34cee6f868bc1',1,'CellObserver']]],
+  ['_7ecircleshape2d',['~CircleShape2D',['../classGraphicalEditorCore_1_1CircleShape2D.html#a8dac5c648f62af0e23fa50442d14407b',1,'GraphicalEditorCore::CircleShape2D']]],
   ['_7ecolorenginebase',['~ColorEngineBase',['../classGraphicalEditorCore_1_1ColorEngineBase.html#a286d4bf617e3cfa67084e436020cd722',1,'GraphicalEditorCore::ColorEngineBase']]],
   ['_7ecolorenginelineargradient',['~ColorEngineLinearGradient',['../classGraphicalEditorCore_1_1ColorEngineLinearGradient.html#acb6ceca52590a6c0f06dbe88e8372ee7',1,'GraphicalEditorCore::ColorEngineLinearGradient']]],
   ['_7ecolorengineuniform',['~ColorEngineUniform',['../classGraphicalEditorCore_1_1ColorEngineUniform.html#a0bfdba9e4751b79bdcf9692ad57fde34',1,'GraphicalEditorCore::ColorEngineUniform']]],
+  ['_7ecompositeshape2d',['~CompositeShape2D',['../classGraphicalEditorCore_1_1CompositeShape2D.html#a0a5658b8caf83f1578ed32b762e5db2c',1,'GraphicalEditorCore::CompositeShape2D']]],
   ['_7econtigious_5fblock',['~contigious_block',['../classcontigious__block.html#a5fe8250399873d760c8bbf0b08e51189',1,'contigious_block']]],
   ['_7ecustomcontainer',['~CustomContainer',['../classCustomContainer.html#a7de15b5199e301225c6bc469aef4ef77',1,'CustomContainer::~CustomContainer()'],['../classCustomContainer_3_01T_00_01reserve__allocator_3_01T_00_01n_01_4_01_4.html#a11dae533731736ae4c2309550b793a11',1,'CustomContainer&lt; T, reserve_allocator&lt; T, n &gt; &gt;::~CustomContainer()']]],
   ['_7ecustompair',['~CustomPair',['../classCustomPair.html#ac020a919f7416ce505190c396dc13d85',1,'CustomPair::~CustomPair()'],['../classCustomPair_3_01T1_01_6_00_01U2_01_6_01_4.html#a4c5e1ae9340d0d69527d4e1d838fb0c4',1,'CustomPair&lt; T1 &amp;, U2 &amp; &gt;::~CustomPair()']]],
@@ -22,5 +24,6 @@ var searchData=
   ['_7epoint2d',['~Point2D',['../classGraphicalEditorCore_1_1Point2D.html#a0afd645c9cdf5ce145f9038fc0769831',1,'GraphicalEditorCore::Point2D']]],
   ['_7eprodconssimulator',['~ProdConsSimulator',['../classProdConsSimulator.html#acfff65a112f0354699e9418dedcd3381',1,'ProdConsSimulator']]],
   ['_7ereserve_5fallocator',['~reserve_allocator',['../classreserve__allocator.html#aa2a6cb73017c9f2a24153c4c0fc3d7ea',1,'reserve_allocator']]],
-  ['_7erowobserver',['~RowObserver',['../classRowObserver.html#a5f484fa44a0684b283538ac5ac68fc94',1,'RowObserver']]]
+  ['_7erowobserver',['~RowObserver',['../classRowObserver.html#a5f484fa44a0684b283538ac5ac68fc94',1,'RowObserver']]],
+  ['_7etriangleshape2d',['~TriangleShape2D',['../classGraphicalEditorCore_1_1TriangleShape2D.html#a561fbaff5077e2d945eb8a9a95c48617',1,'GraphicalEditorCore::TriangleShape2D']]]
 ];

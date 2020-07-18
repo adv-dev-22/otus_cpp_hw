@@ -1,6 +1,7 @@
 var searchData=
 [
   ['cellobserver',['CellObserver',['../classCellObserver.html',1,'']]],
+  ['circleshape2d',['CircleShape2D',['../classGraphicalEditorCore_1_1CircleShape2D.html',1,'GraphicalEditorCore']]],
   ['color_5findex',['color_index',['../structGraphicalEditorCore_1_1color__index.html',1,'GraphicalEditorCore']]],
   ['color_5findex_3c_20rgbcolor_3a_3ablue_20_3e',['color_index&lt; RgbColor::Blue &gt;',['../structGraphicalEditorCore_1_1color__index_3_01RgbColor_1_1Blue_01_4.html',1,'GraphicalEditorCore']]],
   ['color_5findex_3c_20rgbcolor_3a_3agreen_20_3e',['color_index&lt; RgbColor::Green &gt;',['../structGraphicalEditorCore_1_1color__index_3_01RgbColor_1_1Green_01_4.html',1,'GraphicalEditorCore']]],
@@ -8,6 +9,7 @@ var searchData=
   ['colorenginebase',['ColorEngineBase',['../classGraphicalEditorCore_1_1ColorEngineBase.html',1,'GraphicalEditorCore']]],
   ['colorenginelineargradient',['ColorEngineLinearGradient',['../classGraphicalEditorCore_1_1ColorEngineLinearGradient.html',1,'GraphicalEditorCore']]],
   ['colorengineuniform',['ColorEngineUniform',['../classGraphicalEditorCore_1_1ColorEngineUniform.html',1,'GraphicalEditorCore']]],
+  ['compositeshape2d',['CompositeShape2D',['../classGraphicalEditorCore_1_1CompositeShape2D.html',1,'GraphicalEditorCore']]],
   ['contigious_5fblock',['contigious_block',['../classcontigious__block.html',1,'']]],
   ['custom_5ftuple',['custom_tuple',['../structcustom__tuple.html',1,'']]],
   ['custom_5ftuple_3c_20t_2c_20types_2e_2e_2e_20_3e',['custom_tuple&lt; T, Types... &gt;',['../structcustom__tuple_3_01T_00_01Types_8_8_8_01_4.html',1,'']]],

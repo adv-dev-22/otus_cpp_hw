@@ -24,7 +24,7 @@ public:
 
 private:
     std::unique_ptr<Document> up_document_;
-    // TODO: May be changed to container (map) of already created documents
+    // TODO: May be changed to container (map) of documents have been already created
 
 private:
     EditorCore(const EditorCore & ) = delete;
