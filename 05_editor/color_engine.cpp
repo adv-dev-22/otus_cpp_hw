@@ -70,6 +70,12 @@ uint8_t ColorEngineUniform::blue(const size_t /*unused*/, const size_t /*unused*
     return rgb_color_[color_index<RgbColor::Blue>::value()];
 }
 
+void ColorEngineUniform::append(std::ofstream & ofs) const {
+
+    // TODO:
+    // write its type
+    // write necessary data
+}
 
 ColorEngineLinearGradient::ColorEngineLinearGradient():
 ColorEngineBase() {
@@ -90,6 +96,14 @@ uint8_t ColorEngineLinearGradient::green(const size_t /*i_x*/, const size_t /*j_
 uint8_t ColorEngineLinearGradient::blue(const size_t /*i_x*/, const size_t /*j_y*/) const {
     return 0;
 }
+
+void ColorEngineLinearGradient::append(std::ofstream & ofs) const {
+
+    // TODO:
+    // write its type
+    // write necessary data
+}
+
 
 } // End of namespace GraphicalEditorCore
 

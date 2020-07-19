@@ -1,4 +1,5 @@
 #include "shapes_2d.h"
+#include "document_writer.h"
 #include <iostream>
 
 namespace GraphicalEditorCore {
@@ -47,7 +48,8 @@ void TriangleShape2D<T>::moveVertex(const T dx, const T dy, const size_t index) 
 
     if (index >= 3) throw std::out_of_range("Attempt to get access to >= 3 triangle points");
 
-    // TODO:
+    points_2d_[index].x() += dx;
+    points_2d_[index].y() += dy;
 }
 
 template <typename T>
@@ -55,6 +57,30 @@ void TriangleShape2D<T>::scale(const T factor) {
     // TODO:
 }
 
+template <typename T>
+void TriangleShape2D<T>::debug_print() {
+
+    BaseShape2D<T>::debug_print();
+
+    for (size_t k = 0; k < 3; ++k) {
+        std::cout << std::to_string(points_2d_[k].x()) << " ";
+        std::cout << std::to_string(points_2d_[k].y()) << std::endl;
+    }
+}
+
+template <typename T>
+void TriangleShape2D<T>::append(DocumentWriterBase & wr_eng) const {
+
+    BaseShape2D<T>::append(wr_eng);
+
+    // write triangle type
+    for (size_t k = 0; k < 3; ++k) {
+        wr_eng.append(std::to_string(points_2d_[k].x()));
+        wr_eng.append(" ");
+        wr_eng.append(std::to_string(points_2d_[k].y()));
+        wr_eng.append(" ");
+    }
+}
 
 template class TriangleShape2D<float>;
 template class TriangleShape2D<double>;

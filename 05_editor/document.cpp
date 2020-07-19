@@ -1,4 +1,5 @@
 #include "document.h"
+#include "document_writer.h"
 #include <iostream>
 #include <memory>
 
@@ -38,6 +39,29 @@ void Document<T>::remove_shape(const size_t id) {
 
 }
 
+template <typename T>
+void Document<T>::append(DocumentWriterBase & wr_eng) {
+
+    // For several documents write first the number of documents
+    // and for each doc to write its ID.
+    // We proceed in a text format just to validate results directly
+
+    // Currently only one document is supported.
+    // \n is added only for human readability.
+    wr_eng.append("1\n");
+
+    // Write document parameters data
+    auto tmp_shp_params = wp_doc_params_.lock();
+    if (tmp_shp_params) {
+        tmp_shp_params->append(wr_eng);
+    }
+    else {
+        throw std::bad_weak_ptr();
+    }
+
+    // Write shapes info.
+    shapes_2d_.append(wr_eng);
+}
 
 template class Document<float>;
 template class Document<double>;

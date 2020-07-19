@@ -38,6 +38,11 @@ void CircleShape2D<T>::scale(const T factor) {
 // TODO:
 }
 
+template <typename T>
+void CircleShape2D<T>::append(DocumentWriterBase & wr_eng) const {
+
+    // TODO:
+}
 
 template class CircleShape2D<float>;
 template class CircleShape2D<double>;

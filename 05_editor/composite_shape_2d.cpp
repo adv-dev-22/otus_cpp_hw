@@ -64,6 +64,11 @@ void CompositeShape2D<T>::scale(const T factor) {
 }
 
 
+template <typename T>
+void CompositeShape2D<T>::append(DocumentWriterBase & wr_eng) const {
+    //TODO:
+}
+
 template class CompositeShape2D<float>;
 template class CompositeShape2D<double>;
 

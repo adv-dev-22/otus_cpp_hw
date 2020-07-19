@@ -5,8 +5,11 @@
 #include "shapes_2d.h"
 #include <memory>
 #include <map>
+#include <fstream>
 
 namespace GraphicalEditorCore {
+
+class DocumentWriterBase;
 
 template <typename T = double>
 class Document {
@@ -16,6 +19,8 @@ public:
 
     void add_shape(std::unique_ptr<BaseShape2D<T>> && shape_2d);
     void remove_shape(const size_t id);
+
+    void append(DocumentWriterBase & );
 
 private:
     std::weak_ptr<DocumentParametersInterface> wp_doc_params_;

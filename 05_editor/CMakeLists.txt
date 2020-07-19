@@ -14,7 +14,9 @@ add_executable(run_editor
 	container_shape_2d.cpp
         default.cpp	
         document.cpp
-        document_parameters.cpp	
+        document_parameters.cpp
+        document_writer_base.cpp
+        document_writer_text.cpp	
         editor_core.cpp
         main.cpp
 	point_2d.cpp

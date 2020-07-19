@@ -1,6 +1,8 @@
 #include "document_parameters.h"
 #include "default.h"
+#include "document_writer.h"
 #include <iostream>
+#include <string>
 
 namespace GraphicalEditorCore {
 
@@ -92,6 +94,19 @@ template <typename T>
 void DocumentParameters<T>::resetColorEngine(T * const ceb_ptr) {
     uptr_color_engine_.reset(ceb_ptr);
 }
+
+template <typename T>
+void DocumentParameters<T>::append(DocumentWriterBase & wr_eng) {
+
+    wr_eng.append(std::to_string(width_));
+    wr_eng.append(" ");
+    wr_eng.append(std::to_string(height_));
+    wr_eng.append("\n");
+
+    // TODO:
+    //uptr_color_engine_->append(wr_eng);
+}
+
 
 template class DocumentParameters<ColorEngineUniform>;
 //template class DocumentParameters<ColorEngineGradient>;
