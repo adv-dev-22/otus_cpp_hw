@@ -1,3 +1,6 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classGraphicalEditorCore_1_1EditorCore.html" title="GraphicalEditorCore\l::EditorCore\&lt; T \&gt;" alt="" coords="5,5,155,47"/>
+<area shape="rect" id="node1" href="$classGraphicalEditorCore_1_1DocumentWriterBase.html" title="GraphicalEditorCore\l::DocumentWriterBase" alt="" coords="5,71,171,112"/>
+<area shape="rect" id="node2" href="$classGraphicalEditorCore_1_1DocumentWriterBinary.html" title="GraphicalEditorCore\l::DocumentWriterBinary" alt="" coords="233,5,407,47"/>
+<area shape="rect" id="node3" href="$classGraphicalEditorCore_1_1DocumentWriterNetworkDb.html" title="GraphicalEditorCore\l::DocumentWriterNetworkDb" alt="" coords="219,71,421,112"/>
+<area shape="rect" id="node4" href="$classGraphicalEditorCore_1_1DocumentWriterText.html" title="GraphicalEditorCore\l::DocumentWriterText" alt="" coords="241,136,399,177"/>
 </map>

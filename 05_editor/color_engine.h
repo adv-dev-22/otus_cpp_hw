@@ -3,6 +3,7 @@
 
 #include <cstdint>
 #include <array>
+#include <fstream>
 
 namespace GraphicalEditorCore {
 
@@ -39,6 +40,8 @@ public:
     virtual uint8_t green(const size_t i_x, const size_t j_y) const = 0;
     virtual uint8_t blue (const size_t i_x, const size_t j_y) const = 0;
 
+    virtual void append(std::ofstream & ofs) const = 0;
+
 private:
     ColorEngineBase(const ColorEngineBase & ) = delete;
     ColorEngineBase(ColorEngineBase && ) = delete;
@@ -61,6 +64,8 @@ public:
     virtual uint8_t green(const size_t i_x, const size_t j_y) const override;
     virtual uint8_t blue (const size_t i_x, const size_t j_y) const override;
 
+    virtual void append(std::ofstream & ofs) const override;
+
 private:
     std::array<uint8_t, 3> rgb_color_;
 
@@ -78,6 +83,8 @@ public:
     virtual uint8_t red  (const size_t i_x, const size_t j_y) const override;
     virtual uint8_t green(const size_t i_x, const size_t j_y) const override;
     virtual uint8_t blue (const size_t i_x, const size_t j_y) const override;
+
+    virtual void append(std::ofstream & ofs) const override;
 
     // ..
 };

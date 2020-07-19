@@ -1,0 +1,11 @@
+<map id="05_editor/document_writer.h" name="05_editor/document_writer.h">
+<area shape="rect" id="node2" href="$base__shape__2d_8cpp.html" title="05_editor/base_shape\l_2d.cpp" alt="" coords="5,95,168,136"/>
+<area shape="rect" id="node3" href="$document_8cpp.html" title="05_editor/document.cpp" alt="" coords="192,102,371,129"/>
+<area shape="rect" id="node4" href="$document__parameters_8cpp.html" title="05_editor/document\l_parameters.cpp" alt="" coords="395,95,546,136"/>
+<area shape="rect" id="node5" href="$document__writer__base_8cpp.html" title="05_editor/document\l_writer_base.cpp" alt="" coords="570,95,721,136"/>
+<area shape="rect" id="node6" href="$document__writer__text_8cpp.html" title="05_editor/document\l_writer_text.cpp" alt="" coords="745,95,895,136"/>
+<area shape="rect" id="node7" href="$editor__core_8h.html" title="05_editor/editor_core.h" alt="" coords="920,102,1091,129"/>
+<area shape="rect" id="node10" href="$triangle__shape__2d_8cpp.html" title="05_editor/triangle\l_shape_2d.cpp" alt="" coords="1115,95,1250,136"/>
+<area shape="rect" id="node8" href="$editor__core_8cpp.html" title="05_editor/editor_core.cpp" alt="" coords="818,184,1003,211"/>
+<area shape="rect" id="node9" href="$05__editor_2main_8cpp.html" title="05_editor/main.cpp" alt="" coords="1027,184,1173,211"/>
+</map>

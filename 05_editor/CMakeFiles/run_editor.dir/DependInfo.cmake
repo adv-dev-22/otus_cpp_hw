@@ -12,6 +12,8 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/default.cpp" "/home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/CMakeFiles/run_editor.dir/default.cpp.o"
   "/home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/document.cpp" "/home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/CMakeFiles/run_editor.dir/document.cpp.o"
   "/home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/document_parameters.cpp" "/home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/CMakeFiles/run_editor.dir/document_parameters.cpp.o"
+  "/home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/document_writer_base.cpp" "/home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/CMakeFiles/run_editor.dir/document_writer_base.cpp.o"
+  "/home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/document_writer_text.cpp" "/home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/CMakeFiles/run_editor.dir/document_writer_text.cpp.o"
   "/home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/editor_core.cpp" "/home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/CMakeFiles/run_editor.dir/editor_core.cpp.o"
   "/home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/main.cpp" "/home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/CMakeFiles/run_editor.dir/main.cpp.o"
   "/home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/point_2d.cpp" "/home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/CMakeFiles/run_editor.dir/point_2d.cpp.o"

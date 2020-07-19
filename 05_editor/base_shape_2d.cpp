@@ -1,4 +1,7 @@
 #include "shapes_2d.h"
+#include "document_writer.h"
+#include <iostream>
+#include <string>
 
 namespace GraphicalEditorCore {
 
@@ -27,6 +30,20 @@ const ColorEngineBase & BaseShape2D<T>::colorEngine() const {
 template <typename T>
 const size_t BaseShape2D<T>::id() const noexcept {
     return id_;
+}
+
+template <typename T>
+void BaseShape2D<T>::debug_print() {
+    std::cout << "--------------" << std::endl;
+}
+
+template <typename T>
+void BaseShape2D<T>::append(DocumentWriterBase & wr_eng) const {
+
+    wr_eng.append(std::to_string(this->id()));
+    wr_eng.append(" ");
+
+    //uptr_color_engine_->append(wr_eng);
 }
 
 

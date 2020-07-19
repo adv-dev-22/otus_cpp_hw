@@ -14,6 +14,8 @@ var searchData=
   ['_7edocument',['~Document',['../classGraphicalEditorCore_1_1Document.html#a4cadcf8e4a1e1873b372db9740db06f0',1,'GraphicalEditorCore::Document']]],
   ['_7edocumentparameters',['~DocumentParameters',['../classGraphicalEditorCore_1_1DocumentParameters.html#a390ce6cb3be137d584bb7c74965325b7',1,'GraphicalEditorCore::DocumentParameters']]],
   ['_7edocumentparametersinterface',['~DocumentParametersInterface',['../classGraphicalEditorCore_1_1DocumentParametersInterface.html#a17f379e6cde775c74283e90d046372e4',1,'GraphicalEditorCore::DocumentParametersInterface']]],
+  ['_7edocumentwriterbase',['~DocumentWriterBase',['../classGraphicalEditorCore_1_1DocumentWriterBase.html#ade9be8e2ae6676e92f6c56cfe1acad11',1,'GraphicalEditorCore::DocumentWriterBase']]],
+  ['_7edocumentwritertext',['~DocumentWriterText',['../classGraphicalEditorCore_1_1DocumentWriterText.html#a32e8f4467904ef80a563a9afbe51ae81',1,'GraphicalEditorCore::DocumentWriterText']]],
   ['_7eeditorcore',['~EditorCore',['../classGraphicalEditorCore_1_1EditorCore.html#ac16fa9bd735820ff6fbf3066dd271e81',1,'GraphicalEditorCore::EditorCore']]],
   ['_7eelementwise_5fblock_5fallocator',['~elementwise_block_allocator',['../classelementwise__block__allocator.html#a00e784cf4d72a47d3afc7a61dc6db98e',1,'elementwise_block_allocator']]],
   ['_7einfinitematrix',['~InfiniteMatrix',['../classInfiniteMatrix.html#ad2ec5e978578ba47951983688d122dad',1,'InfiniteMatrix']]],

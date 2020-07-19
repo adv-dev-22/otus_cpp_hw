@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/run_editor.dir/default.cpp.o"
   "CMakeFiles/run_editor.dir/document.cpp.o"
   "CMakeFiles/run_editor.dir/document_parameters.cpp.o"
+  "CMakeFiles/run_editor.dir/document_writer_base.cpp.o"
+  "CMakeFiles/run_editor.dir/document_writer_text.cpp.o"
   "CMakeFiles/run_editor.dir/editor_core.cpp.o"
   "CMakeFiles/run_editor.dir/main.cpp.o"
   "CMakeFiles/run_editor.dir/point_2d.cpp.o"

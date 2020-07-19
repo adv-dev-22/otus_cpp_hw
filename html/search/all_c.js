@@ -7,6 +7,7 @@ var searchData=
   ['point_5f2d_2eh',['point_2d.h',['../point__2d_8h.html',1,'']]],
   ['pointer',['pointer',['../classreserve__allocator.html#a5381e084c053670fcbcc13f1a8724a75',1,'reserve_allocator::pointer()'],['../classelementwise__block__allocator.html#af41c83aed240eb55e53155abdd714ec6',1,'elementwise_block_allocator::pointer()']]],
   ['pop',['pop',['../classMultiThreadDataServer.html#a6b6020d24aec2aff2bbf8ed9420c0f91',1,'MultiThreadDataServer']]],
+  ['prepare',['prepare',['../classGraphicalEditorCore_1_1DocumentWriterBase.html#a6ce62d6ccbe39b8c18532c183c6ef4de',1,'GraphicalEditorCore::DocumentWriterBase::prepare()'],['../classGraphicalEditorCore_1_1DocumentWriterText.html#a66ff75d3e923eedd856147a67a5a31b8',1,'GraphicalEditorCore::DocumentWriterText::prepare()']]],
   ['print',['print',['../structtupple__printer.html#a85dd6fb2430ea3eaff7f58558adcefb9',1,'tupple_printer::print()'],['../structtupple__printer_3_01Tuple_00_011_01_4.html#aa1465f1c21683b29c615f5ea48a4d986',1,'tupple_printer&lt; Tuple, 1 &gt;::print()'],['../03__ranges_2ip__processor_8cpp.html#a79396c609a09a70fc948375f89e75a35',1,'print():&#160;ip_processor.cpp']]],
   ['print_5fany_5fcondition',['print_any_condition',['../02_2ip__processor_8cpp.html#a6cb34919eb988bbeb21974a9623a7706',1,'ip_processor.cpp']]],
   ['print_5fhelp',['print_help',['../multithread__pc_2main_8cpp.html#a853216ac51aa181669ff4d3de74058a7',1,'main.cpp']]],

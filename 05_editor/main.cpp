@@ -26,7 +26,7 @@ int main(int argc, char * argv []) {
     up_circle_02->moveVertex(45., 0., 0);
     up_circle_02->moveCenter(-22., 34.);
 
-    // Create Shapes for composite and composite
+    // Create Shapes for composite
     auto up_triangle_03 = std::make_unique<TriangleShape2D<PrecType>>(3);
     up_triangle_03->moveVertex( 10.0, -2.0, 0);
     up_triangle_03->moveVertex(-30.0, -2.0, 1);
@@ -38,18 +38,22 @@ int main(int argc, char * argv []) {
     up_composite_05->add(std::move(up_triangle_03));
     up_composite_05->add(std::move(up_circle_04));
 
+    //up_triangle_01->debug_print();
     document.add_shape(std::move(up_triangle_01));
     document.add_shape(std::move(up_circle_02));
     document.add_shape(std::move(up_composite_05));
 
+    // Writer engine
+    auto up_doc_writer = std::make_unique<DocumentWriterText>();
+    up_editor_core->reset_writer(std::move(up_doc_writer));
+
     const std::string filename1("editor_01.txt");
-//    up_editor_core->save(filename1);
+    up_editor_core->save(filename1);
 
     document.remove_shape(2);
 
     const std::string filename2("editor_02.txt");
 //    up_editor_core->save(filename2);
-
 
     // create yet another editor
     // load its data from file

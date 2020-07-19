@@ -2,6 +2,7 @@ var searchData=
 [
   ['cellobserver',['CellObserver',['../classCellObserver.html#a04a245848c8cd86cfc471b0f278dc546',1,'CellObserver']]],
   ['circleshape2d',['CircleShape2D',['../classGraphicalEditorCore_1_1CircleShape2D.html#ac6e40c6596bafc87cb948f61225955e2',1,'GraphicalEditorCore::CircleShape2D']]],
+  ['close',['close',['../classGraphicalEditorCore_1_1DocumentWriterBase.html#a852099c87792d7b8a7edf1b4544cb073',1,'GraphicalEditorCore::DocumentWriterBase::close()'],['../classGraphicalEditorCore_1_1DocumentWriterText.html#a55c62e66d481f41be81ad48842fcef91',1,'GraphicalEditorCore::DocumentWriterText::close()']]],
   ['colorengine',['colorEngine',['../classGraphicalEditorCore_1_1DocumentParametersInterface.html#aa686512ed2fc7bc504c1ee97ac8e4ad6',1,'GraphicalEditorCore::DocumentParametersInterface::colorEngine()'],['../classGraphicalEditorCore_1_1DocumentParameters.html#a49010b1753c4a62a46bf01da20f17e61',1,'GraphicalEditorCore::DocumentParameters::colorEngine()'],['../classGraphicalEditorCore_1_1BaseShape2D.html#aed3e9da5f221282c0b7f958ad7c834c5',1,'GraphicalEditorCore::BaseShape2D::colorEngine()']]],
   ['colorenginebase',['ColorEngineBase',['../classGraphicalEditorCore_1_1ColorEngineBase.html#ae9aaf24b0d10206078560352af041058',1,'GraphicalEditorCore::ColorEngineBase']]],
   ['colorenginelineargradient',['ColorEngineLinearGradient',['../classGraphicalEditorCore_1_1ColorEngineLinearGradient.html#a12f2a422a82b8376d0ddaca148e82e86',1,'GraphicalEditorCore::ColorEngineLinearGradient']]],

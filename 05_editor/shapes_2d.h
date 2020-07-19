@@ -8,6 +8,8 @@
 
 namespace GraphicalEditorCore {
 
+class DocumentWriterBase;
+
 template <typename T = double>
 class BaseShape2D {
 public:
@@ -23,6 +25,9 @@ public:
     const ColorEngineBase & colorEngine() const;
 
     const size_t id() const noexcept;
+    virtual void debug_print();
+
+    virtual void append(DocumentWriterBase & ) const;
 
 private:
     size_t id_;
@@ -53,6 +58,10 @@ public:
     virtual void moveVertex(const T dx, const T dy, const size_t index) override;
     virtual void scale(const T factor) override;
 
+    virtual void debug_print() override;
+
+    virtual void append(DocumentWriterBase & ) const override;
+
 private:
     std::array<Point2D<T>, 3> points_2d_;
 
@@ -74,6 +83,8 @@ public:
     virtual void moveCenter(const T dx, const T dy) override;
     virtual void moveVertex(const T dx, const T dy, const size_t index) override;
     virtual void scale(const T factor) override;
+
+    virtual void append(DocumentWriterBase & ) const override;
 
 private:
     Point2D<T> center_2d_;
@@ -103,6 +114,8 @@ public:
 
     BaseShape2D<T> & find(const size_t id);
 
+    void append(DocumentWriterBase & ) const;
+
 private:
     std::map<size_t, std::unique_ptr<BaseShape2D<T>>> shapes_2d_;
 
@@ -126,6 +139,8 @@ public:
     virtual void moveCenter(const T dx, const T dy) override;
     virtual void moveVertex(const T dx, const T dy, const size_t index) override;
     virtual void scale(const T factor) override;
+
+    virtual void append(DocumentWriterBase & ) const override;
 
 private:
     //std::map<size_t, std::unique_ptr<BaseShape2D<T>>> shapes_2d_;

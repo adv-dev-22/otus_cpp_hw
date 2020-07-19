@@ -34,6 +34,10 @@ void \hyperlink{classGraphicalEditorCore_1_1BaseShape2D_abd6e21c5c3911a2926b210d
 const \hyperlink{classGraphicalEditorCore_1_1ColorEngineBase}{Color\+Engine\+Base} \& \hyperlink{classGraphicalEditorCore_1_1BaseShape2D_aed3e9da5f221282c0b7f958ad7c834c5}{color\+Engine} () const 
 \item 
 const size\+\_\+t \hyperlink{classGraphicalEditorCore_1_1BaseShape2D_ac66cfa23289ae36d70ff6b7c41dd791f}{id} () const noexcept
+\item 
+virtual void \hyperlink{classGraphicalEditorCore_1_1BaseShape2D_ab1db8da4296c0499c0e3bba4601bcc97}{debug\+\_\+print} ()
+\item 
+virtual void \hyperlink{classGraphicalEditorCore_1_1BaseShape2D_ac8f67c255fe72fd97aa7a5df80b698be}{append} (\hyperlink{classGraphicalEditorCore_1_1DocumentWriterBase}{Document\+Writer\+Base} \&) const 
 \end{DoxyCompactItemize}
 
 
@@ -55,6 +59,17 @@ const size\+\_\+t \hyperlink{classGraphicalEditorCore_1_1BaseShape2D_ac66cfa2328
 
 
 \subsection{Member Function Documentation}
+\index{Graphical\+Editor\+Core\+::\+Base\+Shape2D@{Graphical\+Editor\+Core\+::\+Base\+Shape2D}!append@{append}}
+\index{append@{append}!Graphical\+Editor\+Core\+::\+Base\+Shape2D@{Graphical\+Editor\+Core\+::\+Base\+Shape2D}}
+\subsubsection[{\texorpdfstring{append(\+Document\+Writer\+Base \&) const }{append(DocumentWriterBase &) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf Graphical\+Editor\+Core\+::\+Base\+Shape2D}$<$ T $>$\+::append (
+\begin{DoxyParamCaption}
+\item[{{\bf Document\+Writer\+Base} \&}]{wr\+\_\+eng}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGraphicalEditorCore_1_1BaseShape2D_ac8f67c255fe72fd97aa7a5df80b698be}{}\label{classGraphicalEditorCore_1_1BaseShape2D_ac8f67c255fe72fd97aa7a5df80b698be}
+
+
+Reimplemented in \hyperlink{classGraphicalEditorCore_1_1CompositeShape2D_af0ed12595f25239559d340c81d0fcb0d}{Graphical\+Editor\+Core\+::\+Composite\+Shape2\+D$<$ T $>$}, \hyperlink{classGraphicalEditorCore_1_1CircleShape2D_a56126680ab31d5b5de944b35e041855e}{Graphical\+Editor\+Core\+::\+Circle\+Shape2\+D$<$ T $>$}, and \hyperlink{classGraphicalEditorCore_1_1TriangleShape2D_af743a9e43c2f30d9b76dd4c37fe475c0}{Graphical\+Editor\+Core\+::\+Triangle\+Shape2\+D$<$ T $>$}.
+
 \index{Graphical\+Editor\+Core\+::\+Base\+Shape2D@{Graphical\+Editor\+Core\+::\+Base\+Shape2D}!color\+Engine@{color\+Engine}}
 \index{color\+Engine@{color\+Engine}!Graphical\+Editor\+Core\+::\+Base\+Shape2D@{Graphical\+Editor\+Core\+::\+Base\+Shape2D}}
 \subsubsection[{\texorpdfstring{color\+Engine() const }{colorEngine() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ const {\bf Color\+Engine\+Base} \& {\bf Graphical\+Editor\+Core\+::\+Base\+Shape2D}$<$ T $>$\+::color\+Engine (
@@ -62,6 +77,17 @@ const size\+\_\+t \hyperlink{classGraphicalEditorCore_1_1BaseShape2D_ac66cfa2328
 {}
 \end{DoxyParamCaption}
 ) const}\hypertarget{classGraphicalEditorCore_1_1BaseShape2D_aed3e9da5f221282c0b7f958ad7c834c5}{}\label{classGraphicalEditorCore_1_1BaseShape2D_aed3e9da5f221282c0b7f958ad7c834c5}
+\index{Graphical\+Editor\+Core\+::\+Base\+Shape2D@{Graphical\+Editor\+Core\+::\+Base\+Shape2D}!debug\+\_\+print@{debug\+\_\+print}}
+\index{debug\+\_\+print@{debug\+\_\+print}!Graphical\+Editor\+Core\+::\+Base\+Shape2D@{Graphical\+Editor\+Core\+::\+Base\+Shape2D}}
+\subsubsection[{\texorpdfstring{debug\+\_\+print()}{debug_print()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf Graphical\+Editor\+Core\+::\+Base\+Shape2D}$<$ T $>$\+::debug\+\_\+print (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGraphicalEditorCore_1_1BaseShape2D_ab1db8da4296c0499c0e3bba4601bcc97}{}\label{classGraphicalEditorCore_1_1BaseShape2D_ab1db8da4296c0499c0e3bba4601bcc97}
+
+
+Reimplemented in \hyperlink{classGraphicalEditorCore_1_1TriangleShape2D_a056f50df5a3891dba4c7ee46593ee5b4}{Graphical\+Editor\+Core\+::\+Triangle\+Shape2\+D$<$ T $>$}.
+
 \index{Graphical\+Editor\+Core\+::\+Base\+Shape2D@{Graphical\+Editor\+Core\+::\+Base\+Shape2D}!id@{id}}
 \index{id@{id}!Graphical\+Editor\+Core\+::\+Base\+Shape2D@{Graphical\+Editor\+Core\+::\+Base\+Shape2D}}
 \subsubsection[{\texorpdfstring{id() const noexcept}{id() const noexcept}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ const size\+\_\+t {\bf Graphical\+Editor\+Core\+::\+Base\+Shape2D}$<$ T $>$\+::id (

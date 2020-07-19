@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['tail',['tail',['../structcustom__tuple_3_01T_00_01Types_8_8_8_01_4.html#adff61bc9ff136d4c8393278eef6b62b4',1,'custom_tuple&lt; T, Types... &gt;']]]
+  ['storage_5fname_5f',['storage_name_',['../classGraphicalEditorCore_1_1DocumentWriterBase.html#ae546712e448e7be5f90afac7da766b0d',1,'GraphicalEditorCore::DocumentWriterBase']]]
 ];

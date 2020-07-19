@@ -4,8 +4,11 @@
 #include "color_engine.h"
 #include <cstddef>
 #include <memory>
+#include <fstream>
 
 namespace GraphicalEditorCore {
+
+class DocumentWriterBase;
 
 class DocumentParametersInterface {
 public:
@@ -15,6 +18,8 @@ public:
     virtual size_t width()  const = 0;
     virtual size_t height() const = 0;
     virtual ColorEngineBase & colorEngine() const = 0;
+
+    virtual void append(DocumentWriterBase & wr_eng) = 0;
 
 private:
     DocumentParametersInterface(const DocumentParametersInterface & ) = delete;
@@ -38,6 +43,8 @@ public:
     virtual size_t width()    const override;
     virtual size_t height()   const override;
     virtual T & colorEngine() const override;
+
+    virtual void append(DocumentWriterBase & wr_eng) override;
 
     void setWidth(const size_t w);
     void setHeight(const size_t h);

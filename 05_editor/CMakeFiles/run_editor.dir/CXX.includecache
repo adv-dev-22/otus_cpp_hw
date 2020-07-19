@@ -9,6 +9,12 @@
 /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/base_shape_2d.cpp
 shapes_2d.h
 /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/shapes_2d.h
+document_writer.h
+/home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/document_writer.h
+iostream
+-
+string
+-
 
 /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/circle_shape_2d.cpp
 shapes_2d.h
@@ -28,6 +34,8 @@ iostream
 cstdint
 -
 array
+-
+fstream
 -
 
 /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/composite_shape_2d.cpp
@@ -53,6 +61,8 @@ cstddef
 /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/document.cpp
 document.h
 /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/document.h
+document_writer.h
+/home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/document_writer.h
 iostream
 -
 memory
@@ -67,13 +77,19 @@ memory
 -
 map
 -
+fstream
+-
 
 /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/document_parameters.cpp
 document_parameters.h
 /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/document_parameters.h
 default.h
 /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/default.h
+document_writer.h
+/home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/document_writer.h
 iostream
+-
+string
 -
 
 /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/document_parameters.h
@@ -83,6 +99,24 @@ cstddef
 -
 memory
 -
+fstream
+-
+
+/home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/document_writer.h
+string
+-
+fstream
+-
+
+/home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/document_writer_base.cpp
+document_writer.h
+/home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/document_writer.h
+
+/home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/document_writer_text.cpp
+document_writer.h
+/home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/document_writer.h
+fstream
+-
 
 /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/editor_core.cpp
 editor_core.h
@@ -91,10 +125,14 @@ document_parameters.h
 /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/document_parameters.h
 iostream
 -
+fstream
+-
 
 /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/editor_core.h
 document.h
 /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/document.h
+document_writer.h
+/home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/document_writer.h
 memory
 -
 
@@ -129,6 +167,8 @@ map
 /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/triangle_shape_2d.cpp
 shapes_2d.h
 /home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/shapes_2d.h
+document_writer.h
+/home/travis/build/adv-dev-22/otus_cpp_hw/05_editor/document_writer.h
 iostream
 -
 

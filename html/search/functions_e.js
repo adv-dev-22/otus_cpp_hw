@@ -6,6 +6,7 @@ var searchData=
   ['set_5fconsumer_5fnumber',['set_consumer_number',['../classProdConsSimulator.html#a405ddd1c46a8b1c6acaddd2743c98e9a',1,'ProdConsSimulator']]],
   ['set_5findex',['set_index',['../classCellObserver.html#a5838eda25127346a5a296c38a651f764',1,'CellObserver']]],
   ['set_5fproducer_5fnumber',['set_producer_number',['../classProdConsSimulator.html#ae4a02be5e3f0192a3f959aa02711e216',1,'ProdConsSimulator']]],
+  ['set_5fstorage_5fname',['set_storage_name',['../classGraphicalEditorCore_1_1DocumentWriterBase.html#a225cef356ae9d25a580c5065d5a70a2d',1,'GraphicalEditorCore::DocumentWriterBase']]],
   ['set_5fworker_5floop_5fsize',['set_worker_loop_size',['../classMultiThreadDataServer.html#a76eccc6978541af924a14f03d9d5b556',1,'MultiThreadDataServer::set_worker_loop_size()'],['../classProdConsSimulator.html#a84d0077672f30d5776de8f9f5935a2c4',1,'ProdConsSimulator::set_worker_loop_size()']]],
   ['setheight',['setHeight',['../classGraphicalEditorCore_1_1DocumentParameters.html#a399ffb889b05829955ed0ab4020408ef',1,'GraphicalEditorCore::DocumentParameters']]],
   ['setwidth',['setWidth',['../classGraphicalEditorCore_1_1DocumentParameters.html#a1b982f66a9fd844c3ecbba465bf85ad1',1,'GraphicalEditorCore::DocumentParameters']]],

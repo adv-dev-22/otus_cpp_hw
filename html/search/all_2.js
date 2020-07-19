@@ -7,6 +7,7 @@ var searchData=
   ['circle_5fshape_5f2d_2ecpp',['circle_shape_2d.cpp',['../circle__shape__2d_8cpp.html',1,'']]],
   ['circleshape2d',['CircleShape2D',['../classGraphicalEditorCore_1_1CircleShape2D.html',1,'GraphicalEditorCore']]],
   ['circleshape2d',['CircleShape2D',['../classGraphicalEditorCore_1_1CircleShape2D.html#ac6e40c6596bafc87cb948f61225955e2',1,'GraphicalEditorCore::CircleShape2D']]],
+  ['close',['close',['../classGraphicalEditorCore_1_1DocumentWriterBase.html#a852099c87792d7b8a7edf1b4544cb073',1,'GraphicalEditorCore::DocumentWriterBase::close()'],['../classGraphicalEditorCore_1_1DocumentWriterText.html#a55c62e66d481f41be81ad48842fcef91',1,'GraphicalEditorCore::DocumentWriterText::close()']]],
   ['cmakeccompilerid_2ec',['CMakeCCompilerId.c',['../CMakeCCompilerId_8c.html',1,'']]],
   ['cmakecxxcompilerid_2ecpp',['CMakeCXXCompilerId.cpp',['../CMakeCXXCompilerId_8cpp.html',1,'']]],
   ['color_5fengine_2ecpp',['color_engine.cpp',['../color__engine_8cpp.html',1,'']]],

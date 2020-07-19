@@ -420,6 +420,60 @@ document_parameters.cpp.s:
 	cd /home/travis/build/adv-dev-22/otus_cpp_hw && $(MAKE) -f 05_editor/CMakeFiles/run_editor.dir/build.make 05_editor/CMakeFiles/run_editor.dir/document_parameters.cpp.s
 .PHONY : document_parameters.cpp.s
 
+document_writer_base.o: document_writer_base.cpp.o
+
+.PHONY : document_writer_base.o
+
+# target to build an object file
+document_writer_base.cpp.o:
+	cd /home/travis/build/adv-dev-22/otus_cpp_hw && $(MAKE) -f 05_editor/CMakeFiles/run_editor.dir/build.make 05_editor/CMakeFiles/run_editor.dir/document_writer_base.cpp.o
+.PHONY : document_writer_base.cpp.o
+
+document_writer_base.i: document_writer_base.cpp.i
+
+.PHONY : document_writer_base.i
+
+# target to preprocess a source file
+document_writer_base.cpp.i:
+	cd /home/travis/build/adv-dev-22/otus_cpp_hw && $(MAKE) -f 05_editor/CMakeFiles/run_editor.dir/build.make 05_editor/CMakeFiles/run_editor.dir/document_writer_base.cpp.i
+.PHONY : document_writer_base.cpp.i
+
+document_writer_base.s: document_writer_base.cpp.s
+
+.PHONY : document_writer_base.s
+
+# target to generate assembly for a file
+document_writer_base.cpp.s:
+	cd /home/travis/build/adv-dev-22/otus_cpp_hw && $(MAKE) -f 05_editor/CMakeFiles/run_editor.dir/build.make 05_editor/CMakeFiles/run_editor.dir/document_writer_base.cpp.s
+.PHONY : document_writer_base.cpp.s
+
+document_writer_text.o: document_writer_text.cpp.o
+
+.PHONY : document_writer_text.o
+
+# target to build an object file
+document_writer_text.cpp.o:
+	cd /home/travis/build/adv-dev-22/otus_cpp_hw && $(MAKE) -f 05_editor/CMakeFiles/run_editor.dir/build.make 05_editor/CMakeFiles/run_editor.dir/document_writer_text.cpp.o
+.PHONY : document_writer_text.cpp.o
+
+document_writer_text.i: document_writer_text.cpp.i
+
+.PHONY : document_writer_text.i
+
+# target to preprocess a source file
+document_writer_text.cpp.i:
+	cd /home/travis/build/adv-dev-22/otus_cpp_hw && $(MAKE) -f 05_editor/CMakeFiles/run_editor.dir/build.make 05_editor/CMakeFiles/run_editor.dir/document_writer_text.cpp.i
+.PHONY : document_writer_text.cpp.i
+
+document_writer_text.s: document_writer_text.cpp.s
+
+.PHONY : document_writer_text.s
+
+# target to generate assembly for a file
+document_writer_text.cpp.s:
+	cd /home/travis/build/adv-dev-22/otus_cpp_hw && $(MAKE) -f 05_editor/CMakeFiles/run_editor.dir/build.make 05_editor/CMakeFiles/run_editor.dir/document_writer_text.cpp.s
+.PHONY : document_writer_text.cpp.s
+
 editor_core.o: editor_core.cpp.o
 
 .PHONY : editor_core.o
@@ -568,6 +622,12 @@ help:
 	@echo "... document_parameters.o"
 	@echo "... document_parameters.i"
 	@echo "... document_parameters.s"
+	@echo "... document_writer_base.o"
+	@echo "... document_writer_base.i"
+	@echo "... document_writer_base.s"
+	@echo "... document_writer_text.o"
+	@echo "... document_writer_text.i"
+	@echo "... document_writer_text.s"
 	@echo "... editor_core.o"
 	@echo "... editor_core.i"
 	@echo "... editor_core.s"
