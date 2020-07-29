@@ -7,8 +7,8 @@ find_package(GTest REQUIRED)
 enable_testing()
 
 add_executable(run_matrix 
-        main.cpp
-        cell_observer.h
+	cell_observer.h
+	main.cpp
 	infinite_row.h
 	infinite_matrix.h
 )
