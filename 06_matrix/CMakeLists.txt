@@ -7,10 +7,10 @@ find_package(GTest REQUIRED)
 enable_testing()
 
 add_executable(run_matrix 
-        main.cpp
-        cell_observer.h
+        effective_cell.h
+	main.cpp
 	infinite_row.h
-	infinite_matrix.h
+	#infinite_matrix.h
 )
 
 set_target_properties(run_matrix PROPERTIES

@@ -6,7 +6,7 @@
 template <typename T, T DefaultValue>
 InfiniteRow<T, DefaultValue>::InfiniteRow():
 values_(),
-up_cell_observer_(nullptr) {
+up_effective_cell_(nullptr) {
 
 }
 
@@ -15,28 +15,18 @@ InfiniteRow<T, DefaultValue>::~InfiniteRow() {
 
 }
 
-//template <typename T, T DefaultValue>
-//const T InfiniteRow<T, DefaultValue>::operator[] (const size_t index) const {
-
-//std::cout << "1: " << index << std::endl;
-//    auto itr_idx = values_.find(index);
-//    if (values_.end() != itr_idx) return itr_idx->second;
-
-//    return DefaultValue;
-//}
-
 template <typename T, T DefaultValue>
-CellObserver<T, DefaultValue> & InfiniteRow<T, DefaultValue>::operator[] (const size_t index) {
+EffectiveCell<T, DefaultValue> & InfiniteRow<T, DefaultValue>::operator[] (const size_t index) {
 
     // Lazy initialization
-    if (nullptr == up_cell_observer_) {
-        up_cell_observer_ = std::make_unique<CellObserver<T, DefaultValue>>();
-        up_cell_observer_->bind(this);
+    if (nullptr == up_effective_cell_) {
+        up_effective_cell_ = std::make_unique<EffectiveCell<T, DefaultValue>>();
+        up_effective_cell_->bind(this);
     }
 
-    up_cell_observer_->set_index(index);
+    up_effective_cell_->set_index(index);
 
-    return *up_cell_observer_;
+    return *up_effective_cell_;
 }
 
 template <typename T, T DefaultValue>
@@ -70,41 +60,9 @@ void InfiniteRow<T, DefaultValue>::insert(const size_t index, const T& value) {
     }
 }
 
-
-
-
-
-
-//template <typename T, T DefaultValue>
-//void InfiniteRow<T, DefaultValue>::set_value_(const size_t index, const T & value) {
-
-//    //..
-//}
-
-//friend bool operator == (const InfiniteRow & inf_row_1, const InfiniteRow & inf_row_2);
-
-//template <typename T, T DefaultValue>
-//InfiniteRow_Debug<T, DefaultValue>::InfiniteRow_Debug():
-//InfiniteRow<T, DefaultValue>() {
-
-//}
-
-//template <typename T, T DefaultValue>
-//InfiniteRow_Debug<T, DefaultValue>::~InfiniteRow_Debug() {
-
-//}
+template <typename T, T DefaultValue>
+void InfiniteRow<T, DefaultValue>::remove(const size_t index) {
+    values_.erase(index);
+}
 
 // End of the file
-
-//    InfiniteRow(const InfiniteRow & );
-//    InfiniteRow(InfiniteRow && );
-
-//    InfiniteRow & operator = (const InfiniteRow & );
-//    InfiniteRow & operator = (InfiniteRow && );
-
-//std::cout << "2: " << index << std::endl;
-    //using map_sz_T_itr = typename std::map<size_t, T>::iterator;
-    //std::pair<map_sz_T_itr, bool> result = values_.insert(std::pair(index, DefaultValue));
-
-    // Item with such an index exists or default value will be inserted
-    //return result.first->second;

@@ -1,5 +1,5 @@
-#ifndef _CELL_OBSERVER_H_
-#define _CELL_OBSERVER_H_
+#ifndef _EFFECTIVE_CELL_H_
+#define _EFFECTIVE_CELL_H_
 
 #include <cstddef>
 
@@ -7,10 +7,10 @@
 template <typename T, T DefaultValue> class InfiniteRow;
 
 template <typename T, T DefaultValue>
-class CellObserver final {
+class EffectiveCell final {
 public:
-    CellObserver();
-    ~CellObserver() = default;
+    EffectiveCell();
+    ~EffectiveCell() = default;
 
     /*! Saves index of cell for a corresponding row. */
     void set_index(const size_t index);
@@ -23,29 +23,30 @@ public:
     /*! Operator is used for cells assignment:
      *  it calls update value of row if and only if
      *  it does not coincide with the default value. */
-    CellObserver & operator= (const T & rhs_value);
+    EffectiveCell & operator= (const T & rhs_value);
 
 private:
     size_t index_;
     InfiniteRow<T, DefaultValue> * host_row_;
 
-    CellObserver(const CellObserver & ) = delete;
-    CellObserver(CellObserver && )      = delete;
-    CellObserver & operator= (const CellObserver & ) = delete;
-    CellObserver & operator= (CellObserver && )      = delete;
+private:
+    EffectiveCell(const EffectiveCell & ) = delete;
+    EffectiveCell(EffectiveCell && )      = delete;
+    EffectiveCell & operator= (const EffectiveCell & ) = delete;
+    EffectiveCell & operator= (EffectiveCell && )      = delete;
 };
 
 
 template <typename T, T DefaultValue>
-bool operator== (const CellObserver<T, DefaultValue> & lhs, const T & rhs);
+bool operator== (const EffectiveCell<T, DefaultValue> & lhs, const T & rhs);
 
 template <typename T, T DefaultValue>
-bool operator== (const T & lhs, const CellObserver<T, DefaultValue> & rhs);
+bool operator== (const T & lhs, const EffectiveCell<T, DefaultValue> & rhs);
 
 
 // Necessary for separate template implementation.
-#include "cell_observer.cpp"
+#include "effective_cell.cpp"
 
-#endif  // _CELL_OBSERVER_H_
+#endif  // _EFFECTIVE_CELL_H_
 
 // End of the file
