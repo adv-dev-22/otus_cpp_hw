@@ -8,9 +8,9 @@ enable_testing()
 
 add_executable(run_matrix 
         effective_cell.h
-	main.cpp
+	infinite_matrix.h
 	infinite_row.h
-	#infinite_matrix.h
+	main.cpp
 )
 
 set_target_properties(run_matrix PROPERTIES

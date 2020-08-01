@@ -2,10 +2,9 @@
 #define _INIFINITE_MATRIX_H_
 
 #include <map>
+#include <memory>
 
 template <typename T, T DefaultValue> class InfiniteRow;
-template <typename T, T DefaultValue> class RowObserver;
-
 
 template <typename T, T DefaultValue>
 class InfiniteMatrix {
@@ -15,18 +14,13 @@ public:
 
     size_t size() const;
 
-    //const InfiniteRow<T, DefaultValue> & operator[](const size_t index) const;
-
-    //MatrixObserver<T, DefaultValue> & operator[](const size_t index);
+    InfiniteRow<T, DefaultValue> & operator[](const size_t index);
 
 private:
+    /*! Matrix rows. Not empty. */
+    std::map<size_t, std::shared_ptr<InfiniteRow<T, DefaultValue>>> rows_;
 
-//    std::map<size_t, >   rows_;
-
-    //rows also will be observers when whole the row is zero.
-
-
-
+private:
     InfiniteMatrix(const InfiniteMatrix & ) = delete;
     InfiniteMatrix(InfiniteMatrix && )      = delete;
     InfiniteMatrix & operator= (const InfiniteMatrix & ) = delete;

@@ -63,6 +63,7 @@ void InfiniteRow<T, DefaultValue>::insert(const size_t index, const T& value) {
 template <typename T, T DefaultValue>
 void InfiniteRow<T, DefaultValue>::remove(const size_t index) {
     values_.erase(index);
+    // send message to matrix to remove empty row
 }
 
 // End of the file

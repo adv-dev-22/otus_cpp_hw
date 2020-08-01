@@ -1,6 +1,6 @@
 #include "../effective_cell.h"
 #include "../infinite_row.h"
-//#include "../infinite_matrix.h"
+#include "../infinite_matrix.h"
 #include <gtest/gtest.h>
 #include <iostream>
 #include <memory>
@@ -53,13 +53,22 @@ void test_infinite_row() {
     EXPECT_EQ(inf_row.size(), 0);
 }
 
-//template <typename T, T DefaultValue>
-//void test_infinite_matrix() {
+template <typename T, T DefaultValue>
+void test_infinite_matrix() {
 
-//    InfiniteMatrix<T, DefaultValue> inf_matrix;
-//    EXPECT_EQ(inf_matrix.size(), 0);
+    InfiniteMatrix<T, DefaultValue> inf_matrix;
+    EXPECT_EQ(inf_matrix.size(), 0);
 
-//}
+    inf_matrix[12][34] = DefaultValue;
+    T v2 = inf_matrix[12][34];
+    EXPECT_EQ(v2, DefaultValue);
+    EXPECT_EQ(inf_matrix.size(), 0);
+
+    inf_matrix[34][55] = 234;
+    T v1 = inf_matrix[34][55];
+    EXPECT_EQ(v1, 234);
+    EXPECT_EQ(inf_matrix.size(), 1);
+}
 
 TEST(test_effective_cell, basic) {
     test_effective_cell<int, 172>();
@@ -69,9 +78,9 @@ TEST(test_infinite_row, basic) {
     test_infinite_row<int, 25>();
 }
 
-//TEST(test_infinite_matrix, basic) {
-//    test_infinite_matrix<int, 99>();
-//}
+TEST(test_infinite_matrix, basic) {
+    test_infinite_matrix<int, 99>();
+}
 
 int main(int argc, char *argv[]) {
 

@@ -1,4 +1,5 @@
 #include <iostream>
+#include "infinite_matrix.h"
 
 int main(int argc, char * argv []) {
 
