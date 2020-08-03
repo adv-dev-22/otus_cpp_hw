@@ -15,7 +15,7 @@ template <typename T, T DefaultValue>
 size_t InfiniteMatrix<T, DefaultValue>::size() const {
 
     size_t sum_size = 0;
-    for (auto & item : rows_) {
+    for (const auto & item : rows_) {
         sum_size += item.second->size();
     }
     return sum_size;

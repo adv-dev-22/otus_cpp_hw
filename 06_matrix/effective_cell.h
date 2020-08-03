@@ -10,6 +10,8 @@ template <typename T, T DefaultValue>
 class EffectiveCell final {
 public:
     EffectiveCell();
+    EffectiveCell(const EffectiveCell & ) = default;
+
     ~EffectiveCell() = default;
 
     /*! Saves index of cell for a corresponding row. */
@@ -30,7 +32,6 @@ private:
     InfiniteRow<T, DefaultValue> * host_row_;
 
 private:
-    EffectiveCell(const EffectiveCell & ) = delete;
     EffectiveCell(EffectiveCell && )      = delete;
     EffectiveCell & operator= (const EffectiveCell & ) = delete;
     EffectiveCell & operator= (EffectiveCell && )      = delete;
