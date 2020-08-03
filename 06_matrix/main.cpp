@@ -39,9 +39,9 @@ int main(int argc, char * argv []) {
 
     std::cout << "occupied cells number = " << mtx_diag.size() << std::endl;
 
-    //for (auto c : matrix) {
+//    for (auto item : mtx_diag) {
 
-    //}
+//    }
 
     return 0;
 }

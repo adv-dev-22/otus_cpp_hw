@@ -42,6 +42,12 @@ InfiniteRow<T, DefaultValue>::find(const size_t index) {
 
 template <typename T, T DefaultValue>
 typename std::map<size_t, T>::iterator
+InfiniteRow<T, DefaultValue>::begin() {
+    return values_.begin();
+}
+
+template <typename T, T DefaultValue>
+typename std::map<size_t, T>::iterator
 InfiniteRow<T, DefaultValue>::end() {
     return values_.end();
 }

@@ -10,6 +10,15 @@ template <typename T, T DefaultValue> class EffectiveCell;
 template <typename T, T DefaultValue>
 class InfiniteRow {
 public:
+
+//    class Iterator {
+//    public:
+
+//    private:
+
+//    };
+
+public:
     InfiniteRow();
     virtual ~InfiniteRow();
 
@@ -18,6 +27,7 @@ public:
     size_t size() const;
 
     typename std::map<size_t, T>::iterator find(const size_t index);
+    typename std::map<size_t, T>::iterator begin();
     typename std::map<size_t, T>::iterator end();
 
     void insert(const size_t index, const T& value);
