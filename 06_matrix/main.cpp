@@ -18,12 +18,30 @@ int main(int argc, char * argv []) {
     assert(matrix[100][100] == 314);
     assert(matrix.size() == 1);
 
-//    for (auto c : matrix) {
-
-//    }
-
     ((matrix[23][24] = 555) = 227) = 99;
     std::cout << "99 = " << matrix[23][24] << std::endl;
+
+    // Main task. Fill it up.
+    auto up_mtx_diag = std::make_unique<InfiniteMatrix<int, 0>>();
+    auto & mtx_diag = *up_mtx_diag;
+    for (int k = 0; k <= 9; ++k) {
+        mtx_diag[k][k] = k;
+        mtx_diag[k][9 - k] = 9 - k;
+    }
+
+    // Print out submatrix
+    for (int i = 1; i <= 8; ++i) {
+        for (int j = 1; j <= 8; ++j) {
+            std::cout << mtx_diag[i][j] << " ";
+        }
+        std::cout << std::endl;
+    }
+
+    std::cout << "occupied cells number = " << mtx_diag.size() << std::endl;
+
+    //for (auto c : matrix) {
+
+    //}
 
     return 0;
 }
