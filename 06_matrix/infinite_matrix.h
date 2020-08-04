@@ -3,6 +3,7 @@
 
 #include <map>
 #include <memory>
+#include <iostream>
 
 template <typename T, T DefaultValue> class InfiniteRow;
 
@@ -12,47 +13,43 @@ public:
 
     class Iterator {
     public:
-
         friend class InfiniteMatrix;
-
-        Iterator operator++ (int ) {
-
-            if (cell_itr_ == rows_itr_->second->end()) {
-                ++rows_itr_;
-                cell_itr_ = rows_itr_->second->begin();
-            }
-            else {
-                ++cell_itr_;
-            }
-            return *this;
-        }
 
         Iterator operator++ () {
 
             Iterator buffer = *this;
 
+            ++cell_itr_;
             if (cell_itr_ == rows_itr_->second->end()) {
                 ++rows_itr_;
-                cell_itr_ = rows_itr_->second->begin();
-            }
-            else {
-                ++cell_itr_;
+
+                if (rows_itr_ != rows_itr_end_) {
+                    cell_itr_ = rows_itr_->second->begin();
+                }
             }
             return buffer;
         }
 
-        bool operator!= (const Iterator) {
+        bool operator!= (const Iterator rhs) {
+
+            if (rows_itr_ != rhs.rows_itr_) return true;
+            if (cell_itr_ != rhs.cell_itr_) return true;
 
             return false;
         }
 
-//        EffectiveCell & operator* (Iterator) {
-//            return cell_itr_->;
-//        }
+        std::tuple<size_t, size_t, T> operator* () {
+
+            const size_t i = rows_itr_->first;
+            const size_t j = cell_itr_->first;
+            const T value  = cell_itr_->second;
+            return std::move(std::make_tuple(i, j, value));
+        }
 
     private:
         typename std::map<size_t, std::shared_ptr<InfiniteRow<T, DefaultValue>>>::iterator rows_itr_;
         typename std::map<size_t, T>::iterator cell_itr_;
+        typename std::map<size_t, std::shared_ptr<InfiniteRow<T, DefaultValue>>>::iterator rows_itr_end_;
     };
 
 public:

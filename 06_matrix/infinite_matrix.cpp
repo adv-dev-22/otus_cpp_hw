@@ -43,6 +43,8 @@ typename InfiniteMatrix<T, DefaultValue>::Iterator InfiniteMatrix<T, DefaultValu
     tmp_itr.rows_itr_ = rows_.begin();
     tmp_itr.cell_itr_ = rows_.begin()->second->begin();
 
+    tmp_itr.rows_itr_end_ = rows_.end();
+
     return tmp_itr;
 }
 
@@ -52,6 +54,8 @@ typename InfiniteMatrix<T, DefaultValue>::Iterator InfiniteMatrix<T, DefaultValu
     InfiniteMatrix<T, DefaultValue>::Iterator tmp_itr;
 
     tmp_itr.rows_itr_ = rows_.end();
+    tmp_itr.cell_itr_ = (--tmp_itr.rows_itr_)->second->end();
+    ++tmp_itr.rows_itr_;
 
     return tmp_itr;
 }

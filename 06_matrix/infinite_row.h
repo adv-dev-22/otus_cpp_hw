@@ -10,15 +10,6 @@ template <typename T, T DefaultValue> class EffectiveCell;
 template <typename T, T DefaultValue>
 class InfiniteRow {
 public:
-
-//    class Iterator {
-//    public:
-
-//    private:
-
-//    };
-
-public:
     InfiniteRow();
     virtual ~InfiniteRow();
 
@@ -32,8 +23,6 @@ public:
 
     void insert(const size_t index, const T& value);
     void remove(const size_t index);
-
-    //friend bool operator == (const InfiniteRow & inf_row_1, const InfiniteRow & inf_row_2);
 
 private:
     /*! According to problem statement, we do not implement internal
@@ -55,7 +44,6 @@ private:
     InfiniteRow & operator = (const InfiniteRow & ) = delete;
     InfiniteRow & operator = (InfiniteRow && )      = delete;
 };
-
 
 /*! InfiniteRow depends on numerical type (second parameter).
  *  That is why we can not use explicit instantiation

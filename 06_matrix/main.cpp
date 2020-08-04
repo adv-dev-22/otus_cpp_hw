@@ -39,9 +39,22 @@ int main(int argc, char * argv []) {
 
     std::cout << "occupied cells number = " << mtx_diag.size() << std::endl;
 
-//    for (auto item : mtx_diag) {
-
+//    // Print out submatrix
+//    for (int i = 0; i <= 9; ++i) {
+//        for (int j = 0; j <= 9; ++j) {
+//            std::cout << mtx_diag[i][j] << " ";
+//        }
+//        std::cout << std::endl;
 //    }
+
+    std::cout << std::endl << "Non zero matrix elements: " << std::endl;
+    for (auto item : mtx_diag) {
+
+        size_t i1, j2;
+        int idx_k;
+        std::tie(i1, j2, idx_k) = item;
+        std::cout << i1 << " " << j2 << " " << idx_k << std::endl;
+    }
 
     return 0;
 }
