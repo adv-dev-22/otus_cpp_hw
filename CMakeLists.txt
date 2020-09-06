@@ -39,6 +39,10 @@ if (HW06 OR HWALL)
     add_subdirectory(06_matrix)
 endif()
 
+if (HW07 OR HWALL)
+    add_subdirectory(07_bulk)
+endif()
+
 
 
 set(CPACK_GENERATOR DEB)
