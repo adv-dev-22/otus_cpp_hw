@@ -15,8 +15,11 @@ void DataTranslator::run(int argc, char * argv [])
     auto data_processor = std::make_unique<DataProcessor>();
     data_processor->set_block_size(block_size);
 
-    auto block_observer = std::make_shared<BlockObserver>();
-    data_processor->subscribe(block_observer);
+    auto block_observer_std = std::make_shared<BlockObserverStd>();
+    data_processor->subscribe(block_observer_std);
+
+    auto block_observer_file = std::make_shared<BlockObserverFile>();
+    data_processor->subscribe(block_observer_file);
 
     std::string buffer;
     while (std::getline(std::cin, buffer))

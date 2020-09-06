@@ -6,11 +6,39 @@ class DataBlock;
 class BlockObserver
 {
 public:
-    void update(const DataBlock & data_block);
+    BlockObserver() = default;
+    virtual ~BlockObserver() = default;
+
+    virtual void update(const DataBlock & data_block) = 0;
 
 private:
 
 };
+
+class BlockObserverStd : public BlockObserver
+{
+public:
+    BlockObserverStd();
+    virtual ~BlockObserverStd() = default;
+
+    virtual void update(const DataBlock & data_block);
+
+private:
+
+};
+
+class BlockObserverFile : public BlockObserver
+{
+public:
+    BlockObserverFile();
+    virtual ~BlockObserverFile() = default;
+
+    virtual void update(const DataBlock & data_block);
+
+private:
+
+};
+
 
 #endif  // _07_BLOCK_OBSERVER_H_
 
