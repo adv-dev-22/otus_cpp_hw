@@ -9,7 +9,8 @@ enable_testing()
 add_executable(run_bulk 
         main.cpp
         block_observer.cpp
-        data_block.cpp
+        block_state.cpp
+	data_block.cpp
         data_processor.cpp
         data_translator.cpp
 )

@@ -3,6 +3,7 @@
 
 #include "block_observer.h"
 #include "data_block.h"
+#include "block_state.h"
 #include <string>
 #include <memory>
 #include <cstddef>
@@ -14,6 +15,8 @@ class DataProcessor final
 public:
     DataProcessor();
     ~DataProcessor() = default;
+
+    void set_state(IBlockState * );
 
     void set_block_size(const size_t block_size);
 
@@ -35,7 +38,7 @@ private:
 
     std::pair<std::string, std::string> brackets_;
 
-    size_t lines_counter_;
+    std::unique_ptr<IBlockState> up_block_state_;
 
 
     void  clear_block_();
