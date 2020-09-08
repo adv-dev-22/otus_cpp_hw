@@ -11,9 +11,15 @@ up_block_state_(std::make_unique<BlockStateEmpty>())
 
 }
 
+void DataProcessor::set_state(IBlockState * block_state)
+{
+    up_block_state_.reset(block_state);
+}
+
 void DataProcessor::set_block_size(const size_t block_size)
 {
     block_size_ = block_size;
+    IBlockState::set_block_size(block_size);
 }
 
 void DataProcessor::subscribe(std::weak_ptr<BlockObserver> wp_block_observer)
@@ -35,13 +41,13 @@ void DataProcessor::consider(const std::string & str_line)
 
     if (0 == str_line.size()) return;
 
-    if (str_line == brackets_.first ) up_block_state_->open_bracket();
-    if (str_line == brackets_.second) up_block_state_->close_bracket();
+    if (str_line == brackets_.first ) up_block_state_->open_bracket(this);
+    if (str_line == brackets_.second) up_block_state_->close_bracket(this);
 
     if (up_block_state_->is_relevant())
     {
         up_data_block_->append(str_line);
-        up_block_state_->add_line();
+        up_block_state_->add_line(this);
     }
 
     if (up_block_state_->is_ready())
@@ -60,8 +66,8 @@ void DataProcessor::conclude()
 
 void DataProcessor::clear_block_()
 {
-    lines_counter_ = 0;
     up_data_block_->clear();
+    up_block_state_.reset(new BlockStateEmpty());
 }
 
 // End of the file

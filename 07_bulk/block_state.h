@@ -1,65 +1,61 @@
 #ifndef _07_BLOCK_STATE_H_
 #define _07_BLOCK_STATE_H_
 
+#include <cstddef>
+
 class DataProcessor;
 
 class IBlockState
 {
 public:
-    IBlockState(const size_t block_size,
-                const size_t lines_counter,
-                const size_t brackets_counter);
+    IBlockState();
 
     virtual ~IBlockState() = default;
 
+    static void set_block_size(const size_t block_size);
+
     virtual void open_bracket(DataProcessor * dp) = 0;
     virtual void close_bracket(DataProcessor * dp) = 0;
-    virtual bool add_line(DataProcessor * dp) = 0;
+    virtual void add_line(DataProcessor * dp) = 0;
 
     virtual bool is_relevant() const = 0;
     virtual bool is_ready() const = 0;
 
 protected:
-    size_t block_size_
-    size_t lines_counter_;
-
-    size_t brackets_counter_;
+    static size_t block_size_;
 };
 
-
-class BlockStateEmpty : public IBlockState
+class BlockStateEmpty final : public IBlockState
 {
 public:
-    BlockStateEmpty(const size_t block_size,
-                    const size_t lines_counter = 0,
-                    const size_t brackets_counter = 0);
-
+    BlockStateEmpty();
     virtual ~BlockStateEmpty() = default;
 
     virtual void open_bracket(DataProcessor * dp) override;
     virtual void close_bracket(DataProcessor * dp) override;
-    virtual bool add_line(DataProcessor * dp) override;
+    virtual void add_line(DataProcessor * dp) override;
 
     virtual bool is_relevant() const override;
     virtual bool is_ready() const override;
 };
 
 
-class BlockStateSimpleFilling : public IBlockState
+class BlockStateSimpleFilling final : public IBlockState
 {
 public:
-    BlockStateSimpleFilling(const size_t block_size,
-                            const size_t lines_counter,
-                            const size_t brackets_counter);
+    BlockStateSimpleFilling();
 
     virtual ~BlockStateSimpleFilling() = default;
 
     virtual void open_bracket(DataProcessor * dp) override;
     virtual void close_bracket(DataProcessor * dp) override;
-    virtual bool add_line(DataProcessor * dp) override;
+    virtual void add_line(DataProcessor * dp) override;
 
     virtual bool is_relevant() const override;
     virtual bool is_ready() const override;
+
+protected:
+    size_t lines_counter_;
 };
 
 
@@ -74,25 +70,23 @@ public:
 
     virtual void open_bracket(DataProcessor * dp) override;
     virtual void close_bracket(DataProcessor * dp) override;
-    virtual bool add_line(DataProcessor * dp) override;
+    virtual void add_line(DataProcessor * dp) override;
 
     virtual bool is_relevant() const override;
     virtual bool is_ready() const override;
 };
+//size_t brackets_counter_;
 
 
 class BlockStateReady : public IBlockState
 {
 public:
-    BlockStateReady(const size_t block_size,
-                    const size_t lines_counter,
-                    const size_t brackets_counter);
-
+    BlockStateReady();
     virtual ~BlockStateReady() = default;
 
     virtual void open_bracket(DataProcessor * dp) override;
     virtual void close_bracket(DataProcessor * dp) override;
-    virtual bool add_line(DataProcessor * dp) override;
+    virtual void add_line(DataProcessor * dp) override;
 
     virtual bool is_relevant() const override;
     virtual bool is_ready() const override;
