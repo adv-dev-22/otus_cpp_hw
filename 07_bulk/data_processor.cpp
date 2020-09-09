@@ -41,8 +41,17 @@ void DataProcessor::consider(const std::string & str_line)
 
     if (0 == str_line.size()) return;
 
-    if (str_line == brackets_.first ) up_block_state_->open_bracket(this);
-    if (str_line == brackets_.second) up_block_state_->close_bracket(this);
+    up_block_state_->update_state(this);
+
+    if (str_line == brackets_.first )
+    {
+        up_block_state_->open_bracket(this);
+    }
+
+    if (str_line == brackets_.second)
+    {
+        up_block_state_->close_bracket(this);
+    }
 
     if (up_block_state_->is_relevant())
     {
@@ -67,7 +76,7 @@ void DataProcessor::conclude()
 void DataProcessor::clear_block_()
 {
     up_data_block_->clear();
-    up_block_state_.reset(new BlockStateEmpty());
+    up_block_state_->go_next_state(this);
 }
 
 // End of the file
