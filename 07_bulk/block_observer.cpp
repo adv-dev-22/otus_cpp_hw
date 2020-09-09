@@ -1,11 +1,11 @@
 #include "block_observer.h"
 #include "data_block.h"
 #include <iostream>
+#include <fstream>
 
 BlockObserverStd::BlockObserverStd():
 BlockObserver()
 {
-
 }
 
 void BlockObserverStd::update(const DataBlock & data_block)
@@ -16,14 +16,17 @@ void BlockObserverStd::update(const DataBlock & data_block)
 BlockObserverFile::BlockObserverFile():
 BlockObserver()
 {
-
 }
 
 void BlockObserverFile::update(const DataBlock & data_block)
 {
+    std::string file_name("bulk");
+    file_name.append(data_block.time_stamp());
+    file_name.append(".log");
 
-    std::cout << "File " << data_block.size() << std::endl;
-
+    std::ofstream fout(file_name, std::ofstream::out);
+    data_block.write(fout);
+    fout.close();
 }
 
 // End of the file

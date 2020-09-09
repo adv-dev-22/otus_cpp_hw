@@ -8,7 +8,6 @@ up_data_block_(std::make_unique<DataBlock>()),
 brackets_(std::make_pair("{","}")),
 up_block_state_(std::make_unique<BlockStateEmpty>())
 {
-
 }
 
 void DataProcessor::set_state(IBlockState * block_state)
@@ -43,15 +42,8 @@ void DataProcessor::consider(const std::string & str_line)
 
     up_block_state_->update_state(this);
 
-    if (str_line == brackets_.first )
-    {
-        up_block_state_->open_bracket(this);
-    }
-
-    if (str_line == brackets_.second)
-    {
-        up_block_state_->close_bracket(this);
-    }
+    if (str_line == brackets_.first ) up_block_state_->open_bracket(this);
+    if (str_line == brackets_.second) up_block_state_->close_bracket(this);
 
     if (up_block_state_->is_relevant())
     {
@@ -69,8 +61,12 @@ void DataProcessor::consider(const std::string & str_line)
 
 void DataProcessor::conclude()
 {
-    std::cout << "Ctrl + D is pressed" << std::endl;
-    //this->notify();
+    //std::cout << "Ctrl + D is pressed" << std::endl;
+    if (up_block_state_->is_simple())
+    {
+        this->notify();
+        this->clear_block_();
+    }
 }
 
 void DataProcessor::clear_block_()

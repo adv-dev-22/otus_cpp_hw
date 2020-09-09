@@ -13,6 +13,7 @@ add_executable(run_bulk
 	data_block.cpp
         data_processor.cpp
         data_translator.cpp
+	time_holder.cpp
 )
 
 set_target_properties(run_bulk PROPERTIES

@@ -22,6 +22,7 @@ public:
 
     virtual bool is_relevant() const = 0;
     virtual bool is_ready()    const = 0;
+    virtual bool is_simple()   const = 0;
 
 protected:
     static size_t block_size_;
@@ -41,6 +42,7 @@ public:
 
     virtual bool is_relevant() const override;
     virtual bool is_ready()    const override;
+    virtual bool is_simple()   const override;
 };
 
 class BlockStateSimpleFilling final : public IBlockState
@@ -58,6 +60,7 @@ public:
 
     virtual bool is_relevant() const override;
     virtual bool is_ready()    const override;
+    virtual bool is_simple()   const override;
 
 protected:
     size_t lines_counter_;
@@ -77,6 +80,7 @@ public:
 
     virtual bool is_relevant() const override;
     virtual bool is_ready()    const override;
+    virtual bool is_simple()   const override;
 private:
     size_t brackets_counter_;
 };
@@ -96,6 +100,7 @@ public:
 
     virtual bool is_relevant() const override;
     virtual bool is_ready()    const override;
+    virtual bool is_simple()   const override;
 
 protected:
     size_t brackets_counter_;
@@ -115,6 +120,8 @@ public:
 
     virtual bool is_relevant() const override;
     virtual bool is_ready()    const override;
+    virtual bool is_simple()   const override;
+
 private:
     size_t brackets_counter_;
 };
@@ -133,6 +140,7 @@ public:
 
     virtual bool is_relevant() const override;
     virtual bool is_ready()    const override;
+    virtual bool is_simple()   const override;
 };
 
 #endif  // _07_BLOCK_STATE_H_

@@ -55,6 +55,11 @@ bool BlockStateEmpty::is_ready() const
     return false;
 }
 
+bool BlockStateEmpty::is_simple() const
+{
+    return false;
+}
+
 //-----------------------------------------------------------------------------
 
 BlockStateSimpleFilling::BlockStateSimpleFilling():
@@ -99,6 +104,11 @@ bool BlockStateSimpleFilling::is_ready() const
     return false;
 }
 
+bool BlockStateSimpleFilling::is_simple() const
+{
+    return true;
+}
+
 //-----------------------------------------------------------------------------
 
 BlockStateBracketOpen::BlockStateBracketOpen(const size_t brackets_counter):
@@ -138,12 +148,16 @@ bool BlockStateBracketOpen::is_ready() const
     return true;
 }
 
+bool BlockStateBracketOpen::is_simple() const
+{
+    return false;
+}
+
 //-----------------------------------------------------------------------------
 
 BlockStateBracketFilling::BlockStateBracketFilling(const size_t brackets_counter):
 brackets_counter_(brackets_counter)
 {
-
 }
 
 void BlockStateBracketFilling::open_bracket(DataProcessor * dp)
@@ -186,6 +200,11 @@ bool BlockStateBracketFilling::is_ready() const
     return false;
 }
 
+bool BlockStateBracketFilling::is_simple() const
+{
+    return false;
+}
+
 //-----------------------------------------------------------------------------
 
 BlockStateTwoMoreBracketOpen::BlockStateTwoMoreBracketOpen(const size_t brackets_counter):
@@ -216,6 +235,11 @@ bool BlockStateTwoMoreBracketOpen::is_relevant() const
 }
 
 bool BlockStateTwoMoreBracketOpen::is_ready() const
+{
+    return false;
+}
+
+bool BlockStateTwoMoreBracketOpen::is_simple() const
 {
     return false;
 }
@@ -261,5 +285,9 @@ bool BlockStateReady::is_ready() const
     return true;
 }
 
+bool BlockStateReady::is_simple() const
+{
+    return false;
+}
 
 // End of the file

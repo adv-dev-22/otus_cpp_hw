@@ -1,15 +1,10 @@
 #ifndef _07_DATA_TRANSLATOR_H_
 #define _07_DATA_TRANSLATOR_H_
 
-
 class DataTranslator
 {
 public:
     void run(int argc, char * argv []);
-
-private:
-
-
 };
 
 #endif  // _07_DATA_TRANSLATOR_H_
