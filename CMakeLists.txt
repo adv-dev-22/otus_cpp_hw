@@ -43,6 +43,10 @@ if (HW07 OR HWALL)
     add_subdirectory(07_bulk)
 endif()
 
+if (HW09 OR HWALL)
+    add_subdirectory(09_files)
+endif()
+
 
 
 set(CPACK_GENERATOR DEB)
