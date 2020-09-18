@@ -9,7 +9,9 @@ add_executable(run_fs
         fs_comparator_controller.cpp
         fs_comparator_options.cpp
         fs_main.cpp
+        fs_option_labels
 )
+
 set_target_properties(run_fs PROPERTIES
         CXX_STANDARD 17
         CXX_STANDARD_REQUIRED ON
