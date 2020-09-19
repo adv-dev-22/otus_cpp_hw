@@ -10,9 +10,9 @@ std::string OptionLabels::scandirs() noexcept
     return std::string("scandirs");
 }
 
-std::string OptionLabels::scipdirs() noexcept
+std::string OptionLabels::skipdirs() noexcept
 {
-    return std::string("scipdirs");
+    return std::string("skipdirs");
 }
 
 std::string OptionLabels::level() noexcept
@@ -23,6 +23,11 @@ std::string OptionLabels::level() noexcept
 std::string OptionLabels::minfilesz() noexcept
 {
     return std::string("minfilesz");
+}
+
+std::string OptionLabels::masks() noexcept
+{
+    return std::string("masks");
 }
 
 std::string OptionLabels::blocksize() noexcept
