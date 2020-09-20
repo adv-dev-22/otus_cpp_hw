@@ -17,6 +17,9 @@ public:
 
 protected:
     std::list<std::string> fnames_list_;
+
+    template <typename dir_iterator>
+    void collect_file_names_(dir_iterator ditr);
 };
 
 
