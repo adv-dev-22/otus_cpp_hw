@@ -92,12 +92,12 @@ void FsComparatorOptions::parse(int argc, char * argv [])
 
 }
 
-const std::vector<std::string> & FsComparatorOptions::scan_dirs() const
+const std::vector<std::string> & FsComparatorOptions::scan_dirs() const noexcept
 {
     return scan_dirs_;
 }
 
-const std::vector<std::string> & FsComparatorOptions::skip_dirs() const
+const std::vector<std::string> & FsComparatorOptions::skip_dirs() const noexcept
 {
     return skip_dirs_;
 }
@@ -112,7 +112,7 @@ size_t FsComparatorOptions::min_file_size() const noexcept
     return min_file_size_;
 }
 
-const std::vector<std::string> & FsComparatorOptions::masks() const
+const std::vector<std::string> & FsComparatorOptions::masks() const noexcept
 {
     return masks_;
 }

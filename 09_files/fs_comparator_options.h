@@ -29,10 +29,10 @@ public:
     void parse(int argc, char * argv []);
 
     /*! Directories for scan */
-    const std::vector<std::string> & scan_dirs() const;
+    const std::vector<std::string> & scan_dirs() const noexcept;
 
     /*! Directories which should be excluded from scan */
-    const std::vector<std::string> & skip_dirs() const;
+    const std::vector<std::string> & skip_dirs() const noexcept;
 
     /*! 0 - no subfolders. 1 - recursively, all subfolders */
     ScanLevel level() const noexcept;
@@ -41,7 +41,7 @@ public:
     size_t min_file_size() const noexcept;
 
     /*! File name should satisfy one of the given regexp */
-    const std::vector<std::string> & masks() const;
+    const std::vector<std::string> & masks() const noexcept;
 
     /*! Files are read and compared by hash computed on block */
     size_t block_size() const noexcept;

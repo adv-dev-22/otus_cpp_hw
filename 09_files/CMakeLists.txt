@@ -7,9 +7,12 @@ find_package(Boost COMPONENTS program_options REQUIRED)
 
 add_executable(run_fs 
         fs_comparator_controller.cpp
+        fs_comparator_engine.cpp
         fs_comparator_options.cpp
         fs_main.cpp
-        fs_option_labels
+        fs_names_collection.cpp
+        fs_option_labels.cpp
+        fs_printer.cpp
 )
 
 set_target_properties(run_fs PROPERTIES
