@@ -1,4 +1,5 @@
 #include "fs_names_collection.h"
+#include <boost/regex.hpp>
 #include <iostream>
 #include <iomanip>
 
@@ -13,13 +14,31 @@ const std::list<std::string> & IFsNamesCollection::fnames_list() const noexcept
     return fnames_list_;
 }
 
-bool is_dir_excluded(bfs::path pth, const FsComparatorOptions & opts)
+static bool is_dir_excluded(bfs::path pth, const FsComparatorOptions & opts)
 {
     const std::set<std::string> & skipdirs_set = opts.skip_dirs();
 
     const auto itr = skipdirs_set.find(pth.string());
 
     if (itr != skipdirs_set.end()) return true;
+    return false;
+}
+
+static bool fit_file_conditions(bfs::path pth, const FsComparatorOptions & opts)
+{
+    // Size validation
+    if (bfs::file_size(pth) < opts.min_file_size()) return false;
+
+    // Regexp validation
+    const std::vector<std::string> & vec_masks = opts.masks();
+    if (0 == vec_masks.size()) return true;
+
+    for (const auto & mask : vec_masks)
+    {
+        boost::regex pattern(mask, boost::regex::perl);
+        if (boost::regex_match(pth.string(), pattern)) return true;
+    }
+    // No matches for any regexpr patterns
     return false;
 }
 
@@ -30,7 +49,6 @@ void IFsNamesCollection::collect_files_for_path_(bfs::path pth, const FsComparat
     {
         if (bfs::is_directory(ditr->path()))
         {
-            std::cout << "directory: " << ditr->path() << std::endl;
             if (opts.level() == ScanLevel::AllSubfolders)
             {
                 if (!is_dir_excluded(ditr->path(), opts))
@@ -41,12 +59,9 @@ void IFsNamesCollection::collect_files_for_path_(bfs::path pth, const FsComparat
         }
         else if (bfs::is_regular_file(ditr->path()))
         {
-            //std::cout << std::setw(10) << bfs::file_size(ditr->path());
-            //std::cout << ditr->path().string() << std::endl;
-
-            if (0)
+            if (fit_file_conditions(ditr->path(), opts))
             {
-                //names_list_
+                fnames_list_.push_back(ditr->path().string());
             }
         }
         ++ditr;
@@ -71,6 +86,8 @@ IFsNamesCollection()
 
 void FsNamesCollectionBoost::extract_file_names(const FsComparatorOptions & rhs)
 {
+    fnames_list_.clear();
+
     const std::vector<std::string> & scandirs = rhs.scan_dirs();
     for (const auto & item : scandirs)
     {
@@ -81,9 +98,11 @@ void FsNamesCollectionBoost::extract_file_names(const FsComparatorOptions & rhs)
 
 // End of the file
 
+//std::cout << std::setw(10) << bfs::file_size(pth);
+//std::cout << pth.string() << std::endl;
 
 
-////            bfs::directory_iterator itr{pth};
+// bfs::directory_iterator itr{pth};
 
 //while (ditr != dir_iterator{})
 //{

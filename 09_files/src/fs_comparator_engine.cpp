@@ -1,5 +1,5 @@
 #include "fs_comparator_engine.h"
-
+#include <iostream>
 
 FsComparatorEngine::FsComparatorEngine():
 lls_duplicates_()
@@ -9,6 +9,12 @@ lls_duplicates_()
 
 void FsComparatorEngine::find_duplicates(const std::list<std::string> & fnames_list)
 {
+    for (const auto & item : fnames_list)
+    {
+        std::cout << item << std::endl;
+    }
+
+
 
 }
 

@@ -5,7 +5,8 @@ project(dz_09_files)
 
 find_package(Boost COMPONENTS 
         program_options
-        filesystem	
+        filesystem
+        regex	
         REQUIRED
 )
 

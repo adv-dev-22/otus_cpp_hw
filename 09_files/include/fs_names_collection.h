@@ -47,9 +47,3 @@ public:
 #endif  // _FS_NAMES_COLLECTION_H_
 
 // End of the file
-
-
-
-
-//    template <typename dir_iterator>
-//    void collect_file_names_(dir_iterator ditr);

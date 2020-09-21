@@ -134,7 +134,8 @@ void FsComparatorOptions::extract_option_values_(const bpo::variables_map & vars
     // Files lesser then min_file_size are ignored.
     min_file_size_ = vars_map[OptionLabels::minfilesz()].as<size_t>();
 
-//    std::vector<std::string> masks_;
+    // Regexpr pattern
+    masks_ = vars_map[OptionLabels::masks()].as<std::vector<std::string>>();
 
 //    size_t block_size_;
 
