@@ -2,8 +2,11 @@
 #define _FS_NAMES_COLLECTION_H_
 
 #include "fs_comparator_options.h"
+#include <boost/filesystem.hpp>
 #include <list>
 #include <string>
+
+namespace bfs = boost::filesystem;
 
 class IFsNamesCollection
 {
@@ -18,8 +21,7 @@ public:
 protected:
     std::list<std::string> fnames_list_;
 
-    template <typename dir_iterator>
-    void collect_file_names_(dir_iterator ditr);
+    void collect_files_for_path_(bfs::path pth, const FsComparatorOptions & rhs);
 };
 
 
@@ -45,3 +47,9 @@ public:
 #endif  // _FS_NAMES_COLLECTION_H_
 
 // End of the file
+
+
+
+
+//    template <typename dir_iterator>
+//    void collect_file_names_(dir_iterator ditr);
