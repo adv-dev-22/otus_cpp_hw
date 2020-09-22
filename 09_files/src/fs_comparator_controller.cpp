@@ -19,10 +19,10 @@ void FsComparatorController::run(int argc, char * argv [])
     up_names_clctn->extract_file_names(*up_cmd_options);
 
     auto up_cmpr_engine = std::make_unique<FsComparatorEngine>();
-    up_cmpr_engine->find_duplicates(up_names_clctn->fnames_list());
+    up_cmpr_engine->find_duplicates(up_names_clctn->fnames_vec());
 
     auto up_printer = std::make_unique<FsPrinter>();
-    up_printer->put_out(up_cmpr_engine->duplicates_list());
+    up_printer->put_out(up_cmpr_engine->ll_duplicates());
 }
 
 // End of the file

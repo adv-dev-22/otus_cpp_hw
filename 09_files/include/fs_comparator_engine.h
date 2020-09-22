@@ -1,8 +1,9 @@
 #ifndef _FS_COMPARATOR_ENGINE_H_
 #define _FS_COMPARATOR_ENGINE_H_
 
-#include <list>
+#include <vector>
 #include <string>
+#include <list>
 
 class FsComparatorEngine
 {
@@ -10,9 +11,9 @@ public:
     FsComparatorEngine();
     ~FsComparatorEngine() = default;
 
-    void find_duplicates(const std::list<std::string> & fnames_list);
+    void find_duplicates(const std::vector<std::string> & fnames_list);
 
-    const std::list<std::list<std::string>> & duplicates_list() const noexcept;
+    const std::list<std::list<std::string>> & ll_duplicates() const noexcept;
 
 private:
     std::list<std::list<std::string>> lls_duplicates_;

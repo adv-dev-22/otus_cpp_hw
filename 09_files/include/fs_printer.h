@@ -10,7 +10,7 @@ public:
     FsPrinter();
     ~FsPrinter() = default;
 
-    void put_out(const std::list<std::list<std::string>> & lls_duplicates);
+    void put_out(const std::list<std::list<std::string>> & ll_duplicates);
 
 private:
 

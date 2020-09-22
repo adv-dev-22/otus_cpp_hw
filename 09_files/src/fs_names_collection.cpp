@@ -5,14 +5,20 @@
 
 
 IFsNamesCollection::IFsNamesCollection():
-fnames_list_()
+fnames_list_(),
+fnames_vec_()
 {
 }
 
-const std::list<std::string> & IFsNamesCollection::fnames_list() const noexcept
+const std::vector<std::string> & IFsNamesCollection::fnames_vec() const noexcept
 {
-    return fnames_list_;
+    return fnames_vec_;
 }
+
+//const std::list<std::string> & IFsNamesCollection::fnames_list() const noexcept
+//{
+//    return fnames_list_;
+//}
 
 static bool is_dir_excluded(bfs::path pth, const FsComparatorOptions & opts)
 {
@@ -94,92 +100,12 @@ void FsNamesCollectionBoost::extract_file_names(const FsComparatorOptions & rhs)
         bfs::path pth(item);
         collect_files_for_path_(pth, rhs);
     }
+
+    fnames_vec_.resize(fnames_list_.size());
+    fnames_vec_.assign(std::make_move_iterator(std::begin(fnames_list_)),
+                       std::make_move_iterator(std::end(fnames_list_)));
+    fnames_list_.clear();
 }
 
 // End of the file
 
-//std::cout << std::setw(10) << bfs::file_size(pth);
-//std::cout << pth.string() << std::endl;
-
-
-// bfs::directory_iterator itr{pth};
-
-//while (ditr != dir_iterator{})
-//{
-//    if (bfs::is_regular_file(ditr->path()))
-//    {
-//        std::cout << std::setw(10) << bfs::file_size(ditr->path()/*.string().c_str()*/);
-//        std::cout << "file " << ditr->path().string() << std::endl;
-//    } else {
-//        std::cout << "dir  " << ditr->path().string() << std::endl;
-//    }
-//    //names_list_
-//    ++ditr;
-//}
-
-
-
-////        if (ScanLevel::ZeroLayer == rhs.level())
-////        {
-////            bfs::directory_iterator itr{pth};
-////            this->collect_file_names_(itr);
-////        }
-////        else if (ScanLevel::AllSubfolders == rhs.level())
-////        {
-////            bfs::recursive_directory_iterator itr{pth};
-////            this->collect_file_names_(itr);
-////        }
-
-//        if (bfs::is_regular_file(ditr->path()))
-//        {
-//            std::cout << std::setw(10) << bfs::file_size(ditr->path()/*.string().c_str()*/);
-//            std::cout << "file " << ditr->path().string() << std::endl;
-//        } else {
-//            std::cout << "dir  " << ditr->path().string() << std::endl;
-//        }
-
-
-//template <typename dir_iterator>
-//void IFsNamesCollection::collect_file_names_(dir_iterator ditr)
-//{
-//    // TODO
-//    // 1. file size
-//    // 2. regexp
-//    // 3. !is dir excluded
-
-//    while (ditr != dir_iterator{})
-//    {
-//        if (bfs::is_regular_file(ditr->path()))
-//        {
-//            std::cout << std::setw(10) << bfs::file_size(ditr->path()/*.string().c_str()*/);
-//            std::cout << "file " << ditr->path().string() << std::endl;
-//        } else {
-//            std::cout << "dir  " << ditr->path().string() << std::endl;
-//        }
-
-//        //names_list_
-
-
-//        ++ditr;
-//    }
-//}
-//    bfs::path pth("./");
-//    bfs::directory_iterator itr{pth};
-//    bfs::recursive_directory_iterator itr{pth};
-
-//    this->collect_file_names_(itr);
-
-//    bfs::path pth("./");
-//    bfs::directory_iterator itr{pth};
-//    while (itr != bfs::directory_iterator{})
-//    {
-//        std::cout << itr->path().string() << std::endl;
-//        ++itr;
-//    }
-
-//    bfs::recursive_directory_iterator ritr{pth};
-//    while (ritr != bfs::recursive_directory_iterator{})
-//    {
-//        std::cout << ritr->path().string() << std::endl;
-//        ++ritr;
-//    }
