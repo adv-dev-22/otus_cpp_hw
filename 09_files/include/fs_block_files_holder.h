@@ -23,6 +23,8 @@ public:
 
 private:
     std::vector<std::unique_ptr<FsBlockFileProxy>> vec_bpfiles_;
+
+    std::vector<std::string> debug_vec_;
 };
 
 #endif // End of the file
