@@ -19,35 +19,28 @@ void FsComparatorEngine::find_duplicates(const std::vector<std::string> & fnames
                                   "bb", "aa", "cc", "bb"};
 
     // Temporary list of equal pairs
-    auto pairs_lst = make_pairs_list_(test);
+    auto equiv_lst = make_equiv_list_(test);
 
-    // Fill up llist with duplicates.
-    lls_duplicates_.clear();
-    if (pairs_lst.empty()) return;
+//    // Fill up llist with duplicates.
+//    lls_duplicates_.clear();
+//    if (pairs_lst.empty()) return;
 
-    size_t i0_prev = std::numeric_limits<size_t>::max();
-    for (auto item : pairs_lst)
+    for (auto & item : equiv_lst)
     {
-        if (i0_prev != item.first)
+        for (auto i : item)
         {
-            i0_prev = item.first;
-
-            lls_duplicates_.emplace_back(std::list<std::string>());
-            lls_duplicates_.back().emplace_back(fnames_vec.at(item.first));
-
-            //std::cout << "---------------" << std::endl;
+            std::cout << test.at(i) << " ";
         }
-        lls_duplicates_.back().emplace_back(fnames_vec.at(item.second));
-
-        std::cout << item.first << " " << item.second << std::endl;
+        std::cout << std::endl;
     }
+
 }
 
-std::list<std::pair<size_t, size_t>> FsComparatorEngine::make_pairs_list_(const std::vector<std::string> & fnames_vec)
+std::list<std::list<size_t>> FsComparatorEngine::make_equiv_list_(const std::vector<std::string> & fnames_vec)
 {
     // Holds duplicates indexes.
     // The aim of this subroutine is to initialize this list.
-    std::list<std::pair<size_t, size_t>> pairs_lst;
+    std::list<std::list<size_t>> equiv_lst;
 
     // Holder of Block file proxies. BlockFileProxy contain hashed blocks
     // (in case those blocks have been required).
@@ -73,24 +66,33 @@ std::list<std::pair<size_t, size_t>> FsComparatorEngine::make_pairs_list_(const 
     cmpr.itr_1 = fnames_idx.begin();
 
     std::vector<size_t>::iterator itr_2 = cmpr.itr_1 + 1;
-
+    bool new_chain = true;
     while (cmpr.itr_1 + 1 != fnames_idx.end()) {
 
         auto prev_itr_2 = itr_2;
         itr_2 = find_if(itr_2, fnames_idx.end(), cmpr);
 
+        // Similar found
         if (fnames_idx.end() != itr_2)
         {
-            pairs_lst.emplace_back(*cmpr.itr_1, *itr_2);
+            if (new_chain)
+            {
+                equiv_lst.emplace_back(std::list<size_t>());
+                equiv_lst.back().emplace_back(*cmpr.itr_1);
+                new_chain = false;
+            }
+            equiv_lst.back().emplace_back(*itr_2);
             std::swap(*(++cmpr.itr_1), *itr_2);
+
             if (prev_itr_2 == itr_2) ++itr_2;
         }
         else {
             itr_2 = ++cmpr.itr_1 + 1;
+            new_chain = true;
         }
     }
 
-    return std::move(pairs_lst);
+    return std::move(equiv_lst);
 }
 
 const std::list<std::list<std::string>> & FsComparatorEngine::ll_duplicates() const noexcept
@@ -138,4 +140,20 @@ const std::list<std::list<std::string>> & FsComparatorEngine::ll_duplicates() co
 //        {
 //            if (bpf_holder.are_equal(i, j)) pairs_lst.emplace_back(i, j);
 //        }
+//    }
+
+
+//    {
+//        if (i0_prev != item.first)
+//        {
+//            i0_prev = item.first;
+
+//            lls_duplicates_.emplace_back(std::list<std::string>());
+//            lls_duplicates_.back().emplace_back(fnames_vec.at(item.first));
+
+//            //std::cout << "---------------" << std::endl;
+//        }
+//        lls_duplicates_.back().emplace_back(fnames_vec.at(item.second));
+
+//        std::cout << item.first << " " << item.second << std::endl;
 //    }

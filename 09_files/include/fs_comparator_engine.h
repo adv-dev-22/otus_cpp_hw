@@ -18,7 +18,7 @@ public:
 private:
     std::list<std::list<std::string>> lls_duplicates_;
 
-    std::list<std::pair<size_t, size_t>> make_pairs_list_(const std::vector<std::string> & fnames_vec);
+    std::list<std::list<size_t>> make_equiv_list_(const std::vector<std::string> & fnames_vec);
 };
 
 #endif // _FS_COMPARATOR_ENGINE_H_
