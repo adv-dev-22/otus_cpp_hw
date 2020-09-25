@@ -6,7 +6,7 @@
 #include <numeric>
 
 FsComparatorEngine::FsComparatorEngine():
-lls_duplicates_()
+lli_duplicates_()
 {
 
 }
@@ -18,14 +18,14 @@ void FsComparatorEngine::find_duplicates(const std::vector<std::string> & fnames
                                   "bb", "aa", "cc", "aa",
                                   "bb", "aa", "cc", "bb"};
 
-    // Temporary list of equal pairs
-    auto equiv_lst = make_equiv_list_(test);
+    // Build list of repeated files.
+    make_equiv_list_(test);
 
 //    // Fill up llist with duplicates.
 //    lls_duplicates_.clear();
 //    if (pairs_lst.empty()) return;
 
-    for (auto & item : equiv_lst)
+    for (auto & item : lli_duplicates_)
     {
         for (auto i : item)
         {
@@ -36,11 +36,11 @@ void FsComparatorEngine::find_duplicates(const std::vector<std::string> & fnames
 
 }
 
-std::list<std::list<size_t>> FsComparatorEngine::make_equiv_list_(const std::vector<std::string> & fnames_vec)
+void FsComparatorEngine::make_equiv_list_(const std::vector<std::string> & fnames_vec)
 {
-    // Holds duplicates indexes.
-    // The aim of this subroutine is to initialize this list.
-    std::list<std::list<size_t>> equiv_lst;
+    // The aim of this subroutine is to initialize this list
+    // lli_duplicates_ which holds duplicates.
+    lli_duplicates_.clear();
 
     // Holder of Block file proxies. BlockFileProxy contain hashed blocks
     // (in case those blocks have been required).
@@ -77,11 +77,11 @@ std::list<std::list<size_t>> FsComparatorEngine::make_equiv_list_(const std::vec
         {
             if (new_chain)
             {
-                equiv_lst.emplace_back(std::list<size_t>());
-                equiv_lst.back().emplace_back(*cmpr.itr_1);
+                lli_duplicates_.emplace_back(std::list<size_t>());
+                lli_duplicates_.back().emplace_back(*cmpr.itr_1);
                 new_chain = false;
             }
-            equiv_lst.back().emplace_back(*itr_2);
+            lli_duplicates_.back().emplace_back(*itr_2);
             std::swap(*(++cmpr.itr_1), *itr_2);
 
             if (prev_itr_2 == itr_2) ++itr_2;
@@ -91,13 +91,11 @@ std::list<std::list<size_t>> FsComparatorEngine::make_equiv_list_(const std::vec
             new_chain = true;
         }
     }
-
-    return std::move(equiv_lst);
 }
 
-const std::list<std::list<std::string>> & FsComparatorEngine::ll_duplicates() const noexcept
+const std::list<std::list<size_t>> & FsComparatorEngine::lli_duplicates() const noexcept
 {
-    return lls_duplicates_;
+    return lli_duplicates_;
 }
 
 // End of the file

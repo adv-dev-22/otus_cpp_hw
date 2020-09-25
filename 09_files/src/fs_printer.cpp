@@ -6,15 +6,15 @@ FsPrinter::FsPrinter()
 
 }
 
-void FsPrinter::put_out(const std::list<std::list<std::string>> & ll_duplicates)
+void FsPrinter::put_out(const std::list<std::list<size_t>> & lli_duplicates)
 {
-    if (ll_duplicates.empty())
+    if (lli_duplicates.empty())
     {
         std::cout << "no duplicates were found.." << std::endl;
         return;
     }
 
-    for (const auto & lst : ll_duplicates)
+    for (const auto & lst : lli_duplicates)
     {
         for (const auto & item : lst)
         {
