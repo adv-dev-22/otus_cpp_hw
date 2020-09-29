@@ -13,7 +13,8 @@ find_package(Boost COMPONENTS
 add_executable(run_fs 
         src/fs_block_file_proxy.cpp
         src/fs_block_files_holder.cpp
-        src/fs_comparator_controller.cpp
+        src/fs_blocks_number_proxy.cpp
+	src/fs_comparator_controller.cpp
         src/fs_comparator_engine.cpp
         src/fs_comparator_options.cpp
         src/fs_main.cpp

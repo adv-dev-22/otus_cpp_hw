@@ -3,7 +3,6 @@
 
 FsPrinter::FsPrinter()
 {
-
 }
 
 void FsPrinter::put_out(const std::list<std::list<size_t>> & lli_duplicates)

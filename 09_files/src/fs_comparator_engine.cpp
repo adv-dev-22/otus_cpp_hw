@@ -65,6 +65,9 @@ void FsComparatorEngine::make_equiv_list_(const std::vector<std::string> & fname
     cmpr.ptr_bfs_holder = &bpf_holder;
     cmpr.itr_1 = fnames_idx.begin();
 
+    // Pass by the elements. For each element search for repeated ones.
+    // put them in one (the same) list.
+    // Each list corresponds to a certain similar content.
     std::vector<size_t>::iterator itr_2 = cmpr.itr_1 + 1;
     bool new_chain = true;
     while (cmpr.itr_1 + 1 != fnames_idx.end()) {
@@ -75,18 +78,24 @@ void FsComparatorEngine::make_equiv_list_(const std::vector<std::string> & fname
         // Similar found
         if (fnames_idx.end() != itr_2)
         {
+            // Insert very first item opening new chain of similar elements
             if (new_chain)
             {
                 lli_duplicates_.emplace_back(std::list<size_t>());
                 lli_duplicates_.back().emplace_back(*cmpr.itr_1);
                 new_chain = false;
             }
+            // Push back second and others similar elements
             lli_duplicates_.back().emplace_back(*itr_2);
             std::swap(*(++cmpr.itr_1), *itr_2);
 
+            // New found element is right after the reference one: ???a|a????
+            // In this case the iterator was not incremented,
+            // so it needs to be propagated manually.
             if (prev_itr_2 == itr_2) ++itr_2;
         }
         else {
+            // For a given reference there are no any coincidence.
             itr_2 = ++cmpr.itr_1 + 1;
             new_chain = true;
         }
@@ -99,59 +108,3 @@ const std::list<std::list<size_t>> & FsComparatorEngine::lli_duplicates() const 
 }
 
 // End of the file
-
-
-
-//    std::vector<size_t>::iterator itr_1 = fnames_idx.begin();
-//    std::vector<size_t>::iterator itr_2 = itr_1 + 1;
-
-//    ComparatorIdx cmpr;
-//    comparator_idx.ptr_bfs_holder = &bpf_holder;
-//    comparator_idx.itr_1 = fnames_idx.begin();
-
-//    std::vector<size_t>::iterator itr_2 = cmpr.itr_1 + 1;
-
-//    while (itr_1 + 1 != fnames_idx.end()) {
-
-//        itr_2 = find_if(itr_2, fnames_idx.end(), comparator_idx);
-//        if (fnames_idx.end() != itr_2)
-//        {
-//            pairs_lst.emplace_back(*itr_1, *itr_2);
-//            std::swap(*(++itr_1), *itr_2);
-//            comparator_idx.itr_1 = itr_1;
-//        }
-//        else {
-//            ++itr_1;
-//            itr_2 = itr_1 + 1;
-//        }
-//    }
-//}
-
-
-// It is definitely not empty. Insert first element (a) of first (a,b) pair.
-//    lls_duplicates_.emplace_back(std::list<std::string>);
-//    lls_duplicates_.front().emplace_back(fnames_vec.at(pairs_lst.front().first));
-
-//    for (size_t i = 0; i + 1 < fnames_vec.size(); ++i)
-//    {
-//        for (size_t j = i + 1; j < fnames_vec.size(); ++j)
-//        {
-//            if (bpf_holder.are_equal(i, j)) pairs_lst.emplace_back(i, j);
-//        }
-//    }
-
-
-//    {
-//        if (i0_prev != item.first)
-//        {
-//            i0_prev = item.first;
-
-//            lls_duplicates_.emplace_back(std::list<std::string>());
-//            lls_duplicates_.back().emplace_back(fnames_vec.at(item.first));
-
-//            //std::cout << "---------------" << std::endl;
-//        }
-//        lls_duplicates_.back().emplace_back(fnames_vec.at(item.second));
-
-//        std::cout << item.first << " " << item.second << std::endl;
-//    }

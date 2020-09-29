@@ -13,8 +13,8 @@ void FsBlockFilesHolder::init(const std::vector<std::string> & fnames_vec)
 
     for (const std::string & item : fnames_vec)
     {
-        //auto shp_file_proxy = std::make_shared<FsBlockFileProxy>(item);
-        //vec_bpfiles_.emplace(item, shp_file_proxy);
+        auto up_file_proxy = std::make_unique<FsBlockFileProxy>(item);
+        vec_bpfiles_.emplace_back(std::move(up_file_proxy));
     }
 
     debug_vec_ = fnames_vec;
@@ -23,6 +23,8 @@ void FsBlockFilesHolder::init(const std::vector<std::string> & fnames_vec)
 bool FsBlockFilesHolder::are_equal(const size_t i, const size_t j)
 {
     // TODO: ..
+    // size_1 == size_2
+
 
     // i -> file_i
     // j -> file_j

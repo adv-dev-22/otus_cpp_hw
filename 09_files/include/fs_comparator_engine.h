@@ -24,5 +24,3 @@ private:
 #endif // _FS_COMPARATOR_ENGINE_H_
 
 // End of the file
-
-//const std::list<std::list<std::string>> & ll_duplicates() const noexcept;
