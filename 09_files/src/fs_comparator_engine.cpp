@@ -33,7 +33,6 @@ void FsComparatorEngine::find_duplicates(const std::vector<std::string> & fnames
         }
         std::cout << std::endl;
     }
-
 }
 
 void FsComparatorEngine::make_equiv_list_(const std::vector<std::string> & fnames_vec)

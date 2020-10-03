@@ -137,7 +137,8 @@ void FsComparatorOptions::extract_option_values_(const bpo::variables_map & vars
     // Regexpr pattern
     masks_ = vars_map[OptionLabels::masks()].as<std::vector<std::string>>();
 
-//    size_t block_size_;
+    // Size of one block in bytes.
+    block_size_ = vars_map[OptionLabels::blocksize()].as<size_t>();
 
 //    HashingAlgorithm hash_alg_;
 
