@@ -15,11 +15,6 @@ const std::vector<std::string> & IFsNamesCollection::fnames_vec() const noexcept
     return fnames_vec_;
 }
 
-//const std::list<std::string> & IFsNamesCollection::fnames_list() const noexcept
-//{
-//    return fnames_list_;
-//}
-
 static bool is_dir_excluded(bfs::path pth, const FsComparatorOptions & opts)
 {
     const std::set<std::string> & skipdirs_set = opts.skip_dirs();
@@ -109,3 +104,7 @@ void FsNamesCollectionBoost::extract_file_names(const FsComparatorOptions & rhs)
 
 // End of the file
 
+//const std::list<std::string> & IFsNamesCollection::fnames_list() const noexcept
+//{
+//    return fnames_list_;
+//}

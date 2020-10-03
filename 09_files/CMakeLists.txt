@@ -36,8 +36,8 @@ target_link_libraries(run_fs ${Boost_LIBRARIES})
 install(TARGETS run_fs RUNTIME DESTINATION bin)
 
 find_package(GTest REQUIRED)
-#enable_testing()
-#add_subdirectory(tests)
+enable_testing()
+add_subdirectory(tests)
 
 # End of the file
 

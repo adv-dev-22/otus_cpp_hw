@@ -40,6 +40,7 @@ char FsBlockFileProxy::block(const size_t index) const
 
 bool operator == (const FsBlockFileProxy & lhs_01, const FsBlockFileProxy & rhs_02)
 {
+    // Lazy size estimation. Secnond and further attempts use proxy.
     if (lhs_01.blocks_number() != rhs_02.blocks_number()) return false;
 
     //for (size_t k = 0; k < lhs_01.blocks_size(); ++k)
