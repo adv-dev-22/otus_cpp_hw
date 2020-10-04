@@ -1,5 +1,9 @@
 #include "fs_comparator_options.h"
+#include "fs_blocks_number_proxy.h"
 #include <gtest/gtest.h>
+#include <iostream>
+#include <fstream>
+#include <cstdio>
 
 TEST(test_blocks_number, basic) {
 
@@ -22,16 +26,22 @@ TEST(test_blocks_number, basic) {
     EXPECT_EQ(fs_optns.block_size(), 3);
 
     // Create temporary file.
-    // ..
+    const std::string test_file_01("fs_test_blocks_number.txt");
+    std::ofstream ofs;
+    ofs.open(test_file_01, std::ofstream::out);
+    // 97 bytes
+    ofs << "+This file contains several block numbers." << std::endl;
+    ofs << "And explicit blocks number depends on the block size " << std::endl;
+    ofs.close();
 
-
-//        FsBlocksNumberProxy(const std::string & full_name,
-//                            const FsComparatorOptions & cmpr_options);
-//        size_t get() const;
-
+    FsBlocksNumberProxy blocks_number(test_file_01, fs_optns);
+    const size_t first_request_number  = blocks_number.get();
+    const size_t second_request_number = blocks_number.get();
+    EXPECT_EQ(first_request_number,  33);
+    EXPECT_EQ(second_request_number, 33);
 
     // Remove temporary file.
-    // ..
+    std::remove(test_file_01.c_str());
 
     // Free memory for command line input simulation.
     for (int k = 0; k < argc; ++k)
