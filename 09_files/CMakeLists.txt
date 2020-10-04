@@ -10,30 +10,44 @@ find_package(Boost COMPONENTS
         REQUIRED
 )
 
-add_executable(run_fs 
+set(FS09_LIB fs09comparator)
+set(FS09_RUN fs09run)
+
+add_library(${FS09_LIB} STATIC
         src/fs_block_file_proxy.cpp
         src/fs_block_files_holder.cpp
         src/fs_blocks_number_proxy.cpp
-	src/fs_comparator_controller.cpp
+        src/fs_comparator_controller.cpp
         src/fs_comparator_engine.cpp
         src/fs_comparator_options.cpp
-        src/fs_main.cpp
         src/fs_names_collection.cpp
         src/fs_option_labels.cpp
         src/fs_printer.cpp
 )
 
-set_target_properties(run_fs PROPERTIES
-        CXX_STANDARD 17
-        CXX_STANDARD_REQUIRED ON
-	INCLUDE_DIRECTORIES ${Boost_INCLUDE_DIR}
+add_executable(${FS09_RUN} 
+        src/fs_main.cpp
 )
 
-target_include_directories(run_fs PUBLIC ./include)
+set_target_properties(${FS09_RUN} ${FS09_LIB} PROPERTIES
+        CXX_STANDARD 17
+        CXX_STANDARD_REQUIRED ON
+)
 
-target_link_libraries(run_fs ${Boost_LIBRARIES})
+target_include_directories(${FS09_RUN} PUBLIC 
+        ./include
+)
 
-install(TARGETS run_fs RUNTIME DESTINATION bin)
+target_include_directories(${FS09_LIB} PUBLIC 
+        ./include
+        ${Boost_INCLUDE_DIR}
+)
+
+target_link_libraries(${FS09_LIB} ${Boost_LIBRARIES})
+
+target_link_libraries(${FS09_RUN} ${FS09_LIB})
+
+install(TARGETS ${FS09_RUN} RUNTIME DESTINATION bin)
 
 find_package(GTest REQUIRED)
 enable_testing()
