@@ -5,11 +5,9 @@
 FsFileBlockProxy::FsFileBlockProxy(const std::string & full_name,
                                    const FsComparatorOptions & cmpr_options,
                                    const size_t index_offset):
-ref_fname_(full_name),
-ref_cmpr_optns_(cmpr_options),
+FsBaseFileProxy(full_name, cmpr_options),
 idx_offset_(index_offset),
-hash_(),
-is_initialized_(false)
+hash_()
 {
 }
 
@@ -31,6 +29,5 @@ char FsFileBlockProxy::get_hash() const
 
     return hash_;
 }
-
 
 // End of the file

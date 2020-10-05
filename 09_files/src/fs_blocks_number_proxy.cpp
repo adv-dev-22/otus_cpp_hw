@@ -6,9 +6,7 @@ namespace bfs = boost::filesystem;
 
 FsBlocksNumberProxy::FsBlocksNumberProxy(const std::string & full_name,
                                          const FsComparatorOptions & cmpr_options):
-ref_fname_(full_name),
-ref_cmpr_optns_(cmpr_options),
-is_initialized_(false),
+FsBaseFileProxy(full_name, cmpr_options),
 blocks_number_(0)
 {
 }

@@ -14,6 +14,7 @@ set(FS09_LIB fs09comparator)
 set(FS09_RUN fs09run)
 
 add_library(${FS09_LIB} STATIC
+        src/fs_base_file_proxy.cpp
         src/fs_block_file_proxy.cpp
         src/fs_block_files_holder.cpp
         src/fs_blocks_number_proxy.cpp
