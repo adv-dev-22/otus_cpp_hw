@@ -1,12 +1,15 @@
 #ifndef _FS_LAZY_FILE_H_
 #define _FS_LAZY_FILE_H_
 
+#include "fs_comparator_options.h"
 #include <string>
 
 class FsLazyFile final
 {
 public:
-    FsLazyFile(const std::string & full_name); //+ size of block
+    FsLazyFile(const std::string & full_name,
+               const FsComparatorOptions & cmpr_options);
+
     ~FsLazyFile() = default;
 
 //    static void set_block_size(const size_t block_size);

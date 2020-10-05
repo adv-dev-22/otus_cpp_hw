@@ -2,6 +2,7 @@
 #define _FS_LAZY_FILES_HOLDER_H_
 
 #include "fs_lazy_file.h"
+#include "fs_comparator_options.h"
 #include <vector>
 #include <string>
 #include <map>
@@ -14,7 +15,8 @@ public:
     ~FsLazyFilesHolder() = default;
 
     /*! Initialize map with all keys and BlockFileProxy (which are empty) at start. */
-    void init(const std::vector<std::string> & fnames_vec);
+    void init(const std::vector<std::string> & fnames_vec,
+              const FsComparatorOptions & cmpr_options);
 
     /*! Apply optimal comparision by blocks.
      *  Read necessary data from disk in case next unreaded block is needed.

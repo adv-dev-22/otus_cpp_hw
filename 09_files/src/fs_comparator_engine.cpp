@@ -11,7 +11,8 @@ lli_duplicates_()
 
 }
 
-void FsComparatorEngine::find_duplicates(const std::vector<std::string> & fnames_vec)
+void FsComparatorEngine::find_duplicates(const std::vector<std::string> & fnames_vec,
+                                         const FsComparatorOptions & cmpr_options)
 {
     std::vector<std::string> test{"aa", "cc", "aa", "bb",
                                   "aa", "bb", "cc", "aa",
@@ -19,7 +20,7 @@ void FsComparatorEngine::find_duplicates(const std::vector<std::string> & fnames
                                   "bb", "aa", "cc", "bb"};
 
     // Build list of repeated files.
-    make_equiv_list_(test);
+    make_equiv_list_(test, cmpr_options);
 
 //    // Fill up llist with duplicates.
 //    lls_duplicates_.clear();
@@ -35,7 +36,8 @@ void FsComparatorEngine::find_duplicates(const std::vector<std::string> & fnames
     }
 }
 
-void FsComparatorEngine::make_equiv_list_(const std::vector<std::string> & fnames_vec)
+void FsComparatorEngine::make_equiv_list_(const std::vector<std::string> & fnames_vec,
+                                          const FsComparatorOptions & cmpr_options)
 {
     // The aim of this subroutine is to initialize this list
     // lli_duplicates_ which holds duplicates.
@@ -44,7 +46,7 @@ void FsComparatorEngine::make_equiv_list_(const std::vector<std::string> & fname
     // Holder of Block file proxies. BlockFileProxy contain hashed blocks
     // (in case those blocks have been required).
     FsLazyFilesHolder bpf_holder;
-    bpf_holder.init(fnames_vec);
+    bpf_holder.init(fnames_vec, cmpr_options);
 
     std::vector<size_t> fnames_idx(fnames_vec.size());
     std::iota(fnames_idx.begin(), fnames_idx.end(), 0);

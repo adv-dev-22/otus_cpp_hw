@@ -4,7 +4,8 @@
 //size_t FsLazyFile::block_size_ = 0;
 
 
-FsLazyFile::FsLazyFile(const std::string & fname):
+FsLazyFile::FsLazyFile(const std::string & fname,
+                       const FsComparatorOptions & cmpr_options):
 fname_(fname)//,
 //blocks_number_(0),
 //hashed_blocks_(""),

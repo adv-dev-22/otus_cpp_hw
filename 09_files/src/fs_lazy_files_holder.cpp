@@ -6,14 +6,15 @@ vec_lazy_files_()
 {
 }
 
-void FsLazyFilesHolder::init(const std::vector<std::string> & fnames_vec)
+void FsLazyFilesHolder::init(const std::vector<std::string> & fnames_vec,
+                             const FsComparatorOptions & cmpr_options)
 {
     vec_lazy_files_.clear();
     vec_lazy_files_.resize(fnames_vec.size());
 
     for (const std::string & item : fnames_vec)
     {
-        auto up_file_proxy = std::make_unique<FsLazyFile>(item);
+        auto up_file_proxy = std::make_unique<FsLazyFile>(item, cmpr_options);
         vec_lazy_files_.emplace_back(std::move(up_file_proxy));
     }
 
