@@ -3,8 +3,13 @@
 language: cpp
 
 before_script:
-#- sudo apt-get install libboost-test-dev -y
-- sudo apt-get install libboost-all-dev -y
+##- sudo apt-get install libboost-test-dev -y
+#- sudo apt-get install libboost-all-dev -y
+
+- sudo add-apt-repository ppa:mhier/libboost-latest -y
+- sudo apt-get update -q
+- sudo apt-get install libboost1.70-dev -y
+
 - echo "deb http://archive.ubuntu.com/ubuntu xenial main universe" | sudo tee -a /etc/apt/sources.list
 - sudo apt-get update -qq
 
