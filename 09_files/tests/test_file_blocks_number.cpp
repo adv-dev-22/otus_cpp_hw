@@ -61,14 +61,14 @@ TEST(test_file_proxy, basic) {
     // Copy input values for command line
     std::strcpy(argv[0], "run_fake");
     std::strcpy(argv[1], "--blocksize");
-    std::strcpy(argv[2], "3");
+    std::strcpy(argv[2], "30");
 
     // Uses boost program options
     FsComparatorOptions fs_optns;
     fs_optns.parse(argc, argv);
 
     // Expected value validation
-    EXPECT_EQ(fs_optns.block_size(), 3);
+    EXPECT_EQ(fs_optns.block_size(), 30);
 
     // Create temporary file.
     const std::string test_file_02("fs_test_block_hash.txt");
@@ -79,7 +79,7 @@ TEST(test_file_proxy, basic) {
     ofs << "And explicit blocks number depends on the block size";// << std::endl;
     ofs.close();
 
-    constexpr size_t offset = 5; //31;
+    constexpr size_t offset = 2;
     FsFileBlockProxy fs_block_proxy(test_file_02, fs_optns, offset);
 
     std::cout << " from test: " << fs_block_proxy.get_hash() << std::endl;

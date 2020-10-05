@@ -22,6 +22,7 @@ add_library(${FS09_LIB} STATIC
         src/fs_comparator_engine.cpp
         src/fs_comparator_options.cpp
         src/fs_file_block_proxy.cpp
+        src/fs_hash_algorithm.cpp 
         src/fs_names_collection.cpp
         src/fs_option_labels.cpp
         src/fs_printer.cpp
