@@ -15,14 +15,14 @@ set(FS09_RUN fs09run)
 
 add_library(${FS09_LIB} STATIC
         src/fs_base_file_proxy.cpp
-        src/fs_block_file_proxy.cpp
-        src/fs_block_files_holder.cpp
         src/fs_blocks_number_proxy.cpp
         src/fs_comparator_controller.cpp
         src/fs_comparator_engine.cpp
         src/fs_comparator_options.cpp
         src/fs_file_block_proxy.cpp
         src/fs_hash_algorithm.cpp 
+        src/fs_lazy_file.cpp
+        src/fs_lazy_files_holder.cpp
         src/fs_names_collection.cpp
         src/fs_option_labels.cpp
         src/fs_printer.cpp

@@ -1,17 +1,17 @@
-#ifndef _FS_BLOCK_FILES_HOLDER_H_
-#define _FS_BLOCK_FILES_HOLDER_H_
+#ifndef _FS_LAZY_FILES_HOLDER_H_
+#define _FS_LAZY_FILES_HOLDER_H_
 
-#include "fs_block_file_proxy.h"
+#include "fs_lazy_file.h"
 #include <vector>
 #include <string>
 #include <map>
 #include <memory>
 
-class FsBlockFilesHolder
+class FsLazyFilesHolder
 {
 public:
-    FsBlockFilesHolder();
-    ~FsBlockFilesHolder() = default;
+    FsLazyFilesHolder();
+    ~FsLazyFilesHolder() = default;
 
     /*! Initialize map with all keys and BlockFileProxy (which are empty) at start. */
     void init(const std::vector<std::string> & fnames_vec);
@@ -22,11 +22,11 @@ public:
     bool are_equal(const size_t i, const size_t j);
 
 private:
-    std::vector<std::unique_ptr<FsBlockFileProxy>> vec_bpfiles_;
+    std::vector<std::unique_ptr<FsLazyFile>> vec_lazy_files_;
 
     std::vector<std::string> debug_vec_;
 };
 
-#endif // End of the file
+#endif // _FS_LAZY_FILES_HOLDER_H_
 
 // End of the file

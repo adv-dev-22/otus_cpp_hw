@@ -32,15 +32,8 @@ const std::string & FsFileBlockProxy::get_hash() const
         // In case last block is shorter, it reads only the tail and set eofbit and failbit to 1.
         fin.read(vec_buffer.data(), block_size);
 
-//        md5 boost_md5_hash;
-//        md5::digest_type digest;
-//        boost_md5_hash.process_bytes(vec_buffer.data(), vec_buffer.size());
-//        boost_md5_hash.get_digest(digest);
-
-//        hash_ = md5_to_string(digest);
-
         hash_ = up_hash_alg_->compute(vec_buffer);
-        std::cout << "md5(" << vec_buffer.data() << ") = " << hash_ << std::endl;
+        //std::cout << "md5(" << vec_buffer.data() << ") = " << hash_ << std::endl;
 
         this->is_initialized_ = true;
     }
@@ -75,3 +68,12 @@ void FsFileBlockProxy::setup_hashing_algorithm_()
 
 //          std::cout << "md5(" << s << ") = " << toString(digest) << '\n';
 //      }
+
+
+
+//        md5 boost_md5_hash;
+//        md5::digest_type digest;
+//        boost_md5_hash.process_bytes(vec_buffer.data(), vec_buffer.size());
+//        boost_md5_hash.get_digest(digest);
+
+//        hash_ = md5_to_string(digest);

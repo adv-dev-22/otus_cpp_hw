@@ -1,5 +1,5 @@
 #include "fs_comparator_engine.h"
-#include "fs_block_files_holder.h"
+#include "fs_lazy_files_holder.h"
 #include <iostream>
 #include <limits>
 #include <algorithm>
@@ -43,7 +43,7 @@ void FsComparatorEngine::make_equiv_list_(const std::vector<std::string> & fname
 
     // Holder of Block file proxies. BlockFileProxy contain hashed blocks
     // (in case those blocks have been required).
-    FsBlockFilesHolder bpf_holder;
+    FsLazyFilesHolder bpf_holder;
     bpf_holder.init(fnames_vec);
 
     std::vector<size_t> fnames_idx(fnames_vec.size());
@@ -52,7 +52,7 @@ void FsComparatorEngine::make_equiv_list_(const std::vector<std::string> & fname
     // Comapre files content for equality.
     struct ComparatorIdx final
     {
-        FsBlockFilesHolder * ptr_bfs_holder;
+        FsLazyFilesHolder * ptr_bfs_holder;
         std::vector<size_t>::iterator itr_1;
 
         bool operator()(const size_t index_to_compare) {
