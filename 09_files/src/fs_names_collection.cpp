@@ -103,8 +103,3 @@ void FsNamesCollectionBoost::extract_file_names(const FsComparatorOptions & rhs)
 }
 
 // End of the file
-
-//const std::list<std::string> & IFsNamesCollection::fnames_list() const noexcept
-//{
-//    return fnames_list_;
-//}

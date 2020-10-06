@@ -140,23 +140,16 @@ void FsComparatorOptions::extract_option_values_(const bpo::variables_map & vars
     // Size of one block in bytes.
     block_size_ = vars_map[OptionLabels::blocksize()].as<size_t>();
 
-    std::cout << "+" << std::endl;
-
     // Hashing algorithm
     const std::string hash_alg_str = vars_map[OptionLabels::hashalg()].as<std::string>();
     if (std::string("md5") == hash_alg_str)
     {
         hash_alg_ =  HashingAlgorithm::md5;
-        std::cout << "md5" << std::endl;
     }
     else if (std::string("crc32") == hash_alg_str)
     {
         hash_alg_ =  HashingAlgorithm::crc32;
-        std::cout << "crc32" << std::endl;
     }
-
-    std::cout << "!!" << std::endl;
-
 }
 
 // End of the file

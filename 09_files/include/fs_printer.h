@@ -13,9 +13,6 @@ public:
 
     void put_out(const std::vector<std::string> & fnames,
                  const std::list<std::list<size_t>> & lli_duplicates);
-
-private:
-
 };
 
 #endif // _FS_PRINTER_H_

@@ -8,9 +8,6 @@ public:
     ~FsComparatorController() = default;
 
     void run(int argc, char * argv []);
-
-private:
-
 };
 
 #endif // _FS_COMPARATOR_CONTROLLER_H_

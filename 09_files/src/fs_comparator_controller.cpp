@@ -4,7 +4,6 @@
 #include "fs_names_collection.h"
 #include "fs_printer.h"
 #include <memory>
-#include <iostream>
 
 FsComparatorController::FsComparatorController()
 {

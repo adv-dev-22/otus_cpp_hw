@@ -7,19 +7,12 @@ up_blocks_number_proxy_(std::make_unique<FsBlocksNumberProxy>(fname, cmpr_option
 vec_fblocks_proxy_(0)
 {
     vec_fblocks_proxy_.resize(up_blocks_number_proxy_->get());
-    std::cout << fname << "blocks number = " << up_blocks_number_proxy_->get() << std::endl;
 
     for (size_t k = 0; k < up_blocks_number_proxy_->get(); ++k)
     {
         vec_fblocks_proxy_[k] = std::make_unique<FsFileBlockProxy>(fname, cmpr_options, k);
     }
 }
-
-//const std::string & FsLazyFile::fname() const noexcept
-//{
-//// TODO:
-//    return ;
-//}
 
 size_t FsLazyFile::blocks_number() const noexcept
 {
@@ -34,23 +27,16 @@ const std::string & FsLazyFile::block_hash(const size_t index) const
 
 bool operator == (const FsLazyFile & lhs_01, const FsLazyFile & rhs_02)
 {
-    std::cout << "== " << std::endl;
-
-    std::cout << "!nullptr: " << &lhs_01 << std::endl;
-
     // Lazy size estimation. Second and further attempts use proxy.
     if (lhs_01.blocks_number() != rhs_02.blocks_number()) return false;
 
-
-
-    std::cout << "blocks number = " << lhs_01.blocks_number() << std::endl;
-
     for (size_t k = 0; k < lhs_01.blocks_number(); ++k)
     {
-        // Block provides lazy reading from HD.
+        // Block provides lazy reading from HD. Second and further attempts use proxy.
         if (lhs_01.block_hash(k) != rhs_02.block_hash(k)) return false;
     }
 
+    // Files are similar by hash criterion.
     return true;
 }
 

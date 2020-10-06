@@ -8,7 +8,6 @@
 FsComparatorEngine::FsComparatorEngine():
 lli_duplicates_()
 {
-
 }
 
 void FsComparatorEngine::find_duplicates(const std::vector<std::string> & fnames_vec,

@@ -12,7 +12,6 @@ void FsLazyFilesHolder::init(const std::vector<std::string> & fnames_vec,
     vec_lazy_files_.clear();
     vec_lazy_files_.reserve(fnames_vec.size());
 
-    int cntr = 0;
     for (const std::string & item : fnames_vec)
     {
         vec_lazy_files_.emplace_back(std::make_unique<FsLazyFile>(item, cmpr_options));
@@ -21,7 +20,7 @@ void FsLazyFilesHolder::init(const std::vector<std::string> & fnames_vec,
 
 bool FsLazyFilesHolder::are_equal(const size_t i, const size_t j)
 {
-    const FsLazyFile & ref_lazy_file_i = (*vec_lazy_files_.at(i).get());
+    const FsLazyFile & ref_lazy_file_i = *vec_lazy_files_.at(i);
     const FsLazyFile & ref_lazy_file_j = *vec_lazy_files_.at(j);
 
     return ref_lazy_file_i == ref_lazy_file_j;

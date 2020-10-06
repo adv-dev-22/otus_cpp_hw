@@ -1,6 +1,5 @@
 #include "fs_blocks_number_proxy.h"
 #include <boost/filesystem.hpp>
-//#include <iostream>
 
 namespace bfs = boost::filesystem;
 
