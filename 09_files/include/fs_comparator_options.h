@@ -52,6 +52,9 @@ public:
 
     /*! Hashing algorithm */
     HashingAlgorithm hash_alg() const noexcept;
+
+    bool help_request() const noexcept;
+
 private:
     /*! Directories for scan. */
     std::vector<std::string> scan_dirs_;
@@ -73,6 +76,10 @@ private:
     size_t block_size_;
 
     HashingAlgorithm hash_alg_;
+
+    /*! Stop program workflow in case --help option is typed. */
+    bool help_request_;
+
 
     /*! Introduce necessary options. Add description and default values. */
     bpo::options_description  describe_options_();

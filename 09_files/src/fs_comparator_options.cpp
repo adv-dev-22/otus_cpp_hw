@@ -19,7 +19,8 @@ level_(ScanLevel::Undefined),
 min_file_size_(1),
 masks_(),
 block_size_(0),
-hash_alg_(HashingAlgorithm::Undefined)
+hash_alg_(HashingAlgorithm::Undefined),
+help_request_(false)
 {
 }
 
@@ -35,7 +36,11 @@ void FsComparatorOptions::parse(int argc, char * argv [])
     bpo::store(bpo::parse_command_line(argc, argv, descr_opt), vars_map);
 
     // Print out helper multiline message.
-    if (vars_map.count("help")) std::cout << descr_opt << std::endl;
+    if (vars_map.count("help"))
+    {
+        std::cout << descr_opt << std::endl;
+        help_request_ = true;
+    }
 
     // Now pass boost program options to internal data (options).
     extract_option_values_(vars_map);
@@ -74,6 +79,11 @@ size_t FsComparatorOptions::block_size() const noexcept
 HashingAlgorithm FsComparatorOptions::hash_alg() const noexcept
 {
     return hash_alg_;
+}
+
+bool FsComparatorOptions::help_request() const noexcept
+{
+    return help_request_;
 }
 
 bpo::options_description FsComparatorOptions::describe_options_()

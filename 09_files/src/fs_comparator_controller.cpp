@@ -14,6 +14,8 @@ void FsComparatorController::run(int argc, char * argv [])
     auto up_cmd_options = std::make_unique<FsComparatorOptions>();
     up_cmd_options->parse(argc, argv);
 
+    if (up_cmd_options->help_request()) return;
+
     auto up_names_clctn = std::make_unique<FsNamesCollectionBoost>();
     up_names_clctn->extract_file_names(*up_cmd_options);
 
