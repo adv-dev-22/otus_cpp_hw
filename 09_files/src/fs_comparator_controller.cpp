@@ -22,7 +22,7 @@ void FsComparatorController::run(int argc, char * argv [])
     up_cmpr_engine->find_duplicates(up_names_clctn->fnames_vec(), *up_cmd_options);
 
     auto up_printer = std::make_unique<FsPrinter>();
-    up_printer->put_out(up_cmpr_engine->lli_duplicates());
+    up_printer->put_out(up_names_clctn->fnames_vec(), up_cmpr_engine->lli_duplicates());
 }
 
 // End of the file

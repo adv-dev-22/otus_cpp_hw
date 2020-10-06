@@ -2,7 +2,11 @@
 #define _FS_LAZY_FILE_H_
 
 #include "fs_comparator_options.h"
+#include "fs_blocks_number_proxy.h"
+#include "fs_file_block_proxy.h"
 #include <string>
+#include <memory>
+#include <vector>
 
 class FsLazyFile final
 {
@@ -12,22 +16,25 @@ public:
 
     ~FsLazyFile() = default;
 
-//    static void set_block_size(const size_t block_size);
-
     const std::string & fname() const noexcept;
 
     size_t blocks_number() const noexcept;
-    const std::string & block(const size_t index) const;
+
+    const std::string & block_hash(const size_t index) const;
 
 private:
-//    static size_t block_size_;
+    std::unique_ptr<FsBlocksNumberProxy> up_blocks_number_proxy_;
 
-    std::string fname_;
-//    size_t blocks_number_;
+    std::vector<std::unique_ptr<FsFileBlockProxy>> vec_fblocks_proxy_;
 
-//    mutable std::string hashed_blocks_;
-//    mutable size_t block_position_;
+private:
+    FsLazyFile(const FsLazyFile & ) = delete;
+    FsLazyFile(FsLazyFile && ) = delete;
+
+    FsLazyFile & operator= (const FsLazyFile & ) = delete;
+    FsLazyFile & operator= (FsLazyFile && ) = delete;
 };
+
 
 bool operator == (const FsLazyFile & lhs_01, const FsLazyFile & rhs_02);
 

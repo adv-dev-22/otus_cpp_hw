@@ -140,43 +140,24 @@ void FsComparatorOptions::extract_option_values_(const bpo::variables_map & vars
     // Size of one block in bytes.
     block_size_ = vars_map[OptionLabels::blocksize()].as<size_t>();
 
-//    HashingAlgorithm hash_alg_;
+    std::cout << "+" << std::endl;
+
+    // Hashing algorithm
+    const std::string hash_alg_str = vars_map[OptionLabels::hashalg()].as<std::string>();
+    if (std::string("md5") == hash_alg_str)
+    {
+        hash_alg_ =  HashingAlgorithm::md5;
+        std::cout << "md5" << std::endl;
+    }
+    else if (std::string("crc32") == hash_alg_str)
+    {
+        hash_alg_ =  HashingAlgorithm::crc32;
+        std::cout << "crc32" << std::endl;
+    }
+
+    std::cout << "!!" << std::endl;
 
 }
 
 // End of the file
 
-
-
-//    descr.add_options()(OptionLabels::help().c_str(), "Help message");
-
-//    descr.add_options()(OptionLabels::scandirs().c_str(),
-//                        bpo::value<std::vector<std::string>>()->multitoken()
-//                        ->default_value(std::vector<std::string>{"./"}),
-//                        "Setup directories for scan");
-
-//    descr.add_options()(OptionLabels::skipdirs().c_str(),
-//                        bpo::value<std::vector<std::string>>()->multitoken()
-//                        ->default_value(std::vector<std::string>{}),
-//                        "Exclude directories from scan");
-
-//    descr.add_options()(OptionLabels::level().c_str(),
-//                        bpo::value<size_t>()->default_value(1),
-//                        "Scan level: 0 - no recursive subfolder, 1 - all subfolders");
-
-//    descr.add_options()(OptionLabels::minfilesz().c_str(),
-//                        bpo::value<size_t>()->default_value(1),
-//                        "Minimal file size in bytes");
-
-//    descr.add_options()(OptionLabels::masks().c_str(),
-//                        bpo::value<std::vector<std::string>>()->multitoken()
-//                        ->default_value(std::vector<std::string>{}),
-//                        "File masks");
-
-//    descr.add_options()(OptionLabels::blocksize().c_str(),
-//                        bpo::value<size_t>()->default_value(4),
-//                        "Size of one block in bytes");
-
-//    descr.add_options()(OptionLabels::hashalg().c_str(),
-//                        bpo::value<std::string>()->default_value("md5"),
-//                        "Hashing algorithm");

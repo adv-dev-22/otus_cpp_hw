@@ -26,7 +26,12 @@ public:
 private:
     std::vector<std::unique_ptr<FsLazyFile>> vec_lazy_files_;
 
-    std::vector<std::string> debug_vec_;
+private:
+    FsLazyFilesHolder(const FsLazyFilesHolder & ) = delete;
+    FsLazyFilesHolder(FsLazyFilesHolder && ) = delete;
+
+    FsLazyFilesHolder & operator= (const FsLazyFilesHolder & ) = delete;
+    FsLazyFilesHolder & operator= (FsLazyFilesHolder && ) = delete;
 };
 
 #endif // _FS_LAZY_FILES_HOLDER_H_

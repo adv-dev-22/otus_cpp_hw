@@ -14,26 +14,8 @@ lli_duplicates_()
 void FsComparatorEngine::find_duplicates(const std::vector<std::string> & fnames_vec,
                                          const FsComparatorOptions & cmpr_options)
 {
-    std::vector<std::string> test{"aa", "cc", "aa", "bb",
-                                  "aa", "bb", "cc", "aa",
-                                  "bb", "aa", "cc", "aa",
-                                  "bb", "aa", "cc", "bb"};
-
     // Build list of repeated files.
-    make_equiv_list_(test, cmpr_options);
-
-//    // Fill up llist with duplicates.
-//    lls_duplicates_.clear();
-//    if (pairs_lst.empty()) return;
-
-    for (auto & item : lli_duplicates_)
-    {
-        for (auto i : item)
-        {
-            std::cout << test.at(i) << " ";
-        }
-        std::cout << std::endl;
-    }
+    make_equiv_list_(fnames_vec, cmpr_options);
 }
 
 void FsComparatorEngine::make_equiv_list_(const std::vector<std::string> & fnames_vec,
@@ -45,8 +27,8 @@ void FsComparatorEngine::make_equiv_list_(const std::vector<std::string> & fname
 
     // Holder of Block file proxies. BlockFileProxy contain hashed blocks
     // (in case those blocks have been required).
-    FsLazyFilesHolder bpf_holder;
-    bpf_holder.init(fnames_vec, cmpr_options);
+    FsLazyFilesHolder lfholder;
+    lfholder.init(fnames_vec, cmpr_options);
 
     std::vector<size_t> fnames_idx(fnames_vec.size());
     std::iota(fnames_idx.begin(), fnames_idx.end(), 0);
@@ -54,16 +36,16 @@ void FsComparatorEngine::make_equiv_list_(const std::vector<std::string> & fname
     // Comapre files content for equality.
     struct ComparatorIdx final
     {
-        FsLazyFilesHolder * ptr_bfs_holder;
+        FsLazyFilesHolder * ptr_lfholder;
         std::vector<size_t>::iterator itr_1;
 
         bool operator()(const size_t index_to_compare) {
-                return ptr_bfs_holder->are_equal(*itr_1, index_to_compare);
+                return ptr_lfholder->are_equal(*itr_1, index_to_compare);
         }
     };
 
     ComparatorIdx cmpr;
-    cmpr.ptr_bfs_holder = &bpf_holder;
+    cmpr.ptr_lfholder = &lfholder;
     cmpr.itr_1 = fnames_idx.begin();
 
     // Pass by the elements. For each element search for repeated ones.
@@ -74,7 +56,7 @@ void FsComparatorEngine::make_equiv_list_(const std::vector<std::string> & fname
     while (cmpr.itr_1 + 1 != fnames_idx.end()) {
 
         auto prev_itr_2 = itr_2;
-        itr_2 = find_if(itr_2, fnames_idx.end(), cmpr);
+        itr_2 = std::find_if(itr_2, fnames_idx.end(), cmpr);
 
         // Similar found
         if (fnames_idx.end() != itr_2)

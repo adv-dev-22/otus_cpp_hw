@@ -5,7 +5,8 @@ FsPrinter::FsPrinter()
 {
 }
 
-void FsPrinter::put_out(const std::list<std::list<size_t>> & lli_duplicates)
+void FsPrinter::put_out(const std::vector<std::string> & fnames,
+                        const std::list<std::list<size_t>> & lli_duplicates)
 {
     if (lli_duplicates.empty())
     {
@@ -13,11 +14,11 @@ void FsPrinter::put_out(const std::list<std::list<size_t>> & lli_duplicates)
         return;
     }
 
-    for (const auto & lst : lli_duplicates)
+    for (const auto & list_with_same_elems : lli_duplicates)
     {
-        for (const auto & item : lst)
+        for (const auto & index : list_with_same_elems)
         {
-            std::cout << item << std::endl;
+            std::cout << fnames.at(index) << std::endl;
         }
         std::cout << std::endl;
     }

@@ -1,54 +1,55 @@
 #include "fs_lazy_file.h"
-
-
-//size_t FsLazyFile::block_size_ = 0;
-
+#include <iostream>
 
 FsLazyFile::FsLazyFile(const std::string & fname,
                        const FsComparatorOptions & cmpr_options):
-fname_(fname)//,
-//blocks_number_(0),
-//hashed_blocks_(""),
-//block_position_(0)
+up_blocks_number_proxy_(std::make_unique<FsBlocksNumberProxy>(fname, cmpr_options)),
+vec_fblocks_proxy_(0)
 {
-}
+    vec_fblocks_proxy_.resize(up_blocks_number_proxy_->get());
+    std::cout << fname << "blocks number = " << up_blocks_number_proxy_->get() << std::endl;
 
-//void FsLazyFile::set_block_size(const size_t block_size)
-//{
-//    // It is static
-//    FsLazyFile::block_size_ = block_size;
-//}
+    for (size_t k = 0; k < up_blocks_number_proxy_->get(); ++k)
+    {
+        vec_fblocks_proxy_[k] = std::make_unique<FsFileBlockProxy>(fname, cmpr_options, k);
+    }
+}
 
 //const std::string & FsLazyFile::fname() const noexcept
 //{
-//    return fname_;
+//// TODO:
+//    return ;
 //}
 
-//size_t FsLazyFile::blocks_number() const noexcept
-//{
-//    return blocks_number_;
-//}
+size_t FsLazyFile::blocks_number() const noexcept
+{
+    return up_blocks_number_proxy_->get();
+}
 
-//char FsLazyFile::block(const size_t index) const
-//{
-//    //
-
-
-//    return 'x';
-//}
-
-
+const std::string & FsLazyFile::block_hash(const size_t index) const
+{
+    const FsFileBlockProxy & ref_file_block = *vec_fblocks_proxy_.at(index);
+    return ref_file_block.get_hash();
+}
 
 bool operator == (const FsLazyFile & lhs_01, const FsLazyFile & rhs_02)
 {
-//    // Lazy size estimation. Secnond and further attempts use proxy.
-//    if (lhs_01.blocks_number() != rhs_02.blocks_number()) return false;
+    std::cout << "== " << std::endl;
 
-//    //for (size_t k = 0; k < lhs_01.blocks_size(); ++k)
-//    {
-//        // Block provides lazy reading from HD.
-//        //if (lhs_01.block(k) != rhs_02.block(k)) return false;
-//    }
+    std::cout << "!nullptr: " << &lhs_01 << std::endl;
+
+    // Lazy size estimation. Second and further attempts use proxy.
+    if (lhs_01.blocks_number() != rhs_02.blocks_number()) return false;
+
+
+
+    std::cout << "blocks number = " << lhs_01.blocks_number() << std::endl;
+
+    for (size_t k = 0; k < lhs_01.blocks_number(); ++k)
+    {
+        // Block provides lazy reading from HD.
+        if (lhs_01.block_hash(k) != rhs_02.block_hash(k)) return false;
+    }
 
     return true;
 }

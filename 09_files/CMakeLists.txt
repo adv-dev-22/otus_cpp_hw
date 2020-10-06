@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.5)
 
 project(dz_09_files)
 
-find_package(Boost COMPONENTS 
+find_package(Boost COMPONENTS
         program_options
         filesystem
         regex	

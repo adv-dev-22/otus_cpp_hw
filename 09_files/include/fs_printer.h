@@ -3,6 +3,7 @@
 
 #include <list>
 #include <string>
+#include <vector>
 
 class FsPrinter final
 {
@@ -10,7 +11,8 @@ public:
     FsPrinter();
     ~FsPrinter() = default;
 
-    void put_out(const std::list<std::list<size_t>> & lli_duplicates);
+    void put_out(const std::vector<std::string> & fnames,
+                 const std::list<std::list<size_t>> & lli_duplicates);
 
 private:
 

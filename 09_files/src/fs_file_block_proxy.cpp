@@ -33,7 +33,7 @@ const std::string & FsFileBlockProxy::get_hash() const
         fin.read(vec_buffer.data(), block_size);
 
         hash_ = up_hash_alg_->compute(vec_buffer);
-        //std::cout << "md5(" << vec_buffer.data() << ") = " << hash_ << std::endl;
+        std::cout << "md5(" << vec_buffer.data() << ") = " << hash_ << std::endl;
 
         this->is_initialized_ = true;
     }

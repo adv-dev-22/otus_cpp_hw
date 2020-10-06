@@ -10,33 +10,21 @@ void FsLazyFilesHolder::init(const std::vector<std::string> & fnames_vec,
                              const FsComparatorOptions & cmpr_options)
 {
     vec_lazy_files_.clear();
-    vec_lazy_files_.resize(fnames_vec.size());
+    vec_lazy_files_.reserve(fnames_vec.size());
 
+    int cntr = 0;
     for (const std::string & item : fnames_vec)
     {
-        auto up_file_proxy = std::make_unique<FsLazyFile>(item, cmpr_options);
-        vec_lazy_files_.emplace_back(std::move(up_file_proxy));
+        vec_lazy_files_.emplace_back(std::make_unique<FsLazyFile>(item, cmpr_options));
     }
-
-    debug_vec_ = fnames_vec;
 }
 
 bool FsLazyFilesHolder::are_equal(const size_t i, const size_t j)
 {
-    // TODO: ..
-    // size_1 == size_2
+    const FsLazyFile & ref_lazy_file_i = (*vec_lazy_files_.at(i).get());
+    const FsLazyFile & ref_lazy_file_j = *vec_lazy_files_.at(j);
 
-
-    // i -> file_i
-    // j -> file_j
-
-    // DEBUG
-    return debug_vec_[i] == debug_vec_[j];
-
-
-
-    return true;
+    return ref_lazy_file_i == ref_lazy_file_j;
 }
-
 
 // End of the file
