@@ -42,13 +42,17 @@ const std::string & FsFileBlockProxy::get_hash() const
 
 void FsFileBlockProxy::setup_hashing_algorithm_()
 {
-//    if (HashingAlgorithm::md5 == this->ref_cmpr_optns_->hash_alg())
-//    {
+    if (HashingAlgorithm::md5 == this->ref_cmpr_optns_.hash_alg())
+    {
         up_hash_alg_ = std::make_unique<HashAlgorithmMd5>();
         return;
-//    }
+    }
 
-    // ..
+    if (HashingAlgorithm::crc32 == this->ref_cmpr_optns_.hash_alg())
+    {
+        up_hash_alg_ = std::make_unique<HashAlgorithmCrc32>();
+        return;
+    }
 
 //    throw
 }

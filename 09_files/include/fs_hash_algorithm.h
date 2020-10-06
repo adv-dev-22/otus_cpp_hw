@@ -22,7 +22,14 @@ public:
     virtual std::string compute(const std::vector<char> & vec_buffer);
 };
 
-// crc32
+class HashAlgorithmCrc32 : public HashAlgorithmBase
+{
+public:
+    HashAlgorithmCrc32() = default;
+    virtual ~HashAlgorithmCrc32() = default;
+
+    virtual std::string compute(const std::vector<char> &vec_buffer);
+};
 
 #endif  // _FS_HASH_ALGORITHM_H_
 

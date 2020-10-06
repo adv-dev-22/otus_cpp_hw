@@ -1,6 +1,10 @@
 #include "fs_hash_algorithm.h"
 #include <boost/uuid/detail/md5.hpp>
 #include <boost/algorithm/hex.hpp>
+#include <boost/crc.hpp>
+#include <sstream>
+
+#include <iostream>
 
 using boost::uuids::detail::md5;
 
@@ -22,6 +26,17 @@ std::string HashAlgorithmMd5::compute(const std::vector<char> & vec_buffer)
     boost_md5_hash.get_digest(digest);
 
     return md5_to_string(digest);
+}
+
+std::string HashAlgorithmCrc32::compute(const std::vector<char> &vec_buffer)
+{
+    boost::crc_32_type result;
+    result.process_bytes(vec_buffer.data(), vec_buffer.size());
+
+    std::stringstream  ss;
+    ss << result.checksum();
+
+    return ss.str();
 }
 
 // End of the file
