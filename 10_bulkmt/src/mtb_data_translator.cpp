@@ -1,5 +1,6 @@
 #include "mtb_data_translator.h"
 #include "mtb_data_processor.h"
+#include "mtb_block_transporter.h"
 #include <iostream>
 #include <memory>
 
@@ -14,6 +15,9 @@ void DataTranslator::run(int argc, char * argv [])
 
     auto data_processor = std::make_unique<DataProcessor>();
     data_processor->set_block_size(block_size);
+
+    auto up_block_transporter = std::make_unique<MtbBlockTransporter>();
+    up_block_transporter->start_threads();
 
     auto block_observer_std = std::make_shared<BlockObserverStd>();
     data_processor->subscribe(block_observer_std);
@@ -31,6 +35,9 @@ void DataTranslator::run(int argc, char * argv [])
     {
         data_processor->conclude();
     }
+
+    up_block_transporter->conclude_threads();
+    up_block_transporter->join_threads();
 }
 
 // End of the file

@@ -9,10 +9,12 @@ set(MTB10_RUN mtb10run)
 add_library(${MTB10_LIB} STATIC
         src/mtb_block_observer.cpp
         src/mtb_block_state.cpp
-        src/mtb_data_block.cpp
+        src/mtb_block_transporter.cpp
+ 	src/mtb_data_block.cpp
         src/mtb_data_processor.cpp
         src/mtb_data_translator.cpp
         src/mtb_time_holder.cpp
+        src/mtb_transporter_worker.cpp
 )
 
 add_executable(${MTB10_RUN} 
@@ -35,7 +37,7 @@ target_include_directories(${MTB10_LIB} PUBLIC
 
 #target_link_libraries(${FS09_LIB} ${Boost_LIBRARIES})
 
-target_link_libraries(${MTB10_RUN} ${MTB10_LIB})
+target_link_libraries(${MTB10_RUN} ${MTB10_LIB} pthread)
 
 #install(TARGETS ${FS09_RUN} RUNTIME DESTINATION bin)
 
