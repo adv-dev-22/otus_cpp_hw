@@ -16,14 +16,19 @@ void DataTranslator::run(int argc, char * argv [])
     auto data_processor = std::make_unique<DataProcessor>();
     data_processor->set_block_size(block_size);
 
-    auto up_block_transporter = std::make_unique<MtbBlockTransporter>();
-    up_block_transporter->start_threads();
+    auto block_transporter = std::make_shared<MtbBlockTransporter>();
+    data_processor->subscribe(block_transporter);
+    block_transporter->start_threads();
 
-    auto block_observer_std = std::make_shared<BlockObserverStd>();
-    data_processor->subscribe(block_observer_std);
 
-    auto block_observer_file = std::make_shared<BlockObserverFile>();
-    data_processor->subscribe(block_observer_file);
+    // REMOVE obsolete 07 code
+//    auto block_observer_std = std::make_shared<BlockObserverStd>();
+//    data_processor->subscribe(block_observer_std);
+
+//    auto block_observer_file = std::make_shared<BlockObserverFile>();
+//    data_processor->subscribe(block_observer_file);
+    // REMOVE obsolete 07 code
+
 
     std::string buffer;
     while (std::getline(std::cin, buffer))
@@ -36,8 +41,8 @@ void DataTranslator::run(int argc, char * argv [])
         data_processor->conclude();
     }
 
-    up_block_transporter->conclude_threads();
-    up_block_transporter->join_threads();
+    block_transporter->conclude_threads();
+    block_transporter->join_threads();
 }
 
 // End of the file

@@ -1,6 +1,9 @@
 #include "mtb_data_translator.h"
 #include <iostream>
 #include <memory>
+//#include <thread>
+//#include <mutex>
+
 
 int main(int argc, char * argv [])
 {
@@ -15,6 +18,30 @@ int main(int argc, char * argv [])
 
 
 
+
+//std::mutex m1;
+//std::mutex m2;
+//int a = 100;
+//void w1()
+//{
+//    m1.lock();
+//    m2.lock();
+//    a = 1 + a;
+//    m2.unlock();
+//    m1.unlock();
+
+//}
+//void w2()
+//{
+//    m1.lock();
+//    a = a + 100;
+//    m1.unlock();
+//}
+//    std::thread t1(w1);
+//    std::thread t2(w2);
+
+//    t1.join();
+//    t2.join();
 
 
 

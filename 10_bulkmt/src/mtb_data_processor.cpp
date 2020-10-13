@@ -3,7 +3,8 @@
 
 DataProcessor::DataProcessor():
 block_size_(0),
-list_wp_block_observers_(),
+wp_transporter_(),
+//list_wp_block_observers_(),
 up_data_block_(std::make_unique<DataBlock>()),
 brackets_(std::make_pair("{","}")),
 up_block_state_(std::make_unique<BlockStateEmpty>())
@@ -21,17 +22,26 @@ void DataProcessor::set_block_size(const size_t block_size)
     IBlockState::set_block_size(block_size);
 }
 
-void DataProcessor::subscribe(std::weak_ptr<BlockObserver> wp_block_observer)
+void DataProcessor::subscribe(std::weak_ptr<MtbBlockTransporter> wp_block_transporter)
 {
-    list_wp_block_observers_.push_back(wp_block_observer);
+    wp_transporter_ = wp_block_transporter;
 }
+
+// obsolete
+//void DataProcessor::subscribe(std::weak_ptr<BlockObserver> wp_block_observer)
+//{
+//    list_wp_block_observers_.push_back(wp_block_observer);
+//}
 
 void DataProcessor::notify()
 {
-    for (auto item : list_wp_block_observers_)
-    {
-        item.lock()->update(*up_data_block_.get());
-    }
+    // TODO: copy it not a ref
+    //wp_transporter_.lock()->notify(*up_data_block_);
+
+//    for (auto item : list_wp_block_observers_)
+//    {
+//        item.lock()->update(*up_data_block_.get());
+//    }
 }
 
 void DataProcessor::consider(const std::string & str_line)
