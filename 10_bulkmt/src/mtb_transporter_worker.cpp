@@ -7,7 +7,7 @@
 
 MtbTransporterWorkerBase::MtbTransporterWorkerBase():
 processing_is_finished_(false),
-ptr_cv_(nullptr),
+wp_cv_(),
 ptr_mtx_(nullptr),
 ptr_block_queue_(nullptr)
 {
@@ -18,9 +18,9 @@ void MtbTransporterWorkerBase::conclude_processing() noexcept
     processing_is_finished_ = true;
 }
 
-void MtbTransporterWorkerBase::set_condition_variable(std::condition_variable * ptr_cv)
+void MtbTransporterWorkerBase::set_condition_variable(std::weak_ptr<std::condition_variable> wp_cv)
 {
-    this->ptr_cv_ = ptr_cv;
+    this->wp_cv_ = wp_cv;
 }
 
 void MtbTransporterWorkerBase::set_mutex(std::mutex * ptr_mtx)
@@ -30,16 +30,8 @@ void MtbTransporterWorkerBase::set_mutex(std::mutex * ptr_mtx)
 
 void MtbTransporterWorkerBase::set_queue(std::queue<DataBlock> * block_queue)
 {
-    this->ptr_block_queue_;
+    this->ptr_block_queue_ = block_queue;
 }
-
-
-void MtbTransporterWorkerBase::update()
-{
-    // TODO:
-    //ptr_data_block_ = p_data_block;
-}
-
 
 MtbTransporterWorkerStd::MtbTransporterWorkerStd()
 {
@@ -47,22 +39,22 @@ MtbTransporterWorkerStd::MtbTransporterWorkerStd()
 
 void MtbTransporterWorkerStd::operator() ()
 {
-    std::cout << "std thread started " << std::endl;
+//    std::cout << "std thread started " << std::endl;
 
-//    std::unique_lock<std::mutex> lck(*ptr_mtx_);
+    std::unique_lock<std::mutex> lck(*ptr_mtx_);
+    while (!processing_is_finished_)
+    {
+        wp_cv_.lock()->wait(lck);
 
-//    while (!processing_is_finished_)
-//    {
-//        ptr_cv_->wait(lck);
+        if (ptr_block_queue_->empty()) continue;
 
-//        //std::shared_lock()
+        const DataBlock & db = ptr_block_queue_->front();
+        db.write(std::cout);
 
-//        std::cout << "next processing: " << processing_is_finished_ << std::endl;
-//        std::this_thread::sleep_for(std::chrono::milliseconds(500));
-
-//    }
-    std::cout << "std thread finished " << std::endl;
-
+        ptr_block_queue_->pop();
+        std::this_thread::sleep_for(std::chrono::milliseconds(500));
+    }
+//    std::cout << "std thread finished " << std::endl;
 }
 
 MtbTransporterWorkerFile::MtbTransporterWorkerFile()
@@ -84,3 +76,8 @@ void MtbTransporterWorkerFile::operator() ()
 }
 
 // End of the file
+
+
+
+
+//std::cout << "next processing: " << processing_is_finished_ << std::endl;

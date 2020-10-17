@@ -33,13 +33,14 @@ private:
     std::unique_ptr<MtbTransporterWorkerFile> up_worker_file_1_;
     std::unique_ptr<MtbTransporterWorkerFile> up_worker_file_2_;
 
-    std::condition_variable cv_stdout_;
-    std::condition_variable cv_file_x_;
+    std::shared_ptr<std::condition_variable> cv_stdout_;
+    //std::condition_variable cv_file_x_;
 
     std::mutex mtx_stdout_;
     std::mutex mtx_file_x_;
 
-    std::queue<DataBlock> block_queue_;
+    std::queue<DataBlock> block_queue_stdout_;
+    std::queue<DataBlock> block_queue_file_x_;
 };
 
 #endif //_MTB_10_BLOCK_TRANSPORTER_H_

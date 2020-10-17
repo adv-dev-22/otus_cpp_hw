@@ -12,6 +12,7 @@ class DataBlock final
 {
 public:
     DataBlock();
+    DataBlock(const DataBlock & );
     ~DataBlock() = default;
 
     size_t size() const noexcept;

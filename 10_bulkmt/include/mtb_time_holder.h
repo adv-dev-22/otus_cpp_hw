@@ -7,6 +7,7 @@ class TimeHolder final
 {
 public:
     TimeHolder();
+    TimeHolder(const TimeHolder & );
     ~TimeHolder() = default;
 
     void capture_at_first();

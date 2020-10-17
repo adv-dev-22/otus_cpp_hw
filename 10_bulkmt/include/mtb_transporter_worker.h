@@ -7,6 +7,9 @@
 
 class DataBlock;
 
+// Notification is done throw cv.notify_...()
+// No explicit update invocations
+
 class MtbTransporterWorkerBase
 {
 public:
@@ -17,16 +20,14 @@ public:
 
     void conclude_processing() noexcept;
 
-    void set_condition_variable(std::condition_variable * ptr_cv);
+    void set_condition_variable(std::weak_ptr<std::condition_variable> wp_cv);
     void set_mutex(std::mutex * ptr_mtx);
     void set_queue(std::queue<DataBlock> * block_queue);
-
-    void update();
 
 protected:
     bool processing_is_finished_;
 
-    std::condition_variable * ptr_cv_;
+    std::weak_ptr<std::condition_variable> wp_cv_;
     std::mutex * ptr_mtx_;
     std::queue<DataBlock> * ptr_block_queue_;
 };

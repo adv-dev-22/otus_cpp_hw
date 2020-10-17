@@ -10,6 +10,12 @@ at_first_(true)
 {
 }
 
+TimeHolder::TimeHolder(const TimeHolder & rhs):
+time_stamp_(rhs.time_stamp_),
+at_first_(rhs.at_first_)
+{
+}
+
 void TimeHolder::capture_at_first()
 {
     if (at_first_)

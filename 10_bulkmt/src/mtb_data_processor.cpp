@@ -35,8 +35,7 @@ void DataProcessor::subscribe(std::weak_ptr<MtbBlockTransporter> wp_block_transp
 
 void DataProcessor::notify()
 {
-    // TODO: copy it not a ref
-    //wp_transporter_.lock()->notify(*up_data_block_);
+    wp_transporter_.lock()->push_back_locked(*up_data_block_);
 
 //    for (auto item : list_wp_block_observers_)
 //    {

@@ -7,6 +7,13 @@ up_time_holder_(std::make_unique<TimeHolder>())
 {
 }
 
+DataBlock::DataBlock(const DataBlock & rhs):
+size_(rhs.size_),
+list_data_(rhs.list_data_),
+up_time_holder_(std::make_unique<TimeHolder>(*rhs.up_time_holder_.get()))
+{
+}
+
 size_t DataBlock::size() const noexcept
 {
     return list_data_.size();
