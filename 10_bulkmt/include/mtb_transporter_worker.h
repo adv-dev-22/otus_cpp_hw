@@ -21,15 +21,17 @@ public:
     void conclude_processing() noexcept;
 
     void set_condition_variable(std::weak_ptr<std::condition_variable> wp_cv);
-    void set_mutex(std::mutex * ptr_mtx);
-    void set_queue(std::queue<DataBlock> * block_queue);
+    void set_mutex(std::weak_ptr<std::mutex> wp_mtx);
+    void set_queue(std::weak_ptr<std::queue<DataBlock>> wp_block_queue);
 
 protected:
+    /*! Flag to stop inifinite cv.wait() loop */
     bool processing_is_finished_;
 
+    /*! Auxiliary multithreading variables common for stdout or file out threads */
     std::weak_ptr<std::condition_variable> wp_cv_;
-    std::mutex * ptr_mtx_;
-    std::queue<DataBlock> * ptr_block_queue_;
+    std::weak_ptr<std::mutex> wp_mtx_;
+    std::weak_ptr<std::queue<DataBlock>> wp_block_queue_;
 };
 
 class MtbTransporterWorkerStd : public MtbTransporterWorkerBase

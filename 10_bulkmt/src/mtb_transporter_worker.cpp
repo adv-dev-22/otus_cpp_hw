@@ -8,8 +8,8 @@
 MtbTransporterWorkerBase::MtbTransporterWorkerBase():
 processing_is_finished_(false),
 wp_cv_(),
-ptr_mtx_(nullptr),
-ptr_block_queue_(nullptr)
+wp_mtx_(),
+wp_block_queue_()
 {
 }
 
@@ -23,15 +23,17 @@ void MtbTransporterWorkerBase::set_condition_variable(std::weak_ptr<std::conditi
     this->wp_cv_ = wp_cv;
 }
 
-void MtbTransporterWorkerBase::set_mutex(std::mutex * ptr_mtx)
+void MtbTransporterWorkerBase::set_mutex(std::weak_ptr<std::mutex> wp_mtx)
 {
-    this->ptr_mtx_ = ptr_mtx;
+    this->wp_mtx_ = wp_mtx;
 }
 
-void MtbTransporterWorkerBase::set_queue(std::queue<DataBlock> * block_queue)
+void MtbTransporterWorkerBase::set_queue(std::weak_ptr<std::queue<DataBlock>> wp_block_queue)
 {
-    this->ptr_block_queue_ = block_queue;
+    this->wp_block_queue_ = wp_block_queue;
 }
+
+//-----------------------------------------------------------------------------
 
 MtbTransporterWorkerStd::MtbTransporterWorkerStd()
 {
@@ -39,23 +41,24 @@ MtbTransporterWorkerStd::MtbTransporterWorkerStd()
 
 void MtbTransporterWorkerStd::operator() ()
 {
-//    std::cout << "std thread started " << std::endl;
-
-    std::unique_lock<std::mutex> lck(*ptr_mtx_);
+    auto mtx = wp_mtx_.lock();
+    std::unique_lock<std::mutex> lck(*mtx);
     while (!processing_is_finished_)
     {
         wp_cv_.lock()->wait(lck);
 
-        if (ptr_block_queue_->empty()) continue;
+        auto block_queue = wp_block_queue_.lock();
+        if (block_queue->empty()) continue;
 
-        const DataBlock & db = ptr_block_queue_->front();
+        const DataBlock & db = block_queue->front();
         db.write(std::cout);
 
-        ptr_block_queue_->pop();
-        std::this_thread::sleep_for(std::chrono::milliseconds(500));
+        block_queue->pop();
+        std::this_thread::sleep_for(std::chrono::milliseconds(300));
     }
-//    std::cout << "std thread finished " << std::endl;
 }
+
+//-----------------------------------------------------------------------------
 
 MtbTransporterWorkerFile::MtbTransporterWorkerFile()
 {

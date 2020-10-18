@@ -36,11 +36,11 @@ private:
     std::shared_ptr<std::condition_variable> cv_stdout_;
     //std::condition_variable cv_file_x_;
 
-    std::mutex mtx_stdout_;
-    std::mutex mtx_file_x_;
+    std::shared_ptr<std::mutex> mtx_stdout_;
+    //std::mutex mtx_file_x_;
 
-    std::queue<DataBlock> block_queue_stdout_;
-    std::queue<DataBlock> block_queue_file_x_;
+    std::shared_ptr<std::queue<DataBlock>> block_queue_stdout_;
+    //std::queue<DataBlock> block_queue_file_x_;
 };
 
 #endif //_MTB_10_BLOCK_TRANSPORTER_H_
