@@ -7,7 +7,7 @@
 
 class DataBlock;
 
-// Notification is done throw cv.notify_...()
+// Notification is done via cv.notify_one()
 // No explicit update invocations
 
 class MtbTransporterWorkerBase
@@ -16,7 +16,7 @@ public:
     MtbTransporterWorkerBase();
     virtual ~MtbTransporterWorkerBase() = default;
 
-    virtual void operator() () = 0;
+    void operator() ();
 
     void conclude_processing() noexcept;
 
@@ -32,6 +32,10 @@ protected:
     std::weak_ptr<std::condition_variable> wp_cv_;
     std::weak_ptr<std::mutex> wp_mtx_;
     std::weak_ptr<std::queue<DataBlock>> wp_block_queue_;
+
+private:
+    void do_work_strategy_();
+    virtual void do_specific_work_() = 0;
 };
 
 class MtbTransporterWorkerStd : public MtbTransporterWorkerBase
@@ -40,7 +44,8 @@ public:
     MtbTransporterWorkerStd();
     virtual ~MtbTransporterWorkerStd() = default;
 
-    virtual void operator() () override;
+private:
+    virtual void do_specific_work_() override;
 };
 
 class MtbTransporterWorkerFile : public MtbTransporterWorkerBase
@@ -49,7 +54,8 @@ public:
     MtbTransporterWorkerFile();
     virtual ~MtbTransporterWorkerFile() = default;
 
-    virtual void operator() () override;
+private:
+    virtual void do_specific_work_() override;
 };
 
 #endif  // _MTB_10_TRANSPORTER_WORKER_H_
