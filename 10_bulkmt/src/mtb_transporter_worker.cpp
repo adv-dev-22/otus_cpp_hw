@@ -65,15 +65,31 @@ MtbTransporterWorkerFile::MtbTransporterWorkerFile()
 
 }
 
+// TODO: move it to base class with parameter
 void MtbTransporterWorkerFile::operator() ()
 {
+    std::cout << "file thread: " << std::this_thread::get_id() << std::endl;
 
-//    while (true)
-//    {
-//            cv.wait
+    // Weak pointer takes shared pointer.
+    auto mtx = wp_mtx_.lock();
+    // Lock mutex
+    std::unique_lock<std::mutex> lck(*mtx);
+    while (!processing_is_finished_)
+    {
+        std::cout << "file thread: " << std::this_thread::get_id() << std::endl;
+        wp_cv_.lock()->wait(lck);
 
-//        if (quit_flag) break;
-//    }
+        // Shared ptr from weak
+        auto block_queue = wp_block_queue_.lock();
+        if (block_queue->empty()) continue;
+
+        const DataBlock & db = block_queue->front();
+        std::cout << "file thread writes: " << std::this_thread::get_id() << std::endl;
+        db.write(std::cout);
+
+        block_queue->pop();
+        std::this_thread::sleep_for(std::chrono::milliseconds(300));
+    }
 
 
 }
