@@ -7,7 +7,7 @@
 
 class DataBlock;
 
-// Notification is done via cv.notify_one()
+// Notification is done via cv.notify_one/all()
 // No explicit update invocations
 
 class MtbTransporterWorkerBase

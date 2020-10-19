@@ -20,16 +20,6 @@ void DataTranslator::run(int argc, char * argv [])
     data_processor->subscribe(block_transporter);
     block_transporter->start_threads();
 
-
-    // REMOVE obsolete 07 code
-//    auto block_observer_std = std::make_shared<BlockObserverStd>();
-//    data_processor->subscribe(block_observer_std);
-
-//    auto block_observer_file = std::make_shared<BlockObserverFile>();
-//    data_processor->subscribe(block_observer_file);
-    // REMOVE obsolete 07 code
-
-
     std::string buffer;
     while (std::getline(std::cin, buffer))
     {

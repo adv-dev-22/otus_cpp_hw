@@ -4,7 +4,6 @@
 DataProcessor::DataProcessor():
 block_size_(0),
 wp_transporter_(),
-//list_wp_block_observers_(),
 up_data_block_(std::make_unique<DataBlock>()),
 brackets_(std::make_pair("{","}")),
 up_block_state_(std::make_unique<BlockStateEmpty>())
@@ -27,20 +26,9 @@ void DataProcessor::subscribe(std::weak_ptr<MtbBlockTransporter> wp_block_transp
     wp_transporter_ = wp_block_transporter;
 }
 
-// obsolete
-//void DataProcessor::subscribe(std::weak_ptr<BlockObserver> wp_block_observer)
-//{
-//    list_wp_block_observers_.push_back(wp_block_observer);
-//}
-
 void DataProcessor::notify()
 {
     wp_transporter_.lock()->push_back_locked(*up_data_block_);
-
-//    for (auto item : list_wp_block_observers_)
-//    {
-//        item.lock()->update(*up_data_block_.get());
-//    }
 }
 
 void DataProcessor::consider(const std::string & str_line)
