@@ -73,12 +73,7 @@ void DataProcessor::conclude()
 
 void DataProcessor::print_statistics()
 {
-    std::stringstream ss;
-    ss << "main: " << stats_counter_main_->lines_counter << " lines, ";
-    ss << stats_counter_main_->blocks_counter << " blocks ";
-    ss << stats_counter_main_->commands_counter << " commands";
-
-    std::cout << ss.str() << std::endl;
+    std::cout << stats_counter_main_->get_stat_str("main: ") << std::endl;
 }
 
 void DataProcessor::clear_block_()

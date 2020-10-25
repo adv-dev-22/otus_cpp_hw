@@ -1,5 +1,6 @@
 #include "mtb_transporter_worker.h"
 #include "mtb_data_block.h"
+#include "mtb_stats_counter.h"
 #include <iostream>
 #include <chrono>
 #include <thread>
@@ -11,7 +12,8 @@ MtbTransporterWorkerBase::MtbTransporterWorkerBase():
 processing_is_finished_(false),
 wp_cv_(),
 wp_mtx_(),
-wp_block_queue_()
+wp_block_queue_(),
+stats_counter_(std::make_unique<MtbStatsCounterThread>(0,0))
 {
 }
 
@@ -58,6 +60,13 @@ void MtbTransporterWorkerBase::do_work_strategy_()
 
         block_queue->pop();
     }
+    print_statistics_();
+}
+
+void MtbTransporterWorkerBase::append_stats_(const DataBlock & db)
+{
+    stats_counter_->blocks_counter++;
+    stats_counter_->commands_counter += db.size();
 }
 
 //-----------------------------------------------------------------------------
@@ -72,7 +81,15 @@ void MtbTransporterWorkerStd::do_specific_work_()
 
     auto block_queue = wp_block_queue_.lock();
     const DataBlock & db = block_queue->front();
+
+    append_stats_(db);
+
     db.write(std::cout);
+}
+
+void MtbTransporterWorkerStd::print_statistics_()
+{
+    std::cout << stats_counter_->get_stat_str("log:  ") << std::endl;
 }
 
 //-----------------------------------------------------------------------------
@@ -88,10 +105,10 @@ void MtbTransporterWorkerFile::do_specific_work_()
     auto block_queue = wp_block_queue_.lock();
     const DataBlock & db = block_queue->front();
 
+    append_stats_(db);
+
     std::string file_name("bulk-");
-    std::stringstream ss;
-    ss << std::this_thread::get_id();
-    file_name.append(ss.str());
+    file_name.append(get_id_str());
     file_name.append("-");
     file_name.append(db.time_stamp());
     file_name.append(".log");
@@ -99,6 +116,20 @@ void MtbTransporterWorkerFile::do_specific_work_()
     std::ofstream fout(file_name, std::ofstream::out);
     db.write(fout);
     fout.close();
+}
+
+void MtbTransporterWorkerFile::print_statistics_()
+{
+    std::stringstream ss;
+    ss << "file-" << get_id_str() << " ";
+    std::cout << stats_counter_->get_stat_str(ss.str()) << std::endl;
+}
+
+std::string MtbTransporterWorkerFile::get_id_str() const
+{
+    std::stringstream ss;
+    ss << std::this_thread::get_id();
+    return ss.str();
 }
 
 // End of the file

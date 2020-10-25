@@ -32,10 +32,11 @@ void DataTranslator::run(int argc, char * argv [])
     }
 
     // Print statistic
-    data_processor->print_statistics();
 
     block_transporter->conclude_threads();
     block_transporter->join_threads();
+
+    data_processor->print_statistics();
 }
 
 // End of the file

@@ -1,11 +1,13 @@
 #ifndef _MTB_10_TRANSPORTER_WORKER_H_
 #define _MTB_10_TRANSPORTER_WORKER_H_
 
+#include "mtb_stats_counter.h"
 #include <condition_variable>
 #include <shared_mutex>
 #include <queue>
 
 class DataBlock;
+class MtbStatsCounterThread;
 
 // Notification is done via cv.notify_one/all()
 // No explicit update invocations
@@ -33,9 +35,15 @@ protected:
     std::weak_ptr<std::mutex> wp_mtx_;
     std::weak_ptr<std::queue<DataBlock>> wp_block_queue_;
 
+    std::unique_ptr<MtbStatsCounterThread> stats_counter_;
+
+    void append_stats_(const DataBlock & db);
+
 private:
     void do_work_strategy_();
+
     virtual void do_specific_work_() = 0;
+    virtual void print_statistics_() = 0;
 };
 
 class MtbTransporterWorkerStd : public MtbTransporterWorkerBase
@@ -46,6 +54,7 @@ public:
 
 private:
     virtual void do_specific_work_() override;
+    virtual void print_statistics_() override;
 };
 
 class MtbTransporterWorkerFile : public MtbTransporterWorkerBase
@@ -56,6 +65,9 @@ public:
 
 private:
     virtual void do_specific_work_() override;
+    virtual void print_statistics_() override;
+
+    std::string get_id_str() const;
 };
 
 #endif  // _MTB_10_TRANSPORTER_WORKER_H_
