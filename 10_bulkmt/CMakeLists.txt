@@ -10,7 +10,7 @@ add_library(${MTB10_LIB} STATIC
         src/mtb_block_observer.cpp
         src/mtb_block_state.cpp
         src/mtb_block_transporter.cpp
- 	src/mtb_data_block.cpp
+        src/mtb_data_block.cpp
         src/mtb_data_processor.cpp
         src/mtb_data_translator.cpp
         src/mtb_time_holder.cpp

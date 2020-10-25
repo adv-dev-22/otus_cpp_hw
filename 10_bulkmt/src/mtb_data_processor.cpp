@@ -1,12 +1,14 @@
 #include "mtb_data_processor.h"
 #include <iostream>
+#include <sstream>
 
 DataProcessor::DataProcessor():
 block_size_(0),
 wp_transporter_(),
 up_data_block_(std::make_unique<DataBlock>()),
 brackets_(std::make_pair("{","}")),
-up_block_state_(std::make_unique<BlockStateEmpty>())
+up_block_state_(std::make_unique<BlockStateEmpty>()),
+stats_counter_main_(std::make_shared<MtbStatsCounterMain>(0,0,0))
 {
 }
 
@@ -28,14 +30,16 @@ void DataProcessor::subscribe(std::weak_ptr<MtbBlockTransporter> wp_block_transp
 
 void DataProcessor::notify()
 {
+    stats_counter_main_->blocks_counter++;
     wp_transporter_.lock()->push_back_locked(*up_data_block_);
 }
 
 void DataProcessor::consider(const std::string & str_line)
 {
     // The order of the block statements is important.
-
     if (0 == str_line.size()) return;
+
+    stats_counter_main_->lines_counter++;
 
     up_block_state_->update_state(this);
 
@@ -44,6 +48,7 @@ void DataProcessor::consider(const std::string & str_line)
 
     if (up_block_state_->is_relevant())
     {
+        stats_counter_main_->commands_counter++;
         up_data_block_->append(str_line);
         up_block_state_->add_line(this);
     }
@@ -64,6 +69,16 @@ void DataProcessor::conclude()
         this->notify();
         this->clear_block_();
     }
+}
+
+void DataProcessor::print_statistics()
+{
+    std::stringstream ss;
+    ss << "main: " << stats_counter_main_->lines_counter << " lines, ";
+    ss << stats_counter_main_->blocks_counter << " blocks ";
+    ss << stats_counter_main_->commands_counter << " commands";
+
+    std::cout << ss.str() << std::endl;
 }
 
 void DataProcessor::clear_block_()

@@ -5,6 +5,7 @@
 #include "mtb_data_block.h"
 #include "mtb_block_state.h"
 #include "mtb_block_transporter.h"
+#include "mtb_stats_counter.h"
 #include <string>
 #include <memory>
 #include <cstddef>
@@ -23,9 +24,6 @@ public:
 
     void subscribe(std::weak_ptr<MtbBlockTransporter> wp_block_transporter);
 
-    // obsolete
-    //void subscribe(std::weak_ptr<BlockObserver> wp_block_observer);
-
     // TODO: refactor
     void notify();
 
@@ -33,15 +31,13 @@ public:
 
     void conclude();
 
+    void print_statistics();
+
 private:
     /*! Default size from input */
     size_t block_size_;
 
     std::weak_ptr<MtbBlockTransporter> wp_transporter_;
-
-    // OBSOLETE
-    // /*! Observers */
-    //std::list<std::weak_ptr<BlockObserver>> list_wp_block_observers_;
 
     /*! Working data block. */
     std::unique_ptr<DataBlock> up_data_block_;
@@ -49,6 +45,8 @@ private:
     std::pair<std::string, std::string> brackets_;
 
     std::unique_ptr<IBlockState> up_block_state_;
+
+    std::shared_ptr<MtbStatsCounterMain> stats_counter_main_;
 
     void  clear_block_();
 };
