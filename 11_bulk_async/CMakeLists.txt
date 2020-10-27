@@ -5,6 +5,7 @@ project(dz_11_bulk_async)
 
 add_library(bulk_11_async SHARED 
         src/async_interface.cpp	
+        src/async_time_holder.cpp
 )
 
 add_executable(run_bulk_async
