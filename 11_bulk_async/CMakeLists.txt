@@ -4,6 +4,7 @@ cmake_minimum_required(VERSION 3.5)
 project(dz_11_bulk_async)
 
 add_library(bulk_11_async SHARED 
+	src/async_data_translator.cpp
         src/async_interface.cpp	
         src/async_time_holder.cpp
 )
@@ -14,8 +15,6 @@ add_executable(run_bulk_async
 #block_state.cpp
 #data_block.cpp
 #data_processor.cpp
-#        data_translator.cpp
-#time_holder.cpp
 )
 
 set_target_properties(run_bulk_async bulk_11_async PROPERTIES
