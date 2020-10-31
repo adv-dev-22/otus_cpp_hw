@@ -1,40 +1,31 @@
 #include "async_data_translator.h"
-//#include "data_processor.h"
+#include "async_data_processor.h"
 #include <iostream>
 #include <memory>
 
 namespace async
 {
 
-void DataTranslator::run(int argc, char * argv [])
+void DataTranslator::setup(const size_t block_size, const size_t id)
 {
-//    if (argc < 2)
-//    {
-//        std::cout << "Block size must be set as a command line parameter.." << std::endl;
-//        return;
-//    }
-//    const size_t block_size = std::stoi(argv[1]);
+    data_processor_ = std::make_shared<DataProcessor>();
+    data_processor_->set_block_size(block_size);
 
-//    auto data_processor = std::make_unique<DataProcessor>();
-//    data_processor->set_block_size(block_size);
+    block_observer_std_ = std::make_shared<BlockObserverStd>();
+    data_processor_->subscribe(block_observer_std_);
 
-//    auto block_observer_std = std::make_shared<BlockObserverStd>();
-//    data_processor->subscribe(block_observer_std);
+    block_observer_file_ = std::make_shared<BlockObserverFile>(id);
+    data_processor_->subscribe(block_observer_file_);
+}
 
-//    auto block_observer_file = std::make_shared<BlockObserverFile>();
-//    data_processor->subscribe(block_observer_file);
+void DataTranslator::translate(const std::string & buffer)
+{
+    data_processor_->consider(buffer);
+}
 
-//    std::string buffer;
-//    while (std::getline(std::cin, buffer))
-//    {
-//        data_processor->consider(buffer);
-//    }
-
-//    if (std::cin.eof())
-//    {
-//        data_processor->conclude();
-//    }
-
+void DataTranslator::close()
+{
+    data_processor_->conclude();
 }
 
 }
