@@ -1,5 +1,9 @@
 #include "asio_bulk_controller.h"
+#include "asio_bulk_server.h"
 #include <iostream>
+#include <boost/asio.hpp>
+
+using boost::asio::ip::tcp;
 
 namespace asio_bulk_12
 {
@@ -15,11 +19,11 @@ int Controller::run(int argc, char * argv [])
             return 1;
         }
 
-        //boost::asio::io_context io_context;
+        boost::asio::io_context io_context;
 
-        //server server(io_context, std::atoi(argv[1]));
+        Server server(io_context, std::atoi(argv[1]), std::atoi(argv[2]));
 
-        //io_context.run();
+        io_context.run();
     }
     catch (const std::exception& ex)
     {

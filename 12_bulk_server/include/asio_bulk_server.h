@@ -10,9 +10,8 @@ namespace asio_bulk_12
 class Server
 {
 public:
-    Server(boost::asio::io_context& io_context, int port);
+    Server(boost::asio::io_context& io_context, int port, int bulk_size);
     ~Server() = default;
-
 
 private:
     tcp::acceptor acceptor_;

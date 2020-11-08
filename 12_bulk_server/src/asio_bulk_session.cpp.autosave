@@ -23,6 +23,9 @@ void Session::read_socket_()
             if (ec) return;
 
             //redirect_(std::string);
+            auto ep = socket_.remote_endpoint();
+            auto x = ep.address().to_string() + ":" + std::to_string(ep.port());
+            std::cout << x << std::endl;
 
             std::cout << "receive " << length << " =" << std::string{data_, length} << std::endl;
             read_socket_();
