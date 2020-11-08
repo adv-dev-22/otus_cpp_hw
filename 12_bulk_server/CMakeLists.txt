@@ -8,6 +8,7 @@ include_directories(${Boost_INCLUDE_DIR})
 
 add_library(asio_server_12 SHARED
         src/asio_bulk_controller.cpp
+        src/asio_bulk_redirector.cpp
         src/asio_bulk_server.cpp
         src/asio_bulk_session.cpp
 )

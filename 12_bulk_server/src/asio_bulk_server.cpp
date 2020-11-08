@@ -5,7 +5,8 @@ namespace asio_bulk_12
 {
 
 Server::Server(boost::asio::io_context& io_context, int port, int bulk_size):
-acceptor_(io_context, tcp::endpoint(tcp::v4(), port))
+acceptor_(io_context, tcp::endpoint(tcp::v4(), port)),
+redirector_()
 {
     do_accept_();
 }
@@ -16,7 +17,7 @@ void Server::Server::do_accept_()
     {
         if (ec) return;
 
-        std::make_shared<Session>(std::move(socket))->start();
+        std::make_shared<Session>(std::move(socket), redirector_)->start();
         do_accept_();
     };
 

@@ -1,6 +1,7 @@
 #pragma once
 
 #include <boost/asio.hpp>
+#include "asio_bulk_redirector.h"
 
 using boost::asio::ip::tcp;
 
@@ -15,6 +16,7 @@ public:
 
 private:
     tcp::acceptor acceptor_;
+    Redirector redirector_;
 
     void do_accept_();
 };
