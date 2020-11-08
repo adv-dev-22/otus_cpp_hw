@@ -8,6 +8,8 @@ include_directories(${Boost_INCLUDE_DIR})
 
 add_library(asio_server_12 SHARED
         src/asio_bulk_controller.cpp
+        src/asio_bulk_server.cpp
+        src/asio_bulk_session.cpp
 )
 
 #src/async_block_state.cpp
@@ -29,6 +31,10 @@ set_target_properties(run_asio_server asio_server_12 PROPERTIES
 target_include_directories(asio_server_12 PUBLIC ./include)
 target_include_directories(run_asio_server PUBLIC ./include)
 
-target_link_libraries(run_asio_server asio_server_12)
+target_link_libraries(run_asio_server 
+        asio_server_12
+        ${Boost_LIBRARIES}
+        ${CMAKE_THREAD_LIBS_INIT}
+)
 
 #End of the file
