@@ -51,6 +51,14 @@ if (HW10 OR HWALL)
     add_subdirectory(10_bulkmt)
 endif()
 
+if (HW11 OR HWALL)
+    add_subdirectory(11_bulk_async)
+endif()
+
+if (HW12 OR HWALL)
+    add_subdirectory(12_bulk_server)
+endif()
+
 
 set(CPACK_GENERATOR DEB)
 
